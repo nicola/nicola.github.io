@@ -46,6 +46,7 @@ html{
     .print-footer{
       display: none;
     }
+
   }
   @media screen and (min-width: 800px){
     html{
@@ -243,6 +244,12 @@ p, article  ul li, pre code, pre code p, code{
 @media screen and (max-width: 400px){
     p{
       width: 90%;
+    }
+}
+
+@media screen and (max-width: 910px){
+    p.hideOnSmall {
+      display: none;
     }
 }
 
@@ -561,4 +568,15 @@ nav.group a {
 
 .listing h4 {
   margin-top: 0;
+}
+
+#field {
+  position: fixed;
+  margin-top: -15px;
+  left: 8.4%;
+  height: 0;
+  margin-left: 800px;
+}
+body {
+  overflow-x: hidden;
 }

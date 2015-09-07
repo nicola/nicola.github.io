@@ -9,3 +9,102 @@
 <span>Using <a href="//jekyllrb.com">Jekyll</a>, theme based on <a href="//github.com/clayh53/tufte-jekyll">Tufte</a>.</span> 
 </div>  
 </footer> -->
+
+{% if page.url == "/index.html" %}
+<script type="text/javascript">
+var line, field, flowers, w, h, d, n, dx, color, touching;
+
+color = false;
+w = window.innerWidth * 0.6;
+h = window.innerHeight;
+d = Math.ceil(h * 0.016);
+n = Math.ceil(w * 0.015);
+dx = Math.min(w / (n + .5), h / (d + .5));
+w = dx * (n + .5);
+h = dx * (d + .5);
+
+// Preparing lines
+line =
+  d3.svg.line()
+  .interpolate("cardinal-closed")
+  .x(function(d) { return d[0]; })
+  .y(function(d) { return d[1]; })
+
+// Preparing the field
+field =
+  d3.select("#field")
+  .append("svg")
+  .attr("width", w)
+  .attr("height", h)
+  .on('mouseover', function(d, i) {
+    if (color === false) {
+      d3.selectAll("path")
+        .transition()
+        .duration(1000)
+        .style("stroke", function(d, i) {
+          // Finding the most beautiful colors
+          return random_color(120,250);
+      });
+      color = true;
+    }
+  })
+
+field
+  .append("style")
+  .text("text { font-family: sans-serif; }\nline, path { stroke: #000; fill: none; }")
+
+// Grow flowers
+flowers =
+  field.selectAll("g")
+  .data(d3.range(d * n).map(function(i) { return [1 + i % n, 1 + ~~(i / n)]; }))
+  .enter()
+  .append("g")
+  .attr("transform", function(d, i) { return "translate(" + [d[0] * dx, d[1] * dx] + ")"; });
+
+flowers
+  .append("path")
+  .attr("d", handcraft_flower)
+  .on("mouseover", start_touching)
+  .on("mouseout", stop_touching)
+  .style("stroke", "#000");
+
+function handcraft_flower(d) {
+  var i, p, q, k, period;
+
+  i = gcd.apply(null, d);
+  p = Math.round(d[0] / i);
+  q = Math.round(d[1] / i), k = p / q;
+  period = (p & q & 1 ? 1 : 2) * Math.PI * q;
+
+  return line(d3.range(0, period + Math.PI / 50, Math.PI / 50).map(function(theta) {
+    var r = (dx - 5) * Math.cos(k * theta) / 2;
+    return [r * Math.cos(theta), r * Math.sin(theta)];
+  }));
+}
+
+function start_touching(d, i) {
+  if (touching === i) return;
+  touching = i;
+  d[0] = random_int(1, 11);
+  d[1] = random_int(1, 11);
+  if (d[0] == d[1]) d[1]++; // deleting ugly flowers
+
+  var flower = d3.select(this);
+  flower
+   .transition()
+   .delay(10)
+   .duration(1000)
+   .attr("d", handcraft_flower)
+   .style("stroke", "#ccc");
+}
+
+function stop_touching(d, i) {
+  // Please touch me again
+}
+
+function time() {
+  var firstflower = 'March 15, 2013 21:42:04 GMT+0000',
+      count = new CountUp('Handcrafting flowers since', firstflower, 'time');
+}
+</script>
+{% endif %}
