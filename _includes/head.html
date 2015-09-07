@@ -29,22 +29,25 @@
 {% else %}
   <meta content="{{ site.title }}" property="og:title">
 {% endif %}
+
 {% if page.title %}
   <meta content="article" property="og:type">
 {% else %}
   <meta content="website" property="og:type">
 {% endif %}
-{% if page.description %}
+
+<!-- {% if page.description %}
   <meta content="{{ page.description }}" property="og:description">
 {% else %}
   <meta content="{{ site.description }}" property="og:description">
 {% endif %}
+ -->
 
-{% capture page_url %}{{ page.url | replace:'/index.html','/' | append: site.url | append: site.baseurl }}{% endcapture %}
+<!-- {% capture page_url %}{{ page.url | replace:'/index.html','/' | append: site.url | append: site.baseurl }}{% endcapture %}
 {% if page_url %}
   <meta content="{{ page_url }}" property="og:url">
 {% endif %}
-
+ -->
 {% if page.date %}
   <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
   <meta content="https://www.facebook.com/nicolagreco" property="article:author">
