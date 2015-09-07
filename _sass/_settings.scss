@@ -1,0 +1,18 @@
+/* This file contains all the constants for colors and font styles */
+
+/*-- Global stuff with fonts, background colors,etc --*/
+
+$print-body-font:   ETBembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+$print-sans-font:  "Gill Sans", "Gill Sans MT", "Lato", Calibri, sans-serif;
+
+$body-font:   ETBembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+$sans-font:  "Gill Sans", "Gill Sans MT", "Lato", Calibri, sans-serif;
+
+$code-font: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+$url-font: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
+$text-color: rgb(59, 59, 59);
+$bg-color: rgb(249, 249, 249);
+$contrast-color: #0099FF;
+$border-color: #333333;
+// for syntax highlighting
+

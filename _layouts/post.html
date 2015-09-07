@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<h1>{{ page.title | capitalize }}</h1>
+<p>{{ page.date | date: "%B %-d, %Y" }}</p>
+
+
+{{ content }}
+
+
+<p class="">
+  - <a href="/about">Nicola Greco</a>,<br>
+  <em>Keep on rocking the decentralized web</em>
+</p>
+
+<div class="more">
+<h4>Thanks for reading</h4>
+
+{% for post in site.posts | limit:3 %} <!-- for1 -->
+    <li>
+      <span class="recent-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title | strip_html | strip_newlines | truncate: 30 }} </a></span>
+      <span class="date">{{post.date | date: "%b %d, %Y" }}</span>
+    </li>
+{% endfor %}
+</div>
