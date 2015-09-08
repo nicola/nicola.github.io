@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The principles of a decentralized web"
-date:   2015-09-07 13:06:04
+date:   2015-09-08 18:06:04
 categories: Decentralized Web
 ---
 
