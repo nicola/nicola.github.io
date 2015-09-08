@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Post-Internet art"
+title:  "Introducing Versioning Poems"
 date:   2015-09-07 11:42:04
-categories: Introducing Versioning Poems
+categories: Post-Internet
 ---
 
 In London we have a fantasic group of people that discusses cutting edge ideas, the group is called the __Palo Alto Supermarket test__{% sidenote 1 'It abbreviates as __PST__, maybe it is worth looking for an interesting acronym, e.g. _Policy_, _Society_ and _Technology_. Please ping me on twitter if you want to join in.' %}. A recurrent topic has been Post-Internet art which we think it can be the next artistic expression trend{% sidenote 2 'Ping me if you are interested in hearing more, I would like to build up a sort of community around this' %}.
