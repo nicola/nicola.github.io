@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Post-Internet art"
-date:   2015-09-04 13:06:04
+date:   2015-09-07 11:42:04
 categories: Introducing Versioning Poems
 ---
 
