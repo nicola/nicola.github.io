@@ -43,11 +43,11 @@
 {% endif %}
  -->
 
-<!-- {% capture page_url %}{{ page.url | replace:'/index.html','/' | append: site.url | append: site.baseurl }}{% endcapture %}
+{% capture page_url %}{{ page.url | replace:'/index.html','/' | append: site.url | append: site.baseurl }}{% endcapture %}
 {% if page_url %}
   <meta content="{{ page_url }}" property="og:url">
 {% endif %}
- -->
+
 {% if page.date %}
   <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
   <meta content="https://www.facebook.com/nicolagreco" property="article:author">
