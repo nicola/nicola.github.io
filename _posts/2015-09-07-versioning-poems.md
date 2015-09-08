@@ -9,15 +9,14 @@ In London we have a fantasic group of people that discusses cutting edge ideas, 
 
 In this post, I would like to introduce one way of writing Post-Internet poetry that mixes __traditional__ poetry and __coding__ poetry: __Versioning Poems__ - I hope to inspire a new generation of poets, please update me [@nicolagreco](http://twitter.com/nicolagreco) if you write some.
 
-
 ## Versioning Poems
 
 A versioning poem has two characteristics:
 
-1. Versioning tool: The poem written in commit messages using a versioning tool
-2. Commit diff: Each line has a commit diff that has code related to the message
+1. __Versioning tool__: The poem written in commit messages using a versioning tool
+2. __Commit diff__: Each line has a commit diff that has code related to the message
 
-In this way, one could clone a repository{% sidenote 3 'This can be SVN, Git, and so on' %} and just list the commit messages. The following is a poem of mine [9*19 Flowers poem](https://github.com/nicola/flowers-poem){% sidenote 4 'You can find this in the [home page](/)' %}.
+In this way, one could clone a repository and just list the commit messages. The following is a poem of mine [9*19 Flowers poem](https://github.com/nicola/flowers-poem).
 
 ### Understanding requirement 1
 
