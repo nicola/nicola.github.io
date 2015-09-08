@@ -59,6 +59,6 @@ The difference added by `93c57f8 Touch me to give you more` relates to a piece o
 
 ## Conclusion
 
-You can get very bizarre, the code does not need to work necessarely. In the case of my flowers, the final commit brings up a final working version of a [visualization of the poem](http://nicola.io/flowers-poem/) (See Figure 1).{% marginfigure '/assets/img/flowers.png' 'Figure 1: Detail of 9*19 Flowers poem' %}
+{% marginfigure '/assets/img/flowers.png' 'Figure 1: Detail of 9*19 Flowers poem' %}You can get very bizarre, the code does not need to work necessarely. In the case of my flowers, the final commit brings up a final working version of a [visualization of the poem](http://nicola.io/flowers-poem/) (See Figure 1).
 
 I challenge your engineering skills and creativity to surprise me with a poem of yours.
