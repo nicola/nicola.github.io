@@ -5,7 +5,7 @@ date:   2015-09-07 23:42:04
 categories: Post-Internet
 ---
 
-In London we have a fantasic group of people that discusses cutting edge ideas, the group is called the __Palo Alto Supermarket test__{% sidenote 1 'It abbreviates as __PST__, maybe it is worth looking for an interesting acronym, e.g. _Policy_, _Society_ and _Technology_. Please ping me on twitter if you want to join in.' %}. A recurrent topic has been Post-Internet art which we think it can be the next artistic expression trend{% sidenote 2 'Ping me if you are interested in hearing more, I would like to build up a sort of community around this' %}.
+In London we have a fantasic group of people that discusses cutting edge ideas, the group is called the __Palo Alto Supermarket test__{% sidenote 1 'It abbreviates as __PST__, maybe it is worth looking for an interesting acronym, e.g. _Policy_, _Society_ and _Technology_. Please ping me on twitter if you want to join in.' %}. A recurrent topic has been Post-Internet art which we think it can be the next artistic expression trend.
 
 In this post, I would like to introduce one way of writing Post-Internet poetry that mixes __traditional__ poetry and __coding__ poetry: __Versioning Poems__ - I hope to inspire a new generation of poets, please update me [@nicolagreco](http://twitter.com/nicolagreco) if you write some.
 
