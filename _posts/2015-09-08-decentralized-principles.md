@@ -5,7 +5,7 @@ date:   2015-09-08 18:06:04
 categories: Decentralized Web
 ---
 
-In this article I will briefly introduce the my three key aspect that a decentralized web I think should have.
+In this article I will briefly introduce three key aspect that the decentralized web should, in my opinion, have.
 
 1. Users are in __Control__ of their data
 2. __Interoperability__ across the services on the web and
