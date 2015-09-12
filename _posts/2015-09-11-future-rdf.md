@@ -12,6 +12,7 @@ I will now show you three ways to do a very simple task (1) the current way (usi
 ## The current RDF way
 
 _Example 1:_ Creating a graph with a triple that represents my name
+
 ```javascript
 var rdf = require('rdf-ext')
 var me = rdf.createGraph()
@@ -23,6 +24,7 @@ me.add(new rdf.Triple(
 ```
 
 _Example 2:_ Retrieving my name from the graph
+
 ```javascript
 me.match(
   'http://nicola.io',
@@ -37,6 +39,7 @@ me.match(
 Now, to the RDF experts, this might sound about right, but let's remember one second how real world developers would do something like that, let's say using Javascript Objects.
 
 _Example 3:_ The equivalent of Example 1 and 2 using JSON
+
 ```javascript
 var me = {
   name: 'Nicola'
@@ -51,6 +54,7 @@ me.name
 The future RDF library should provide a seamless experience to the developer that is used to the JS object.
 
 _Example 4:_ The equivalent of Example 1 and 2 as it should be
+
 ```javascript
 var r = require('simplerdf')
 var me = r()
