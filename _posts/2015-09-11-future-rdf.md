@@ -81,6 +81,8 @@ me.name
 // Nicola
 ```
 
+In other words, the key hack is on `Object.defineProperty` which enable us to redefine the getters/setters of object properties. So, in other words, we can have the power of a graph, behind some simple operations.
+
 As a last note, as many of you may point out, these examples only show how to do operations when both the subject and the predicate are known - what about the rest?
 
 In my opinion, this is already a big step forward simplifying RDF, maybe there are some operations would not be possible to achieve, and we can always come back to the traditional way of handling a graph `me.toGraph()`, or we can find together some new clever solutions that have the same spirit of simplicity.
