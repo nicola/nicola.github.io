@@ -5,9 +5,9 @@ date:   2015-09-11 11:47:04
 categories: Decentralized Web
 ---
 
-RDF is an simple and powerful language to describe data. However, playing with RDF data can get very tricky - especially when doing simple things. Only by solving the user experience of RDF libraries we would really get developers to user RDF more{% sidenote 1 'In all of its forms, _turtle_, _json-ld_, and so on.' %}. This blog post is directed to the community that work in this field and it is an open call to work on an ultimate, simpler library for RDF.
+RDF is an simple and powerful language to describe data. However, playing with RDF data can get very tricky - especially when doing simple things. Only by solving the user experience of RDF libraries we would really get developers to user RDF more{% sidenote 1 'In all of its forms, _turtle_, _json-ld_, and so on.' %}. This blog post is directed to the community that works in this field and it is an open call to work on an ultimate, simpler library for RDF.
 
-I will now show you three ways to do a very simple task (1) the current way (using [rdf-ext](http://github.com/rdf-ext/rdf-ext){% sidenote 2 'I have been recently involved with the development of this library' %}) (2) the way developers find it familiar (3) the way the future RDF lib should do.
+I will now show you three ways to do a very simple task (1) the current way (using [rdf-ext](http://github.com/rdf-ext/rdf-ext){% sidenote 2 'I have been recently involved with the development of this library' %}) (2) the way developers find familiar (3) the way the future RDF lib should be.
 
 ## The current RDF way
 
@@ -36,7 +36,7 @@ me.match(
 
 ## The Javascript Objects way
 
-Now, to the RDF experts, this might sound about right, but let's remember one second how real world developers would do something like that, let's say using Javascript Objects.
+Now, to the RDF experts, this might sound about right, but let's remember one second how _real world_ developers would do something like that, let's say using Javascript Objects.
 
 _Example 3:_ The equivalent of Example 1 and 2 using JSON
 
