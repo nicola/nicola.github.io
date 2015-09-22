@@ -15,6 +15,7 @@ He is now __22__ and determined to work on re-decentralizing the Web - probably 
 
 ## Events and Conferences
 
+The following are events and conference I gave a presentation at. Want me to give a keynote/unconference? Please contact me at [@nicolagreco](http://twitter.com/nicolagreco) or via email at me at nicola dot io.
 
 - __What is a Hackathon?__, SeedCamp, London, 2014/07 
 - __10 points Manifesto of a new generation, OrientaGiovani__, Confindustria, Rome, 2012/11 
