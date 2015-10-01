@@ -27,7 +27,7 @@ storage is cheap.
 
 Why don’t we - society, individuals and companies - start to build technologies that take advantage of this?
 
-Let’s bring decentralization at the center of attention.
+Let’s bring decentralization{% sidenote 2 'Read about my principle for a [Decentralized Web](http://nicola.io/decentralized-principles/2015/)' %} at the center of attention.
 
 --
 
