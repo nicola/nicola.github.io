@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A Center for decentralization"
+title:  "A Center for Decentralization"
 date:   2015-10-01 12:55:04
 categories: Decentralized Web
 ---
