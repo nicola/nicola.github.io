@@ -12,7 +12,7 @@ title: Nicola Greco
   <ul class="content">
     {% for post in site.posts %}
       <li class="listing">
-      	<a href="{{ post.url }}"><h4 class="contrast">{{ post.title }}</h4></a>
+      	<a href="{{base }}{{ post.url }}"><h4 class="contrast">{{ post.title }}</h4></a>
       	<span class="smaller">{{ post.date | date: "%B %-d, %Y" }}</span>  <br/>
 		<!-- <div>{{ post.excerpt }}</div> -->
 		
