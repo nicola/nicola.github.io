@@ -3,7 +3,7 @@ layout: page
 title: About me
 ---
 
-Nicola Greco{% marginfigure /assets/img/nicola.jpg 'Photo by [Virginia Alonso](http://virginialonso.com)' %} is a Ph.D. student in the _Decentralized Information Group_ at MIT. He writes and advances research on ways to re-decentralize the web, focusing on technical, political, and social aspects of decentralized systems both at MIT and the Berkman Center for Internet and Society.
+Nicola Greco{% marginfigure ./assets/img/nicola.jpg 'Photo by [Virginia Alonso](http://virginialonso.com)' %} is a Ph.D. student in the _Decentralized Information Group_ at MIT. He writes and advances research on ways to re-decentralize the web, focusing on technical, political, and social aspects of decentralized systems both at MIT and the Berkman Center for Internet and Society.
 
 He started writing code when he was very young. He was __14__ when he started the petition _“Linux in Italian Schools”_, converting schools to use Open Source Software; __16__, when he started the _BuddyPress’ developers community_ - an open source platform for federated social networks; __17__, when he made one of the first unofficial Twitter buttons (two years before they came out); __18__, he wrote software for Social Network analysis used by Telecom Italia that awarded him two research grants. The latter was key for his exposure; all of a sudden he was traveling around Europe, gave a *TEDx* and appeared *Italian Wired Top 10 under 25*. He left his undergraduate college one year before graduation to join MIT.
 
