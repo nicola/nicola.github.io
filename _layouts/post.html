@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% include base.html %}
 
 <h1>{{ page.title }}</h1>
 <p>{{ page.date | date: "%B %-d, %Y" }}</p>
@@ -10,7 +11,7 @@ layout: default
 
 
 <p class="">
-  - <a href="/about">Nicola Greco</a>,<br>
+  - <a href="{{base}}/about">Nicola Greco</a>,<br>
   <em>Keep on rocking the decentralized web</em>
 </p>
 
@@ -19,7 +20,7 @@ layout: default
 
 {% for post in site.posts | limit:3 %} <!-- for1 -->
     <li>
-      <span class="recent-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title | strip_html | strip_newlines }} </a></span>
+      <span class="recent-title"><a href="{{base}}{{ post.url }}" title="{{ post.title }}">{{ post.title | strip_html | strip_newlines }} </a></span>
       <span class="date">{{post.date | date: "%b %d, %Y" }}</span>
     </li>
 {% endfor %}

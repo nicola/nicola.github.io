@@ -1,3 +1,4 @@
+{% include base.html %}
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
 
-  <link rel="stylesheet" href="{{ "./css/tufte.css" | prepend: site.baseurl }}">	
+  <link rel="stylesheet" href="{{ "/css/tufte.css" | prepend: base }}">	
   
 
   <!-- Google Fonts loaded here -->
@@ -19,8 +20,8 @@
   {% endif %}
 
 {% if page.url == "/index.html" %}
-  <script type="text/javascript" src="./assets/js/d3.min.js" charset="utf-8"></script>
-  <script type="text/javascript" src="./assets/js/dataviz.js" charset="utf-8"></script>
+  <script type="text/javascript" src="{{base}}/assets/js/d3.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="{{base}}/assets/js/dataviz.js" charset="utf-8"></script>
 {% endif %}
 
 <meta content="{{ site.title }}" property="og:site_name">
@@ -53,9 +54,9 @@
   <meta content="https://www.facebook.com/nicolagreco" property="article:author">
 {% endif %}
 {% if page.image %}
-  <meta content="./assets/img/{{ page.image }}" property="og:image">
+  <meta content="/assets/img/{{ page.image }}" property="og:image">
 {% else %}
-  <meta content="./assets/img/nicola.jpg" property="og:image">
+  <meta content="/assets/img/nicola.jpg" property="og:image">
 {% endif %}
 {% if page.categories %}
   {% for category in page.categories limit:1 %}
