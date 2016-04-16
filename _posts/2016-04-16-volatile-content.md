@@ -5,7 +5,7 @@ date:   2016-04-16 02:46:04
 categories: Decentralized Web
 ---
 
-_The lie of volatile content on the web (and everything digital)_{% sidenote 2 'tl;dr Technologically, content cannot be permanent, however we can build systems that make permanence more costly or accept that online content is forever permanent' %}
+_The lie of volatile content on the web (and everything digital)_{% sidenote 1 'tl;dr Technologically, content cannot be permanent, however we can build systems that make permanence more costly or accept that online content is forever permanent' %}
 
 The fact that browser does not keep a copy of every page that we visit, it makes the users feel that the digital content can be **volatile**. However, the fact that the browser doesn’t save the pages we visit, it is just a default setting. If browsers would store the surfing history, then they would allow us to see content that before it was deleted or updated. Should we build systems assuming that content can disappear or that it can be permanent?
 
@@ -26,7 +26,8 @@ In this example, some users read some content that others don’t. A blogger wri
 In both cases, the browser saw content that users did not see or cannot see anymore. The content that is now lost, it was once seen by the browser, hence it was never hidden to the user. The user could have promptly decided to “save” the pages of their interest and in this case they would not have missed the content. The authors of this content may rely on the fact that browser’s content is volatile, however this is not a technological guarantee.
 
 ### Future questions
-  ⁃ Would their behavior change if they would know this?
-  ⁃ Do they already know this?
-  ⁃ What if our browser would store every page we visit and track the changes
-  ⁃ Can we then build a web that leaves traces?
+
+- Would their behavior change if they would know this?
+- Do they already know this?
+- What if our browser would store every page we visit and track the changes
+- Can we then build a web that leaves traces?
