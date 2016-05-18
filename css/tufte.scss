@@ -479,7 +479,7 @@ span.newthought {
         page-break-after: avoid;
     }
 
-    body header , body footer {
+    body header , body footer, #disqus_thread, .more {
       display:none;
     }
 }
