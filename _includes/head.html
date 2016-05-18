@@ -20,8 +20,7 @@
   {% if site.data.options.mathjax %}
   <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
   {% endif %}
-
-{% if page.url == "/index.html" %}
+{% if page.url == "/" %}
   <script type="text/javascript" src="{{base}}/assets/js/d3.min.js" charset="utf-8"></script>
   <script type="text/javascript" src="{{base}}/assets/js/dataviz.js" charset="utf-8"></script>
 {% endif %}

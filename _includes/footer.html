@@ -10,13 +10,13 @@
 </div>  
 </footer> -->
 
-{% if page.url == "/index.html" %}
+{% if page.url == "/" %}
 <script type="text/javascript">
 var line, field, flowers, w, h, d, n, dx, color, touching;
 
 color = false;
 w = window.innerWidth * 0.6;
-h = window.innerHeight;
+h = window.innerHeight + window.innerHeight * 0.12;
 d = Math.ceil(h * 0.016);
 n = Math.ceil(w * 0.015);
 dx = Math.min(w / (n + .5), h / (d + .5));
