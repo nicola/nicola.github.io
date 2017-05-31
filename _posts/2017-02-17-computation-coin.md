@@ -31,9 +31,7 @@ Delegate computations by creating bounties
 
 1. `CreateComputation(code, timeout, minReputation)`:
   
-  User writes a computation `code` (following Versum Guidelines)
-At `timeout` time, all the coins in the contract are given to the winning answer.
-In this contract, only miners with minReputation from ReputationContract can participate
+  User writes a computation `code` (following Versum Guidelines). At `timeout` time, all the coins in the contract are given to the winning answer. In this contract, only miners with minReputation from ReputationContract can participate
 2. `FinanceComputation(coins)`:
   
   Any user can put coins into the contract to incentivize Computers to compute!
