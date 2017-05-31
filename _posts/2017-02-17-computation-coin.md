@@ -29,13 +29,13 @@ Delegate computations by creating bounties
 
 ### Protocol 1: ComputationCoin Protocol
 
-- `CreateComputation(code, timeout, minReputation)`:<br>
+1. `CreateComputation(code, timeout, minReputation)`:<br>
   User writes a computation `code` (following Versum Guidelines). At `timeout` time, all the coins in the contract are given to the winning answer. In this contract, only miners with minReputation from ReputationContract can participate
-- `FinanceComputation(coins)`:<br>
+2. `FinanceComputation(coins)`:<br>
   Any user can put coins into the contract to incentivize Computers to compute!
-- `SolveComputation(ans, comm, coins)`:<br>
+3. `SolveComputation(ans, comm, coins)`:<br>
   Computers solve the computation and submit the answers `ans`, a commitment to the computation history `comm`, a collateral `coins` required by the contract, this will be added to the total amount of coins in the contract.
-- `ConfuteAnswer(ans, comm, coins, conflict)`:<br>
+4. `ConfuteAnswer(ans, comm, coins, conflict)`:<br>
   Computers can confute a previous answer by submitting their `ans`, a commitment to their computation history `comm`, a collateral `coins` required by the contract and the part of conflict between their answer and the previous submitter answer. (Note: this function call is only going to be added/processed by having the miners running “conflict”)
 
 ### Protocol 2: ReputationContract Protocol
