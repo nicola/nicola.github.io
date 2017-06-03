@@ -44,11 +44,14 @@ My plan here is to update this blogpost and propose a lot of bad ideas, which I 
 
 ### What to do with these tokens? (crazy ideas starting here)
 
-1. Reputation score
-Organizations that support research could have a reputation score based on how much they have donated to academics (????).
-For example: A company can be a sponsor of the conference only if they have a minimum amount of research coins
-2. Incentivizing Peer-Review
-A peer-to-peer network of peer reviewers can review the papers, and bet whether a paper will be accepted or not (????)
+- **Reputation score**
+
+  Organizations that support research could have a reputation score based on how much they have donated to academics (?).
+
+  For example: A company can be a sponsor of the conference only if they have a minimum amount of research coins
+- **Incentivizing Peer-Review**
+
+  A peer-to-peer network of peer reviewers can review the papers, and bet whether a paper will be accepted or not (?)
 
 ### Questions
 
