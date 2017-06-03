@@ -15,8 +15,6 @@ This is the type of questions that the excellent people at [Protocol Labs Inc.](
 
 Universities are not companies, and it is difficult to fund research from which the outcomes are unknown (or yet to be researched!). Given the incentive power that *tokens* have in these new blockchain-based decentralized systems, I  wonder if we can borrow some ideas from these systems to rethink the way we fund and we run university research labs.
 
---
-
 The above question lead to another question:
 
 > **Can we fund research at MIT by launching an MITCoin?**
