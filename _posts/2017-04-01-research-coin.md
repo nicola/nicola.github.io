@@ -34,13 +34,14 @@ My plan here is to update this blogpost and propose a lot of bad ideas, which I 
 - Incentivize peer-review
 
 ### Assumptions
-- Assumption 1: A research paper is good if it gets in a peer reviewed journal
-- Assumption 2: Peer review is wise and unbiased
+- Assumption 0: There is a set of great peer-reviewed conferences/journal
+- Assumption 1: A research paper is good if it gets reviewed from those
+- Assumption 2: Peer review is always wise and unbiased
 
 ### Idea
-- Oracles: there is a set of well known conferences that is chosen and they are trusted to reveal the published papers (we can just rely on HTTPS)
-- Minting Tokens: If a paper is published in one of these conferences, the paper receives a reward (that can is shared between the authors) (can still be automated)
-- Tokens: tokens can be exchanged and sold by the academics
+- *Oracles*: There is a set of well known conferences that is chosen and they are trusted to reveal the published papers (we can just rely on HTTPS)
+- *Minting Tokens*: If a paper is published in one of these conferences, the paper receives a reward (that can is shared between the authors) (can still be automated)
+- *Tokens*: Tokens can be exchanged and sold by the academics
 
 ### What to do with these tokens? (crazy ideas starting here)
 
@@ -58,9 +59,11 @@ My plan here is to update this blogpost and propose a lot of bad ideas, which I 
 - Are there better uses for the token? (I think the peer review betting idea can be really powerful - although there should be no insider trading!)
 - Are the assumptions correct?
 - Do these ideas distort the way we do research?
-- New ideas:
-  - Can we find a way for researchers to “bet” on their research?
-  - Can we turn the reputation of citations into revenue streams?
+
+I also have other inexplored ideas:
+
+- Can we find a way for researchers to “bet” on their research?
+- Can we turn the reputation of citations into revenue streams?
 
 ### Future directions
 
