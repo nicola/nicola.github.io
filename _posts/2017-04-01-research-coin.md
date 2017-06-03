@@ -9,7 +9,7 @@ categories: Ideas
 
 A few months ago, I started asking myself this question:
 
-> *How can we run a futuristic research lab and fund great research?*
+> **How can we run a futuristic research lab and fund great research?**
 
 This is the type of questions that the excellent people at [Protocol Labs Inc.](https://protocol.ai) are also trying to tackle. Their strategy as a company and as an industry R&D&D lab is to launch token-based network protocols and use the token sales to fund new research.
 
@@ -19,7 +19,7 @@ Universities are not companies, and it is difficult to fund research from which 
 
 The above question lead to another question:
 
-> *Can we fund research at MIT by launching an MITCoin?*
+> **Can we fund research at MIT by launching an MITCoin?**
 
 While I am still trying to answer that question, I have no clear idea about what values an MITCoin could actually bring. Is there a more generic *Research Coin* that can be used to reward great research?
 
@@ -59,8 +59,8 @@ My plan here is to update this blogpost and propose a lot of bad ideas, which I 
 - Are the assumptions correct?
 - Do these ideas distort the way we do research?
 - New ideas:
- - Can we find a way for researchers to “bet” on their research?
- - Can we turn the reputation of citations into revenue streams?
+  - Can we find a way for researchers to “bet” on their research?
+  - Can we turn the reputation of citations into revenue streams?
 
 ### Future directions
 
