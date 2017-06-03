@@ -21,28 +21,28 @@ The above question lead to another question:
 
 > *Can we fund research at MIT by launching an MITCoin?*
 
-While I have an intuition on what that would look like, I have no clear idea - yet! - and I would like to start a conversation so that we can get crazy!
-In the rest of this post, I am describing a more generic idea from *MITCoin* whose aim is to trying to reward great research.
+While I am still trying to answer that question, I have no clear idea about what values an MITCoin could actually bring. Is there a more generic *Research Coin* that can be used to reward great research?
 
-The plan here is to propose a lot of bad ideas, which I don't necessarely endorse, from which hopefully one will be great, or will inspire one of you to contact me! :)
+In the rest of this post, I am describing a sort of proposal for *Research Coin*.
+My plan here is to update this blogpost and propose a lot of bad ideas, which I don't necessarly endorse. Hopefully a great idea will come out of this, if you are interested in the problem or you are running a research lab and want to be part of this conversation, please get in touch with me! :)
 
-# Attempt 1: Research Coin
+## Attempt 1: Research Coin
 
-## Motivation
+### Motivation
 - Reward academics for their good research
 - Finding new funding strategy beyond grants!
 - Incentivize peer-review
 
-## Assumptions
+### Assumptions
 - Assumption 1: A research paper is good if it gets in a peer reviewed journal
 - Assumption 2: Peer review is wise and unbiased
 
-## Idea
+### Idea
 - Oracles: there is a set of well known conferences that is chosen and they are trusted to reveal the published papers (we can just rely on HTTPS)
 - Minting Tokens: If a paper is published in one of these conferences, the paper receives a reward (that can is shared between the authors) (can still be automated)
 - Tokens: tokens can be exchanged and sold by the academics
 
-## What to do with these tokens? (crazy ideas starting here)
+### What to do with these tokens? (crazy ideas starting here)
 
 1. Reputation score
 Organizations that support research could have a reputation score based on how much they have donated to academics (????).
@@ -50,7 +50,7 @@ For example: A company can be a sponsor of the conference only if they have a mi
 2. Incentivizing Peer-Review
 A peer-to-peer network of peer reviewers can review the papers, and bet whether a paper will be accepted or not (????)
 
-## Questions
+### Questions
 
 - Are there better uses for the token? (I think the peer review betting idea can be really powerful - although there should be no insider trading!)
 - Are the assumptions correct?
@@ -59,7 +59,7 @@ A peer-to-peer network of peer reviewers can review the papers, and bet whether 
  - Can we find a way for researchers to “bet” on their research?
  - Can we turn the reputation of citations into revenue streams?
 
-## Future directions
+### Future directions
 
 I am struggling to see why Attempt 1 can really work, and I scared it might incentivize new types of behaviour (corrupted peer reviewers!) or even disagreement on who decides, who is in the "closed" circle of conferences and journals.
 
