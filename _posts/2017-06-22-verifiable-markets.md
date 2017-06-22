@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Verifiable Markets on the blockchain"
-date:   2017-06-22 13:06:04
+date:   2017-06-21 13:06:04
 categories: Ideas
 ---
 
