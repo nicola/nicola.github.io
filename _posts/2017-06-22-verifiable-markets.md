@@ -21,3 +21,6 @@ It is important to note that:
 The reason why I find this direction of work really exciting, is that we can now create new (verifiable market) protocols that connect demand and offer of a specific good/service in a verifiable and decentralised way.
 
 There are a lot of Verifiable Markets that I look forward to see. An example is energy: if we can prove that electricity has been moved from a place to another, then we can have a decentralised energy market (and many others)
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">1/ (Verifiable) Market Protocols will be another killer app of blockchain.</p>&mdash; Nicola Greco (@nicolagreco) <a href="https://twitter.com/nicolagreco/status/877470925402386432">June 21, 2017</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
