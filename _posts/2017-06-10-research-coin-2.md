@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Idea: Research Coin, second attempt"
-date:   2017-04-01 13:06:04
+date:   2017-06-10 13:06:04
 categories: Ideas
 ---
 
