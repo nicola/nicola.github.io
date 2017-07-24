@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Before Tokens"
-date:   2017-06-21 13:06:04
+date:   2017-07-24 13:06:04
 categories: Ideas
 ---
 
