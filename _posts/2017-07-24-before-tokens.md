@@ -5,7 +5,11 @@ date:   2017-06-21 13:06:04
 categories: Ideas
 ---
 
-From January, [due](https://filecoin.io) [to](https://internetpolicy.mit.edu/team/nicola-greco-2/) [different](http://dci.mit.edu/people.html) [reasons](http://nicola.io/computation-coin/2017) I had the incredible occasion to brainstorm and collaborate with some very great minds in the blockchain space. A recurring question was: "How can we build a new cryptocurrency that offers a service?". This gave me a lot to think about: [decentralized file storage](https://filecoin.io), [distributed computation](http://nicola.io/computation-coin/2017) and more generically [verifiable markets](http://nicola.io/verifiable-markets/2017). During the past 6 months, the word **token** was all over the place; as the months passed different groups worked on many of the ideas/implementations that others and I discussed - what of an exciting time to live in.
+From January, [due](https://filecoin.io) [to](https://internetpolicy.mit.edu/team/nicola-greco-2/) [different](http://dci.mit.edu/people.html) [reasons](http://nicola.io/computation-coin/2017) I had the incredible occasion to brainstorm and collaborate with some very great minds in the blockchain space. 
+
+A recurring question was: "*How can we build a new cryptocurrency that offers a service?*". This gave me a lot to think about: [decentralized file storage](https://filecoin.io), [distributed computation](http://nicola.io/computation-coin/2017) and more generically [verifiable markets](http://nicola.io/verifiable-markets/2017).
+
+During the past 6 months, the word **token** was all over the place; as the months passed different groups worked on many of the ideas/implementations that others and I discussed - what of an exciting time to live in.
 
 In this blogpost, I am leaving some of my notes taken during the month of January.
 
@@ -17,9 +21,9 @@ During this month I collected the following notes on: "How to create new tokens?
 
 ### Jan 2017
 
-In my notes (sparse in github issues) I was writing the following categorizations, calling them "Metacoins". Whether they are of any help today, I am not sure; friends and I found this categorization really helpful back then:
+In my notes (sparse in github issues) I was writing the following categorizations, calling them "**Metacoins**". Whether they are of any help today, I am not sure; friends and I found this categorization really helpful back then:
 
- Note: off-chain, in-chain is relative to ethereum
+ Note: off-chain, in-chain is relative to Ethereum:
 
 - **In-chain Coin (or *Contract Coin*)**
   - **consensus**: Ethereum nodes agree on new blocks

@@ -233,7 +233,7 @@ p, li{
 // Necessary to specify that any list within an article is the same width as
 // the paragraphs
 
-p, article  ul li, pre code, pre code p, code{
+p, article > ul, pre code, pre code p, code{
   width: 60%;
 }
 
