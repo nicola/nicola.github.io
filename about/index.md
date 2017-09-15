@@ -3,15 +3,16 @@ layout: page
 title: About me
 ---
 
-Nicola Greco{% marginfigure ../assets/img/nicola.jpg 'Photo by [Virginia Alonso](http://virginialonso.com)' %} is a Ph.D. student in the _Decentralized Information Group_ at MIT. He writes and advances research on ways to re-decentralize the web, focusing on technical, political, and social aspects of decentralized systems both at MIT and the Berkman Center for Internet and Society.
+Nicola Greco{% marginfigure ../assets/img/nicola.jpg 'Photo by [Virginia Alonso](http://virginialonso.com)' %} is a Ph.D. student in the _Decentralized Information Group_ at MIT. He writes and advances research on ways to re-decentralize the web, focusing on technical, political, and social aspects of decentralized systems both at MIT and the Berkman-Klein Center for Internet and Society.
 
-He started writing code when he was very young. He was __14__ when he started the petition _“Linux in Italian Schools”_, converting schools to use Open Source Software; __16__, when he started the _BuddyPress’ developers community_ - an open source platform for federated social networks; __17__, when he made one of the first unofficial Twitter buttons (two years before they came out); __18__, he wrote software for Social Network analysis used by Telecom Italia that awarded him two research grants. The latter was key for his exposure; all of a sudden he was traveling around Europe, gave a *TEDx* and appeared *Italian Wired Top 10 under 25*. He left his undergraduate college one year before graduation to join MIT.
+He started writing code when he was very young. He was __14__ when he started the petition _“Linux in Italian Schools”_, converting schools to use Open Source Software; __16__, when he started the _BuddyPress’ developers community_ - an open source platform for federated social networks; __17__, when he made one of the first unofficial Twitter buttons (two years before they came out); __18__, he wrote software for Social Network analysis used by Telecom Italia that awarded him two research grants. The latter was key for his exposure; all of a sudden he was traveling around Europe, gave a *TEDx* and appeared *Italian Wired Top 10 under 25*. At __21__ left his undergraduate college one year before graduation to join MIT determined to work on re-decentralizing the Web after his experience in Mozilla.
 
-He is now __22__ and determined to work on re-decentralizing the Web - probably influenced by working at Mozilla and as a reaction to writing software for tracking people on social media.
+At __23__ he participated in the design of Filecoin, which raised over 200M dollars. He is interested in designing and building decentralized infrastructure.
 
 ## Publications
 
-- Smith, E., Greco, N., Bosnjak, M., Vlachos, A. A Strong Lexical Matching Method for the Machine Comprehension Test. Conference on Empirical Methods in Natural Language Processing 2015. 
+- Smith, E., Greco, N., Bosnjak, M., Vlachos, A. A Strong Lexical Matching Method for the Machine Comprehension Test. Conference on Empirical Methods in Natural Language Processing 2015.
+- Benet, J., Greco, N. Filecoin: A Decentralized Storage Network (whitepaper). 2017.
 
 ## Events and Conferences
 
