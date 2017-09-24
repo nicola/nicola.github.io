@@ -1,0 +1,178 @@
+html, body {
+  height:100%;
+  padding: 0px;
+  margin: 0px 0px 0px 1px;
+}
+
+@font-face {
+  font-family: ETBembo;
+  src: url("http://nicola.io/fonts/ETBembo-RomanLF.ttf"); }
+
+
+body {
+    background-image: url(/assets/img/nicolacard.png), linear-gradient(to bottom, #021e42 0%,#0d426b 93.5%,#F8F8F6 0%,#f8f8f6 100%);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-attachment: fixed;
+    background-color: #f8f8f6;
+    font-family: ETBembo;
+}
+
+#dialog {
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  color: #fff;
+}
+
+#hey {
+  font-weight: bold;
+  font-size: 5em;
+  font-family: Helvetica;
+}
+
+#i {
+  font-size: 2em;
+  margin-top: 75px;
+  /*font-family: Helvetica;*/
+}
+#p1 {
+  height: 1px;
+}
+
+#p2 {
+  margin-top: 90px;
+  font-family: ETBembo;
+  width: 80%;
+}
+
+a {
+  color: #0099FF;
+  text-decoration: none;
+  font-weight: bold;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+#links {
+  /*position: absolute;
+  bottom: 0px;*/
+}
+
+#links ul a {
+  color: #e9c72f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#links ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  display: inline;
+  margin-left: 30px;
+}
+
+#links li {
+    display: inline;
+    padding-right: 30px;
+}
+
+.small {
+    font-size: 20px;
+}
+#button {
+  font-size: 20px;
+  border: 1px solid #ffffff;
+  padding: 15px 20px;
+  border-radius: 999px;
+  color: #fff;
+}
+#button:hover {
+  text-decoration: none !important;
+  background: #e9c72f;
+  color: #fff;
+}
+
+
+@media screen and (max-width: 1130px) {
+    body {
+        background-size: 50% auto, 100%;
+        background-color: #0d426b;
+        background-position: bottom left;
+    }
+}
+
+@media screen and (width: 1366px) and (height: 1024px) {
+    body {
+        background-size: 50% auto, 100%;
+        background-color: #0d426b;
+        background-position: bottom left;
+    }
+}
+@media screen and (height: 1366px) and (width: 1024px) {
+  #dialog {
+    left: 20%;
+  }
+}
+
+@media screen and (max-width: 844px) {
+    #hey {
+      font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 750px) {
+  #links ul {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-position: bottom center;
+  }
+  #dialog {
+    position: relative;
+    left: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  #p1 {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 640px) {
+  #hey {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-height: 535px) {
+  #p1 {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 440px) {
+  #hey {
+    font-size: 2em;
+  }
+  #i, #p2 {
+    margin-top: 0px;
+  }
+}
+
+@media screen and (width: 568px) and (height: 320px) {
+  body {
+    background-position: right;
+  }
+  #p2 {
+    width: 60%
+  }
+}
