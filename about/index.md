@@ -12,11 +12,11 @@ He started writing code when he was very young. He was __14__ when he started th
 At __23__ he participated in the design of Filecoin, which raised over 200M dollars. He is interested in designing and building decentralized infrastructure.
 
 ## Publications
-{% marginfigure ../assets/img/nicola-avatar-2019.jpg '2019 by [Virginia Alonso](http://virginialonso.com)' %}
-{% marginfigure ../assets/img/nicola-avatar-2018.jpg '2018 by [Virginia Alonso](http://virginialonso.com)' %}
-{% marginfigure ../assets/img/nicola-avatar-2017.jpg '2017 by [Virginia Alonso](http://virginialonso.com)' %}
-{% marginfigure ../assets/img/nicola-avatar-2015.jpg '2015 by [Nicola](http://nicola.io)' %}
-{% marginfigure ../assets/img/nicola-avatar-2014.jpg '2014 by [Virginia Alonso](http://virginialonso.com)' %}
+{% marginfigure ../assets/img/avatar-2019.jpg '2019 by [Virginia Alonso](http://virginialonso.com)' %}
+{% marginfigure ../assets/img/avatar-2018.jpg '2018 by [Virginia Alonso](http://virginialonso.com)' %}
+{% marginfigure ../assets/img/avatar-2017.jpg '2017 by [Virginia Alonso](http://virginialonso.com)' %}
+{% marginfigure ../assets/img/avatar-2015.jpg '2015 by [Nicola](http://nicola.io)' %}
+{% marginfigure ../assets/img/avatar-2014.jpg '2014 by [Virginia Alonso](http://virginialonso.com)' %}
 
 - Smith, E., Greco, N., Bosnjak, M., Vlachos, A. A Strong Lexical Matching Method for the Machine Comprehension Test. Conference on Empirical Methods in Natural Language Processing 2015.
 - Benet, J., Greco, N. Filecoin: A Decentralized Storage Network (whitepaper). 2017.
