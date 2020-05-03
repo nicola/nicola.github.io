@@ -12,14 +12,17 @@ He started writing code when he was very young. He was __14__ when he started th
 At __23__ he participated in the design of Filecoin, which raised over 200M dollars. He is interested in designing and building decentralized infrastructure.
 
 ## Publications
+{% marginfigure ../assets/img/avatar-2020.png '2020 by [Virginia Alonso](http://virginialonso.com)' %}
 {% marginfigure ../assets/img/avatar-2019.png '2019 by [Virginia Alonso](http://virginialonso.com)' %}
 {% marginfigure ../assets/img/avatar-2018.jpg '2018 by [Virginia Alonso](http://virginialonso.com)' %}
 {% marginfigure ../assets/img/avatar-2017.jpg '2017 by [Virginia Alonso](http://virginialonso.com)' %}
 {% marginfigure ../assets/img/avatar-2015.jpg '2015 by [Nicola](http://nicola.io)' %}
 {% marginfigure ../assets/img/avatar-2014.jpg '2014 by [Virginia Alonso](http://virginialonso.com)' %}
 
-- Smith, E., Greco, N., Bosnjak, M., Vlachos, A. A Strong Lexical Matching Method for the Machine Comprehension Test. Conference on Empirical Methods in Natural Language Processing 2015.
+- Boneh, D., Eskandarian, S., Hanzlik L., Greco, N. Single Secret Leader Election (eprint). 2020.
+- Campanelli, M., Fiore, D., Greco, N. Kolonelos, D., Nizzardo, L. Vector Commitment Techniques and Applications to Verifiable Decentralized Storage  (eprint). 2020.
 - Benet, J., Greco, N. Filecoin: A Decentralized Storage Network (whitepaper). 2017.
+- Smith, E., Greco, N., Bosnjak, M., Vlachos, A. A Strong Lexical Matching Method for the Machine Comprehension Test. Conference on Empirical Methods in Natural Language Processing 2015.
 
 ## Events and Conferences
 
