@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Nicola Greco
+title: Nicola
 ---
   {% include base.html %}
   <p>This blog is a collection of essays, ideas and life updates.</p>

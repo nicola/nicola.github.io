@@ -1,9 +1,9 @@
 baseurl: 
-title: Nicola Greco | Blog
+title: Nicola | Blog
 subtitle: Collection of essays ideas and life updates.
-author: Nicola Greco
+author: Nicola 
 simple_search: http://google.com/search
-description: The personal blog of Nicola Greco
+description: The personal blog of Nicola 
 name: nicola
 markdown: Kramdown
 kramdown:  
