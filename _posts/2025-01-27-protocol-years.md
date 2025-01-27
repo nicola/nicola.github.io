@@ -11,16 +11,19 @@ categories: Work
 > My main drive has always been to design a decentralized web infra - I was doing this at MIT and I left my PhD midway to join Juan and the early team - they were doing it for real - here I found many people that shared that same drive, many of us still do today. For all these years, Protocol Labs has been a place for visionary breakthrough innovation, which I had the possibility to help shape and look forward to its next iteration.
 >
 > For everyone at PL:
+>
 > My words won’t be enough to thank everyone for the wonderful rollercoaster dream-like adventure life changing experience that Protocol Labs has been. I am deeply grateful. Thank you!
 >
 > For the people that worked directly with me:
+>
 > Throughout the years I built many versions of the same team, an open distributed research lab (Filecoin Research -> Red Team -> CryptoLab -> CryptoNet). To you, I say: thank you for your trust in working with me for many years of your life and to share the vision of our research lab - my personal goal was to create teams that could do repeatable innovation, deploy real world cryptography safely, attract unique talent and be a point of reference in the ecosystem - you made this happen. Thank you!
 >
 > Finally deep thank you to Juan for believing in me at the beginning of this adventure.
 >
 > I look forward to all the future of Protocol Labs and the new teams forming.
+>
+> -- Nicola
 
----
 
 The year 2024 ends my Protocol years.
 

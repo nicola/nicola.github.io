@@ -599,3 +599,9 @@ article ul li.listing {
 article > ul > li > ul li {
     margin-left: 20px;
 }
+
+blockquote {
+  border-left: 4px solid var(--fbc-secondary-text);
+  color: var(--fbc-secondary-text);
+  padding-left: 4%;
+}
