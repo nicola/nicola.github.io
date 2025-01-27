@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  
+
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Your browser saw what you did not</title>
+  <meta name="description" content="The lie of volatile content on the web (and everything digital)11 tl;dr Technologically, content cannot be permanent, however we can build systems that make ...">
+
+  <link rel="me" href="https://twitter.com/nicolagreco" />
+  <link rel="me" href="https://github.com/nicola" />
+  <link rel="me" href="https://facebook.com/nicolagreco" />
+
+  <link rel="stylesheet" href="../../css/tufte.css">	
+  
+  <!-- Google Fonts loaded here -->
+  <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+<meta content="Nicola | Blog" property="og:site_name">
+
+  <meta content="Your browser saw what you did not" property="og:title">
+
+
+
+  <meta content="article" property="og:type">
+
+
+<!-- 
+  <meta content="The personal blog of Nicola" property="og:description">
+
+ -->
+
+
+
+  <meta content="../../volatile-content/2016" property="og:url">
+
+
+
+  <meta content="2016-04-16T02:46:04+00:00" property="article:published_time">
+  <meta content="https://www.facebook.com/nicolagreco" property="article:author">
+
+
+  <meta content="../../assets/img/nicola.jpg" property="og:image">
+
+
+  
+  <meta content="Decentralized" property="article:section">
+  
+
+
+  
+
+
+
+  <link rel="canonical" href="/volatile-content/2016">
+  <link rel="alternate" type="application/rss+xml" title="Nicola | Blog" href="/feed.xml" />
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+
+
+
+
+<header>
+  <nav class="group">
+    <a href="../../blog">Home</a>
+    <a href="../../about">About me</a>
+    <a href="../../art">Art</a>
+  </nav>
+  <div class="">
+    <p><a href="../../" rel="me">Nicola Greco</a></p>
+    <p>I am working to re-decentralize the web<span class="sidenote">Read more about my work <a href="../../about">here</a></span>. I am a researcher at <a href="https://nicola.io">Protocol Labs</a>. PhD student (on leave) at <a href="http://mit.edu">MIT</a> advised by <a href="https://www.w3.org/People/Berners-Lee/">Tim Berners-Lee</a> and friend at <a href="http://berkmancenter.org">Berkman Center</a>. Once an entrepreneur, a <a href="http://ucl.ac.uk">UCL</a> student, a <a href="http://mozilla.org">Mozillian</a>.</p>
+  </div>
+
+</header>
+    <article>
+      <h1>Your browser saw what you did not</h1>
+<p>April 16, 2016</p>
+
+
+<p><em>The lie of volatile content on the web (and everything digital)</em><sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> tl;dr Technologically, content cannot be permanent, however we can build systems that make permanence more costly or accept that online content is forever permanent</span></p>
+
+<p>The fact that browser does not keep a copy of every page that we visit, it makes the users feel that the digital content can be <strong>volatile</strong>. However, the fact that the browser doesn’t save the pages we visit, it is just a default setting. If browsers would store the surfing history, then they would allow us to see content that before it was deleted or updated. Should we build systems assuming that content can disappear or that it can be permanent?</p>
+
+<h3 id="content-is-volatile">Content is volatile</h3>
+<p>When surfing the web we consume the content we are navigating and we throw it away as soon as we close a browser tab. If we want to go back and see the web page again, we are not guaranteed to see the same content.</p>
+
+<p>Since the browser does not store the page on our machines by default, it is not easy for the users to store every page they visit: the user must press a combination of keys to save the page, or install a particular plugin, in other words, it requires effort. Because of this browser decision when users create content online, update it or even delete it after a while. Although some people could have seen it, their browser did not store the content, so this piece of information is somehow lost, it cannot be retrieved.</p>
+
+<p>Of course, the above does not give any guarantee to the author that his content was not “saved” - either stored digitally or remembered by their users). However, in many of the cases, it is not practical for the user to “save” the content. In other words, the volatility of content on the web gives online authors the privilege of making their content, or parts of it, really disappear.</p>
+
+<h5 id="example-in-messaging-applications">Example in messaging applications</h5>
+<p>In this example, browsers read the content that users don’t. Alice writes a very long message to Bob. Just after, Alice decides that she wants to delete the message, Bob will not have enough time to read the entire message (although his browser did read the entire message!). Now, Alice is highly confident that Bob did not read the entire message.</p>
+
+<h5 id="example-in-online-blogging">Example in online blogging</h5>
+<p>In this example, some users read some content that others don’t. A blogger writes a grammatical mistake on his blogpost, some readers notice it, the blogger changes the content again and future users will not notice the mistake. Also, previous readers that did not notice the error, when they go back to check the presence of this error cannot find it anymore.</p>
+
+<h3 id="is-the-content-really-volatile">Is the content really volatile?</h3>
+<p>In both cases, the browser saw content that users did not see or cannot see anymore. The content that is now lost, it was once seen by the browser, hence it was never hidden to the user. The user could have promptly decided to “save” the pages of their interest and in this case they would not have missed the content. The authors of this content may rely on the fact that browser’s content is volatile, however this is not a technological guarantee.</p>
+
+<h3 id="future-questions">Future questions</h3>
+
+<ul>
+  <li>Would their behavior change if they would know this?</li>
+  <li>Do they already know this?</li>
+  <li>What if our browser would store every page we visit and track the changes</li>
+  <li>Can we then build a web that leaves traces?</li>
+</ul>
+
+
+
+<p class="">
+  - <a href="/about">Nicola Greco</a>,<br>
+  <em>Keep on rocking the decentralized web</em>
+</p>
+
+<div class="more">
+<h4>Thanks for reading</h4>
+
+ <!-- for1 -->
+    <li>
+      <span class="recent-title"><a href="/protocol-years/2024" title="Protocol Years">Protocol Years </a></span>
+      <span class="date">Apr 24, 2024</span>
+    </li>
+ <!-- for1 -->
+    <li>
+      <span class="recent-title"><a href="/before-tokens/2017" title="Before Tokens">Before Tokens </a></span>
+      <span class="date">Jul 24, 2017</span>
+    </li>
+ <!-- for1 -->
+    <li>
+      <span class="recent-title"><a href="/verifiable-markets/2017" title="Verifiable Markets on the blockchain">Verifiable Markets on the blockchain </a></span>
+      <span class="date">Jun 21, 2017</span>
+    </li>
+
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'nicolaio';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </article>
+    <span class="print-footer">Your browser saw what you did not - April 16, 2016 - Nicola</span>
+    <!-- <footer class="desc">
+  <span>You can contact me via
+    <a href="mailto:me (at) nicola (dot) io">Email</a>
+    
+      , <a href="//www.twitter.com/nicolagreco">Twitter</a>
+    
+      , <a href="//github.com/nicola">Github</a>
+    
+      , <a href="/feed">Feed</a>
+    </span>
+<div class="credits">
+<span>&copy; 2025 &nbsp;&nbsp;NICOLA</span></br> 
+<span>Using <a href="//jekyllrb.com">Jekyll</a>, theme based on <a href="//github.com/clayh53/tufte-jekyll">Tufte</a>.</span> 
+</div>  
+</footer> -->
+
+
+  </body>
+</html>
