@@ -20,6 +20,8 @@ categories: Work
 >
 > I look forward to all the future of Protocol Labs and the new teams forming.
 
+---
+
 The year 2024 ends my Protocol years.
 
 The past seven years on this blog have been silent. I truly have dedicated most of my adult life in building decentralized systems, surrounded by incredible talent while at Protocol Labs. Months have passed, but I have yet to digest what an incredible ride it has been - mostly because I have been around in a way or another in the new Protocol Labs "network" ecosystem.
