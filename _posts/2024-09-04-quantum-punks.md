@@ -26,9 +26,7 @@ We wrote this short doc to create awareness of what is possible and to gather li
 
 About 25 years before Nakamoto published the Bitcoin paper, quantum researcher Wiesner published the notion of Quantum Money.
 
-Quantum Money is digital currency without consensus, ledgers or blockchains. It's digital cash with physical properties.
-
-In Quantum Money, tokens are encoded in quantum states which can be transferred over the internet (e.g. via fiber optics). Due to the no-cloning theorem, quantum money can't be cloned and they can only be sent once.
+Quantum Money is digital currency without consensus, ledgers or blockchains. It's digital cash with physical properties. Tokens are encoded in quantum states which can be transferred over the internet (e.g. via fiber optics). Due to the no-cloning theorem, quantum money can't be cloned and they can only be sent once.
 
 Double spending solved.
 
