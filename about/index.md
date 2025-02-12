@@ -5,7 +5,7 @@ title: About me
 
 Nicola Greco
 {% marginfigure ../assets/img/nicola.jpg 'Photo by [Virginia Alonso](http://virginialonso.com)' %}
-is an academic entrepreneur working on decentralized systems. He led the protocol design and cryptography research team at Protocol Labs. Previously he was a fellow at the Harvard Berkman-Klein Center for Internet and Society and a PhD student at MIT.
+is an academic entrepreneur working on decentralized systems. He led the protocol design and cryptography research team at *Protocol Labs*. Previously he was a fellow at the *Harvard Berkman-Klein Center for Internet and Society* and a PhD student at *MIT*.
 
 He started writing code when he was very young. He was __14__ when he started the petition _“Linux in Italian Schools”_, converting schools to use Open Source Software; __16__, started the _BuddyPress’ developers community_, an open source platform for federated social networks; __18__, wrote software for Social Network analysis used by Telecom Italia that awarded him two research grants, for which he gave a *TEDx* and appeared *Italian Wired Top 10 under 25*; __21__, left his undergraduate program at UCL a year before graduation to join MIT as a PhD student to work on re-decentralizing the Web with Sir Tim Berners-Lee and to join the Harvard Berkman-Klein Center for Internet and Society as a fellow; __23__, left MIT to join Protocol Labs for over 8 years to run the applied cryptography research team, participating in the design of several decentralized protocols widely used today (IPFS, Filecoin, DRAND, SNARK improvements); __25__, started [deepcrypto.xyz](https://deepcrypto.xyz), an investment vehicle for early stage cryptography companies.
 
