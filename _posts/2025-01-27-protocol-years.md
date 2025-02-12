@@ -27,8 +27,8 @@ categories: Work
 
 The year 2024 ends my Protocol years.
 
-The past seven years on this blog have been silent. I truly have dedicated most of my adult life in building decentralized systems, surrounded by incredible talent while at Protocol Labs. Months have passed, but I have yet to digest what an incredible ride it has been - mostly because I have been around in a way or another in the new Protocol Labs "network" ecosystem.
+The past seven years on this blog have been silent. I truly have dedicated most of my adult life in building decentralized systems, surrounded by incredible talent while at Protocol Labs. Months have passed, but I have yet to digest what an incredible ride it has been.
 
 Protocol Labs was more than a company to me, it was a way to express myself on what I believe in, what I want to build and how I want to work. We invented many things, operated in a truly non-standard way, contributed to pushing humanity forward and pushing the frontier of research. In particular with my team at [CryptoNet](https://cryptonet.org), we built an open distributed research lab, with 50+ collaborators, tens of published papers, many protocol improvements used by thousands of users.
 
-I look forward to the future of Protocol Labs in their next iteration.
+I look forward to the future of Protocol Labs in their next iteration as I will continue to be around this new Protocol Labs "network".
