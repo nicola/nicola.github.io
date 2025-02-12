@@ -5,11 +5,13 @@ title: About me
 
 Nicola Greco
 {% marginfigure ../assets/img/nicola.jpg 'Photo by [Virginia Alonso](http://virginialonso.com)' %}
-is a Ph.D. student in the _Decentralized Information Group_ at MIT. He writes and advances research on ways to re-decentralize the web, focusing on technical, political, and social aspects of decentralized systems both at MIT and the Berkman-Klein Center for Internet and Society.
+is an academic entrepreneur working on decentralized systems. He led the protocol design and cryptography research team at Protocol Labs. Previously he was a fellow at the Harvard Berkman-Klein Center for Internet and Society and a PhD student at MIT.
 
-He started writing code when he was very young. He was __14__ when he started the petition _“Linux in Italian Schools”_, converting schools to use Open Source Software; __16__, when he started the _BuddyPress’ developers community_ - an open source platform for federated social networks; __17__, when he made one of the first unofficial Twitter buttons (two years before they came out); __18__, he wrote software for Social Network analysis used by Telecom Italia that awarded him two research grants. The latter was key for his exposure; all of a sudden he was traveling around Europe, gave a *TEDx* and appeared *Italian Wired Top 10 under 25*. At __21__ left his undergraduate college one year before graduation to join MIT determined to work on re-decentralizing the Web after his experience in Mozilla.
+He started writing code when he was very young. He was __14__ when he started the petition _“Linux in Italian Schools”_, converting schools to use Open Source Software; __16__, when he started the _BuddyPress’ developers community_ - an open source platform for federated social networks; __18__, he wrote software for Social Network analysis used by Telecom Italia that awarded him two research grants, for which he gave a *TEDx* and appeared *Italian Wired Top 10 under 25*. At __21__ left his undergraduate program at UCL a year before graduation to join MIT determined to work on re-decentralizing the Web with Sir Tim Berners-Lee and to become a fellow at the Harvard Berkman-Klein Center for Internet and Society.
 
-At __23__ he participated in the design of Filecoin. He is interested in designing and building decentralized infrastructure.
+At __23__ he joined Protocol Labs, participating in the design of many decentralized protocols widely used today (IPFS, Filecoin, improvement to SNARKs, DRAND) and run the cryptography research and protocol development team called [CryptoNet](https://cryptonet.org).
+
+At __30__ he started [Public Good Crypto](https://publicgoodcrypto.org), a research grant organization that supports early stage research in cryptography and decentralized systems and started a new movement to make quantum technology practical called [Quantum Punks](https://quantumpunks.org).
 
 ## Publications
 {% marginfigure ../assets/img/avatar-2020.jpg '2020 by [Virginia Alonso](http://virginialonso.com)' %}
