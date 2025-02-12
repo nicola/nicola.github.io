@@ -1,30 +1,617 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <title>Nicola | Blog</title>
+    <description>The personal blog of Nicola</description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 12 Feb 2025 11:10:33 +0000</pubDate>
+    <lastBuildDate>Wed, 12 Feb 2025 11:10:33 +0000</lastBuildDate>
+    <generator>Jekyll v4.4.0</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>Introducing Quantum Punks</title>
+        <description>&lt;p&gt;Over the years, I met quantum people that had no idea about crypto and viceversa.&lt;/p&gt;
+
+&lt;p&gt;However, I also met people that are in the perfect intersection.&lt;/p&gt;
+
+&lt;p&gt;Finally, Alex Obadia and I decided to call them Quantum Punks and wrote a short manifesto: &lt;a href=&quot;https://quantumpunks.org&quot;&gt;Quantum Punks Manifesto&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;thesis&quot;&gt;Thesis&lt;/h3&gt;
+
+&lt;p&gt;Our main thesis is that a small yet growing field called Quantum Cryptography can:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Lead to new cryptographic protocols that we could not build with classical cryptography&lt;/li&gt;
+  &lt;li&gt;Be accelerationist for the broader quantum industry&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Even more so, a small movement of people beyond us, believes that there could be more cypherpunk applications of quantum technology that we have yet to discover.&lt;/p&gt;
+
+&lt;p&gt;We wrote this short doc to create awareness of what is possible and to gather like-minded people to build this future.&lt;/p&gt;
+
+&lt;h3 id=&quot;example-of-quantum-crypto&quot;&gt;Example of Quantum Crypto&lt;/h3&gt;
+
+&lt;p&gt;About 25 years before Nakamoto published the Bitcoin paper, quantum researcher Wiesner published the notion of Quantum Money.&lt;/p&gt;
+
+&lt;p&gt;Quantum Money is digital currency without consensus, ledgers or blockchains. It’s digital cash with physical properties. Tokens are encoded in quantum states which can be transferred over the internet (e.g. via fiber optics). Due to the no-cloning theorem, quantum money can’t be cloned and they can only be sent once.&lt;/p&gt;
+
+&lt;p&gt;Double spending solved.&lt;/p&gt;
+
+&lt;p&gt;Yet, we don’t have hardware to make this practical.&lt;/p&gt;
+
+&lt;p&gt;However, we do have hardware for making other cryptography practical (e.g. Quantum Key Distribution) - our bet is that we have hardware for even more than QKD.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 04 Sep 2024 13:06:00 +0000</pubDate>
+        <link>/quantum-punks/2024</link>
+        <guid isPermaLink="true">/quantum-punks/2024</guid>
+        
+        
+        <category>Work</category>
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Protocol Years</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Hey team,&lt;/p&gt;
+
+  &lt;p&gt;I have been at Protocol Labs for 7 years, most part of my adult life. 
+My main drive has always been to design a decentralized web infra - I was doing this at MIT and I left my PhD midway to join Juan and the early team - they were doing it for real - here I found many people that shared that same drive, many of us still do today. For all these years, Protocol Labs has been a place for visionary breakthrough innovation, which I had the possibility to help shape and look forward to its next iteration.&lt;/p&gt;
+
+  &lt;p&gt;For everyone at PL:&lt;/p&gt;
+
+  &lt;p&gt;My words won’t be enough to thank everyone for the wonderful rollercoaster dream-like adventure life changing experience that Protocol Labs has been. I am deeply grateful. Thank you!&lt;/p&gt;
+
+  &lt;p&gt;For the people that worked directly with me:&lt;/p&gt;
+
+  &lt;p&gt;Throughout the years I built many versions of the same team, an open distributed research lab (Filecoin Research -&amp;gt; Red Team -&amp;gt; CryptoLab -&amp;gt; CryptoNet). To you, I say: thank you for your trust in working with me for many years of your life and to share the vision of our research lab - my personal goal was to create teams that could do repeatable innovation, deploy real world cryptography safely, attract unique talent and be a point of reference in the ecosystem - you made this happen. Thank you!&lt;/p&gt;
+
+  &lt;p&gt;Finally deep thank you to Juan for believing in me at the beginning of this adventure.&lt;/p&gt;
+
+  &lt;p&gt;I look forward to all the future of Protocol Labs and the new teams forming.&lt;/p&gt;
+
+  &lt;p&gt;– Nicola&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The year 2024 ends my Protocol years.&lt;/p&gt;
+
+&lt;p&gt;The past seven years on this blog have been silent. I truly have dedicated most of my adult life in building decentralized systems, surrounded by incredible talent while at Protocol Labs. Months have passed, but I have yet to digest what an incredible ride it has been.&lt;/p&gt;
+
+&lt;p&gt;Protocol Labs was more than a company to me, it was a way to express myself on what I believe in, what I want to build and how I want to work. We invented many things, operated in a truly non-standard way, contributed to pushing humanity forward and pushing the frontier of research. In particular with my team at &lt;a href=&quot;https://cryptonet.org&quot;&gt;CryptoNet&lt;/a&gt;, we built an open distributed research lab, with 50+ collaborators, tens of peer-reviewed papers, many protocol improvements used by thousands of users and deployed a lot of new cryptography safely in the real world.&lt;/p&gt;
+
+&lt;p&gt;I look forward to the future of Protocol Labs in their next iteration as I will continue to be around this new Protocol Labs “network”.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 24 Apr 2024 13:06:00 +0000</pubDate>
+        <link>/protocol-years/2024</link>
+        <guid isPermaLink="true">/protocol-years/2024</guid>
+        
+        
+        <category>Work</category>
+        
+      </item>
+    
+      <item>
+        <title>Before Tokens</title>
+        <description>&lt;p&gt;From January, &lt;a href=&quot;https://filecoin.io&quot;&gt;due&lt;/a&gt; &lt;a href=&quot;https://internetpolicy.mit.edu/team/nicola-greco-2/&quot;&gt;to&lt;/a&gt; &lt;a href=&quot;http://dci.mit.edu/people.html&quot;&gt;different&lt;/a&gt; &lt;a href=&quot;http://nicola.io/computation-coin/2017&quot;&gt;reasons&lt;/a&gt; I had the incredible occasion to brainstorm and collaborate with some very great minds in the blockchain space.&lt;/p&gt;
+
+&lt;p&gt;A recurring question was: “&lt;em&gt;How can we build a new cryptocurrency that offers a service?&lt;/em&gt;”. This gave me a lot to think about: &lt;a href=&quot;https://filecoin.io&quot;&gt;decentralized file storage&lt;/a&gt;, &lt;a href=&quot;http://nicola.io/computation-coin/2017&quot;&gt;distributed computation&lt;/a&gt; and more generically &lt;a href=&quot;http://nicola.io/verifiable-markets/2017&quot;&gt;verifiable markets&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;During the past 6 months, the word &lt;strong&gt;token&lt;/strong&gt; was all over the place; as the months passed different groups worked on many of the ideas/implementations that others and I discussed - what of an exciting time to live in.&lt;/p&gt;
+
+&lt;p&gt;In this blogpost, I am leaving some of my notes taken during the month of January.&lt;/p&gt;
+
+&lt;h3 id=&quot;dec-2016&quot;&gt;Dec 2016&lt;/h3&gt;
+
+&lt;p&gt;During my Christmas vacation (Dec 2016) I started reading a &lt;a href=&quot;https://github.com/ethereum/EIPs/issues/20&quot;&gt;Github issue&lt;/a&gt; that was circulating on a few chats/forum. This is the proposal for ERC20 (the proposed standard) for tokens that most (if not all) of the new tokens built on Ethereum are now using. I did not get to understand the details of the ERC20 until a month after. However, the story of tokens goes really much earlier than this, with the idea of Colored Coins.&lt;/p&gt;
+
+&lt;p&gt;During this month I collected the following notes on: “How to create new tokens?” without running your own blockchain.&lt;/p&gt;
+
+&lt;h3 id=&quot;jan-2017&quot;&gt;Jan 2017&lt;/h3&gt;
+
+&lt;p&gt;In my notes (sparse in github issues) I was writing the following categorizations, calling them “&lt;strong&gt;Metacoins&lt;/strong&gt;”. Whether they are of any help today, I am not sure; friends and I found this categorization really helpful back then:&lt;/p&gt;
+
+&lt;p&gt;Note: off-chain, in-chain is relative to Ethereum:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;In-chain Coin (or &lt;em&gt;Contract Coin&lt;/em&gt;)&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;consensus&lt;/strong&gt;: Ethereum nodes agree on new blocks&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;transaction validation&lt;/strong&gt;: Ethereum miners validate transactions of servicecoin during consensus step&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;servicecoin fees/rewards&lt;/strong&gt;: servicecoin miners submit their valid proof of service that can validate by the Ethereum miners.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;needs&lt;/strong&gt;: ethereum to support verification of the proof of service&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Off-chain Coin (or &lt;em&gt;Virtual Coin&lt;/em&gt;)&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;consensus&lt;/strong&gt;: ethereum consensus orders the servicecoin request for payment in the chain&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;transaction validation&lt;/strong&gt;: servicecoin miners read the ethereum chain and filter out transactions that are not necessary&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;servicecoin fees/reward&lt;/strong&gt;: servicecoin miners add proof of service on the chain and consider that in their transaction validation&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;needs&lt;/strong&gt;: a way to do atomic swaps across chains (e.g. spend servicecoin in eth contracts)&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;problems&lt;/strong&gt;:
+        &lt;ul&gt;
+          &lt;li&gt;expensive proofs&lt;/li&gt;
+          &lt;li&gt;clogging the chain&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Hybrid Coin&lt;/strong&gt;:
+    &lt;ul&gt;
+      &lt;li&gt;evaluate ways in which we could use some basic properties of the chain: ordering, hash time lock&lt;/li&gt;
+      &lt;li&gt;evaluate off-chain (log) + backup on ethereum (state) for trade offs with efficient proofs + delegation&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 24 Jul 2017 13:06:04 +0000</pubDate>
+        <link>/before-tokens/2017</link>
+        <guid isPermaLink="true">/before-tokens/2017</guid>
+        
+        
+        <category>Ideas</category>
+        
+      </item>
+    
+      <item>
+        <title>Verifiable Markets on the blockchain</title>
+        <description>&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;1/ (Verifiable) Market Protocols will be another killer app of blockchain.&lt;/p&gt;&amp;mdash; Nicola Greco (@nicolagreco) &lt;a href=&quot;https://twitter.com/nicolagreco/status/877470925402386432&quot;&gt;June 21, 2017&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;I am currently working on something that includes this new notion of &lt;em&gt;Verifiable Markets&lt;/em&gt;. This was output of many conversations with Juan, Matt (from &lt;a href=&quot;https://protocol.ai&quot;&gt;Protocol Labs&lt;/a&gt;), &lt;a href=&quot;http://www.catalini.com/&quot;&gt;Christian Catalini&lt;/a&gt; (from MIT Sloan).&lt;/p&gt;
+
+&lt;p&gt;While I will soon post some more formal work on this, I think it is really important to present some form of understanding behind Verifiable Markets, what they are and why they are important.&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; This post is being taken from my recent series of tweets on &lt;a href=&quot;https://twitter.com/nicolagreco/status/877470925402386432&quot;&gt;Verifiable Markets&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(Verifiable) Market Protocols&lt;/strong&gt; are another killer app for blockchain/decentralized tech. A &lt;em&gt;Market Protocol&lt;/em&gt; models the exchange of a good or a service between a buyer and a seller and it is &lt;em&gt;Verifiable&lt;/em&gt; if the exchange can be publicly verified by both party and any user interested in verifying the exchange.&lt;/p&gt;
+
+&lt;p&gt;It is important to note that:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Fair Exchange&lt;/strong&gt;: The exchange of payment/service only happens if the provider of the service can prove they should be rewarded.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Decentralized Market&lt;/strong&gt;: When built on a public ledger, the market is not operated by a central exchange, but by a network of users.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Proofs&lt;/strong&gt;: As long as one can prove the exchange of a good or the correct execution of a service, then we can have Verifiable Market Protocols. For example, in systems such as Filecoin, we need to prove that storage providers have correctly stored the data via Proofs of Storage.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The reason why I find this direction of work really exciting, is that we can now create new (verifiable market) protocols that connect demand and offer of a specific good/service in a verifiable and decentralised way.&lt;/p&gt;
+
+&lt;p&gt;There are a lot of Verifiable Markets that I look forward to see. An example is energy: if we can prove that electricity has been moved from a place to another, then we can have a decentralised energy market (and many others).&lt;/p&gt;
+</description>
+        <pubDate>Wed, 21 Jun 2017 13:06:04 +0000</pubDate>
+        <link>/verifiable-markets/2017</link>
+        <guid isPermaLink="true">/verifiable-markets/2017</guid>
+        
+        
+        <category>Ideas</category>
+        
+      </item>
+    
+      <item>
+        <title>Idea: Research Coin, second attempt</title>
+        <description>&lt;p&gt;tl;dr&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Each university has 100 tokens and they can sell them at any time&lt;/li&gt;
+  &lt;li&gt;Token holders of a specific university can use these tokens to bet on university paper’s being accepted.&lt;/li&gt;
+  &lt;li&gt;Betting on papers from good university will be a low risk investment that will make the university token go up in price.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The &lt;strong&gt;assumptions&lt;/strong&gt; are the same: there is a trusted oracle which is the conference accepting great papers. The &lt;strong&gt;motivations&lt;/strong&gt; are the same: (1) create new funding for academia, (2) make good research, (3) incentivize peer review.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;:  I actually DON’T like this idea since it optimises for short-term good papers. I think universities should play a longer term than just “have papers accepted”&lt;/p&gt;
+
+&lt;h1 id=&quot;university-coin&quot;&gt;University Coin&lt;/h1&gt;
+
+&lt;p&gt;This idea comes from a midnight conversation with Matt from MIT.
+It’s an improvement (or different attempt) for a &lt;a href=&quot;http://nicola.io/research-coin/2017&quot;&gt;Research Coin&lt;/a&gt; from last time.&lt;/p&gt;
+
+&lt;h2 id=&quot;new-token-model&quot;&gt;New token model&lt;/h2&gt;
+
+&lt;p&gt;Each institution, research lab or group can create an “org”.
+Each &lt;em&gt;org&lt;/em&gt; is assigned 100 org-tokens that are specific to the &lt;em&gt;org&lt;/em&gt;.
+For example, the &lt;em&gt;org&lt;/em&gt; “MIT” will have MITCoin, “Cornell” will have CornellCoin and so on. An &lt;em&gt;org&lt;/em&gt; can decide whether to sell or not their 100 &lt;em&gt;org&lt;/em&gt;-tokens.&lt;/p&gt;
+
+&lt;p&gt;Note: Even a specific lab, can decide to create an &lt;em&gt;org&lt;/em&gt;, for example MIT PDOS can create a PDOS token.&lt;/p&gt;
+
+&lt;h2 id=&quot;betting-system&quot;&gt;Betting system&lt;/h2&gt;
+
+&lt;p&gt;A peer-to-peer network of peer reviewers can review the papers, and bet whether a paper will be accepted or not for a particular conference.
+On the conference deadlines, all the winning reviewers get rewarded.
+This system could re-create interesting behaviors, where peer-reviewers will try to look for great papers that need some more work and give comments to the authors.&lt;/p&gt;
+
+&lt;p&gt;Similarly to Research Coin, anyone can bet on a paper being accepted at a specific conference.
+However, one can bet on a paper by using the &lt;em&gt;org&lt;/em&gt;-token representing the &lt;em&gt;org&lt;/em&gt; used by the researchers.
+In other words, if I want to bet that the MIT paper will be accepted, I must bet tokens from MIT.&lt;/p&gt;
+
+&lt;p&gt;Bets run in rounds, for each conference, owners of tokens can bet org-tokens on papers from a specific org.
+When papers are selected by the conference, all the lost bets are split proportionally (however, I am not sure how, this is actually non-trivial) to the amount they bet.&lt;/p&gt;
+
+&lt;h2 id=&quot;intuitions&quot;&gt;Intuitions&lt;/h2&gt;
+
+&lt;p&gt;The intuition here is that: as universities (and research labs)  do great research, the value of their tokens would, since many would prefer to bet on their research.
+I expect that the token of a very successful university will have a higher price, but bets will have a low risk, hence a lower return.&lt;/p&gt;
+
+&lt;p&gt;I am overall convinced that this is NOT a good idea yet. I am not sure if betting on research paper passing through a conference is the best use of a currency.&lt;/p&gt;
+
+&lt;h2 id=&quot;questions&quot;&gt;Questions&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Would this lead to making great research or would this be optimize for short-term good publishable research?&lt;/li&gt;
+  &lt;li&gt;Can universities do “ICO”s for selling betting credit for their university?&lt;/li&gt;
+  &lt;li&gt;Would this really increase peer-review or there will just be speculation?&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 10 Jun 2017 13:06:04 +0000</pubDate>
+        <link>/research-coin-2/2017</link>
+        <guid isPermaLink="true">/research-coin-2/2017</guid>
+        
+        
+        <category>Ideas</category>
+        
+      </item>
+    
+      <item>
+        <title>Idea: Research Coin and futuristic research labs</title>
+        <description>&lt;h2 id=&quot;futuristic-research-labs&quot;&gt;Futuristic research labs&lt;/h2&gt;
+
+&lt;p&gt;A few months ago, I started asking myself this question:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;How can we run a futuristic research lab and fund great research?&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This is the type of questions that the excellent people at &lt;a href=&quot;https://protocol.ai&quot;&gt;Protocol Labs Inc.&lt;/a&gt; are also trying to tackle. Their strategy as a company and as an industry R&amp;amp;D&amp;amp;D lab is to launch token-based network protocols and use the token sales to fund new research.&lt;/p&gt;
+
+&lt;p&gt;Universities are not companies, and it is difficult to fund research from which the outcomes are unknown (or yet to be researched!). Given the incentive power that &lt;em&gt;tokens&lt;/em&gt; have in these new blockchain-based decentralized systems, I  wonder if we can borrow some ideas from these systems to rethink the way we fund and we run university research labs.&lt;/p&gt;
+
+&lt;p&gt;The above question lead to another question:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Can we fund research at MIT by launching an MITCoin?&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;While I am still trying to answer that question, I have no clear idea about what values an MITCoin could actually bring. Is there a more generic &lt;em&gt;Research Coin&lt;/em&gt; that can be used to reward great research?&lt;/p&gt;
+
+&lt;p&gt;In the rest of this post, I am describing a sort of proposal for &lt;em&gt;Research Coin&lt;/em&gt;.
+My plan here is to update this blogpost and propose a lot of bad ideas, which I don’t necessarly endorse. Hopefully a great idea will come out of this, if you are interested in the problem or you are running a research lab and want to be part of this conversation, please get in touch with me! :)&lt;/p&gt;
+
+&lt;h2 id=&quot;attempt-1-research-coin&quot;&gt;Attempt 1: Research Coin&lt;/h2&gt;
+
+&lt;h3 id=&quot;motivation&quot;&gt;Motivation&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Reward academics for their good research&lt;/li&gt;
+  &lt;li&gt;Finding new funding strategy beyond grants!&lt;/li&gt;
+  &lt;li&gt;Incentivize peer-review&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;assumptions&quot;&gt;Assumptions&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Assumption 0: There is a set of great peer-reviewed conferences/journal&lt;/li&gt;
+  &lt;li&gt;Assumption 1: A research paper is good if it gets reviewed from those&lt;/li&gt;
+  &lt;li&gt;Assumption 2: Peer review is always wise and unbiased&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;idea&quot;&gt;Idea&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Oracles&lt;/em&gt;: There is a set of well known conferences that is chosen and they are trusted to reveal the published papers (we can just rely on HTTPS)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Minting Tokens&lt;/em&gt;: If a paper is published in one of these conferences, the paper receives a reward (that can is shared between the authors) (can still be automated)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Tokens&lt;/em&gt;: Tokens can be exchanged and sold by the academics&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;what-to-do-with-these-tokens-crazy-ideas-starting-here&quot;&gt;What to do with these tokens? (crazy ideas starting here)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Reputation score&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;Organizations that support research could have a reputation score based on how much they have donated to academics (?).&lt;/p&gt;
+
+    &lt;p&gt;For example: A company can be a sponsor of the conference only if they have a minimum amount of research coins&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Incentivizing Peer-Review&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;A peer-to-peer network of peer reviewers can review the papers, and bet whether a paper will be accepted or not for a particular conference. On the conference deadlines, all the winning reviewers get rewarded. This system could re-create interesting behaviors, where peer-reviewers will try to look for great papers that need some more work and give comments to the authors.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;questions&quot;&gt;Questions&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Are there better uses for the token? (I think the peer review betting idea can be really powerful - although there should be no insider trading!)&lt;/li&gt;
+  &lt;li&gt;Are the assumptions correct?&lt;/li&gt;
+  &lt;li&gt;Do these ideas distort the way we do research?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I also have other inexplored ideas:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Can we find a way for researchers to “bet” on their research?&lt;/li&gt;
+  &lt;li&gt;Can we turn the reputation of citations into revenue streams?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;future-directions&quot;&gt;Future directions&lt;/h3&gt;
+
+&lt;p&gt;I am struggling to see why Attempt 1 can really work, and I scared it might incentivize new types of behaviour (corrupted peer reviewers!) or even disagreement on who decides, who is in the “closed” circle of conferences and journals.&lt;/p&gt;
+
+&lt;h2 id=&quot;attempt-2-university-coin&quot;&gt;Attempt 2: University Coin&lt;/h2&gt;
+
+&lt;p&gt;This idea comes from a midnight conversation with Matt from MIT.
+It’s an improvement (or different attempt) for a &lt;a href=&quot;http://nicola.io/research-coin/2017&quot;&gt;Research Coin&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;new-token-model&quot;&gt;New token model&lt;/h3&gt;
+
+&lt;p&gt;Each institution, research lab or group can create an “org”.
+Each &lt;em&gt;org&lt;/em&gt; is assigned 100 org-tokens that are specific to the &lt;em&gt;org&lt;/em&gt;. For example, the &lt;em&gt;org&lt;/em&gt; “MIT” will have MITCoin, “Cornell” will have CornellCoin and so on. Even a specific lab, can decide to create an &lt;em&gt;org&lt;/em&gt;, for example MIT PDOS can create a PDOS token. An &lt;em&gt;org&lt;/em&gt; can decide whether to sell or not their 100 &lt;em&gt;org&lt;/em&gt;-tokens.&lt;/p&gt;
+
+&lt;h3 id=&quot;betting-system&quot;&gt;Betting system&lt;/h3&gt;
+
+&lt;p&gt;Similarly to Research Coin, anyone can bet on a paper being accepted at a specific conference. However, one can bet on a paper by using the &lt;em&gt;org&lt;/em&gt;-token representing the &lt;em&gt;org&lt;/em&gt; used by the researchers. In other words, if I want to bet that the MIT paper will be accepted, I must bet tokens from MIT.&lt;/p&gt;
+
+&lt;p&gt;Bets run in rounds, for each conference, owners of tokens can bet org-tokens on papers from a specific org. When papers are selected by the conference, all the lost bets are split proportionally (however, I am not sure how, this is actually non-trivial) to the amount they bet.&lt;/p&gt;
+
+&lt;h3 id=&quot;intuitions&quot;&gt;Intuitions&lt;/h3&gt;
+
+&lt;p&gt;The intuition here is that universities (and research labs) can use do great research to increase the value of their tokens, since many would prefer to bet on their research. I expect that the token of a very active university will have a higher price, but bets will have a low risk, hence a lower return, however, I will need to revisit this intuition soon.&lt;/p&gt;
+
+&lt;p&gt;This is however is more difficult to implement in practice than idea 1. This requires research organizations to actively create orgs and sell a percentage of their coins (well, we can still bootstrap this with researchers getting reward coins for their published research..!)&lt;/p&gt;
+
+&lt;p&gt;I am overall convinced that this is NOT a good idea yet. I am not sure if betting on research paper passing through a conference is the best use of a currency.&lt;/p&gt;
+
+&lt;h3 id=&quot;questions-1&quot;&gt;Questions&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Would this lead to making great research or would this be optimize for short-term good publishable research?&lt;/li&gt;
+  &lt;li&gt;Can universities do “ICO”s for selling betting credit for their university?&lt;/li&gt;
+  &lt;li&gt;Would this really increase peer-review or there will just be speculation?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Help me think about Attempt 3!&lt;/p&gt;
+
+&lt;!-- ## Action points
+- Creating a system uses conference webpages or google scholar as trusted oracle should be easy
+- We could create a research coin based on ETH in a very simple way --&gt;
+</description>
+        <pubDate>Sat, 01 Apr 2017 13:06:04 +0000</pubDate>
+        <link>/research-coin/2017</link>
+        <guid isPermaLink="true">/research-coin/2017</guid>
+        
+        
+        <category>Ideas</category>
+        
+      </item>
+    
+      <item>
+        <title>Idea: Computation Coin</title>
+        <description>&lt;p&gt;I am posting a draft written during the summer of 2017. I wrote this after reading the Versum paper and starting learning about verifiable computation. The idea here is to do faster off-chain contracts.&lt;/p&gt;
+
+&lt;h1 id=&quot;computation-coin-coco&quot;&gt;Computation Coin (CoCo)&lt;/h1&gt;
+
+&lt;p&gt;Delegate computations by creating bounties&lt;/p&gt;
+
+&lt;h2 id=&quot;motivations&quot;&gt;Motivations&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Complex contracts are really expensive in Ethereum&lt;/li&gt;
+  &lt;li&gt;Every ethereum miner runs every computation (too much waste!)&lt;/li&gt;
+  &lt;li&gt;Use ideas from Refereed Multi-prover Delegated Computation (and Versum)&lt;/li&gt;
+  &lt;li&gt;SNARK &amp;amp; other systems are too expensive (!!)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;setting&quot;&gt;Setting&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Users&lt;/strong&gt;: they want to pay for computation&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Computers&lt;/strong&gt;: they want to be rewarded for computing&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Trust model&lt;/strong&gt;: this runs in the any trust model, if there is at least an honest computer running the computation, the computation is run correctly.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;protocols&quot;&gt;Protocols&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ComputationCoin&lt;/code&gt;: Users can create computation bounties that Computers can solve.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ReputationContract&lt;/code&gt;: Computers that misbehave are reported to ReputationContract and lose their reputation.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;protocol-1-computationcoin-protocol&quot;&gt;Protocol 1: ComputationCoin Protocol&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CreateComputation(code, timeout, minReputation)&lt;/code&gt;:&lt;/p&gt;
+
+    &lt;p&gt;User writes a computation &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;code&lt;/code&gt; (following Versum Guidelines). At &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;timeout&lt;/code&gt; time, all the coins in the contract are given to the winning answer. In this contract, only miners with minReputation from ReputationContract can participate.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FinanceComputation(coins)&lt;/code&gt;:&lt;/p&gt;
+
+    &lt;p&gt;Any user can put coins into the contract to incentivize Computers to compute!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SolveComputation(ans, comm, coins)&lt;/code&gt;:&lt;/p&gt;
+
+    &lt;p&gt;Computers solve the computation and submit the answers &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ans&lt;/code&gt;, a commitment to the computation history &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;comm&lt;/code&gt;, a collateral &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;coins&lt;/code&gt; required by the contract, this will be added to the total amount of coins in the contract.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ConfuteAnswer(ans, comm, coins, conflict)&lt;/code&gt;:&lt;/p&gt;
+
+    &lt;p&gt;Computers can confute a previous answer by submitting their &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ans&lt;/code&gt;, a commitment to their computation history &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;comm&lt;/code&gt;, a collateral &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;coins&lt;/code&gt; required by the contract and the part of conflict between their answer and the previous submitter answer. (Note: this function call is only going to be added/processed by having the miners running “conflict”)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;protocol-2-reputationcontract-protocol&quot;&gt;Protocol 2: ReputationContract Protocol&lt;/h3&gt;
+
+&lt;p&gt;If a computer is found to create an incorrect computation in the future, they can be referenced to a reputation contract, losing in this way reputation, so in the future Computation contract can set up some minimum reputation they require.&lt;/p&gt;
+
+&lt;h2 id=&quot;problems-left&quot;&gt;Problems left&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Running arbitrary computation in a contract to detect conflict (this is a technical detail)&lt;/li&gt;
+  &lt;li&gt;(Actually important) How to keep computation history around and in an accountable way for a long time (they also might be long!!)&lt;/li&gt;
+  &lt;li&gt;Can we design this into an ethereum contract?&lt;/li&gt;
+  &lt;li&gt;Game theoretical analysis: what if EVERY computer is incentivized to misbehave?&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 17 Feb 2017 13:06:04 +0000</pubDate>
+        <link>/computation-coin/2017</link>
+        <guid isPermaLink="true">/computation-coin/2017</guid>
+        
+        
+        <category>Ideas</category>
+        
+      </item>
+    
+      <item>
+        <title>Mass-murderer space rock and hash collisions</title>
+        <description>&lt;p&gt;I was on the #IPFS irc channel and some users were discussing about hash collisions, and I read this really clever quote.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;A mass-murderer space rock happens about once every 30 million years on average. This leads to a probability of such an event occurring in the next second to about 10-15. That’s 45 orders of magnitude more probable than the SHA-256 collision. Briefly stated, if you find SHA-256 collisions scary then your priorities are wrong&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Tue, 03 Nov 2015 13:06:04 +0000</pubDate>
+        <link>/hash-collision/2015</link>
+        <guid isPermaLink="true">/hash-collision/2015</guid>
+        
+        
+        <category>Quotes</category>
+        
+      </item>
+    
+      <item>
+        <title>A Center for Decentralization</title>
+        <description>&lt;p&gt;People from the Internet,
+I will make this very simple,
+we live in a strange web.&lt;/p&gt;
+
+&lt;p&gt;Data is not yours,
+services don’t interoperate,
+you are locked in very many walled-garden,
+there is someone in the middle of your interactions,
+(actually, every time the same folks)
+web pages disappear/die every 100 days,
+Online identity - what the heck is even that?&lt;/p&gt;
+
+&lt;p&gt;[breath]&lt;/p&gt;
+
+&lt;p&gt;At the same time,
+Internet connection got better,
+our computers much faster
+our devices are all connected,
+storage is cheap.&lt;/p&gt;
+
+&lt;p&gt;Why don’t we - society, individuals and companies - start to build technologies that take advantage of this?&lt;/p&gt;
+
+&lt;p&gt;Let’s bring decentralization&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; Read about my principle for a &lt;a href=&quot;http://nicola.io/decentralized-principles/2015/&quot;&gt;Decentralized Web&lt;/a&gt;&lt;/span&gt; at the center of attention.&lt;/p&gt;
+
+&lt;p&gt;–&lt;/p&gt;
+
+&lt;p&gt;Now, in practice, I haven’t started a center&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; yet.&lt;/span&gt;. I like to call the meetings that we are starting in Boston with the name “Center for Decentralization” (every other Friday at 4:30 at the Berkman Center/MIT).&lt;/p&gt;
+
+&lt;p&gt;Do get in touch &lt;a href=&quot;http://twitter.com/nicolagreco&quot;&gt;@nicolagreco&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 01 Oct 2015 12:55:04 +0000</pubDate>
+        <link>/decentralization-center/2015</link>
+        <guid isPermaLink="true">/decentralization-center/2015</guid>
+        
+        
+        <category>Decentralized</category>
+        
+        <category>Web</category>
+        
+      </item>
+    
+      <item>
+        <title>Towards the future RDF library</title>
+        <description>&lt;p&gt;RDF is an simple and powerful language to describe data. However, playing with RDF data can get very tricky - especially when doing simple things. Only by solving the user experience of RDF libraries we would really get developers to user RDF more&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; In all of its forms, &lt;em&gt;turtle&lt;/em&gt;, &lt;em&gt;json-ld&lt;/em&gt;, and so on.&lt;/span&gt;. This blog post is directed to the community that works in this field and it is an open call to work on an ultimate, simpler library for RDF.&lt;/p&gt;
+
+&lt;p&gt;I will now show you three ways to do a very simple task (1) the current way (using &lt;a href=&quot;http://github.com/rdf-ext/rdf-ext&quot;&gt;rdf-ext&lt;/a&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; I have been recently involved with the development of this library&lt;/span&gt;) (2) the way developers find familiar (3) the way the future RDF lib should be.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-current-rdf-way&quot;&gt;The current RDF way&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Example 1:&lt;/em&gt; Creating a graph with a triple that represents my name&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rdf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;rdf-ext&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;me&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;createGraph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;me&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Triple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;NamedNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;http://nicola.io&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;NamedNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;http://xmlns.com/foaf/0.1/name&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Literal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Nicola&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Example 2:&lt;/em&gt; Retrieving my name from the graph&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;me&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;http://nicola.io&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;http://xmlns.com/foaf/0.1/name&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;object&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Nicola&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;the-javascript-objects-way&quot;&gt;The Javascript Objects way&lt;/h2&gt;
+
+&lt;p&gt;Now, to the RDF experts, this might sound about right, but let’s remember one second how &lt;em&gt;real world&lt;/em&gt; developers would do something like that, let’s say using Javascript Objects.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Example 3:&lt;/em&gt; The equivalent of Example 1 and 2 using JSON&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;me&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Nicola&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;me&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Nicola&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;the-future-rdf-way&quot;&gt;The future RDF way&lt;/h2&gt;
+
+&lt;p&gt;The future RDF library should provide a seamless experience to the developer that is used to the JS object.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Example 4:&lt;/em&gt; The equivalent of Example 1 and 2 as it should be&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;simplerdf&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;me&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;http://xmlns.com/foaf/0.1/name&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Nicola&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;http://xmlns.com/foaf/0.1/name&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Nicola&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Even simpler, I should be able to load an JSON-LD context to achieve the following&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;me&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;me&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;http://xmlns.com/foaf/0.1/name&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;homepage&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;@id&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;http://xmlns.com/foaf/0.1/homepage&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;@type&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;@id&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;me&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Nicola&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;me&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Nicola&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In other words, the key hack is on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Object.defineProperty&lt;/code&gt; which enable us to redefine the getters/setters of object properties. So, in other words, we can have the power of a graph, behind some simple operations.&lt;/p&gt;
+
+&lt;p&gt;As a last note, as many of you may point out, these examples only show how to do operations when both the subject and the predicate are known - what about the rest?&lt;/p&gt;
+
+&lt;p&gt;In my opinion, this is already a big step forward simplifying RDF, maybe there are some operations would not be possible to achieve, and we can always come back to the traditional way of handling a graph &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;me.toGraph()&lt;/code&gt;, or we can find together some new clever solutions that have the same spirit of simplicity.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;I implemented most of what presented here in a library called &lt;a href=&quot;http://github.com/nicola/simplerdf&quot;&gt;simplerdf&lt;/a&gt; - please, have a look at &lt;a href=&quot;https://github.com/nicola/simplerdf/tree/master/examples&quot;&gt;further examples&lt;/a&gt;. However, as you may expect, this library is not stable at all, the APIs could change drastically in the next few days.&lt;/p&gt;
+
+&lt;p&gt;If you are interested, I really would like to hear from you, and maybe fork the Github repository and contribute, so that maybe, we could really write the future RDF library together.&lt;/p&gt;
+
+&lt;p&gt;Inspired by this &lt;a href=&quot;https://github.com/webr3/js3&quot;&gt;repo&lt;/a&gt; that has been written 5 years ago.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 11 Sep 2015 11:47:04 +0000</pubDate>
+        <link>/future-rdf/2015</link>
+        <guid isPermaLink="true">/future-rdf/2015</guid>
+        
+        
+        <category>Decentralized</category>
+        
+        <category>Web</category>
+        
+      </item>
+    
   </channel>
 </rss>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  
+
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Introducing Versioning Poems</title>
+  <meta name="description" content="In London we have a fantasic group of people that discusses cutting edge ideas, the group is called the Palo Alto Supermarket test11 It abbreviates as PST, m...">
+
+  <link rel="me" href="https://twitter.com/nicolagreco" />
+  <link rel="me" href="https://github.com/nicola" />
+  <link rel="me" href="https://facebook.com/nicolagreco" />
+
+  <link rel="stylesheet" href="../../css/tufte.css">	
+  
+  <!-- Google Fonts loaded here -->
+  <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+<meta content="Nicola | Blog" property="og:site_name">
+
+  <meta content="Introducing Versioning Poems" property="og:title">
+
+
+
+  <meta content="article" property="og:type">
+
+
+<!-- 
+  <meta content="The personal blog of Nicola" property="og:description">
+
+ -->
+
+
+
+  <meta content="../../versioning-poems/2015" property="og:url">
+
+
+
+  <meta content="2015-09-07T23:42:04+00:00" property="article:published_time">
+  <meta content="https://www.facebook.com/nicolagreco" property="article:author">
+
+
+  <meta content="../../assets/img/nicola.jpg" property="og:image">
+
+
+  
+  <meta content="Post-Internet" property="article:section">
+  
+
+
+  
+
+
+
+  <link rel="canonical" href="/versioning-poems/2015">
+  <link rel="alternate" type="application/rss+xml" title="Nicola | Blog" href="/feed.xml" />
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+
+
+
+
+<header>
+  <nav class="group">
+    <a href="../../blog">Home</a>
+    <a href="../../about">About me</a>
+    <a href="../../art">Art</a>
+  </nav>
+  <div class="">
+    <p><a href="../../" rel="me">Nicola Greco</a></p>
+    <p>I am working to re-decentralize the web<span class="sidenote">Read more about my work <a href="../../about">here</a></span>. I am a researcher at <a href="https://nicola.io">Protocol Labs</a>. PhD student (on leave) at <a href="http://mit.edu">MIT</a> advised by <a href="https://www.w3.org/People/Berners-Lee/">Tim Berners-Lee</a> and friend at <a href="http://berkmancenter.org">Berkman Center</a>. Once an entrepreneur, a <a href="http://ucl.ac.uk">UCL</a> student, a <a href="http://mozilla.org">Mozillian</a>.</p>
+  </div>
+
+</header>
+    <article>
+      <h1>Introducing Versioning Poems</h1>
+<p>September 7, 2015</p>
+
+
+<p>In London we have a fantasic group of people that discusses cutting edge ideas, the group is called the <strong>Palo Alto Supermarket test</strong><sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> It abbreviates as <strong>PST</strong>, maybe it is worth looking for an interesting acronym, e.g. <em>Policy</em>, <em>Society</em> and <em>Technology</em>. Please ping me on twitter if you want to join in.</span>. A recurrent topic has been Post-Internet art which we think it can be the next artistic expression trend.</p>
+
+<p>In this post, I would like to introduce one way of writing Post-Internet poetry that mixes <strong>traditional</strong> poetry and <strong>coding</strong> poetry: <strong>Versioning Poems</strong> - I hope to inspire a new generation of poets, please update me <a href="http://twitter.com/nicolagreco">@nicolagreco</a> if you write some.</p>
+
+<h2 id="versioning-poems">Versioning Poems</h2>
+
+<p>A versioning poem has two characteristics:</p>
+
+<ol>
+  <li><strong>Versioning tool</strong>: The poem written in commit messages using a versioning tool</li>
+  <li><strong>Commit diff</strong>: Each line has a commit diff that has code related to the message</li>
+</ol>
+
+<p>In this way, one could clone a repository and just list the commit messages. The following is a poem of mine <a href="https://github.com/nicola/flowers-poem">9*19 Flowers poem</a>.</p>
+
+<h3 id="understanding-requirement-1">Understanding requirement 1</h3>
+
+<p>As you can see each line shows up as a poem</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clone https://github.com/nicola/flowers-poem
+<span class="nv">$ </span>git fetch origin poem
+<span class="nv">$ </span>git checkout poem
+<span class="nv">$ </span>git log <span class="nt">--format</span><span class="o">=</span><span class="s2">"%C(yellow)%h%Creset %Cgreen%s%Creset%n%b"</span>
+
+ea814f4 POEM: 9<span class="k">*</span>19 flowers
+02d0dc0 Handcraft flowers from maths and lines,
+aa14064 Choose the colors to make them shine,
+ad4e12c Till the soil to plant the seeds.
+700b967 <span class="nb">.</span>
+7cea9e1 See me to make me glow
+93c57f8 Touch me to give you more
+e023bd0 Touch me you<span class="s1">'ll never stop
+e146d2c Please touch me again.
+</span></code></pre></div></div>
+
+<h3 id="understanding-requirement-2">Understanding requirement 2</h3>
+
+<p>The difference added by <code class="language-plaintext highlighter-rouge">93c57f8 Touch me to give you more</code> relates to a piece of code that adds the function <code class="language-plaintext highlighter-rouge">start_touching</code></p>
+
+<div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">93c57f8 Touch me to give you more
+</span><span class="gi">+  function start_touching(d, i) {
++    var flower = d3.select(this);
++    flower
++     .transition()
++     .delay(10)
++     .duration(1000)
++     .attr("d", handcraft_flower)
++     .style("stroke", "#ccc");
++  }
+</span></code></pre></div></div>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p><span class="marginnote"><img class="fullwidth" src="../../assets/img/flowers.png" />Figure 1: Detail of 9*19 Flowers poem</span>You can get very bizarre, the code does not need to work necessarely. In the case of my flowers, the final commit brings up a final working version of a <a href="http://nicola.io/flowers-poem/">visualization of the poem</a> (See Figure 1).</p>
+
+<p>I challenge your engineering skills and creativity to surprise me with a poem of yours.</p>
+
+
+
+<p class="">
+  - <a href="/about">Nicola Greco</a>,<br>
+  <em>Keep on rocking the decentralized web</em>
+</p>
+
+<div class="more">
+<h4>Thanks for reading</h4>
+
+ <!-- for1 -->
+    <li>
+      <span class="recent-title"><a href="/quantum-punks/2024" title="Introducing Quantum Punks">Introducing Quantum Punks </a></span>
+      <span class="date">Sep 04, 2024</span>
+    </li>
+ <!-- for1 -->
+    <li>
+      <span class="recent-title"><a href="/protocol-years/2024" title="Protocol Years">Protocol Years </a></span>
+      <span class="date">Apr 24, 2024</span>
+    </li>
+ <!-- for1 -->
+    <li>
+      <span class="recent-title"><a href="/before-tokens/2017" title="Before Tokens">Before Tokens </a></span>
+      <span class="date">Jul 24, 2017</span>
+    </li>
+
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'nicolaio';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </article>
+    <span class="print-footer">Introducing Versioning Poems - September 7, 2015 - Nicola</span>
+    <!-- <footer class="desc">
+  <span>You can contact me via
+    <a href="mailto:me (at) nicola (dot) io">Email</a>
+    
+      , <a href="//www.twitter.com/nicolagreco">Twitter</a>
+    
+      , <a href="//github.com/nicola">Github</a>
+    
+      , <a href="/feed">Feed</a>
+    </span>
+<div class="credits">
+<span>&copy; 2025 &nbsp;&nbsp;NICOLA</span></br> 
+<span>Using <a href="//jekyllrb.com">Jekyll</a>, theme based on <a href="//github.com/clayh53/tufte-jekyll">Tufte</a>.</span> 
+</div>  
+</footer> -->
+
+
+  </body>
+</html>

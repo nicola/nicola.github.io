@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  
+
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Towards the future RDF library</title>
+  <meta name="description" content="RDF is an simple and powerful language to describe data. However, playing with RDF data can get very tricky - especially when doing simple things. Only by so...">
+
+  <link rel="me" href="https://twitter.com/nicolagreco" />
+  <link rel="me" href="https://github.com/nicola" />
+  <link rel="me" href="https://facebook.com/nicolagreco" />
+
+  <link rel="stylesheet" href="../../css/tufte.css">	
+  
+  <!-- Google Fonts loaded here -->
+  <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+<meta content="Nicola | Blog" property="og:site_name">
+
+  <meta content="Towards the future RDF library" property="og:title">
+
+
+
+  <meta content="article" property="og:type">
+
+
+<!-- 
+  <meta content="The personal blog of Nicola" property="og:description">
+
+ -->
+
+
+
+  <meta content="../../future-rdf/2015" property="og:url">
+
+
+
+  <meta content="2015-09-11T11:47:04+00:00" property="article:published_time">
+  <meta content="https://www.facebook.com/nicolagreco" property="article:author">
+
+
+  <meta content="../../assets/img/nicola.jpg" property="og:image">
+
+
+  
+  <meta content="Decentralized" property="article:section">
+  
+
+
+  
+
+
+
+  <link rel="canonical" href="/future-rdf/2015">
+  <link rel="alternate" type="application/rss+xml" title="Nicola | Blog" href="/feed.xml" />
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+
+
+
+
+<header>
+  <nav class="group">
+    <a href="../../blog">Home</a>
+    <a href="../../about">About me</a>
+    <a href="../../art">Art</a>
+  </nav>
+  <div class="">
+    <p><a href="../../" rel="me">Nicola Greco</a></p>
+    <p>I am working to re-decentralize the web<span class="sidenote">Read more about my work <a href="../../about">here</a></span>. I am a researcher at <a href="https://nicola.io">Protocol Labs</a>. PhD student (on leave) at <a href="http://mit.edu">MIT</a> advised by <a href="https://www.w3.org/People/Berners-Lee/">Tim Berners-Lee</a> and friend at <a href="http://berkmancenter.org">Berkman Center</a>. Once an entrepreneur, a <a href="http://ucl.ac.uk">UCL</a> student, a <a href="http://mozilla.org">Mozillian</a>.</p>
+  </div>
+
+</header>
+    <article>
+      <h1>Towards the future RDF library</h1>
+<p>September 11, 2015</p>
+
+
+<p>RDF is an simple and powerful language to describe data. However, playing with RDF data can get very tricky - especially when doing simple things. Only by solving the user experience of RDF libraries we would really get developers to user RDF more<sup class="sidenote-number">1</sup><span class="sidenote"><sup class="sidenote-number">1</sup> In all of its forms, <em>turtle</em>, <em>json-ld</em>, and so on.</span>. This blog post is directed to the community that works in this field and it is an open call to work on an ultimate, simpler library for RDF.</p>
+
+<p>I will now show you three ways to do a very simple task (1) the current way (using <a href="http://github.com/rdf-ext/rdf-ext">rdf-ext</a><sup class="sidenote-number">2</sup><span class="sidenote"><sup class="sidenote-number">2</sup> I have been recently involved with the development of this library</span>) (2) the way developers find familiar (3) the way the future RDF lib should be.</p>
+
+<h2 id="the-current-rdf-way">The current RDF way</h2>
+
+<p><em>Example 1:</em> Creating a graph with a triple that represents my name</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">rdf</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">rdf-ext</span><span class="dl">'</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">me</span> <span class="o">=</span> <span class="nx">rdf</span><span class="p">.</span><span class="nf">createGraph</span><span class="p">()</span>
+<span class="nx">me</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="k">new</span> <span class="nx">rdf</span><span class="p">.</span><span class="nc">Triple</span><span class="p">(</span>
+  <span class="k">new</span> <span class="nx">rdf</span><span class="p">.</span><span class="nc">NamedNode</span><span class="p">(</span><span class="dl">'</span><span class="s1">http://nicola.io</span><span class="dl">'</span><span class="p">),</span>
+  <span class="k">new</span> <span class="nx">rdf</span><span class="p">.</span><span class="nc">NamedNode</span><span class="p">(</span><span class="dl">'</span><span class="s1">http://xmlns.com/foaf/0.1/name</span><span class="dl">'</span><span class="p">),</span>
+  <span class="k">new</span> <span class="nx">rdf</span><span class="p">.</span><span class="nc">Literal</span><span class="p">(</span><span class="dl">'</span><span class="s1">Nicola</span><span class="dl">'</span><span class="p">)</span>
+  <span class="p">))</span>
+</code></pre></div></div>
+
+<p><em>Example 2:</em> Retrieving my name from the graph</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">me</span><span class="p">.</span><span class="nf">match</span><span class="p">(</span>
+  <span class="dl">'</span><span class="s1">http://nicola.io</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">http://xmlns.com/foaf/0.1/name</span><span class="dl">'</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+  <span class="p">.</span><span class="nx">object</span>
+  <span class="p">.</span><span class="nf">toString</span><span class="p">()</span>
+<span class="c1">// Nicola</span>
+</code></pre></div></div>
+
+<h2 id="the-javascript-objects-way">The Javascript Objects way</h2>
+
+<p>Now, to the RDF experts, this might sound about right, but let’s remember one second how <em>real world</em> developers would do something like that, let’s say using Javascript Objects.</p>
+
+<p><em>Example 3:</em> The equivalent of Example 1 and 2 using JSON</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">me</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Nicola</span><span class="dl">'</span>
+<span class="p">}</span>
+
+<span class="nx">me</span><span class="p">.</span><span class="nx">name</span>
+<span class="c1">// Nicola</span>
+</code></pre></div></div>
+
+<h2 id="the-future-rdf-way">The future RDF way</h2>
+
+<p>The future RDF library should provide a seamless experience to the developer that is used to the JS object.</p>
+
+<p><em>Example 4:</em> The equivalent of Example 1 and 2 as it should be</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">simplerdf</span><span class="dl">'</span><span class="p">)</span>
+<span class="kd">var</span> <span class="nx">me</span> <span class="o">=</span> <span class="nf">r</span><span class="p">()</span>
+<span class="nx">r</span><span class="p">[</span><span class="dl">'</span><span class="s1">http://xmlns.com/foaf/0.1/name</span><span class="dl">'</span><span class="p">]</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Nicola</span><span class="dl">'</span>
+
+<span class="nx">r</span><span class="p">[</span><span class="dl">'</span><span class="s1">http://xmlns.com/foaf/0.1/name</span><span class="dl">'</span><span class="p">]</span>
+<span class="c1">// Nicola</span>
+</code></pre></div></div>
+
+<p>Even simpler, I should be able to load an JSON-LD context to achieve the following</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">me</span> <span class="o">=</span> <span class="nf">r</span><span class="p">()</span>
+<span class="nx">me</span><span class="p">.</span><span class="nf">context</span><span class="p">({</span>
+  <span class="dl">'</span><span class="s1">name</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">http://xmlns.com/foaf/0.1/name</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">homepage</span><span class="dl">'</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">'</span><span class="s1">@id</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">http://xmlns.com/foaf/0.1/homepage</span><span class="dl">'</span><span class="p">,</span>
+    <span class="dl">'</span><span class="s1">@type</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">@id</span><span class="dl">'</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+<span class="nx">me</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Nicola</span><span class="dl">'</span>
+
+<span class="nx">me</span><span class="p">.</span><span class="nx">name</span>
+<span class="c1">// Nicola</span>
+</code></pre></div></div>
+
+<p>In other words, the key hack is on <code class="language-plaintext highlighter-rouge">Object.defineProperty</code> which enable us to redefine the getters/setters of object properties. So, in other words, we can have the power of a graph, behind some simple operations.</p>
+
+<p>As a last note, as many of you may point out, these examples only show how to do operations when both the subject and the predicate are known - what about the rest?</p>
+
+<p>In my opinion, this is already a big step forward simplifying RDF, maybe there are some operations would not be possible to achieve, and we can always come back to the traditional way of handling a graph <code class="language-plaintext highlighter-rouge">me.toGraph()</code>, or we can find together some new clever solutions that have the same spirit of simplicity.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>I implemented most of what presented here in a library called <a href="http://github.com/nicola/simplerdf">simplerdf</a> - please, have a look at <a href="https://github.com/nicola/simplerdf/tree/master/examples">further examples</a>. However, as you may expect, this library is not stable at all, the APIs could change drastically in the next few days.</p>
+
+<p>If you are interested, I really would like to hear from you, and maybe fork the Github repository and contribute, so that maybe, we could really write the future RDF library together.</p>
+
+<p>Inspired by this <a href="https://github.com/webr3/js3">repo</a> that has been written 5 years ago.</p>
+
+
+
+<p class="">
+  - <a href="/about">Nicola Greco</a>,<br>
+  <em>Keep on rocking the decentralized web</em>
+</p>
+
+<div class="more">
+<h4>Thanks for reading</h4>
+
+ <!-- for1 -->
+    <li>
+      <span class="recent-title"><a href="/quantum-punks/2024" title="Introducing Quantum Punks">Introducing Quantum Punks </a></span>
+      <span class="date">Sep 04, 2024</span>
+    </li>
+ <!-- for1 -->
+    <li>
+      <span class="recent-title"><a href="/protocol-years/2024" title="Protocol Years">Protocol Years </a></span>
+      <span class="date">Apr 24, 2024</span>
+    </li>
+ <!-- for1 -->
+    <li>
+      <span class="recent-title"><a href="/before-tokens/2017" title="Before Tokens">Before Tokens </a></span>
+      <span class="date">Jul 24, 2017</span>
+    </li>
+
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'nicolaio';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </article>
+    <span class="print-footer">Towards the future RDF library - September 11, 2015 - Nicola</span>
+    <!-- <footer class="desc">
+  <span>You can contact me via
+    <a href="mailto:me (at) nicola (dot) io">Email</a>
+    
+      , <a href="//www.twitter.com/nicolagreco">Twitter</a>
+    
+      , <a href="//github.com/nicola">Github</a>
+    
+      , <a href="/feed">Feed</a>
+    </span>
+<div class="credits">
+<span>&copy; 2025 &nbsp;&nbsp;NICOLA</span></br> 
+<span>Using <a href="//jekyllrb.com">Jekyll</a>, theme based on <a href="//github.com/clayh53/tufte-jekyll">Tufte</a>.</span> 
+</div>  
+</footer> -->
+
+
+  </body>
+</html>

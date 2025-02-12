@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  
+
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Before Tokens</title>
+  <meta name="description" content="From January, due to different reasons I had the incredible occasion to brainstorm and collaborate with some very great minds in the blockchain space.A recur...">
+
+  <link rel="me" href="https://twitter.com/nicolagreco" />
+  <link rel="me" href="https://github.com/nicola" />
+  <link rel="me" href="https://facebook.com/nicolagreco" />
+
+  <link rel="stylesheet" href="../../css/tufte.css">	
+  
+  <!-- Google Fonts loaded here -->
+  <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+<meta content="Nicola | Blog" property="og:site_name">
+
+  <meta content="Before Tokens" property="og:title">
+
+
+
+  <meta content="article" property="og:type">
+
+
+<!-- 
+  <meta content="The personal blog of Nicola" property="og:description">
+
+ -->
+
+
+
+  <meta content="../../before-tokens/2017" property="og:url">
+
+
+
+  <meta content="2017-07-24T13:06:04+00:00" property="article:published_time">
+  <meta content="https://www.facebook.com/nicolagreco" property="article:author">
+
+
+  <meta content="../../assets/img/nicola.jpg" property="og:image">
+
+
+  
+  <meta content="Ideas" property="article:section">
+  
+
+
+  
+
+
+
+  <link rel="canonical" href="/before-tokens/2017">
+  <link rel="alternate" type="application/rss+xml" title="Nicola | Blog" href="/feed.xml" />
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+
+
+
+
+<header>
+  <nav class="group">
+    <a href="../../blog">Home</a>
+    <a href="../../about">About me</a>
+    <a href="../../art">Art</a>
+  </nav>
+  <div class="">
+    <p><a href="../../" rel="me">Nicola Greco</a></p>
+    <p>I am working to re-decentralize the web<span class="sidenote">Read more about my work <a href="../../about">here</a></span>. I am a researcher at <a href="https://nicola.io">Protocol Labs</a>. PhD student (on leave) at <a href="http://mit.edu">MIT</a> advised by <a href="https://www.w3.org/People/Berners-Lee/">Tim Berners-Lee</a> and friend at <a href="http://berkmancenter.org">Berkman Center</a>. Once an entrepreneur, a <a href="http://ucl.ac.uk">UCL</a> student, a <a href="http://mozilla.org">Mozillian</a>.</p>
+  </div>
+
+</header>
+    <article>
+      <h1>Before Tokens</h1>
+<p>July 24, 2017</p>
+
+
+<p>From January, <a href="https://filecoin.io">due</a> <a href="https://internetpolicy.mit.edu/team/nicola-greco-2/">to</a> <a href="http://dci.mit.edu/people.html">different</a> <a href="http://nicola.io/computation-coin/2017">reasons</a> I had the incredible occasion to brainstorm and collaborate with some very great minds in the blockchain space.</p>
+
+<p>A recurring question was: “<em>How can we build a new cryptocurrency that offers a service?</em>”. This gave me a lot to think about: <a href="https://filecoin.io">decentralized file storage</a>, <a href="http://nicola.io/computation-coin/2017">distributed computation</a> and more generically <a href="http://nicola.io/verifiable-markets/2017">verifiable markets</a>.</p>
+
+<p>During the past 6 months, the word <strong>token</strong> was all over the place; as the months passed different groups worked on many of the ideas/implementations that others and I discussed - what of an exciting time to live in.</p>
+
+<p>In this blogpost, I am leaving some of my notes taken during the month of January.</p>
+
+<h3 id="dec-2016">Dec 2016</h3>
+
+<p>During my Christmas vacation (Dec 2016) I started reading a <a href="https://github.com/ethereum/EIPs/issues/20">Github issue</a> that was circulating on a few chats/forum. This is the proposal for ERC20 (the proposed standard) for tokens that most (if not all) of the new tokens built on Ethereum are now using. I did not get to understand the details of the ERC20 until a month after. However, the story of tokens goes really much earlier than this, with the idea of Colored Coins.</p>
+
+<p>During this month I collected the following notes on: “How to create new tokens?” without running your own blockchain.</p>
+
+<h3 id="jan-2017">Jan 2017</h3>
+
+<p>In my notes (sparse in github issues) I was writing the following categorizations, calling them “<strong>Metacoins</strong>”. Whether they are of any help today, I am not sure; friends and I found this categorization really helpful back then:</p>
+
+<p>Note: off-chain, in-chain is relative to Ethereum:</p>
+
+<ul>
+  <li><strong>In-chain Coin (or <em>Contract Coin</em>)</strong>
+    <ul>
+      <li><strong>consensus</strong>: Ethereum nodes agree on new blocks</li>
+      <li><strong>transaction validation</strong>: Ethereum miners validate transactions of servicecoin during consensus step</li>
+      <li><strong>servicecoin fees/rewards</strong>: servicecoin miners submit their valid proof of service that can validate by the Ethereum miners.</li>
+      <li><strong>needs</strong>: ethereum to support verification of the proof of service</li>
+    </ul>
+  </li>
+  <li><strong>Off-chain Coin (or <em>Virtual Coin</em>)</strong>
+    <ul>
+      <li><strong>consensus</strong>: ethereum consensus orders the servicecoin request for payment in the chain</li>
+      <li><strong>transaction validation</strong>: servicecoin miners read the ethereum chain and filter out transactions that are not necessary</li>
+      <li><strong>servicecoin fees/reward</strong>: servicecoin miners add proof of service on the chain and consider that in their transaction validation</li>
+      <li><strong>needs</strong>: a way to do atomic swaps across chains (e.g. spend servicecoin in eth contracts)</li>
+      <li><strong>problems</strong>:
+        <ul>
+          <li>expensive proofs</li>
+          <li>clogging the chain</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Hybrid Coin</strong>:
+    <ul>
+      <li>evaluate ways in which we could use some basic properties of the chain: ordering, hash time lock</li>
+      <li>evaluate off-chain (log) + backup on ethereum (state) for trade offs with efficient proofs + delegation</li>
+    </ul>
+  </li>
+</ul>
+
+
+
+<p class="">
+  - <a href="/about">Nicola Greco</a>,<br>
+  <em>Keep on rocking the decentralized web</em>
+</p>
+
+<div class="more">
+<h4>Thanks for reading</h4>
+
+ <!-- for1 -->
+    <li>
+      <span class="recent-title"><a href="/quantum-punks/2024" title="Introducing Quantum Punks">Introducing Quantum Punks </a></span>
+      <span class="date">Sep 04, 2024</span>
+    </li>
+ <!-- for1 -->
+    <li>
+      <span class="recent-title"><a href="/protocol-years/2024" title="Protocol Years">Protocol Years </a></span>
+      <span class="date">Apr 24, 2024</span>
+    </li>
+ <!-- for1 -->
+    <li>
+      <span class="recent-title"><a href="/before-tokens/2017" title="Before Tokens">Before Tokens </a></span>
+      <span class="date">Jul 24, 2017</span>
+    </li>
+
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'nicolaio';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </article>
+    <span class="print-footer">Before Tokens - July 24, 2017 - Nicola</span>
+    <!-- <footer class="desc">
+  <span>You can contact me via
+    <a href="mailto:me (at) nicola (dot) io">Email</a>
+    
+      , <a href="//www.twitter.com/nicolagreco">Twitter</a>
+    
+      , <a href="//github.com/nicola">Github</a>
+    
+      , <a href="/feed">Feed</a>
+    </span>
+<div class="credits">
+<span>&copy; 2025 &nbsp;&nbsp;NICOLA</span></br> 
+<span>Using <a href="//jekyllrb.com">Jekyll</a>, theme based on <a href="//github.com/clayh53/tufte-jekyll">Tufte</a>.</span> 
+</div>  
+</footer> -->
+
+
+  </body>
+</html>
