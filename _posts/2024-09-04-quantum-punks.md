@@ -11,18 +11,18 @@ However, I also met people that are in the perfect intersection.
 
 Finally, Alex Obadia and I decided to call them Quantum Punks and wrote a short manifesto: [Quantum Punks Manifesto](https://quantumpunks.org).
 
-## The thesis
+## Thesis
 
 Our main thesis is that a small yet growing field called Quantum Cryptography can:
 
-1. lead to new cryptographic protocols that we could not build with classical cryptography
-2. be accelerationist for the broader quantum industry
+1. Lead to new cryptographic protocols that we could not build with classical cryptography
+2. Be accelerationist for the broader quantum industry
 
 Even more so, a small movement of people beyond us, believes that there could be more cypherpunk applications of quantum technology that we have yet to discover.
 
 We wrote this short doc to create awareness of what is possible and to gather like-minded people to build this future.
 
-## Example of Quantum 
+## Example of Quantum Crypto
 
 About 25 years before Nakamoto published the Bitcoin paper, quantum researcher Wiesner published the notion of Quantum Money.
 
