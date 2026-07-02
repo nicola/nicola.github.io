@@ -1,0 +1,561 @@
+.eval-gallery {
+  /* Match tufte's text-column width so the cards sit inline with prose
+     instead of bleeding into the right margin. */
+  width: 55%;
+  margin: 2rem 0 3rem;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@media (max-width: 760px) {
+  .eval-gallery { width: 100%; }
+}
+
+.eval-gallery input[type=radio] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.eval-gallery .tab-labels {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #d8d8e0;
+}
+
+.eval-gallery .tab-labels label {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #888;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  user-select: none;
+  transition: color 0.12s, border-color 0.12s;
+}
+
+.eval-gallery .tab-labels label:hover { color: rgb(59, 59, 59); }
+
+/* Per-card domain colours. The same hue keys the active tab,
+   the card's top border, and the icon, so each card has a clear
+   identity but they all read as part of one set. */
+.eval-gallery {
+  --c-1: #5a7a44;  /* orchard — forest green */
+  --c-2: #c08a3e;  /* wet lab — amber */
+  --c-3: #6a9a3a;  /* vertical farm — lime */
+  --c-4: #4a6ea5;  /* pick-and-pack — steel blue */
+  --c-5: #5a8aaa;  /* sprayer drone — sky */
+  --c-6: #a85a5a;  /* sterilization rig — medical red */
+}
+
+.eval-gallery .pane {
+  display: none;
+  padding: 1.4rem 1.5rem 1.2rem;
+  border: 1px solid #e0e0e8;
+  border-top-width: 3px;
+  border-radius: 4px;
+  background: #fbfbfd;
+  margin-top: -1px;
+}
+
+.eval-gallery .pane-1 { border-top-color: var(--c-1); background: #f7f9f3; }
+.eval-gallery .pane-2 { border-top-color: var(--c-2); background: #fbf6ec; }
+.eval-gallery .pane-3 { border-top-color: var(--c-3); background: #f5faec; }
+.eval-gallery .pane-4 { border-top-color: var(--c-4); background: #f1f5fb; }
+.eval-gallery .pane-5 { border-top-color: var(--c-5); background: #f1f6fb; }
+.eval-gallery .pane-6 { border-top-color: var(--c-6); background: #faf0f0; }
+
+/* Tab labels take the domain colour when active. */
+.eval-gallery #et-1:checked ~ .tab-labels label[for=et-1] { color: var(--c-1); border-bottom-color: var(--c-1); font-weight: 600; }
+.eval-gallery #et-2:checked ~ .tab-labels label[for=et-2] { color: var(--c-2); border-bottom-color: var(--c-2); font-weight: 600; }
+.eval-gallery #et-3:checked ~ .tab-labels label[for=et-3] { color: var(--c-3); border-bottom-color: var(--c-3); font-weight: 600; }
+.eval-gallery #et-4:checked ~ .tab-labels label[for=et-4] { color: var(--c-4); border-bottom-color: var(--c-4); font-weight: 600; }
+.eval-gallery #et-5:checked ~ .tab-labels label[for=et-5] { color: var(--c-5); border-bottom-color: var(--c-5); font-weight: 600; }
+.eval-gallery #et-6:checked ~ .tab-labels label[for=et-6] { color: var(--c-6); border-bottom-color: var(--c-6); font-weight: 600; }
+
+.eval-gallery #et-1:checked ~ .tab-panes .pane-1,
+.eval-gallery #et-2:checked ~ .tab-panes .pane-2,
+.eval-gallery #et-3:checked ~ .tab-panes .pane-3,
+.eval-gallery #et-4:checked ~ .tab-panes .pane-4,
+.eval-gallery #et-5:checked ~ .tab-panes .pane-5,
+.eval-gallery #et-6:checked ~ .tab-panes .pane-6 {
+  display: block;
+}
+
+/* Header row: icon + title + (optional badge). */
+.eval-gallery .pane-header {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.eval-gallery .pane-icon {
+  flex: 0 0 36px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eval-gallery .pane-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.eval-gallery .pane-1 .pane-icon { color: var(--c-1); }
+.eval-gallery .pane-2 .pane-icon { color: var(--c-2); }
+.eval-gallery .pane-3 .pane-icon { color: var(--c-3); }
+.eval-gallery .pane-4 .pane-icon { color: var(--c-4); }
+.eval-gallery .pane-5 .pane-icon { color: var(--c-5); }
+.eval-gallery .pane-6 .pane-icon { color: var(--c-6); }
+
+.eval-gallery .pane-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgb(59, 59, 59);
+  line-height: 1.2;
+}
+
+.eval-gallery .pane-blurb {
+  font-family: et-book, Palatino, serif;
+  font-style: italic;
+  color: #555;
+  margin: 0 0 1.1rem;
+  font-size: 1.1rem;
+  max-width: 50em;
+  line-height: 1.5;
+}
+
+.eval-gallery dl.pane-spec {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  gap: 0.5rem 1rem;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+  width: 100%;
+  max-width: none;
+}
+
+.eval-gallery dl.pane-spec dt {
+  font-weight: 600;
+  color: #888;
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.eval-gallery dl.pane-spec dd {
+  margin: 0;
+  padding: 0;
+  color: rgb(59, 59, 59);
+  line-height: 1.5;
+  text-align: left;
+}
+
+@media (max-width: 760px) {
+  .eval-gallery dl.pane-spec {
+    grid-template-columns: 1fr;
+    gap: 0.2rem 0;
+  }
+  .eval-gallery dl.pane-spec dt { margin-top: 0.6rem; }
+}
+
+/* Hero visualization: isometric SVG scene + a small leaderboard. */
+.hero-fig {
+  display: flex;
+  gap: 2.2rem;
+  align-items: center;
+  margin: 0;
+  padding: 1.2rem 0 0.4rem;
+}
+
+/* tufte.css floats figcaption right at 60% across, which overlaps the
+   next section on any fullwidth figure. Stop the float, sit it below. */
+figure.fullwidth > figcaption {
+  float: none;
+  clear: both;
+  margin: 1rem 0 0;
+  max-width: 60em;
+  text-align: left;
+}
+
+.hero-fig .hero-scene {
+  flex: 1 1 60%;
+  min-width: 0;
+}
+
+.hero-fig .hero-scene svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-fig .hero-leaderboard {
+  flex: 1 1 38%;
+  min-width: 240px;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.hero-fig .lb-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.4rem;
+  border-bottom: 1px solid #d8d8e0;
+}
+
+.hero-fig .lb-title {
+  font-weight: 600;
+  color: #3a3a78;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: lowercase;
+}
+
+.hero-fig .lb-live {
+  font-size: 0.7rem;
+  color: #999;
+  letter-spacing: 0.04em;
+}
+
+.hero-fig .lb-live::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5a9a5a;
+  margin-right: 0.4rem;
+  vertical-align: middle;
+}
+
+.hero-fig table.lb {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.hero-fig table.lb th {
+  text-align: left;
+  font-weight: 500;
+  color: #888;
+  padding: 0.25rem 0.5rem 0.4rem 0;
+  text-transform: lowercase;
+  letter-spacing: 0.03em;
+  font-size: 0.7rem;
+  border-bottom: 1px solid #ececec;
+}
+
+.hero-fig table.lb td {
+  padding: 0.35rem 0.5rem 0.35rem 0;
+  color: rgb(59, 59, 59);
+  border-top: 1px solid #ececec;
+  vertical-align: baseline;
+}
+
+.hero-fig table.lb td:first-child {
+  color: #aaa;
+  font-feature-settings: "tnum";
+  width: 1.8em;
+}
+
+.hero-fig table.lb td.metric {
+  color: #3a3a78;
+  font-weight: 600;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.hero-fig table.lb td.cost {
+  color: #888;
+  text-align: right;
+  white-space: nowrap;
+  font-size: 0.78rem;
+}
+
+.hero-fig table.lb tbody tr:first-child td.metric {
+  position: relative;
+}
+
+.hero-fig table.lb em.team {
+  color: #999;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 0.75rem;
+  margin-left: 0.3rem;
+}
+
+@media (max-width: 820px) {
+  .hero-fig {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.4rem;
+  }
+  .hero-fig .hero-leaderboard { min-width: 0; }
+}
+
+/* Hero scene animation: drone runs a circuit across all six trees over
+   10 s and returns to its idle hover above the centre. When it comes
+   back near the back-left tree at the end of the loop, the pigeons
+   resting there scatter and reset. Background birds drift gently. */
+
+.hero-fig .drone-anim   { animation: drone-circuit 10s ease-in-out infinite; }
+.hero-fig .drone-shadow { animation: drone-shadow-circuit 10s ease-in-out infinite; }
+.hero-fig .pigeon-1     { animation: pigeon-flee-1 10s ease-in-out infinite; }
+.hero-fig .pigeon-2     { animation: pigeon-flee-2 10s ease-in-out infinite; }
+.hero-fig .pigeon-3     { animation: pigeon-flee-3 10s ease-in-out infinite; }
+.hero-fig .bg-bird-1    { animation: bg-bird-1 11s ease-in-out infinite; }
+.hero-fig .bg-bird-2    { animation: bg-bird-2 13s ease-in-out infinite; }
+.hero-fig .bg-bird-3    { animation: bg-bird-3 9s  ease-in-out infinite; }
+
+/* Drone circuit: rest → back-mid → back-right → front-right → front-mid →
+   front-left → hover near pigeon tree (back-left) → rest. */
+@keyframes drone-circuit {
+  0%   { transform: translate(0px, 0px); }       /* rest above centre */
+  12%  { transform: translate(-10px, 20px); }    /* over back-mid tree */
+  24%  { transform: translate(90px, 20px); }     /* over back-right tree */
+  38%  { transform: translate(130px, 75px); }    /* over front-right tree */
+  52%  { transform: translate(0px, 75px); }      /* over front-mid tree */
+  66%  { transform: translate(-130px, 75px); }   /* over front-left tree */
+  80%  { transform: translate(-110px, 25px); }   /* hover near pigeon tree */
+  100% { transform: translate(0px, 0px); }       /* back to rest */
+}
+
+/* Shadow tracks drone X; Y is dampened so the shadow stays on the ground. */
+@keyframes drone-shadow-circuit {
+  0%   { transform: translate(0px, 0px); }
+  12%  { transform: translate(-10px, 5px); }
+  24%  { transform: translate(90px, 5px); }
+  38%  { transform: translate(130px, 18px); }
+  52%  { transform: translate(0px, 18px); }
+  66%  { transform: translate(-130px, 18px); }
+  80%  { transform: translate(-110px, 6px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+/* Pigeons still while drone roams; scatter when drone returns at ~80-88%. */
+@keyframes pigeon-flee-1 {
+  0%, 76%   { transform: translate(0px, 0px); opacity: 1; }
+  88%       { transform: translate(-30px, -45px); opacity: 0; }
+  95%       { transform: translate(-30px, -45px); opacity: 0; }
+  96%       { transform: translate(0px, 0px); opacity: 0; }
+  100%      { transform: translate(0px, 0px); opacity: 1; }
+}
+@keyframes pigeon-flee-2 {
+  0%, 76%   { transform: translate(0px, 0px); opacity: 1; }
+  88%       { transform: translate(0px, -55px); opacity: 0; }
+  95%       { transform: translate(0px, -55px); opacity: 0; }
+  96%       { transform: translate(0px, 0px); opacity: 0; }
+  100%      { transform: translate(0px, 0px); opacity: 1; }
+}
+@keyframes pigeon-flee-3 {
+  0%, 76%   { transform: translate(0px, 0px); opacity: 1; }
+  88%       { transform: translate(30px, -45px); opacity: 0; }
+  95%       { transform: translate(30px, -45px); opacity: 0; }
+  96%       { transform: translate(0px, 0px); opacity: 0; }
+  100%      { transform: translate(0px, 0px); opacity: 1; }
+}
+
+/* Background birds drift slowly to suggest distant flight. */
+@keyframes bg-bird-1 {
+  0%, 100% { transform: translate(0px, 0px); }
+  50%      { transform: translate(20px, -6px); }
+}
+@keyframes bg-bird-2 {
+  0%, 100% { transform: translate(0px, 0px); }
+  50%      { transform: translate(-18px, 5px); }
+}
+@keyframes bg-bird-3 {
+  0%, 100% { transform: translate(0px, 0px); }
+  50%      { transform: translate(14px, 8px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-fig .drone-anim,
+  .hero-fig .drone-shadow,
+  .hero-fig .pigeon-1, .hero-fig .pigeon-2, .hero-fig .pigeon-3,
+  .hero-fig .bg-bird-1, .hero-fig .bg-bird-2, .hero-fig .bg-bird-3 {
+    animation: none;
+  }
+}
+
+/* Pane visualization thumbnail */
+.pane-viz {
+  margin: 0.8rem 0 1rem;
+  overflow-x: auto;
+}
+.pane-viz svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ── Fake-website: physical eval registry ── */
+.physevals-board {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  width: 55%;
+  margin: 1.5rem 0 0;
+  border: 1px solid #d4d2e0;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 14px rgba(58, 58, 120, 0.06);
+}
+
+@media (max-width: 760px) {
+  .physevals-board { width: 100%; }
+}
+
+.physevals-board .bbar {
+  background: #ececf2;
+  border-bottom: 1px solid #d4d2e0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0.7rem;
+}
+.physevals-board .bbar .dots {
+  display: flex;
+  gap: 4px;
+}
+.physevals-board .bbar .dots span {
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+}
+.physevals-board .bbar .dots span:nth-child(1) { background: #f57979; }
+.physevals-board .bbar .dots span:nth-child(2) { background: #f5cb7a; }
+.physevals-board .bbar .dots span:nth-child(3) { background: #7ac88a; }
+.physevals-board .bbar .url {
+  flex: 1;
+  font-size: 0.7rem;
+  color: #777;
+  background: #fff;
+  border: 1px solid #d4d2e0;
+  border-radius: 3px;
+  padding: 0.2rem 0.6rem;
+  font-feature-settings: "tnum";
+}
+
+.physevals-board .page {
+  padding: 1.2rem 1.4rem 1.3rem;
+}
+
+.physevals-board .page-head {
+  border-bottom: 1px solid #e0e0e8;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.physevals-board .page-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: rgb(59, 59, 59);
+}
+.physevals-board .page-sub {
+  font-size: 0.72rem;
+  color: #888;
+  letter-spacing: 0.04em;
+}
+.physevals-board .page-sub::before {
+  content: "";
+  display: inline-block;
+  width: 6px; height: 6px;
+  background: #5a9a5a;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 0.4rem;
+}
+
+.physevals-board .eval-rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.physevals-board .er-row {
+  display: grid;
+  grid-template-columns: 28px 1fr 80px 1fr 60px;
+  gap: 0.6rem 0.8rem;
+  align-items: center;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid #ececec;
+}
+.physevals-board .er-row:last-child { border-bottom: none; }
+
+.physevals-board .er-icon {
+  width: 24px; height: 24px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.physevals-board .er-name { line-height: 1.25; }
+.physevals-board .er-title { font-size: 0.85rem; font-weight: 600; color: rgb(59, 59, 59); }
+.physevals-board .er-sub   { font-size: 0.7rem; color: #888; }
+
+.physevals-board .er-status {
+  font-size: 0.72rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.physevals-board .er-status.open    { color: #2f6a36; }
+.physevals-board .er-status.limited { color: #8a5a00; }
+.physevals-board .er-status.soon    { color: #aaa; }
+
+.physevals-board .er-metric {
+  font-size: 0.72rem;
+  color: #888;
+  font-style: italic;
+}
+
+.physevals-board .er-teams {
+  font-size: 0.72rem;
+  color: #888;
+  text-align: right;
+  font-feature-settings: "tnum";
+  white-space: nowrap;
+}
+
+.physevals-board .page-foot {
+  margin-top: 0.8rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #ececec;
+  font-size: 0.7rem;
+  color: #aaa;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 540px) {
+  .physevals-board .er-row {
+    grid-template-columns: 28px 1fr 80px;
+    grid-template-areas:
+      "icon name status"
+      ".    metric metric"
+      ".    teams  teams";
+    row-gap: 0.15rem;
+  }
+  .physevals-board .er-icon   { grid-area: icon; }
+  .physevals-board .er-name   { grid-area: name; }
+  .physevals-board .er-status { grid-area: status; text-align: right; }
+  .physevals-board .er-metric { grid-area: metric; }
+  .physevals-board .er-teams  { grid-area: teams; }
+}

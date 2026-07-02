@@ -1,0 +1,138 @@
+/* Post-Mythos Crypto — phase-timeline diagram. */
+
+.pmx-timeline {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  width: 100%;
+  margin: 0;
+}
+
+.pmx-track {
+  display: grid;
+  grid-template-columns: 0.85fr 1.1fr 1.1fr 1fr;
+  gap: 0;
+  border: 1px solid #d4d2e0;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 14px rgba(58, 58, 120, 0.06);
+}
+
+.pmx-phase {
+  padding: 0.85rem 0.95rem 1rem;
+  border-right: 1px solid #e2e1ec;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.pmx-phase:last-child { border-right: none; }
+
+.pmx-band {
+  font-size: 0.7rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 0.22rem 0.5rem;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+
+.pmx-name {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: rgb(59, 59, 59);
+  line-height: 1.2;
+}
+
+.pmx-row {
+  font-size: 0.74rem;
+  line-height: 1.35;
+  color: #555;
+}
+.pmx-row b {
+  display: block;
+  font-size: 0.62rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #9a98ad;
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+}
+
+.pmx-risk {
+  margin-top: auto;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  align-self: flex-start;
+}
+
+/* per-phase colour coding */
+.pmx-phase.pre      { background: #f6f6f8; }
+.pmx-phase.grace    { background: #f0f4ef; }
+.pmx-phase.unstable { background: #fbf3ec; }
+.pmx-phase.stable   { background: #eef1f8; }
+
+.pre .pmx-band      { background: #e4e3ea; color: #5b5b6e; }
+.grace .pmx-band    { background: #d9ead2; color: #3d6a2f; }
+.unstable .pmx-band { background: #f6ddc7; color: #a85a2a; }
+.stable .pmx-band   { background: #dadff3; color: #3a3a78; }
+
+.pre .pmx-risk      { background: #e4e3ea; color: #5b5b6e; }
+.grace .pmx-risk    { background: #d9ead2; color: #3d6a2f; }
+.unstable .pmx-risk { background: #f6d2c2; color: #9a2a2a; }
+.stable .pmx-risk   { background: #dadff3; color: #3a3a78; }
+
+/* "we are here" marker over the grace column */
+.pmx-marker {
+  display: flex;
+  margin-top: 0.55rem;
+  font-size: 0.7rem;
+  color: #3d6a2f;
+  font-weight: 600;
+}
+.pmx-marker .spacer-pre   { flex: 0.85; }
+.pmx-marker .here {
+  flex: 1.1;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+.pmx-marker .here::before {
+  content: "▲ ";
+}
+.pmx-marker .spacer-rest  { flex: 2.1; }
+
+.pmx-axis {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+  font-size: 0.68rem;
+  color: #9a98ad;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.pmx-axis .line {
+  flex: 1;
+  height: 1px;
+  background: #d4d2e0;
+}
+
+@media (max-width: 760px) {
+  .pmx-track { grid-template-columns: 1fr; }
+  .pmx-phase { border-right: none; border-bottom: 1px solid #e2e1ec; }
+  .pmx-phase:last-child { border-bottom: none; }
+  .pmx-marker { display: none; }
+}
+
+/* keep the diagram caption centred below, not floated into the margin */
+figure.fullwidth figcaption {
+  float: none;
+  clear: both;
+  max-width: 100%;
+  margin-right: 0;
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.88rem;
+  color: #666;
+}

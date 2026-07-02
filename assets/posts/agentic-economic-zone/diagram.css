@@ -1,0 +1,542 @@
+/* AEZ post — diagram, taxonomy table, and fake evals board. */
+
+.aez-compare {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.2rem;
+  width: 100%;
+  margin: 0;
+  align-items: start;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.aez-panel {
+  margin: 0;
+  max-width: none;
+  min-width: 0;
+}
+
+.aez-panel figcaption {
+  float: none;
+  clear: none;
+  margin: 0 0 0.45rem;
+  max-width: none;
+  color: #555;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.86rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.aez-generated-panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+figure.fullwidth > img {
+  display: block;
+  max-width: 70%;
+  height: auto;
+}
+
+.aez-map-fig {
+  width: 100%;
+  margin: 0;
+  overflow-x: auto;
+}
+
+.aez-map-fig svg {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+}
+
+.aez-map-fig text {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  fill: rgb(59, 59, 59);
+  font-size: 16px;
+  font-weight: 650;
+  letter-spacing: 0;
+  pointer-events: none;
+}
+
+.aez-map-fig text.small {
+  fill: #6f7480;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.aez-map-fig .aez-context {
+  fill: none;
+  stroke: #d7d9e2;
+  stroke-width: 2;
+  opacity: 0.72;
+}
+
+.aez-map-fig .landscape {
+  fill: #d9e5d1;
+  stroke: #8ca67a;
+  stroke-width: 1.2;
+  opacity: 0.82;
+}
+
+.aez-map-fig .landscape path {
+  stroke: #8b7358;
+}
+
+.aez-map-fig .zone-floor {
+  fill: #edeef5;
+  stroke: #7b7fa1;
+  stroke-width: 2.2;
+}
+
+.aez-map-fig .zone-wall {
+  fill: rgba(213, 216, 232, 0.76);
+  stroke: #a7abc4;
+  stroke-width: 1.4;
+}
+
+.aez-map-fig .zone-inner {
+  fill: rgba(252, 252, 252, 0.82);
+  stroke: #c9ccd9;
+  stroke-width: 1.2;
+  stroke-dasharray: 7 7;
+}
+
+.aez-map-fig .outside-labels rect {
+  fill: #fff;
+  stroke: #3a3a78;
+  stroke-width: 2;
+}
+
+.aez-map-fig .outside-labels text {
+  fill: #30306d;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.aez-map-fig .outside-labels text.small {
+  fill: #777b8b;
+  font-size: 12px;
+  text-transform: none;
+}
+
+.aez-map-fig .autonomous-label text {
+  fill: #41683a;
+  font-size: 17px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.aez-map-fig .gate-back,
+.aez-map-fig .tenant rect,
+.aez-map-fig .iso-roof,
+.aez-map-fig .iso-left,
+.aez-map-fig .iso-right {
+  stroke-width: 1.8;
+}
+
+.aez-map-fig .customs .gate-back { fill: #f7e8e5; stroke: #a85a5a; }
+.aez-map-fig .post .gate-back { fill: #e8eef7; stroke: #5d779e; }
+.aez-map-fig .shop .gate-back { fill: #f7e6c6; stroke: #bd8238; }
+.aez-map-fig .customs .iso-roof { fill: #f8e6e3; stroke: #a85a5a; }
+.aez-map-fig .customs .iso-left { fill: #eed2ce; stroke: #a85a5a; }
+.aez-map-fig .customs .iso-right { fill: #e6c1bc; stroke: #a85a5a; }
+.aez-map-fig .post .iso-roof { fill: #e8eef7; stroke: #5d779e; }
+.aez-map-fig .post .iso-left { fill: #dce6f2; stroke: #5d779e; }
+.aez-map-fig .post .iso-right { fill: #ccd9ea; stroke: #5d779e; }
+.aez-map-fig .shop .iso-roof { fill: #fff0d2; stroke: #bd8238; }
+.aez-map-fig .shop .iso-left { fill: #f2d39a; stroke: #bd8238; }
+.aez-map-fig .shop .iso-right { fill: #e8c176; stroke: #bd8238; }
+.aez-map-fig .gate-door { fill: #fbfaf7; stroke: currentColor; stroke-width: 1.4; }
+.aez-map-fig .customs { color: #a85a5a; }
+.aez-map-fig .post { color: #5d779e; }
+.aez-map-fig .shop { color: #bd8238; }
+.aez-map-fig .gate-icon,
+.aez-map-fig .stripe,
+.aez-map-fig .micro-vehicle,
+.aez-map-fig .boba-icon {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.aez-map-fig .awning { fill: #fff3de; stroke: #bd8238; stroke-width: 1.8; }
+.aez-map-fig .window { fill: #3f3440; stroke: #3f3440; stroke-width: 1; opacity: 0.9; }
+
+.aez-map-fig .tenant path,
+.aez-map-fig .tenant circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.aez-map-fig .tenant-icon,
+.aez-map-fig .tenant-dot {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.1;
+}
+
+.aez-map-fig .tenant-dot {
+  fill: rgba(255, 255, 255, 0.42);
+}
+
+.aez-map-fig .tenant text {
+  font-size: 13px;
+}
+
+.aez-map-fig .gate text {
+  font-size: 14px;
+}
+
+.aez-map-fig .boba-shop text {
+  font-size: 15px;
+}
+
+.aez-map-fig .boba-shop text.small {
+  font-size: 11px;
+}
+
+.aez-map-fig .cleaning { color: #5a7a44; }
+.aez-map-fig .cleaning rect { fill: #e6efdf; stroke: #5a7a44; }
+.aez-map-fig .cleaning .iso-roof { fill: #eef5e9; stroke: #5a7a44; }
+.aez-map-fig .cleaning .iso-left { fill: #dfead7; stroke: #5a7a44; }
+.aez-map-fig .cleaning .iso-right { fill: #d3dec9; stroke: #5a7a44; }
+.aez-map-fig .manufacturing { color: #4a6ea5; }
+.aez-map-fig .manufacturing rect { fill: #e4ecf7; stroke: #4a6ea5; }
+.aez-map-fig .manufacturing .iso-roof { fill: #edf3fb; stroke: #4a6ea5; }
+.aez-map-fig .manufacturing .iso-left { fill: #dfe7f2; stroke: #4a6ea5; }
+.aez-map-fig .manufacturing .iso-right { fill: #d2deed; stroke: #4a6ea5; }
+.aez-map-fig .logistics { color: #4f839b; }
+.aez-map-fig .logistics rect { fill: #e0f0f3; stroke: #4f839b; }
+.aez-map-fig .logistics .iso-roof { fill: #edf7f9; stroke: #4f839b; }
+.aez-map-fig .logistics .iso-left { fill: #dcecf1; stroke: #4f839b; }
+.aez-map-fig .logistics .iso-right { fill: #cbe1e9; stroke: #4f839b; }
+.aez-map-fig .boba { color: #bd8238; }
+.aez-map-fig .boba rect { fill: #f5e5c8; stroke: #bd8238; }
+
+.aez-map-fig .market-core ellipse {
+  fill: rgba(255, 255, 255, 0.88);
+  stroke: #5a7a44;
+  stroke-width: 2;
+  stroke-dasharray: 8 7;
+}
+
+.aez-map-fig .market-label-bg {
+  fill: rgba(255, 255, 255, 0.94);
+  stroke: rgba(90, 122, 68, 0.35);
+  stroke-width: 1;
+}
+
+.aez-map-fig .market-core text {
+  fill: #41683a;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.aez-map-fig .market-core text.small {
+  fill: #6f8069;
+  font-size: 12px;
+  text-transform: none;
+}
+
+.aez-map-fig .flows,
+.aez-map-fig .legend path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.aez-map-fig .flows.outside,
+.aez-map-fig .legend .outside {
+  stroke: #2f6f9f;
+  stroke-width: 3;
+  marker-end: url(#map-arrow-outside);
+}
+
+.aez-map-fig #map-arrow-outside path { fill: #2f6f9f; }
+
+.aez-map-fig .flows.internal,
+.aez-map-fig .legend .internal {
+  stroke: #4f7c3f;
+  stroke-width: 2.7;
+  marker-end: url(#map-arrow-internal);
+}
+
+.aez-map-fig #map-arrow-internal path { fill: #4f7c3f; }
+
+.aez-map-fig .flows.customers,
+.aez-map-fig .legend .customers {
+  stroke: #c9832f;
+  stroke-width: 3;
+  marker-end: url(#map-arrow-customer);
+}
+
+.aez-map-fig #map-arrow-customer path { fill: #c9832f; }
+
+.aez-map-fig .legend text {
+  fill: #747474;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.aez-map-fig .zone-title {
+  fill: #3a3a78;
+  font-size: 17px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Override Tufte's floating figcaption so the AEZ diagram caption
+   sits below the diagram as a centred block, not in the margin. */
+figure.fullwidth figcaption {
+  float: none;
+  clear: both;
+  max-width: 100%;
+  margin-right: 0;
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.88rem;
+  color: #666;
+}
+
+@media (max-width: 900px) {
+  .aez-compare {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Org taxonomy table. */
+.org-taxonomy {
+  border-collapse: collapse;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.88rem;
+  margin: 1.2rem 0;
+  width: 100%;
+}
+
+.org-taxonomy thead th {
+  text-align: left;
+  font-weight: 600;
+  color: #3a3a78;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.5rem 0.8rem;
+  border-bottom: 1px solid #3a3a78;
+}
+
+.org-taxonomy tbody td {
+  padding: 0.5rem 0.8rem;
+  color: rgb(59, 59, 59);
+  border-bottom: 1px solid #ececec;
+  vertical-align: top;
+}
+
+.org-taxonomy tbody td:first-child {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.org-taxonomy .row-aez {
+  background: #f6f7fa;
+}
+
+.org-taxonomy .row-aez td {
+  border-bottom: 1px solid #3a3a78;
+}
+
+.org-taxonomy .f {
+  display: inline-block;
+  font-size: 0.72rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  font-weight: 500;
+}
+
+.org-taxonomy .f-high { background: #e5efe2; color: #2f6a36; }
+.org-taxonomy .f-low  { background: #f5e7df; color: #8a5230; }
+.org-taxonomy .f-vlow { background: #f5dedb; color: #8a2a2a; }
+
+/* ── Fake-website leaderboard: evals for autonomous organisations ── */
+.aez-evals-board {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  /* sit in the text-column width (matches Tufte section > p at 55% of body) */
+  width: 55%;
+  margin: 1.5rem 0 0;
+  border: 1px solid #d4d2e0;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 14px rgba(58, 58, 120, 0.06);
+}
+
+@media (max-width: 760px) {
+  .aez-evals-board { width: 100%; }
+}
+
+.aez-evals-board .bbar {
+  background: #ececf2;
+  border-bottom: 1px solid #d4d2e0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0.7rem;
+}
+.aez-evals-board .bbar .dots {
+  display: flex;
+  gap: 4px;
+}
+.aez-evals-board .bbar .dots span {
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #cbcbd2;
+}
+.aez-evals-board .bbar .dots span:nth-child(1) { background: #f57979; }
+.aez-evals-board .bbar .dots span:nth-child(2) { background: #f5cb7a; }
+.aez-evals-board .bbar .dots span:nth-child(3) { background: #7ac88a; }
+.aez-evals-board .bbar .url {
+  flex: 1;
+  font-size: 0.7rem;
+  color: #777;
+  background: #fff;
+  border: 1px solid #d4d2e0;
+  border-radius: 3px;
+  padding: 0.2rem 0.6rem;
+  font-feature-settings: "tnum";
+}
+
+.aez-evals-board .page {
+  padding: 1.2rem 1.4rem 1.3rem;
+}
+
+.aez-evals-board .page-head {
+  border-bottom: 1px solid #e0e0e8;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.aez-evals-board .page-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: rgb(59, 59, 59);
+}
+.aez-evals-board .page-sub {
+  font-size: 0.72rem;
+  color: #888;
+  letter-spacing: 0.04em;
+}
+.aez-evals-board .page-sub::before {
+  content: "";
+  display: inline-block;
+  width: 6px; height: 6px;
+  background: #5a9a5a;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 0.4rem;
+}
+
+.aez-evals-board .eval-rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.aez-evals-board .er-row {
+  display: grid;
+  grid-template-columns: 28px 1fr 60px 1fr 80px;
+  gap: 0.6rem 0.8rem;
+  align-items: center;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid #ececec;
+}
+.aez-evals-board .er-row:last-child { border-bottom: none; }
+
+.aez-evals-board .er-icon {
+  width: 24px; height: 24px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.aez-evals-board .er-name { line-height: 1.25; }
+.aez-evals-board .er-title { font-size: 0.85rem; font-weight: 600; color: rgb(59, 59, 59); }
+.aez-evals-board .er-sub { font-size: 0.7rem; color: #888; }
+
+.aez-evals-board .er-score {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #3a3a78;
+  font-feature-settings: "tnum";
+  text-align: right;
+}
+.aez-evals-board .er-score.pending { color: #aaa; font-weight: 400; font-style: italic; font-size: 0.78rem; }
+
+.aez-evals-board .er-bar {
+  position: relative;
+  height: 6px;
+  border-radius: 999px;
+  background: #ececf2;
+  overflow: hidden;
+}
+.aez-evals-board .er-bar-fill {
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  background: linear-gradient(90deg, #6a6aa8, #3a3a78);
+  border-radius: 999px;
+}
+.aez-evals-board .er-bar.pending { background: #f4f4f8; }
+
+.aez-evals-board .er-meta {
+  font-size: 0.72rem;
+  color: #888;
+  text-align: right;
+  font-feature-settings: "tnum";
+}
+
+.aez-evals-board .page-foot {
+  margin-top: 0.8rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #ececec;
+  font-size: 0.7rem;
+  color: #aaa;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 540px) {
+  .aez-evals-board .er-row {
+    grid-template-columns: 28px 1fr 60px;
+    grid-template-areas:
+      "icon name score"
+      ".    bar  bar"
+      ".    meta meta";
+    row-gap: 0.2rem;
+  }
+  .aez-evals-board .er-icon { grid-area: icon; }
+  .aez-evals-board .er-name { grid-area: name; }
+  .aez-evals-board .er-score { grid-area: score; }
+  .aez-evals-board .er-bar { grid-area: bar; }
+  .aez-evals-board .er-meta { grid-area: meta; }
+}
