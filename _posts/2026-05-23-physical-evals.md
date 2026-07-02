@@ -1,11 +1,10 @@
 ---
 layout: post
 title: "Physical Evals"
+subtitle: "Evaluations in the actual physical world."
 date: 2026-05-23
 categories: Work
 ---
-
-*Evaluations in the actual physical world.*
 
 <span class="newthought">A physical evaluation</span> tests an AI
 system in the actual physical world — not a simulator, not a sandbox,
@@ -142,7 +141,7 @@ environment - fruit trees, a wet bench, a warehouse cell, a field
 plot - through sensors and actuators connected to the internet, so
 any agent can take a slot, attempt the task, and submit a score.
 
-In principle, most problems in the physical world could be turned in a challenge for surfacing the state of the art of AI in solving that problem. In a way physical evals can act as a forcing function to saturate evaluations in the real world. <span class="marginnote">Saturate as in: take the measurable outcome to its ceiling. The eval defines the ceiling; the participants find out how close they can get.</span>
+In principle, most problems in the physical world could be turned in a challenge for surfacing the state of the art of AI in solving that problem. In a way physical evals can act as a forcing function to saturate evaluations in the real world. <label for="mn-raw-1" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-raw-1" class="margin-toggle"/><span class="marginnote">Saturate as in: take the measurable outcome to its ceiling. The eval defines the ceiling; the participants find out how close they can get.</span>
 
 
 ### What they're not
@@ -161,7 +160,7 @@ A physical eval isn't where one trains their models, but it's where they get tes
 A virtual simulation is like a *virtual gym*. Due to the high cost of interacting with the real world, it is likely that all the learning — model fitting, policy iteration, RL
 rollouts, fine-tuning, ablations, sweeps — will happen somewhere
 cheaper: a simulator, a virtual environment, a closed in-house
-testbed. <span class="marginnote">Some of the gyms people are using today: [OpenAI Gym / Gymnasium](https://gymnasium.farama.org/), [MuJoCo](https://mujoco.org/), [PyBullet](https://pybullet.org/), [Isaac Gym / Isaac Sim](https://developer.nvidia.com/isaac-sim), [DeepMind Lab](https://github.com/google-deepmind/lab), [Habitat](https://aihabitat.org/), [AI2-THOR](https://ai2thor.allenai.org/), [CARLA](https://carla.org/), [AirSim](https://microsoft.github.io/AirSim/), [Genesis](https://genesis-embodied-ai.github.io/).</span>
+testbed. <label for="mn-raw-2" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-raw-2" class="margin-toggle"/><span class="marginnote">Some of the gyms people are using today: [OpenAI Gym / Gymnasium](https://gymnasium.farama.org/), [MuJoCo](https://mujoco.org/), [PyBullet](https://pybullet.org/), [Isaac Gym / Isaac Sim](https://developer.nvidia.com/isaac-sim), [DeepMind Lab](https://github.com/google-deepmind/lab), [Habitat](https://aihabitat.org/), [AI2-THOR](https://ai2thor.allenai.org/), [CARLA](https://carla.org/), [AirSim](https://microsoft.github.io/AirSim/), [Genesis](https://genesis-embodied-ai.github.io/).</span>
 Participants are free to use whichever virtual world or *gym* they
 like — there is a whole landscape of simulators specifically built for
 this.
@@ -765,7 +764,7 @@ A useful first pass is to categorise harms by who pays the cost:
 2. **Harm to the surrounding environment.** Chemicals spill, the
    orchard catches fire, a neighbouring field gets sprayed.
 3. **Harm to humans.** A bystander gets hit by the drone, an operator
-   gets burned, a patient sample gets switched. <span class="marginnote">The lines between these categories blur in practice — chemical drift is "environment" until a bystander walks through it.</span>
+   gets burned, a patient sample gets switched. <label for="mn-raw-3" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-raw-3" class="margin-toggle"/><span class="marginnote">The lines between these categories blur in practice — chemical drift is "environment" until a bystander walks through it.</span>
    The category that matters most, and the hardest to bound.
 4. **Information harms.** Footage of bystanders or proprietary processes
    leaves the eval site; the eval is used as a covert surveillance
@@ -795,7 +794,7 @@ physical evals trying, evaluating, and writing up:
   simulation pass first — not as the eval itself, but as a gate.
   Refuses to execute on the physical system if the simulated run trips
   any guardrail.
-- **Supervised / shadow modes.** <span class="marginnote">Like a learner's permit: new operators get to compute actions but not actuate them for the first N slots.</span> New operators run in
+- **Supervised / shadow modes.** <label for="mn-raw-4" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-raw-4" class="margin-toggle"/><span class="marginnote">Like a learner's permit: new operators get to compute actions but not actuate them for the first N slots.</span> New operators run in
   shadow mode (actions computed but not executed) for some number of
   slots before they're trusted with real actuation. Progressive trust
   as the leaderboard accumulates evidence.
@@ -836,7 +835,7 @@ autonomous vehicles in the Mojave; the
 [DARPA Robotics Challenge](https://en.wikipedia.org/wiki/DARPA_Robotics_Challenge)
 put humanoids through disaster-response courses; the
 [Amazon Picking Challenge](https://robohub.org/amazon-picking-challenge/)
-ran in warehouse mock-ups for several years; <span class="marginnote">[RoboCup](https://www.robocup.org/) has been running its soccer leagues since 1997 — arguably the longest-lived physical eval in continuous operation, and the one with the most literature on what makes it work and what it ends up measuring.</span> RoboCup
+ran in warehouse mock-ups for several years; <label for="mn-raw-5" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-raw-5" class="margin-toggle"/><span class="marginnote">[RoboCup](https://www.robocup.org/) has been running its soccer leagues since 1997 — arguably the longest-lived physical eval in continuous operation, and the one with the most literature on what makes it work and what it ends up measuring.</span> RoboCup
 has been doing its soccer leagues since the late 1990s; the [Indy
 Autonomous Challenge](https://www.indyautonomouschallenge.com/) and
 [Roborace](https://en.wikipedia.org/wiki/Roborace) have put driverless
@@ -857,7 +856,7 @@ operating. That ceiling is what makes physical evals rare today — and
 rare evals can't be the basis of an ecosystem.
 
 So one of the most important questions this community can keep returning
-to is the one in the heading.<span class="marginnote">Stand-in for "the cheapest plausible build". The Raspberry Pi did this for hobbyist computing; what's the equivalent for physical evals?</span>
+to is the one in the heading.<label for="mn-raw-6" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-raw-6" class="margin-toggle"/><span class="marginnote">Stand-in for "the cheapest plausible build". The Raspberry Pi did this for hobbyist computing; what's the equivalent for physical evals?</span>
 What's the bill of materials that brings a credible, instrumented,
 openable physical eval down to the cost of a serious hobby project? Probably some mix of commodity sensors, a
 single-board computer for the control loop, an open scheduling service
@@ -1039,7 +1038,7 @@ leaderboard answers the AI-selection question by revealing whose approach
 actually delivers on the physical world.
 
 Physical evals can be a way for problem-owners to
-*delegate AI knowledge* to a market.<span class="marginnote">This is the same shift that happened with bug bounties. A company didn't have to *predict* who the best vulnerability researchers were; they had to publish the surface and the rules, and the market sorted itself out.</span> The grower doesn't pick a model.
+*delegate AI knowledge* to a market.<label for="mn-raw-7" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-raw-7" class="margin-toggle"/><span class="marginnote">This is the same shift that happened with bug bounties. A company didn't have to *predict* who the best vulnerability researchers were; they had to publish the surface and the rules, and the market sorted itself out.</span> The grower doesn't pick a model.
 The hospital doesn't pick a model. The factory doesn't pick a model. They
 pick a problem worth instrumenting and let the world's AI builders compete
 to be the answer. As more domains follow suit, an aggregate picture

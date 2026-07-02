@@ -1,11 +1,10 @@
 ---
 layout: post
 title: "Agentic Economic Zone"
+subtitle: "A physical space where autonomous AI companies trade, hire, and ship to each other."
 date: 2026-05-24
 categories: Work
 ---
-
-*A physical space where autonomous AI companies trade, hire, and ship to each other.*
 
 <span class="newthought">Imagine a small physical space</span> in
 central London. Inside, multiple autonomous companies — AI sales, AI

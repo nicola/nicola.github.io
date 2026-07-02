@@ -1,11 +1,10 @@
 ---
 layout: post
 title: "Post-Mythos Crypto"
+subtitle: "Vulnerability discovery is getting cheap. Blockchain coordination isn't getting faster."
 date: 2026-06-02
 categories: Work
 ---
-
-*Vulnerability discovery is getting cheap. Blockchain coordination isn't getting faster.*
 
 <link rel="stylesheet" href="/assets/posts/post-mythos/diagram.css">
 
@@ -13,7 +12,7 @@ categories: Work
 
 Blockchains likely contain latent critical bugs, and AI systems are rapidly improving at finding them. At the same time, public blockchain infrastructure is unusually difficult to patch quickly or quietly.
 
-Several [recent evaluations](https://www.aisi.gov.uk/blog/our-evaluation-of-claude-mythos-previews-cyber-capabilities) from the UK AI Security Institute (AISI) on Anthropic's latest model *Mythos* <span class="marginnote">*Mythos* is used here as shorthand for the first generation of frontier models that cross the threshold of reliable, autonomous, multi-step cyber capability.</span> are showing AI systems are becoming substantially more effective at cyber capabilities: vulnerability discovery, exploit reasoning, patch analysis, and multi-step offensive workflows. To date, no major blockchain team has announced access to Mythos-like models.<span class="marginnote">Please update the authors if you are aware of any.<br><br> Cryptocurrency teams are often international teams with no presence in the US, which might be incompatible with the current policies of some frontier labs.</span>
+Several [recent evaluations](https://www.aisi.gov.uk/blog/our-evaluation-of-claude-mythos-previews-cyber-capabilities) from the UK AI Security Institute (AISI) on Anthropic's latest model *Mythos* <label for="mn-raw-1" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-raw-1" class="margin-toggle"/><span class="marginnote">*Mythos* is used here as shorthand for the first generation of frontier models that cross the threshold of reliable, autonomous, multi-step cyber capability.</span> are showing AI systems are becoming substantially more effective at cyber capabilities: vulnerability discovery, exploit reasoning, patch analysis, and multi-step offensive workflows. To date, no major blockchain team has announced access to Mythos-like models.<label for="mn-raw-2" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-raw-2" class="margin-toggle"/><span class="marginnote">Please update the authors if you are aware of any.<br><br> Cryptocurrency teams are often international teams with no presence in the US, which might be incompatible with the current policies of some frontier labs.</span>
 
 Just as post-quantum safety demands a years-long, coordinated transition to
 new algorithms *now*, while we still can, we should address post-Mythos
@@ -74,14 +73,14 @@ In a pre-Mythos world, bugs are found by torchlight (expert security teams searc
 <figcaption>The transition to a post-Mythos world. The phases are defined by who can use Mythos-class cyber capability. We are early in the grace period.</figcaption>
 </figure>
 
-<mark style="background:#e4e3ea;color:#5b5b6e;padding:0 .25em;border-radius:.2em">**Pre-Mythos**</mark> is the world we used to live in. Finding a deep vulnerability in
+<mark style="background:#e4e3ea;color:#5b5b6e;padding:0 .25em;border-radius:.2em"><strong>Pre-Mythos</strong></mark> is the world we used to live in. Finding a deep vulnerability in
 a mature system required a specialist with deep context — compiler
 behaviour, consensus internals, a specific cryptographic implementation.
 Very few people had that skill, audits were expensive, and that scarcity
 was, in effect, a security control. Bug density stayed bounded because the
 labour to exhaust it did not exist.
 
-<mark style="background:#d9ead2;color:#3d6a2f;padding:0 .25em;border-radius:.2em">**The grace period**</mark> is where we are now. Mythos-class capability exists,
+<mark style="background:#d9ead2;color:#3d6a2f;padding:0 .25em;border-radius:.2em"><strong>The grace period</strong></mark> is where we are now. Mythos-class capability exists,
 but it is gated: it lives behind a small number of frontier labs that can
 choose who uses it and refuse misuse. In this window, defenders can get
 there first. For example: A protocol team with access can turn AI loose on its own
@@ -91,7 +90,7 @@ grace period is precisely *the interval during which access to Mythos-class
 capability can still be denied to bad actors.* It is a temporary, expiring
 asset, and it is the central concept of this memo. Not having access to such capabilities in this phase will leave us unprepared for the next phase.
 
-<mark style="background:#f6ddc7;color:#a85a2a;padding:0 .25em;border-radius:.2em">**The unstable period**</mark> begins when frontier access
+<mark style="background:#f6ddc7;color:#a85a2a;padding:0 .25em;border-radius:.2em"><strong>The unstable period</strong></mark> begins when frontier access
 broadens enough, or open-weight models catch up enough, that anyone can run
 Mythos-class analysis. Now every latent bug in widely deployed software is
 in play simultaneously. This is the dangerous period, and it is not
@@ -109,7 +108,7 @@ dominate:
   propagation window can be days or weeks. (This is the secure-upgrade
   problem, below.)
 
-<mark style="background:#dadff3;color:#3a3a78;padding:0 .25em;border-radius:.2em">**The stable period**</mark> is the post-Mythos equilibrium worth aiming for: a
+<mark style="background:#dadff3;color:#3a3a78;padding:0 .25em;border-radius:.2em"><strong>The stable period</strong></mark> is the post-Mythos equilibrium worth aiming for: a
 world where essentially every bug findable at reasonable cost by
 Mythos-class tooling has already been found and fixed, and where we have
 working answers to formally secure software and *secure software upgrades.*
