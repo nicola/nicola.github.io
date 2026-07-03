@@ -3,6 +3,7 @@ layout: post
 title:  "On leaving University College London"
 date:   2015-09-07 13:06:04
 categories: Life
+published: false
 ---
 
 {% marginnote '__TL;DR__: I applied to MIT a year before finishing and I dropped out from the 4 year course at UCL'%}In the last few days, I had this recurring conversation on how I left University College London.

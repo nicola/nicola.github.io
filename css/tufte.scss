@@ -76,6 +76,13 @@ body {
       max-width:850px;
       padding-left: 8.4%;
     }
+    // Article pages use the full Tufte canvas like gensec
+    body.layout-post{
+      max-width: 1400px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 12.5%;
+    }
 }
 body > header{
   padding-top: 1rem;
@@ -210,6 +217,17 @@ article > ul, article > ol, .more ul {
   padding-left: 5%;
 }
 
+// Article pages: gensec's text measure (paragraphs 55%, lists 50% + 5% indent)
+body.layout-post p{
+  width: 55%;
+}
+body.layout-post pre code{
+  width: 52.5%;
+}
+body.layout-post article > ul, body.layout-post article > ol, body.layout-post .more ul{
+  width: 50%;
+}
+
 
 @media screen and (max-width: 910px){
     p.hideOnSmall {
@@ -227,6 +245,8 @@ a, .marginnote a, .sidenote a{
 }
 ul.content{
   list-style: none;
+  width: 100%;
+  padding-left: 0;
 }
 img { max-width: 100%; }
 sup, sub {
@@ -237,7 +257,7 @@ sup, sub {
 }
 sub { top: 0.2rem; }
 
-.fullwidth { max-width: 95%; }
+.fullwidth { max-width: 90%; }
 
 // Wide tables scroll inside their own container instead of the page
 .table-wrapper { overflow-x: auto; }
@@ -280,7 +300,7 @@ label.margin-toggle:not(.sidenote-number) {
     padding-left: 8%;
     padding-right: 8%;
   }
-  p, hr{
+  p, hr, body.layout-post p{
     width: 100%;
   }
   table{
@@ -288,11 +308,15 @@ label.margin-toggle:not(.sidenote-number) {
     max-width: 100%;
     overflow-x: auto;
   }
-  pre code, pre code p, code{
+  pre code, pre code p, code, body.layout-post pre code{
     width: 97%;
   }
-  article > ul, article > ol, .more ul{
+  article > ul, article > ol, .more ul,
+  body.layout-post article > ul, body.layout-post article > ol, body.layout-post .more ul{
     width: 90%;
+  }
+  ul.content{
+    width: 100%;
   }
   label.margin-toggle:not(.sidenote-number){
     display: inline;
@@ -382,6 +406,7 @@ div.footnotes{
 }
 
 .subtitle { font-style: italic;
+           font-family: "et-book-display-italic", Georgia, serif;
            font-size: 1.4rem;
            line-height: 1.4;
            margin-top: 1.4rem;
@@ -599,7 +624,7 @@ body {
 }
 
 article ul li p {
-  width: 100%;
+  width: 100% !important;
 }
 
 article ul li.listing {

@@ -29,6 +29,8 @@ At __30__ he started [Public Good Crypto](https://publicgoodcrypto.org), a resea
 
 The following are events and conference I gave a presentation at. Want me to give a keynote/unconference? Please contact me at [@nicolagreco](http://twitter.com/nicolagreco) or via email at me at nicola dot io.
 
+- __What if agents could generate protocols on the spot?__, Devconnect, Buenos Aires, 2025/11
+- __Quantum Punks, with Alex and Nicola__, ZKPodcast, 2025/05
 - __Quantum Cryptography Acceleration__, QuantumPunks @ Devcon7, Bangkok, 2024/11
 - __Good SNARKS are here needed__, Zcon0, Montreal, 2018/06
 - __What is a Hackathon?__, SeedCamp, London, 2014/07

@@ -3,6 +3,7 @@ layout: post
 title:  "Mass-murderer space rock and hash collisions"
 date:   2015-11-03 13:06:04
 categories: Quotes
+published: false
 ---
 
 I was on the #IPFS irc channel and some users were discussing about hash collisions, and I read this really clever quote.

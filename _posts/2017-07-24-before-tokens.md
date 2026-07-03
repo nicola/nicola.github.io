@@ -3,6 +3,7 @@ layout: post
 title:  "Before Tokens"
 date:   2017-07-24 13:06:04
 categories: Ideas
+published: false
 ---
 
 From January, [due](https://filecoin.io) [to](https://internetpolicy.mit.edu/team/nicola-greco-2/) [different](http://dci.mit.edu/people.html) [reasons](http://nicola.io/computation-coin/2017) I had the incredible occasion to brainstorm and collaborate with some very great minds in the blockchain space. 
