@@ -3,6 +3,7 @@ layout: post
 title:  "Idea: Research Coin, second attempt"
 date:   2017-06-10 13:06:04
 categories: Ideas
+published: false
 ---
 
 tl;dr

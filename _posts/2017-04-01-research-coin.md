@@ -3,6 +3,7 @@ layout: post
 title:  "Idea: Research Coin and futuristic research labs"
 date:   2017-04-01 13:06:04
 categories: Ideas
+published: false
 ---
 
 ## Futuristic research labs
