@@ -1,7 +1,7 @@
 html, body {
   height:100%;
   padding: 0px;
-  margin: 0px 0px 0px 1px;
+  margin: 0;
 }
 
 @font-face {
@@ -10,10 +10,11 @@ html, body {
 
 
 body {
-    background-image: url(/assets/img/nicolacard.png), linear-gradient(to bottom, #021e42 0%,#0d426b 93.5%,#F8F8F6 0%,#f8f8f6 100%);
+    background-image: url(/assets/img/avatar-2020.png), linear-gradient(to bottom, #bd4f48 0%,#b0564d 93.5%,#F8F8F6 0%,#f8f8f6 100%);
     background-size: auto 100%;
     background-repeat: no-repeat;
-    background-position: top left;
+    /* The PNG has transparent whitespace around the drawing; offset it so the visible avatar touches the viewport edges. */
+    background-position: left -1.5vh bottom -2.3vh;
     background-attachment: fixed;
     background-color: #f8f8f6;
     font-family: ETBembo;
@@ -48,7 +49,7 @@ body {
 }
 
 a {
-  color: #0099FF;
+  color: #ff977c;
   text-decoration: none;
   font-weight: bold;
 }
@@ -62,7 +63,7 @@ a:hover {
 }
 
 #links ul a {
-  color: #e9c72f;
+  color: #fbefdf;
   text-decoration: none;
   font-weight: bold;
 }
@@ -101,16 +102,16 @@ a:hover {
 @media screen and (max-width: 1130px) {
     body {
         background-size: 50% auto, 100%;
-        background-color: #0d426b;
-        background-position: bottom left;
+        background-color: #b0564d;
+        background-position: left -1.5vw bottom -2.3vw;
     }
 }
 
 @media screen and (width: 1366px) and (height: 1024px) {
     body {
         background-size: 50% auto, 100%;
-        background-color: #0d426b;
-        background-position: bottom left;
+        background-color: #b0564d;
+        background-position: left -1.5vw bottom -2.3vw;
     }
 }
 @media screen and (height: 1366px) and (width: 1024px) {
@@ -133,7 +134,7 @@ a:hover {
 
 @media screen and (max-width: 600px) {
   body {
-    background-position: bottom center;
+    background-position: left -1.5vw bottom -2.3vw;
   }
   #dialog {
     position: relative;
@@ -170,7 +171,7 @@ a:hover {
 
 @media screen and (width: 568px) and (height: 320px) {
   body {
-    background-position: right;
+    background-position: left -1.5vw bottom -2.3vw;
   }
   #p2 {
     width: 60%
