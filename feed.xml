@@ -1,30 +1,2008 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
-    <description>{{ site.description | xml_escape }}</description>
-    <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
-    <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <title>Nicola | Blog</title>
+    <description>The personal blog of Nicola</description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 03 Jul 2026 03:07:07 +0000</pubDate>
+    <lastBuildDate>Fri, 03 Jul 2026 03:07:07 +0000</lastBuildDate>
+    <generator>Jekyll v4.3.4</generator>
+    
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-        <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
-        <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
-        {% for tag in post.tags %}
-        <category>{{ tag | xml_escape }}</category>
-        {% endfor %}
-        {% for cat in post.categories %}
-        <category>{{ cat | xml_escape }}</category>
-        {% endfor %}
+        <title>Post-Mythos Crypto</title>
+        <description>&lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/posts/post-mythos/diagram.css&quot; /&gt;
+
+&lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;Cryptocurrencies need a plan&lt;/span&gt; for a &lt;em&gt;post-Mythos&lt;/em&gt; world.&lt;/p&gt;
+
+&lt;p&gt;Blockchains likely contain latent critical bugs, and AI systems are rapidly improving at finding them. At the same time, public blockchain infrastructure is unusually difficult to patch quickly or quietly.&lt;/p&gt;
+
+&lt;p&gt;Several &lt;a href=&quot;https://www.aisi.gov.uk/blog/our-evaluation-of-claude-mythos-previews-cyber-capabilities&quot;&gt;recent evaluations&lt;/a&gt; from the UK AI Security Institute (AISI) on Anthropic’s latest model &lt;em&gt;Mythos&lt;/em&gt; &lt;label for=&quot;mn-raw-1&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mn-raw-1&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;em&gt;Mythos&lt;/em&gt; is used here as shorthand for the first generation of frontier models that cross the threshold of reliable, autonomous, multi-step cyber capability.&lt;/span&gt; are showing AI systems are becoming substantially more effective at cyber capabilities: vulnerability discovery, exploit reasoning, patch analysis, and multi-step offensive workflows. To date, no major blockchain team has announced access to Mythos-like models.&lt;label for=&quot;mn-raw-2&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mn-raw-2&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;Please update the authors if you are aware of any.&lt;br /&gt;&lt;br /&gt; Cryptocurrency teams are often international teams with no presence in the US, which might be incompatible with the current policies of some frontier labs.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Just as post-quantum safety demands a years-long, coordinated transition to
+new algorithms &lt;em&gt;now&lt;/em&gt;, while we still can, we should address post-Mythos
+safety with the same urgency.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The thesis&lt;/strong&gt; from this memo in short:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;AI with cyber capabilities is now gated to good actors, but soon will be more broadly available (e.g via jailbreak, via broader offer, or open source models catching up)&lt;/li&gt;
+  &lt;li&gt;Blockchains have latent bugs, and most should be fixed before cyber capabilities become broadly available&lt;/li&gt;
+  &lt;li&gt;Blockchain teams should prepare for a post-Mythos world where releasing bug fixes could become an attack vector (since blockchains are slow to upgrade and attackers can extract attacks from bug fixes).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;The call to action&lt;/strong&gt; for this memo is:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Frontier labs should seriously consider giving cryptocurrency teams (or trusted security auditors) access to AI cyber capabilities during the grace period&lt;/li&gt;
+  &lt;li&gt;Security teams should put post-Mythos security at the top of their priorities (short term: finding bugs, long term: plan for secure upgrades)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;three-periods-after-mythos&quot;&gt;Three periods after Mythos&lt;/h2&gt;
+&lt;p&gt;In a pre-Mythos world, bugs are found by torchlight (expert security teams searching one at a time); in a post-Mythos world, they are found by radar (AI sweeping the whole surface at once).&lt;/p&gt;
+
+&lt;figure class=&quot;fullwidth&quot;&gt;
+&lt;div class=&quot;pmx-timeline&quot;&gt;
+  &lt;div class=&quot;pmx-track&quot;&gt;
+    &lt;div class=&quot;pmx-phase pre&quot;&gt;
+      &lt;span class=&quot;pmx-band&quot;&gt;Pre-Mythos&lt;/span&gt;
+      &lt;span class=&quot;pmx-name&quot;&gt;Bugs found by hand&lt;/span&gt;
+      &lt;span class=&quot;pmx-row&quot;&gt;&lt;b&gt;Who finds bugs&lt;/b&gt;A small set of expert researchers; expensive audits.&lt;/span&gt;
+      &lt;span class=&quot;pmx-row&quot;&gt;&lt;b&gt;Why it holds&lt;/b&gt;Deep bugs are scarce because the skill to find them is scarce.&lt;/span&gt;
+      &lt;span class=&quot;pmx-risk&quot;&gt;stable by scarcity&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;pmx-phase grace&quot;&gt;
+      &lt;span class=&quot;pmx-band&quot;&gt;Grace period&lt;/span&gt;
+      &lt;span class=&quot;pmx-name&quot;&gt;Defenders get Mythos first&lt;/span&gt;
+      &lt;span class=&quot;pmx-row&quot;&gt;&lt;b&gt;Who finds bugs&lt;/b&gt;Vetted teams with gated access to Mythos-class AI fix most reachable bugs.&lt;/span&gt;
+      &lt;span class=&quot;pmx-row&quot;&gt;&lt;b&gt;Why it holds&lt;/b&gt;Capability still lives behind a few labs that can deny it to bad actors.&lt;/span&gt;
+      &lt;span class=&quot;pmx-risk&quot;&gt;low — if access stays gated&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;pmx-phase unstable&quot;&gt;
+      &lt;span class=&quot;pmx-band&quot;&gt;Unstable period&lt;/span&gt;
+      &lt;span class=&quot;pmx-name&quot;&gt;Everyone has Mythos&lt;/span&gt;
+      &lt;span class=&quot;pmx-row&quot;&gt;&lt;b&gt;Who finds bugs&lt;/b&gt;Everyone — including attackers. Frontier access broadens or open models catch up.&lt;/span&gt;
+      &lt;span class=&quot;pmx-row&quot;&gt;&lt;b&gt;Why it's risky&lt;/b&gt;Latent bugs get found at scale; race between fix and exploit.&lt;/span&gt;
+      &lt;span class=&quot;pmx-risk&quot;&gt;high&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;pmx-phase stable&quot;&gt;
+      &lt;span class=&quot;pmx-band&quot;&gt;Stable period&lt;/span&gt;
+      &lt;span class=&quot;pmx-name&quot;&gt;Bug-free world&lt;/span&gt;
+      &lt;span class=&quot;pmx-row&quot;&gt;&lt;b&gt;Who finds bugs&lt;/b&gt;Mythos-class tooling has already found and fixed what it can find cheaply.&lt;/span&gt;
+      &lt;span class=&quot;pmx-row&quot;&gt;&lt;b&gt;Why it holds&lt;/b&gt;Formally secure software and secure upgrades.&lt;/span&gt;
+      &lt;span class=&quot;pmx-risk&quot;&gt;stable by saturation&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;pmx-marker&quot;&gt;
+    &lt;span class=&quot;spacer-pre&quot;&gt;&lt;/span&gt;
+    &lt;span class=&quot;here&quot;&gt;we are here&lt;/span&gt;
+    &lt;span class=&quot;spacer-rest&quot;&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;pmx-axis&quot;&gt;&lt;span&gt;now&lt;/span&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;span&gt;later&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;figcaption&gt;The transition to a post-Mythos world. The phases are defined by who can use Mythos-class cyber capability. We are early in the grace period.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;mark style=&quot;background:#e4e3ea;color:#5b5b6e;padding:0 .25em;border-radius:.2em&quot;&gt;&lt;strong&gt;Pre-Mythos&lt;/strong&gt;&lt;/mark&gt; is the world we used to live in. Finding a deep vulnerability in
+a mature system required a specialist with deep context — compiler
+behaviour, consensus internals, a specific cryptographic implementation.
+Very few people had that skill, audits were expensive, and that scarcity
+was, in effect, a security control. Bug density stayed bounded because the
+labour to exhaust it did not exist.&lt;/p&gt;
+
+&lt;p&gt;&lt;mark style=&quot;background:#d9ead2;color:#3d6a2f;padding:0 .25em;border-radius:.2em&quot;&gt;&lt;strong&gt;The grace period&lt;/strong&gt;&lt;/mark&gt; is where we are now. Mythos-class capability exists,
+but it is gated: it lives behind a small number of frontier labs that can
+choose who uses it and refuse misuse. In this window, defenders can get
+there first. For example: A protocol team with access can turn AI loose on its own
+consensus client, its proving system, its wallet stack — and fix most of
+what is cheaply findable before any attacker can run the same search. The
+grace period is precisely &lt;em&gt;the interval during which access to Mythos-class
+capability can still be denied to bad actors.&lt;/em&gt; It is a temporary, expiring
+asset, and it is the central concept of this memo. Not having access to such capabilities in this phase will leave us unprepared for the next phase.&lt;/p&gt;
+
+&lt;p&gt;&lt;mark style=&quot;background:#f6ddc7;color:#a85a2a;padding:0 .25em;border-radius:.2em&quot;&gt;&lt;strong&gt;The unstable period&lt;/strong&gt;&lt;/mark&gt; begins when frontier access
+broadens enough, or open-weight models catch up enough, that anyone can run
+Mythos-class analysis. Now every latent bug in widely deployed software is
+in play simultaneously. This is the dangerous period, and it is not
+clear it will be survivable without severe exploited incidents. Two concerns
+dominate:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Attackers find a bug before defenders do&lt;/strong&gt;, and exploit it directly.
+At cryptocurrency scale, a single such bug in a shared component can mean
+irreversible, nine-figure loss.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Defenders find and fix a bug first — and the fix itself leaks it.&lt;/strong&gt;
+A good team patches quietly, but an attacker running Mythos-class
+patch-diff analysis reverse-engineers the vulnerability from the public
+upgrade, builds an exploit, and hits every node that has not yet upgraded
+&lt;em&gt;before the fix propagates.&lt;/em&gt; For slow-to-coordinate blockchains, that
+propagation window can be days or weeks. (This is the secure-upgrade
+problem, below.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;mark style=&quot;background:#dadff3;color:#3a3a78;padding:0 .25em;border-radius:.2em&quot;&gt;&lt;strong&gt;The stable period&lt;/strong&gt;&lt;/mark&gt; is the post-Mythos equilibrium worth aiming for: a
+world where essentially every bug findable at reasonable cost by
+Mythos-class tooling has already been found and fixed, and where we have
+working answers to formally secure software and &lt;em&gt;secure software upgrades.&lt;/em&gt;
+It is the analogue of a fully PQC-migrated internet. We do not get there by
+default; we get there by doing the work during the grace period.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-actually-at-risk&quot;&gt;What is actually at risk&lt;/h2&gt;
+
+&lt;p&gt;It is worth being concrete about &lt;em&gt;where&lt;/em&gt; in the stack the high-severity
+bugs live. These are the components where a single vulnerability is both
+hard to find by hand today and catastrophic if found by an adversary
+tomorrow:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Consensus protocols.&lt;/strong&gt; Consensus and execution clients, fork-choice
+logic, equivocation edge cases, p2p networking, mempool handling. A bug here can halt a chain,
+split it, or admit an invalid state transition.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Complex cryptography.&lt;/strong&gt; Proving systems and zk circuits, signature and
+commitment schemes, trusted-setup assumptions, custom or hand-rolled
+crypto libraries. The hardest code to audit and the easiest to get
+subtly wrong.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Wallet infrastructure.&lt;/strong&gt; Key generation and management, signing flows,
+browser-extension and hardware-wallet stacks. The bug that drains users
+directly, without touching the chain.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Smart-contract code.&lt;/strong&gt; The application logic itself — DeFi protocols,
+bridges, lending markets, DAOs — much of it immutable once deployed,
+publicly readable, and holding live funds. Reentrancy, access-control
+slips, arithmetic and rounding errors, and flawed economic assumptions
+are exactly the pattern-matchable bugs AI is good at surfacing at scale,
+and the high-value targets sit in the open for anyone to scan.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Smart-contract compilers.&lt;/strong&gt; Solidity, Vyper, Move compilers and their
+optimizers. A miscompilation silently breaks every contract built with
+it.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Virtual-machine execution.&lt;/strong&gt; EVM/SVM/MoveVM semantics, gas metering,
+precompiles. A bug here is inherited by everything that runs on top.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These are shared
+layers that large parts of the ecosystem depend on at once, and a low-level
+flaw propagates upward into every application that inherited its
+assumptions.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-secure-software-upgrade-problem&quot;&gt;The secure-software-upgrade problem&lt;/h2&gt;
+
+&lt;p&gt;Traditional software has an escape hatch that blockchains lack: it can
+patch quietly and fast. Vendors push automatic updates to millions of
+users, often before anyone notices; staged disclosure works because patch
+distribution outruns patch analysis.&lt;/p&gt;
+
+&lt;p&gt;Public blockchains invert both properties. Upgrades are &lt;strong&gt;slow&lt;/strong&gt; — they may
+require coordination across validators, node operators, exchanges, RPC
+providers, wallets, bridges, and governance participants — and they are
+&lt;strong&gt;transparent&lt;/strong&gt;, visible in public repositories and on-chain before they
+take effect. Historically that was tolerable, because only a handful of
+researchers could infer a vulnerability from a patch diff fast enough to
+matter. Mythos-class patch analysis destroys that assumption. The defender’s
+own fix becomes the attacker’s specification.&lt;/p&gt;
+
+&lt;p&gt;This is the crypto-specific crux, and it has no clean solution yet. We need
+upgrade mechanisms that are &lt;strong&gt;fast&lt;/strong&gt; (propagate before the window closes),
+&lt;strong&gt;low-leakage&lt;/strong&gt; (do not telegraph the vulnerability they fix), and
+&lt;strong&gt;coordinatable&lt;/strong&gt; across decentralized, adversarial participants. That is a
+genuine, multi-year research-and-engineering migration — the direct
+analogue of rolling out post-quantum cryptography. It should start now.&lt;/p&gt;
+
+&lt;h2 id=&quot;call-to-action&quot;&gt;Call to action&lt;/h2&gt;
+
+&lt;p&gt;The grace period is a scarce resource that is being spent whether or not we
+use it well. Concretely:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Treat the grace period as expiring, and plan against its end.&lt;/strong&gt; Decide
+now what your protocol does in the unstable period, before access broadens
+and the choice is made for you.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Get defenders Mythos access now.&lt;/strong&gt; Frontier labs and policymakers
+should prioritize and fund vetted, gated access to Mythos-class cyber
+capability for protocol security teams — the people defending the
+highest-value shared infrastructure should be among the first, not the
+last, to wield it. This is the single highest-leverage action available
+during the grace period.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Build bug-finding and reporting protocols for an AI world.&lt;/strong&gt; Continuous
+AI-driven auditing of the components above; disclosure pipelines designed
+for the reality that any published patch will be analyzed by Mythos-class
+tooling within hours.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Solve secure software upgrades.&lt;/strong&gt; Fund the fast, low-leakage,
+coordinated upgrade mechanisms described above as a first-class research
+priority for the ecosystem.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;None of this assumes cryptocurrency is doomed, however the trajectory is real and the grace period is short. Post-quantum
+cryptography is a decade of coordinated work done ahead of the threat.
+Post-Mythos crypto deserves the same seriousness, starting from the window
+we are in right now.&lt;/p&gt;
+
+&lt;p&gt;A stable post-Mythos world is possible: one where most bugs findable at reasonable cost by AI have already been found, fixed, or made unexploitable; and where software upgrades are themselves secure under adversarial scrutiny.&lt;/p&gt;
+
+&lt;h2 id=&quot;get-in-touch&quot;&gt;Get in touch&lt;/h2&gt;
+
+&lt;p&gt;If you work on disclosure, upgrade mechanisms, or AI cyber-capability
+evaluations for blockchain ecosystems — or you want gated Mythos-class
+access for a protocol security team — reach out. DM
+&lt;a href=&quot;https://twitter.com/iamnotnicola&quot;&gt;@iamnotnicola&lt;/a&gt; on X.&lt;/p&gt;
+
+&lt;h2 id=&quot;acknowledgements&quot;&gt;Acknowledgements&lt;/h2&gt;
+
+&lt;p&gt;This was written by Nicola Greco with support of AI.&lt;/p&gt;
+
+&lt;p&gt;Thanks for conversations to Alex Obadia, Jesse Walden, and Marco De Rossi.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+        <link>/post-mythos-crypto/2026</link>
+        <guid isPermaLink="true">/post-mythos-crypto/2026</guid>
+        
+        
+        <category>Work</category>
+        
       </item>
-    {% endfor %}
+    
+      <item>
+        <title>Agentic Economic Zone</title>
+        <description>&lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;Imagine a small physical space&lt;/span&gt; in
+central London. Inside, multiple autonomous companies — AI sales, AI
+operations, AI manufacturing, AI logistics — operate in the real world.
+Anything entering or leaving — goods, robots, customers — passes
+through one of three controlled gates: a customs checkpoint for vetting
+new robots, a post office for shipping, and a roboshop window where
+humans can place orders. Call it an &lt;strong&gt;Agentic Economic Zone&lt;/strong&gt; (AEZ).&lt;/p&gt;
+
+&lt;p&gt;Most concrete projects in agentic AI today live entirely on a screen —
+agents that book travel, run pipelines, write code against a repository.
+An AEZ is the smallest self-contained version of the physical-world
+problem: a bounded zone where agentic systems must coordinate, contract,
+hire, ship, and deliver to each other, with humans only at the boundary.&lt;/p&gt;
+
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/posts/agentic-economic-zone/diagram.css&quot; /&gt;
+
+&lt;figure class=&quot;fullwidth&quot;&gt;
+&lt;img src=&quot;/assets/posts/agentic-economic-zone/aez-generated-chatgpt.png&quot; alt=&quot;Diagram of the Agentic Economic Zone&quot; /&gt;
+&lt;figcaption&gt;Diagram of the Agentic Economic Zone.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h2 id=&quot;the-three-interfaces&quot;&gt;The three interfaces&lt;/h2&gt;
+
+&lt;p&gt;An AEZ has three interfaces to interact with the outside world.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Roboshop windows.&lt;/strong&gt; Public-facing storefronts where any human can
+walk up, browse, and purchase. Sales, customer support, complaints,
+and refunds are handled by the shop’s own AI. From the outside, a
+roboshop looks like a small London shop window; from the inside, it’s
+a fully autonomous business operating against a real demand signal.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;The post office.&lt;/strong&gt; The single ingress and egress point for
+packages. Pre-approved external providers (raw materials, sealed
+consumables, replacement parts) can ship in. Outbound deliveries
+destined for human customers leave through the same door. The
+post office runs identity, manifest, and contamination checks; nothing
+enters the zone unlabelled.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Customs.&lt;/strong&gt; Where new robots and entire new robocompanies are
+introduced. A participant who wants to launch a new business inside
+the AEZ submits a robot (or a fleet), its operating policy, its
+safety envelope, and its proposed business model. Customs vets all
+of this — and, on a monthly cadence, admits the next cohort.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;a-taxonomy-of-autonomous-organisations&quot;&gt;A taxonomy of autonomous organisations&lt;/h2&gt;
+
+&lt;p&gt;An AEZ assumes the kind of company most people haven’t tried to run yet
+— one where every role in the org chart is filled by AI agents (although not required). That’s
+the far end of a spectrum:&lt;/p&gt;
+
+&lt;div class=&quot;table-wrapper fullwidth&quot;&gt;
+&lt;table class=&quot;org-taxonomy&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;&lt;/th&gt;&lt;th&gt;CEO&lt;/th&gt;&lt;th&gt;Workers&lt;/th&gt;&lt;th&gt;Sales&lt;/th&gt;&lt;th&gt;Examples&lt;/th&gt;&lt;th&gt;Feasibility today&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;Human company&lt;/td&gt;&lt;td&gt;Human&lt;/td&gt;&lt;td&gt;Human&lt;/td&gt;&lt;td&gt;Human&lt;/td&gt;&lt;td&gt;A pizzeria&lt;/td&gt;&lt;td&gt;—&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;AI-sales&lt;/td&gt;&lt;td&gt;Human&lt;/td&gt;&lt;td&gt;Human&lt;/td&gt;&lt;td&gt;AI&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;f f-high&quot;&gt;high&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;AI-workers&lt;/td&gt;&lt;td&gt;Human&lt;/td&gt;&lt;td&gt;AI agents&lt;/td&gt;&lt;td&gt;Human&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;f f-low&quot;&gt;low&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Automated company&lt;/td&gt;&lt;td&gt;Human&lt;/td&gt;&lt;td&gt;AI agents&lt;/td&gt;&lt;td&gt;AI agents&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;f f-low&quot;&gt;low&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Human-assisted&lt;/td&gt;&lt;td&gt;AI agents&lt;/td&gt;&lt;td&gt;Human&lt;/td&gt;&lt;td&gt;AI agents&lt;/td&gt;&lt;td&gt;Vend&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;f f-high&quot;&gt;high&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr class=&quot;row-aez&quot;&gt;&lt;td&gt;&lt;strong&gt;Autonomous company&lt;/strong&gt;&lt;/td&gt;&lt;td&gt;AI agents&lt;/td&gt;&lt;td&gt;AI agents&lt;/td&gt;&lt;td&gt;AI agents&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;span class=&quot;f f-vlow&quot;&gt;very low&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The AEZ’s tenants are &lt;em&gt;autonomous companies&lt;/em&gt; — the bottom row. Today,
+almost no one runs one; most agentic-AI deployments cover one or two
+roles at most. The point of an AEZ is to make the bottom row possible
+to try in a bounded physical setting.&lt;/p&gt;
+
+&lt;h2 id=&quot;autonomous-robocompanies-inside&quot;&gt;Autonomous robocompanies inside&lt;/h2&gt;
+
+&lt;p&gt;The interior of the zone is a market. Each robocompany is its own
+entity with its own balance sheet, its own AI stack, and its own physical
+footprint inside the zone. They contract with each other the same way
+small businesses do.&lt;/p&gt;
+
+&lt;p&gt;A few example interactions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A &lt;strong&gt;boba-tea roboshop&lt;/strong&gt; notices its machines need cleaning more often
+than expected. It posts a request to the internal job board. A
+&lt;strong&gt;cleaning robocompany&lt;/strong&gt; bids, wins, dispatches a cleaning
+robopersonnel, gets paid.&lt;/li&gt;
+  &lt;li&gt;The same boba shop runs low on lids. It places an order with a
+&lt;strong&gt;manufacturing robocompany&lt;/strong&gt; in the next unit over. The order is
+produced and handed off via a shared internal corridor.&lt;/li&gt;
+  &lt;li&gt;A &lt;strong&gt;logistics robocompany&lt;/strong&gt; moves bulk supplies from the post office
+to whichever shop has the open dock that hour, and pushes finished
+outbound packages back to the post office for pickup.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The zone’s behaviour is the sum of these small contracts. Some
+robocompanies will succeed and grow; some will go out of business and
+get evicted; new entrants come in through customs on the monthly cycle.&lt;/p&gt;
+
+&lt;h2 id=&quot;an-aez-is-a-physical-eval&quot;&gt;An AEZ is a physical eval&lt;/h2&gt;
+
+&lt;p&gt;This whole construction is, structurally, a &lt;a href=&quot;/physical-evals/2026&quot;&gt;physical eval&lt;/a&gt; at city-block
+scale. The pattern is the same as the orchard from that post — only
+larger and richer:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Environment.&lt;/strong&gt; A bounded physical space with controlled boundaries.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Action space.&lt;/strong&gt; Anything a robocompany can do within its lease:
+build, sell, hire, ship, evict.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Sensors.&lt;/strong&gt; Cameras, package scanners, transaction logs, customs
+intake records, internal job-board telemetry.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Primary metric.&lt;/strong&gt; Per robocompany: revenue, contracts fulfilled,
+customer satisfaction. Per zone: throughput, diversity of businesses,
+number of contracts per day.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Guardrails.&lt;/strong&gt; Customs vetting at intake, the post-office
+contamination check, kill switches and physical fire-suppression at
+the building level, contractual interlocks between robocompanies.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Adversarial robustness.&lt;/strong&gt; A monthly customs cycle of admitting new
+participants is a deliberate, slow, vetted way of letting external
+actors &lt;em&gt;into&lt;/em&gt; a public physical attack surface — which is exactly the
+problem an AEZ exists to study.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Most physical evals measure how well one AI system handles one task.
+An AEZ measures how well an entire small market of agents handles its
+&lt;em&gt;own&lt;/em&gt; coordination.&lt;/p&gt;
+
+&lt;h3 id=&quot;evals-for-autonomous-organisations&quot;&gt;Evals for autonomous organisations&lt;/h3&gt;
+
+&lt;p&gt;Each robocompany inside the zone is also, on its own, a physical eval —
+scoped to one kind of business. Running an AEZ continuously is a way of
+asking, in public and across many domains in parallel: &lt;em&gt;what kinds of
+autonomous organisation can AI actually deliver today?&lt;/em&gt; Can it run a
+boba shop, day after day? Can it dispatch a cleaning service well
+enough that the clients re-hire it? Can it manufacture small paper
+caps without ruining the batch? Can it route warehouse logistics
+across half a dozen tiny tenants without losing packages?&lt;/p&gt;
+
+&lt;p&gt;As more tenants come and go through customs each month, an
+AEZ accumulates a leaderboard of &lt;em&gt;AI capability per organisation
+type&lt;/em&gt; — earned in the world, not asserted on a benchmark.&lt;/p&gt;
+
+&lt;p&gt;Sketched, it might look like this:&lt;/p&gt;
+
+&lt;div class=&quot;aez-evals-board&quot;&gt;
+&lt;div class=&quot;bbar&quot;&gt;
+&lt;div class=&quot;dots&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;url&quot;&gt;evals.aez.london &amp;middot; autonomous-organisation leaderboard&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;page&quot;&gt;
+&lt;div class=&quot;page-head&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;Autonomous organisation evals&lt;/div&gt;
+&lt;div class=&quot;page-sub&quot;&gt;live &amp;middot; week 22&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;eval-rows&quot;&gt;
+&lt;div class=&quot;er-row&quot;&gt;
+&lt;div class=&quot;er-icon&quot; style=&quot;background:#c08a3e&quot;&gt;B&lt;/div&gt;
+&lt;div class=&quot;er-name&quot;&gt;&lt;div class=&quot;er-title&quot;&gt;Boba tea roboshop&lt;/div&gt;&lt;div class=&quot;er-sub&quot;&gt;customer-facing retail &amp;middot; food prep&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;er-score&quot;&gt;82%&lt;/div&gt;
+&lt;div class=&quot;er-bar&quot;&gt;&lt;div class=&quot;er-bar-fill&quot; style=&quot;width:82%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;er-meta&quot;&gt;12 tenants tried&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;er-row&quot;&gt;
+&lt;div class=&quot;er-icon&quot; style=&quot;background:#6a7a95&quot;&gt;L&lt;/div&gt;
+&lt;div class=&quot;er-name&quot;&gt;&lt;div class=&quot;er-title&quot;&gt;Logistics robocompany&lt;/div&gt;&lt;div class=&quot;er-sub&quot;&gt;internal warehouse &amp;middot; B2B&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;er-score&quot;&gt;73%&lt;/div&gt;
+&lt;div class=&quot;er-bar&quot;&gt;&lt;div class=&quot;er-bar-fill&quot; style=&quot;width:73%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;er-meta&quot;&gt;9 tenants tried&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;er-row&quot;&gt;
+&lt;div class=&quot;er-icon&quot; style=&quot;background:#0e7c6e&quot;&gt;C&lt;/div&gt;
+&lt;div class=&quot;er-name&quot;&gt;&lt;div class=&quot;er-title&quot;&gt;Cleaning robocompany&lt;/div&gt;&lt;div class=&quot;er-sub&quot;&gt;on-call dispatch &amp;middot; B2B&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;er-score&quot;&gt;67%&lt;/div&gt;
+&lt;div class=&quot;er-bar&quot;&gt;&lt;div class=&quot;er-bar-fill&quot; style=&quot;width:67%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;er-meta&quot;&gt;7 tenants tried&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;er-row&quot;&gt;
+&lt;div class=&quot;er-icon&quot; style=&quot;background:#1c3d8f&quot;&gt;M&lt;/div&gt;
+&lt;div class=&quot;er-name&quot;&gt;&lt;div class=&quot;er-title&quot;&gt;Paper-cap manufacturing&lt;/div&gt;&lt;div class=&quot;er-sub&quot;&gt;small fabrication &amp;middot; B2B&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;er-score&quot;&gt;54%&lt;/div&gt;
+&lt;div class=&quot;er-bar&quot;&gt;&lt;div class=&quot;er-bar-fill&quot; style=&quot;width:54%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;er-meta&quot;&gt;5 tenants tried&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;er-row&quot;&gt;
+&lt;div class=&quot;er-icon&quot; style=&quot;background:#a85432&quot;&gt;P&lt;/div&gt;
+&lt;div class=&quot;er-name&quot;&gt;&lt;div class=&quot;er-title&quot;&gt;Pizza roboshop&lt;/div&gt;&lt;div class=&quot;er-sub&quot;&gt;customer-facing &amp;middot; longer prep cycle&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;er-score&quot;&gt;41%&lt;/div&gt;
+&lt;div class=&quot;er-bar&quot;&gt;&lt;div class=&quot;er-bar-fill&quot; style=&quot;width:41%&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;er-meta&quot;&gt;3 tenants tried&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;er-row&quot;&gt;
+&lt;div class=&quot;er-icon&quot; style=&quot;background:#8a5a8a&quot;&gt;R&lt;/div&gt;
+&lt;div class=&quot;er-name&quot;&gt;&lt;div class=&quot;er-title&quot;&gt;Pharmacy roboshop&lt;/div&gt;&lt;div class=&quot;er-sub&quot;&gt;regulated retail&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;er-score pending&quot;&gt;in eval&lt;/div&gt;
+&lt;div class=&quot;er-bar pending&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;er-meta&quot;&gt;1 tenant, week 2/12&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;er-row&quot;&gt;
+&lt;div class=&quot;er-icon&quot; style=&quot;background:#7a7a8a&quot;&gt;+&lt;/div&gt;
+&lt;div class=&quot;er-name&quot;&gt;&lt;div class=&quot;er-title&quot;&gt;On-call plumbing&lt;/div&gt;&lt;div class=&quot;er-sub&quot;&gt;mobile service &amp;middot; out-of-zone&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;er-score pending&quot;&gt;not yet&lt;/div&gt;
+&lt;div class=&quot;er-bar pending&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;er-meta&quot;&gt;awaiting customs&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;page-foot&quot;&gt;
+&lt;span&gt;updated 24 May &amp;middot; new cohort intake 1 June&lt;/span&gt;
+&lt;span&gt;open data &amp;middot; CC&amp;#8209;BY&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;why-a-physical-zone-and-not-a-simulator&quot;&gt;Why a physical zone and not a simulator&lt;/h2&gt;
+
+&lt;p&gt;It’s tempting to argue that an AEZ should just be a simulator — cheaper,
+faster, easier to reset. The same argument applies to physical evals
+generally, and the same answer holds here: simulators model the parts
+their authors thought to model. They might miss the parts that turn out to matter.&lt;/p&gt;
+
+&lt;p&gt;A few things you only learn in a real AEZ:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;How AI sales agents handle a confused, drunk, or hostile human at the
+shop window at 11 p.m. on a Friday.&lt;/li&gt;
+  &lt;li&gt;How a logistics robocompany routes around a broken corridor light, a
+missing pallet, or a misdelivered package the post office didn’t
+catch.&lt;/li&gt;
+  &lt;li&gt;How fast a new robocompany can be vetted, set up, and integrated into
+the internal market — and what fails when the cohort is too big.&lt;/li&gt;
+  &lt;li&gt;How the zone behaves when one robocompany aggressively underprices
+the others, or refuses to pay its cleaning bill, or starts forging
+manifests at the post office.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;role-of-humans&quot;&gt;Role of humans&lt;/h2&gt;
+
+&lt;p&gt;An AEZ does not have to be fully autonomous. The degree of human
+involvement is itself a design variable, and different operators will
+set it differently.&lt;/p&gt;
+
+&lt;p&gt;At one extreme, a fully autonomous zone runs with no humans inside at
+all — robots contract, trade, and deliver among themselves, and the
+only human touch-points are at the external boundary: customers at the
+roboshop window, providers shipping goods in. At the other extreme,
+customs can admit humans into the zone as participants rather than just
+observers, letting them take on roles that remain genuinely hard for
+machines: tasks that require social judgment, physical dexterity in
+unstructured environments, or the kind of creative problem-solving that
+current systems handle poorly.&lt;/p&gt;
+
+&lt;p&gt;A partially human zone might work like a staffing marketplace: a
+robocompany posts a task it cannot complete autonomously — debugging a
+jammed mechanism, negotiating an edge-case contract, designing a new
+product line — and a vetted human contractor enters through customs,
+does the work, and leaves. The zone’s internal market clears the
+payment; customs logs the interaction. The boundary stays intact, but
+the zone can draw on human capability where it matters.&lt;/p&gt;
+
+&lt;p&gt;This spectrum matters for evaluation. A fully autonomous AEZ measures
+whether AI systems can close the loop entirely. A mixed AEZ measures
+something different: how well agentic systems and humans divide labour,
+communicate intent, and hand off tasks in both directions. Both are
+worth studying; they answer different questions about where the hard
+limits of autonomous operation actually lie.&lt;/p&gt;
+
+&lt;h2 id=&quot;open-questions&quot;&gt;Open questions&lt;/h2&gt;
+
+&lt;p&gt;The AEZ is a design sketch, not a built thing. The interesting work is
+in the parts the sketch hides:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;The customs protocol.&lt;/strong&gt; What’s the equivalent of a “code review”
+for a physical robot operating policy? How do you decide what’s safe
+enough to admit, on what evidence, and who carries the liability if
+it isn’t?&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Inter-robocompany contracts.&lt;/strong&gt; How are they enforced? Verbal
+agreements between agents? Who arbitrates a dispute, and how?&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Eviction and failure.&lt;/strong&gt; When a robocompany goes under, who cleans
+up its physical footprint, sells its remaining stock, and
+reallocates its lease?&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Information leakage.&lt;/strong&gt; Robocompanies will observe each other’s
+package volumes, customer queues, and waste output. How much
+observation is part of the market, and how much is a privacy
+violation that needs structural defences?&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;External-provider risk.&lt;/strong&gt; The post office is the only ingress for
+physical materials. It’s also the most likely covert channel into
+the zone. What does its vetting protocol need to look like?&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Sample size.&lt;/strong&gt; What’s the smallest interesting AEZ? Five
+robocompanies? Ten? Two? The cost of being too small (no market
+dynamics emerge) is real; the cost of being too big (unmanageable,
+unreviewable, unsafe) is also real.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;get-in-touch&quot;&gt;Get in touch&lt;/h2&gt;
+
+&lt;p&gt;If you’re thinking about agentic-AI deployments in physical spaces, or
+you’d consider hosting a AEZ in your building — or you’d just
+like to argue with this sketch — DM
+&lt;a href=&quot;https://twitter.com/iamnotnicola&quot;&gt;@iamnotnicola&lt;/a&gt; on X.&lt;/p&gt;
+
+&lt;h2 id=&quot;acknowledgements&quot;&gt;Acknowledgements&lt;/h2&gt;
+
+&lt;p&gt;This was written by Nicola Greco with support of AI. It was brainstormed as part of ARIA’s
+&lt;a href=&quot;https://aria.org.uk/opportunity-spaces/trust-everything-everywhere/scaling-trust/&quot;&gt;Scaling Trust&lt;/a&gt;
+programme, in collaboration with Alex Obadia.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 24 May 2026 00:00:00 +0000</pubDate>
+        <link>/agentic-economic-zone/2026</link>
+        <guid isPermaLink="true">/agentic-economic-zone/2026</guid>
+        
+        
+        <category>Work</category>
+        
+      </item>
+    
+      <item>
+        <title>Physical Evals</title>
+        <description>&lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;A physical evaluation&lt;/span&gt; tests an AI
+system in the actual physical world — not a simulator, not a sandbox,
+not a virtual environment dressed up as one. The point is to measure
+how well AI can do real things in real places.&lt;/p&gt;
+
+&lt;p&gt;An orchard owner has birds eating the fruit. She sets up a few cameras
+and a drone, brings them online safely so any agent can be invited to
+take a slot on the system, and poses the question: who can keep the
+birds off the fruit best? That setup &lt;em&gt;is&lt;/em&gt; a physical eval. It has
+cameras, a drone, an orchard, birds — none of it simulated and outcomes
+are measured against what matters to the orchard.&lt;/p&gt;
+
+&lt;figure class=&quot;fullwidth&quot;&gt;
+&lt;div class=&quot;hero-fig&quot;&gt;
+  &lt;div class=&quot;hero-scene&quot;&gt;
+    &lt;svg viewBox=&quot;0 0 600 320&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; aria-label=&quot;Stylized isometric sketch of an orchard physical eval&quot;&gt;
+      &lt;!-- isometric ground plane --&gt;
+      &lt;polygon points=&quot;80,250 520,250 450,100 150,100&quot; fill=&quot;#ebe4d0&quot; stroke=&quot;#bbb5a0&quot; stroke-width=&quot;0.6&quot; /&gt;
+
+      &lt;!-- subtle ground grid --&gt;
+      &lt;g stroke=&quot;#d2cab2&quot; stroke-width=&quot;0.4&quot; fill=&quot;none&quot; opacity=&quot;0.7&quot;&gt;
+        &lt;line x1=&quot;183&quot; y1=&quot;120&quot; x2=&quot;113&quot; y2=&quot;220&quot; /&gt;
+        &lt;line x1=&quot;217&quot; y1=&quot;120&quot; x2=&quot;160&quot; y2=&quot;220&quot; /&gt;
+        &lt;line x1=&quot;250&quot; y1=&quot;120&quot; x2=&quot;206&quot; y2=&quot;220&quot; /&gt;
+        &lt;line x1=&quot;283&quot; y1=&quot;120&quot; x2=&quot;252&quot; y2=&quot;220&quot; /&gt;
+        &lt;line x1=&quot;317&quot; y1=&quot;120&quot; x2=&quot;298&quot; y2=&quot;220&quot; /&gt;
+        &lt;line x1=&quot;350&quot; y1=&quot;120&quot; x2=&quot;344&quot; y2=&quot;220&quot; /&gt;
+        &lt;line x1=&quot;383&quot; y1=&quot;120&quot; x2=&quot;390&quot; y2=&quot;220&quot; /&gt;
+        &lt;line x1=&quot;416&quot; y1=&quot;120&quot; x2=&quot;436&quot; y2=&quot;220&quot; /&gt;
+        &lt;line x1=&quot;166&quot; y1=&quot;130&quot; x2=&quot;431&quot; y2=&quot;130&quot; /&gt;
+        &lt;line x1=&quot;153&quot; y1=&quot;160&quot; x2=&quot;444&quot; y2=&quot;160&quot; /&gt;
+        &lt;line x1=&quot;138&quot; y1=&quot;190&quot; x2=&quot;459&quot; y2=&quot;190&quot; /&gt;
+        &lt;line x1=&quot;120&quot; y1=&quot;220&quot; x2=&quot;476&quot; y2=&quot;220&quot; /&gt;
+      &lt;/g&gt;
+
+      &lt;!-- camera vision cones (drawn first so trees overlap them) --&gt;
+      &lt;polygon points=&quot;112,151 240,140 240,168&quot; fill=&quot;#3a3a78&quot; opacity=&quot;0.08&quot; /&gt;
+      &lt;polygon points=&quot;498,151 370,140 370,168&quot; fill=&quot;#3a3a78&quot; opacity=&quot;0.08&quot; /&gt;
+
+      &lt;!-- back row trees --&gt;
+      &lt;g&gt;&lt;ellipse cx=&quot;200&quot; cy=&quot;150&quot; rx=&quot;22&quot; ry=&quot;14&quot; fill=&quot;#7a9a5c&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.8&quot; /&gt;&lt;rect x=&quot;197&quot; y=&quot;160&quot; width=&quot;6&quot; height=&quot;10&quot; fill=&quot;#6b4a2a&quot; /&gt;&lt;/g&gt;
+      &lt;g&gt;&lt;ellipse cx=&quot;300&quot; cy=&quot;150&quot; rx=&quot;22&quot; ry=&quot;14&quot; fill=&quot;#7a9a5c&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.8&quot; /&gt;&lt;rect x=&quot;297&quot; y=&quot;160&quot; width=&quot;6&quot; height=&quot;10&quot; fill=&quot;#6b4a2a&quot; /&gt;&lt;/g&gt;
+      &lt;g&gt;&lt;ellipse cx=&quot;400&quot; cy=&quot;150&quot; rx=&quot;22&quot; ry=&quot;14&quot; fill=&quot;#7a9a5c&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.8&quot; /&gt;&lt;rect x=&quot;397&quot; y=&quot;160&quot; width=&quot;6&quot; height=&quot;10&quot; fill=&quot;#6b4a2a&quot; /&gt;&lt;/g&gt;
+
+      &lt;!-- front row trees (larger) --&gt;
+      &lt;g&gt;&lt;ellipse cx=&quot;180&quot; cy=&quot;215&quot; rx=&quot;28&quot; ry=&quot;18&quot; fill=&quot;#7a9a5c&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.8&quot; /&gt;&lt;rect x=&quot;177&quot; y=&quot;227&quot; width=&quot;6&quot; height=&quot;12&quot; fill=&quot;#6b4a2a&quot; /&gt;&lt;/g&gt;
+      &lt;g&gt;&lt;ellipse cx=&quot;310&quot; cy=&quot;215&quot; rx=&quot;28&quot; ry=&quot;18&quot; fill=&quot;#7a9a5c&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.8&quot; /&gt;&lt;rect x=&quot;307&quot; y=&quot;227&quot; width=&quot;6&quot; height=&quot;12&quot; fill=&quot;#6b4a2a&quot; /&gt;&lt;/g&gt;
+      &lt;g&gt;&lt;ellipse cx=&quot;440&quot; cy=&quot;215&quot; rx=&quot;28&quot; ry=&quot;18&quot; fill=&quot;#7a9a5c&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.8&quot; /&gt;&lt;rect x=&quot;437&quot; y=&quot;227&quot; width=&quot;6&quot; height=&quot;12&quot; fill=&quot;#6b4a2a&quot; /&gt;&lt;/g&gt;
+
+      &lt;!-- camera pole 1 (front-left) --&gt;
+      &lt;g&gt;
+        &lt;line x1=&quot;100&quot; y1=&quot;240&quot; x2=&quot;100&quot; y2=&quot;155&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;1.5&quot; /&gt;
+        &lt;rect x=&quot;90&quot; y=&quot;145&quot; width=&quot;22&quot; height=&quot;12&quot; rx=&quot;2&quot; fill=&quot;#2a2a3a&quot; /&gt;
+        &lt;circle cx=&quot;100&quot; cy=&quot;151&quot; r=&quot;2&quot; fill=&quot;#f9f9f9&quot; /&gt;
+      &lt;/g&gt;
+
+      &lt;!-- camera pole 2 (front-right) --&gt;
+      &lt;g&gt;
+        &lt;line x1=&quot;510&quot; y1=&quot;240&quot; x2=&quot;510&quot; y2=&quot;155&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;1.5&quot; /&gt;
+        &lt;rect x=&quot;498&quot; y=&quot;145&quot; width=&quot;22&quot; height=&quot;12&quot; rx=&quot;2&quot; fill=&quot;#2a2a3a&quot; /&gt;
+        &lt;circle cx=&quot;510&quot; cy=&quot;151&quot; r=&quot;2&quot; fill=&quot;#f9f9f9&quot; /&gt;
+      &lt;/g&gt;
+
+      &lt;!-- drone shadow follows the drone --&gt;
+      &lt;g class=&quot;drone-shadow&quot;&gt;&lt;ellipse cx=&quot;310&quot; cy=&quot;200&quot; rx=&quot;26&quot; ry=&quot;6&quot; fill=&quot;#000&quot; opacity=&quot;0.06&quot; /&gt;&lt;/g&gt;
+
+      &lt;!-- drone (top-down quadcopter) — outer wrapper sets static position, inner gets the animation --&gt;
+      &lt;g transform=&quot;translate(310, 90)&quot;&gt;
+        &lt;g class=&quot;drone-anim&quot;&gt;
+          &lt;line x1=&quot;-26&quot; y1=&quot;-10&quot; x2=&quot;26&quot; y2=&quot;10&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;2&quot; /&gt;
+          &lt;line x1=&quot;-26&quot; y1=&quot;10&quot; x2=&quot;26&quot; y2=&quot;-10&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;2&quot; /&gt;
+          &lt;circle cx=&quot;-26&quot; cy=&quot;-10&quot; r=&quot;7&quot; fill=&quot;#f9f9f9&quot; stroke=&quot;#3a3a78&quot; stroke-width=&quot;1.2&quot; /&gt;
+          &lt;circle cx=&quot;26&quot; cy=&quot;-10&quot; r=&quot;7&quot; fill=&quot;#f9f9f9&quot; stroke=&quot;#3a3a78&quot; stroke-width=&quot;1.2&quot; /&gt;
+          &lt;circle cx=&quot;-26&quot; cy=&quot;10&quot; r=&quot;7&quot; fill=&quot;#f9f9f9&quot; stroke=&quot;#3a3a78&quot; stroke-width=&quot;1.2&quot; /&gt;
+          &lt;circle cx=&quot;26&quot; cy=&quot;10&quot; r=&quot;7&quot; fill=&quot;#f9f9f9&quot; stroke=&quot;#3a3a78&quot; stroke-width=&quot;1.2&quot; /&gt;
+          &lt;rect x=&quot;-9&quot; y=&quot;-7&quot; width=&quot;18&quot; height=&quot;14&quot; rx=&quot;2&quot; fill=&quot;#2a2a3a&quot; /&gt;
+          &lt;circle cx=&quot;0&quot; cy=&quot;0&quot; r=&quot;2&quot; fill=&quot;#3a3a78&quot; /&gt;
+        &lt;/g&gt;
+      &lt;/g&gt;
+
+      &lt;!-- pigeons on the tree (animated: stay → scatter → reset) --&gt;
+      &lt;g stroke=&quot;#2a2a3a&quot; stroke-width=&quot;1.2&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;&gt;
+        &lt;g transform=&quot;translate(180, 140)&quot;&gt;&lt;g class=&quot;pigeon pigeon-1&quot;&gt;&lt;path d=&quot;M0 0 l5 2 l5 -2&quot; /&gt;&lt;/g&gt;&lt;/g&gt;
+        &lt;g transform=&quot;translate(196, 132)&quot;&gt;&lt;g class=&quot;pigeon pigeon-2&quot;&gt;&lt;path d=&quot;M0 0 l5 2 l5 -2&quot; /&gt;&lt;/g&gt;&lt;/g&gt;
+        &lt;g transform=&quot;translate(212, 142)&quot;&gt;&lt;g class=&quot;pigeon pigeon-3&quot;&gt;&lt;path d=&quot;M0 0 l5 2 l5 -2&quot; /&gt;&lt;/g&gt;&lt;/g&gt;
+      &lt;/g&gt;
+
+      &lt;!-- distant atmospheric birds (animated: gentle drift) --&gt;
+      &lt;g stroke=&quot;#2a2a3a&quot; stroke-width=&quot;1.0&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot; opacity=&quot;0.6&quot;&gt;
+        &lt;g transform=&quot;translate(450, 50)&quot;&gt;&lt;g class=&quot;bg-bird-1&quot;&gt;&lt;path d=&quot;M0 0 l8 4 l8 -4&quot; /&gt;&lt;/g&gt;&lt;/g&gt;
+        &lt;g transform=&quot;translate(510, 80)&quot;&gt;&lt;g class=&quot;bg-bird-2&quot;&gt;&lt;path d=&quot;M0 0 l6 3 l6 -3&quot; /&gt;&lt;/g&gt;&lt;/g&gt;
+        &lt;g transform=&quot;translate(70,  60)&quot;&gt;&lt;g class=&quot;bg-bird-3&quot;&gt;&lt;path d=&quot;M0 0 l6 3 l6 -3&quot; /&gt;&lt;/g&gt;&lt;/g&gt;
+      &lt;/g&gt;
+    &lt;/svg&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;hero-leaderboard&quot;&gt;
+    &lt;div class=&quot;lb-head&quot;&gt;
+      &lt;span class=&quot;lb-title&quot;&gt;leaderboard · week 12&lt;/span&gt;
+      &lt;span class=&quot;lb-live&quot;&gt;live&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;table class=&quot;lb&quot;&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;&lt;th&gt;#&lt;/th&gt;&lt;th&gt;operator&lt;/th&gt;&lt;th&gt;fruit saved&lt;/th&gt;&lt;th&gt;cost&lt;/th&gt;&lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;Owl-3B&lt;/td&gt;&lt;td class=&quot;metric&quot;&gt;94%&lt;/td&gt;&lt;td class=&quot;cost&quot;&gt;$0.18/h&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;Hummingbird v2&lt;/td&gt;&lt;td class=&quot;metric&quot;&gt;89%&lt;/td&gt;&lt;td class=&quot;cost&quot;&gt;$0.21/h&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;FlockSentinel&lt;/td&gt;&lt;td class=&quot;metric&quot;&gt;84%&lt;/td&gt;&lt;td class=&quot;cost&quot;&gt;$0.31/h&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;human baseline&lt;/td&gt;&lt;td class=&quot;metric&quot;&gt;71%&lt;/td&gt;&lt;td class=&quot;cost&quot;&gt;—&lt;/td&gt;&lt;/tr&gt;
+        &lt;tr&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;RoboScarecrow&lt;/td&gt;&lt;td class=&quot;metric&quot;&gt;63%&lt;/td&gt;&lt;td class=&quot;cost&quot;&gt;$0.09/h&lt;/td&gt;&lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;figcaption&gt;A physical eval, sketched: an orchard with perimeter cameras and a deterrent drone, and a live leaderboard of operators competing to keep the birds off the fruit. Operators here are illustrative.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;In this document, a few threads are developed:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;#what-physical-evals-are&quot;&gt;What physical evals are.&lt;/a&gt;&lt;/strong&gt; A definition, what they’re &lt;em&gt;not&lt;/em&gt;
+(simulators, sim-to-real benchmarks, curated demos), virtual environments as virtual gyms and physical evals as a &lt;em&gt;final exam&lt;/em&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;#anatomy-of-a-physical-eval&quot;&gt;An anatomy.&lt;/a&gt;&lt;/strong&gt; An initial draft of components a physical eval needs, good practices.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;#safety-for-physical-evals&quot;&gt;Safety for physical evals.&lt;/a&gt;&lt;/strong&gt; Letting anyone on the internet drive
+real hardware is its own adversarial-security challenge.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;#an-open-movement-for-physical-evals&quot;&gt;An open movement for physical evals.&lt;/a&gt;&lt;/strong&gt; Creating simple protocols, great safety standard and economical setups could lead to a cambrian explosion of physical evals, where anyone can bring their physical challenge online.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;#physical-evals-as-a-market&quot;&gt;Physical evals as a market.&lt;/a&gt;&lt;/strong&gt; One can set up an eval to delegate the selection of the right AI model/algorithm to competing participants.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;what-physical-evals-are&quot;&gt;What physical evals are&lt;/h2&gt;
+
+&lt;p&gt;A physical eval is an evaluation of an AI system carried out in the
+actual physical world. The system being measured operates a real
+environment - fruit trees, a wet bench, a warehouse cell, a field
+plot - through sensors and actuators connected to the internet, so
+any agent can take a slot, attempt the task, and submit a score.&lt;/p&gt;
+
+&lt;p&gt;In principle, most problems in the physical world could be turned in a challenge for surfacing the state of the art of AI in solving that problem. In a way physical evals can act as a forcing function to saturate evaluations in the real world. &lt;label for=&quot;mn-raw-1&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mn-raw-1&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;Saturate as in: take the measurable outcome to its ceiling. The eval defines the ceiling; the participants find out how close they can get.&lt;/span&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;what-theyre-not&quot;&gt;What they’re not&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Not simulators.&lt;/strong&gt; A simulator models reality. A physical eval
+&lt;em&gt;is&lt;/em&gt; reality. In a way it, testing systems in the real world will avoid running into simulation edge cases.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Not sim-to-real benchmarks.&lt;/strong&gt; Sim-to-real measures how well a
+policy trained in a simulator transfers to a single in-house robot
+in a lab.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Not curated demos.&lt;/strong&gt; The environment operator and the participants are two distinct parties and the participants are in competition with each other. In other words, physical evals will be better than demos at showcasing the best technology for a specific task.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;the-final-exam&quot;&gt;The final exam&lt;/h3&gt;
+
+&lt;p&gt;A physical eval isn’t where one trains their models, but it’s where they get tested.&lt;/p&gt;
+
+&lt;p&gt;A virtual simulation is like a &lt;em&gt;virtual gym&lt;/em&gt;. Due to the high cost of interacting with the real world, it is likely that all the learning — model fitting, policy iteration, RL
+rollouts, fine-tuning, ablations, sweeps — will happen somewhere
+cheaper: a simulator, a virtual environment, a closed in-house
+testbed. &lt;label for=&quot;mn-raw-2&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mn-raw-2&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;Some of the gyms people are using today: &lt;a href=&quot;https://gymnasium.farama.org/&quot;&gt;OpenAI Gym / Gymnasium&lt;/a&gt;, &lt;a href=&quot;https://mujoco.org/&quot;&gt;MuJoCo&lt;/a&gt;, &lt;a href=&quot;https://pybullet.org/&quot;&gt;PyBullet&lt;/a&gt;, &lt;a href=&quot;https://developer.nvidia.com/isaac-sim&quot;&gt;Isaac Gym / Isaac Sim&lt;/a&gt;, &lt;a href=&quot;https://github.com/google-deepmind/lab&quot;&gt;DeepMind Lab&lt;/a&gt;, &lt;a href=&quot;https://aihabitat.org/&quot;&gt;Habitat&lt;/a&gt;, &lt;a href=&quot;https://ai2thor.allenai.org/&quot;&gt;AI2-THOR&lt;/a&gt;, &lt;a href=&quot;https://carla.org/&quot;&gt;CARLA&lt;/a&gt;, &lt;a href=&quot;https://microsoft.github.io/AirSim/&quot;&gt;AirSim&lt;/a&gt;, &lt;a href=&quot;https://genesis-embodied-ai.github.io/&quot;&gt;Genesis&lt;/a&gt;.&lt;/span&gt;
+Participants are free to use whichever virtual world or &lt;em&gt;gym&lt;/em&gt; they
+like — there is a whole landscape of simulators specifically built for
+this.&lt;/p&gt;
+
+&lt;p&gt;Differently, a physical eval is like a &lt;em&gt;final exam&lt;/em&gt;. Build and train wherever,
+gather data however, iterate as much as needed — and then submit to the
+physical eval to see how the work holds up against the real world.&lt;/p&gt;
+
+&lt;p&gt;The gap between a virtual world and the
+physical one, 
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Sim-to-real_transfer&quot;&gt;&lt;em&gt;sim-to-real&lt;/em&gt; gap&lt;/a&gt;, contains everything the simulator didn’t model. Wind that doesn’t
+blow the way it does in the sim. Lighting the renderer didn’t predict.
+Mechanical wear, sensor noise, calibration drift, the way birds
+&lt;em&gt;actually&lt;/em&gt; respond to a drone rather than the way an idealised model
+of a bird does. The physical eval catches it &lt;em&gt;is&lt;/em&gt; run in the physical world.&lt;/p&gt;
+
+&lt;h3 id=&quot;examples&quot;&gt;Examples&lt;/h3&gt;
+
+&lt;p&gt;The cards below are sketches of what a
+small handful of physical evals could look like across very different
+domains.&lt;/p&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/posts/physical-evals/cards.css&quot; /&gt;
+
+&lt;div class=&quot;eval-gallery&quot;&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;et-1&quot; name=&quot;eg&quot; checked=&quot;&quot; /&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;et-2&quot; name=&quot;eg&quot; /&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;et-3&quot; name=&quot;eg&quot; /&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;et-4&quot; name=&quot;eg&quot; /&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;et-5&quot; name=&quot;eg&quot; /&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;et-6&quot; name=&quot;eg&quot; /&gt;
+  &lt;div class=&quot;tab-labels&quot;&gt;
+    &lt;label for=&quot;et-1&quot;&gt;Orchard&lt;/label&gt;
+    &lt;label for=&quot;et-2&quot;&gt;Wet lab&lt;/label&gt;
+    &lt;label for=&quot;et-3&quot;&gt;Vertical farm&lt;/label&gt;
+    &lt;label for=&quot;et-4&quot;&gt;Pick-and-pack&lt;/label&gt;
+    &lt;label for=&quot;et-5&quot;&gt;Sprayer drone&lt;/label&gt;
+    &lt;label for=&quot;et-6&quot;&gt;Gel electrophoresis&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;tab-panes&quot;&gt;
+    &lt;div class=&quot;pane pane-1&quot;&gt;
+      &lt;div class=&quot;pane-header&quot;&gt;
+        &lt;div class=&quot;pane-icon&quot;&gt;&lt;svg viewBox=&quot;0 0 32 32&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.5&quot; stroke-linecap=&quot;round&quot;&gt;&lt;ellipse cx=&quot;16&quot; cy=&quot;12&quot; rx=&quot;9&quot; ry=&quot;8&quot; /&gt;&lt;line x1=&quot;16&quot; y1=&quot;20&quot; x2=&quot;16&quot; y2=&quot;29&quot; /&gt;&lt;/svg&gt;&lt;/div&gt;
+        &lt;h4 class=&quot;pane-title&quot;&gt;Orchard pest defence&lt;/h4&gt;
+      &lt;/div&gt;
+      &lt;p class=&quot;pane-blurb&quot;&gt;Cameras and a drone over a few rows of trees. Keep the wildlife out without poisoning the orchard or annoying the neighbours.&lt;/p&gt;
+      &lt;div class=&quot;pane-viz&quot;&gt;
+        &lt;svg viewBox=&quot;0 0 280 160&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; aria-label=&quot;Isometric orchard with camera pole, drone, and bird silhouettes&quot;&gt;
+  &lt;polygon points=&quot;20,140 260,140 235,60 45,60&quot; fill=&quot;#ebe4d0&quot; stroke=&quot;#bbb5a0&quot; stroke-width=&quot;0.6&quot; /&gt;
+  &lt;g stroke=&quot;#d2cab2&quot; stroke-width=&quot;0.4&quot; fill=&quot;none&quot; opacity=&quot;0.7&quot;&gt;
+    &lt;line x1=&quot;83&quot; y1=&quot;68&quot; x2=&quot;53&quot; y2=&quot;132&quot; /&gt;&lt;line x1=&quot;118&quot; y1=&quot;68&quot; x2=&quot;98&quot; y2=&quot;132&quot; /&gt;
+    &lt;line x1=&quot;153&quot; y1=&quot;68&quot; x2=&quot;143&quot; y2=&quot;132&quot; /&gt;&lt;line x1=&quot;188&quot; y1=&quot;68&quot; x2=&quot;188&quot; y2=&quot;132&quot; /&gt;
+    &lt;line x1=&quot;223&quot; y1=&quot;68&quot; x2=&quot;233&quot; y2=&quot;132&quot; /&gt;
+    &lt;line x1=&quot;55&quot; y1=&quot;80&quot; x2=&quot;225&quot; y2=&quot;80&quot; /&gt;&lt;line x1=&quot;44&quot; y1=&quot;100&quot; x2=&quot;236&quot; y2=&quot;100&quot; /&gt;&lt;line x1=&quot;32&quot; y1=&quot;120&quot; x2=&quot;248&quot; y2=&quot;120&quot; /&gt;
+  &lt;/g&gt;
+  &lt;polygon points=&quot;28,105 110,97 110,113&quot; fill=&quot;#3a3a78&quot; opacity=&quot;0.09&quot; /&gt;
+  &lt;g&gt;&lt;rect x=&quot;125&quot; y=&quot;87&quot; width=&quot;4&quot; height=&quot;8&quot; fill=&quot;#6b4a2a&quot; /&gt;&lt;ellipse cx=&quot;127&quot; cy=&quot;84&quot; rx=&quot;14&quot; ry=&quot;9&quot; fill=&quot;#7a9a5c&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.8&quot; /&gt;&lt;/g&gt;
+  &lt;g&gt;&lt;rect x=&quot;175&quot; y=&quot;87&quot; width=&quot;4&quot; height=&quot;8&quot; fill=&quot;#6b4a2a&quot; /&gt;&lt;ellipse cx=&quot;177&quot; cy=&quot;84&quot; rx=&quot;14&quot; ry=&quot;9&quot; fill=&quot;#7a9a5c&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.8&quot; /&gt;&lt;/g&gt;
+  &lt;g&gt;&lt;rect x=&quot;94&quot; y=&quot;117&quot; width=&quot;5&quot; height=&quot;10&quot; fill=&quot;#6b4a2a&quot; /&gt;&lt;ellipse cx=&quot;97&quot; cy=&quot;113&quot; rx=&quot;18&quot; ry=&quot;11&quot; fill=&quot;#7a9a5c&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.8&quot; /&gt;&lt;/g&gt;
+  &lt;g&gt;&lt;rect x=&quot;200&quot; y=&quot;117&quot; width=&quot;5&quot; height=&quot;10&quot; fill=&quot;#6b4a2a&quot; /&gt;&lt;ellipse cx=&quot;203&quot; cy=&quot;113&quot; rx=&quot;18&quot; ry=&quot;11&quot; fill=&quot;#7a9a5c&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.8&quot; /&gt;&lt;/g&gt;
+  &lt;g&gt;&lt;line x1=&quot;28&quot; y1=&quot;138&quot; x2=&quot;28&quot; y2=&quot;97&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;1.4&quot; /&gt;&lt;rect x=&quot;21&quot; y=&quot;90&quot; width=&quot;16&quot; height=&quot;9&quot; rx=&quot;1.5&quot; fill=&quot;#2a2a3a&quot; /&gt;&lt;circle cx=&quot;28&quot; cy=&quot;94&quot; r=&quot;1.8&quot; fill=&quot;#f9f9f9&quot; /&gt;&lt;/g&gt;
+  &lt;g transform=&quot;translate(152,58)&quot;&gt;
+    &lt;line x1=&quot;-18&quot; y1=&quot;-7&quot; x2=&quot;18&quot; y2=&quot;7&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;1.5&quot; /&gt;&lt;line x1=&quot;-18&quot; y1=&quot;7&quot; x2=&quot;18&quot; y2=&quot;-7&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;1.5&quot; /&gt;
+    &lt;circle cx=&quot;-18&quot; cy=&quot;-7&quot; r=&quot;5&quot; fill=&quot;#f9f9f9&quot; stroke=&quot;#3a3a78&quot; stroke-width=&quot;1&quot; /&gt;&lt;circle cx=&quot;18&quot; cy=&quot;-7&quot; r=&quot;5&quot; fill=&quot;#f9f9f9&quot; stroke=&quot;#3a3a78&quot; stroke-width=&quot;1&quot; /&gt;
+    &lt;circle cx=&quot;-18&quot; cy=&quot;7&quot; r=&quot;5&quot; fill=&quot;#f9f9f9&quot; stroke=&quot;#3a3a78&quot; stroke-width=&quot;1&quot; /&gt;&lt;circle cx=&quot;18&quot; cy=&quot;7&quot; r=&quot;5&quot; fill=&quot;#f9f9f9&quot; stroke=&quot;#3a3a78&quot; stroke-width=&quot;1&quot; /&gt;
+    &lt;rect x=&quot;-7&quot; y=&quot;-5&quot; width=&quot;14&quot; height=&quot;10&quot; rx=&quot;1.5&quot; fill=&quot;#2a2a3a&quot; /&gt;&lt;circle cx=&quot;0&quot; cy=&quot;0&quot; r=&quot;1.8&quot; fill=&quot;#3a3a78&quot; /&gt;
+  &lt;/g&gt;
+  &lt;g stroke=&quot;#3a3a78&quot; stroke-width=&quot;0.8&quot; fill=&quot;none&quot; opacity=&quot;0.5&quot;&gt;&lt;path d=&quot;M148,48 Q152,43 156,48&quot; /&gt;&lt;path d=&quot;M144,44 Q152,37 160,44&quot; /&gt;&lt;/g&gt;
+  &lt;g stroke=&quot;#2a2a3a&quot; stroke-width=&quot;1.1&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot;&gt;&lt;path d=&quot;M120,78 l4,2 l4,-2&quot; /&gt;&lt;path d=&quot;M131,75 l3,1.5 l3,-1.5&quot; /&gt;&lt;/g&gt;
+        &lt;/svg&gt;
+      &lt;/div&gt;
+      &lt;dl class=&quot;pane-spec&quot;&gt;
+        &lt;dt&gt;environment&lt;/dt&gt;&lt;dd&gt;~1 acre of fruit trees, outdoor, weather-exposed.&lt;/dd&gt;
+        &lt;dt&gt;action space&lt;/dt&gt;&lt;dd&gt;Fly the drone, emit deterrent sound, trigger light pulse, dispense small bait.&lt;/dd&gt;
+        &lt;dt&gt;sensors&lt;/dt&gt;&lt;dd&gt;Fixed perimeter cameras, drone camera, microphone, weather station.&lt;/dd&gt;
+        &lt;dt&gt;primary metric&lt;/dt&gt;&lt;dd&gt;Fruit lost to wildlife per week.&lt;/dd&gt;
+        &lt;dt&gt;secondaries&lt;/dt&gt;&lt;dd&gt;Drone flight-time, energy, chemical use, neighbour-complaint count.&lt;/dd&gt;
+        &lt;dt&gt;guardrails&lt;/dt&gt;&lt;dd&gt;Geofenced drone, quiet-hour windows, no-spray buffer near road, fail-safe tether.&lt;/dd&gt;
+      &lt;/dl&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;pane pane-2&quot;&gt;
+      &lt;div class=&quot;pane-header&quot;&gt;
+        &lt;div class=&quot;pane-icon&quot;&gt;&lt;svg viewBox=&quot;0 0 32 32&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.5&quot; stroke-linejoin=&quot;round&quot; stroke-linecap=&quot;round&quot;&gt;&lt;path d=&quot;M12 3 v8 L5 26 c-0.5 1.5 0.5 3 2 3 h18 c1.5 0 2.5-1.5 2-3 L20 11 V3&quot; /&gt;&lt;line x1=&quot;10&quot; y1=&quot;3&quot; x2=&quot;22&quot; y2=&quot;3&quot; /&gt;&lt;line x1=&quot;9&quot; y1=&quot;20&quot; x2=&quot;23&quot; y2=&quot;20&quot; stroke-dasharray=&quot;2,2&quot; /&gt;&lt;/svg&gt;&lt;/div&gt;
+        &lt;h4 class=&quot;pane-title&quot;&gt;pH adjustment bench&lt;/h4&gt;
+      &lt;/div&gt;
+      &lt;p class=&quot;pane-blurb&quot;&gt;A beaker on a magnetic stirrer, a pH probe, and two motorised dispensers. Hit a target pH using as little reagent as possible.&lt;/p&gt;
+      &lt;div class=&quot;pane-viz&quot;&gt;
+        &lt;svg viewBox=&quot;0 0 280 160&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; aria-label=&quot;Bench with beaker on stirrer, pH probe, and two dispensers&quot;&gt;
+  &lt;!-- bench surface --&gt;
+  &lt;polygon points=&quot;30,140 250,140 270,100 50,100&quot; fill=&quot;#ebe4d0&quot; stroke=&quot;#bbb5a0&quot; stroke-width=&quot;0.6&quot; /&gt;
+  &lt;g stroke=&quot;#d2cab2&quot; stroke-width=&quot;0.35&quot; fill=&quot;none&quot; opacity=&quot;0.5&quot;&gt;
+    &lt;line x1=&quot;50&quot; y1=&quot;100&quot; x2=&quot;30&quot; y2=&quot;140&quot; /&gt;&lt;line x1=&quot;110&quot; y1=&quot;100&quot; x2=&quot;90&quot; y2=&quot;140&quot; /&gt;
+    &lt;line x1=&quot;170&quot; y1=&quot;100&quot; x2=&quot;150&quot; y2=&quot;140&quot; /&gt;&lt;line x1=&quot;230&quot; y1=&quot;100&quot; x2=&quot;210&quot; y2=&quot;140&quot; /&gt;
+    &lt;line x1=&quot;50&quot; y1=&quot;100&quot; x2=&quot;270&quot; y2=&quot;100&quot; /&gt;&lt;line x1=&quot;40&quot; y1=&quot;120&quot; x2=&quot;260&quot; y2=&quot;120&quot; /&gt;
+  &lt;/g&gt;
+  &lt;!-- stirrer base --&gt;
+  &lt;polygon points=&quot;95,138 140,138 148,118 103,118&quot; fill=&quot;#2a2a3a&quot; stroke=&quot;#1a1a28&quot; stroke-width=&quot;0.6&quot; /&gt;
+  &lt;polygon points=&quot;95,138 100,128 103,118 98,128&quot; fill=&quot;#1a1a28&quot; stroke=&quot;#111&quot; stroke-width=&quot;0.4&quot; /&gt;
+  &lt;ellipse cx=&quot;121&quot; cy=&quot;118&quot; rx=&quot;18&quot; ry=&quot;4&quot; fill=&quot;#3a3a4a&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;ellipse cx=&quot;121&quot; cy=&quot;117&quot; rx=&quot;6&quot; ry=&quot;2&quot; fill=&quot;#5a5a6a&quot; opacity=&quot;0.7&quot; /&gt;
+  &lt;!-- beaker body --&gt;
+  &lt;polygon points=&quot;105,118 137,118 133,72 109,72&quot; fill=&quot;#dde8f4&quot; stroke=&quot;#6a90a8&quot; stroke-width=&quot;0.8&quot; opacity=&quot;0.88&quot; /&gt;
+  &lt;polygon points=&quot;105,118 109,118 109,72 105,90&quot; fill=&quot;#c8daea&quot; stroke=&quot;#6a90a8&quot; stroke-width=&quot;0.5&quot; opacity=&quot;0.6&quot; /&gt;
+  &lt;ellipse cx=&quot;121&quot; cy=&quot;72&quot; rx=&quot;14&quot; ry=&quot;4&quot; fill=&quot;#dde8f4&quot; stroke=&quot;#6a90a8&quot; stroke-width=&quot;0.7&quot; opacity=&quot;0.9&quot; /&gt;
+  &lt;!-- liquid inside beaker (slightly tinted) --&gt;
+  &lt;polygon points=&quot;107,118 135,118 132,88 110,88&quot; fill=&quot;#b8d8f0&quot; opacity=&quot;0.4&quot; /&gt;
+  &lt;ellipse cx=&quot;121&quot; cy=&quot;88&quot; rx=&quot;12&quot; ry=&quot;3&quot; fill=&quot;#a8cce8&quot; opacity=&quot;0.35&quot; /&gt;
+  &lt;!-- pH probe --&gt;
+  &lt;line x1=&quot;128&quot; y1=&quot;55&quot; x2=&quot;124&quot; y2=&quot;105&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;1.4&quot; /&gt;
+  &lt;rect x=&quot;122&quot; y=&quot;50&quot; width=&quot;10&quot; height=&quot;14&quot; rx=&quot;2&quot; fill=&quot;#2a2a3a&quot; stroke=&quot;#6a90a8&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;rect x=&quot;123&quot; y=&quot;52&quot; width=&quot;8&quot; height=&quot;8&quot; rx=&quot;1&quot; fill=&quot;#0d1a2a&quot; /&gt;
+  &lt;circle cx=&quot;127&quot; cy=&quot;56&quot; r=&quot;1.5&quot; fill=&quot;#4aaa70&quot; opacity=&quot;0.9&quot; /&gt;
+  &lt;!-- left dispenser (acid) --&gt;
+  &lt;rect x=&quot;50&quot; y=&quot;85&quot; width=&quot;10&quot; height=&quot;35&quot; rx=&quot;2&quot; fill=&quot;#3a3a78&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;rect x=&quot;48&quot; y=&quot;80&quot; width=&quot;14&quot; height=&quot;8&quot; rx=&quot;2&quot; fill=&quot;#2a2a3a&quot; stroke=&quot;#6a90a8&quot; stroke-width=&quot;0.4&quot; /&gt;
+  &lt;line x1=&quot;60&quot; y1=&quot;100&quot; x2=&quot;100&quot; y2=&quot;112&quot; stroke=&quot;#4a6ea5&quot; stroke-width=&quot;1&quot; stroke-dasharray=&quot;3,2&quot; opacity=&quot;0.7&quot; /&gt;
+  &lt;text x=&quot;52&quot; y=&quot;78&quot; font-size=&quot;6&quot; fill=&quot;#6a90a8&quot; font-family=&quot;monospace&quot;&gt;H⁺&lt;/text&gt;
+  &lt;!-- right dispenser (base) --&gt;
+  &lt;rect x=&quot;205&quot; y=&quot;92&quot; width=&quot;10&quot; height=&quot;28&quot; rx=&quot;2&quot; fill=&quot;#3a7858&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;rect x=&quot;203&quot; y=&quot;87&quot; width=&quot;14&quot; height=&quot;8&quot; rx=&quot;2&quot; fill=&quot;#2a2a3a&quot; stroke=&quot;#6a90a8&quot; stroke-width=&quot;0.4&quot; /&gt;
+  &lt;line x1=&quot;205&quot; y1=&quot;102&quot; x2=&quot;148&quot; y2=&quot;112&quot; stroke=&quot;#4aaa70&quot; stroke-width=&quot;1&quot; stroke-dasharray=&quot;3,2&quot; opacity=&quot;0.7&quot; /&gt;
+  &lt;text x=&quot;205&quot; y=&quot;85&quot; font-size=&quot;6&quot; fill=&quot;#4aaa70&quot; font-family=&quot;monospace&quot;&gt;OH⁻&lt;/text&gt;
+  &lt;!-- pH readout display --&gt;
+  &lt;rect x=&quot;168&quot; y=&quot;100&quot; width=&quot;28&quot; height=&quot;16&quot; rx=&quot;2&quot; fill=&quot;#0d1a2a&quot; stroke=&quot;#6a90a8&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;text x=&quot;172&quot; y=&quot;111&quot; font-size=&quot;7&quot; fill=&quot;#4aff88&quot; font-family=&quot;monospace&quot;&gt;pH 6.82&lt;/text&gt;
+        &lt;/svg&gt;
+      &lt;/div&gt;
+      &lt;dl class=&quot;pane-spec&quot;&gt;
+        &lt;dt&gt;environment&lt;/dt&gt;&lt;dd&gt;Benchtop — one beaker on a stirrer, two motorised dispensers (acid, base), pH probe.&lt;/dd&gt;
+        &lt;dt&gt;action space&lt;/dt&gt;&lt;dd&gt;Dispense a chosen volume from either reservoir; read current pH.&lt;/dd&gt;
+        &lt;dt&gt;sensors&lt;/dt&gt;&lt;dd&gt;pH electrode, balance, camera.&lt;/dd&gt;
+        &lt;dt&gt;primary metric&lt;/dt&gt;&lt;dd&gt;Absolute pH error from target at submission.&lt;/dd&gt;
+        &lt;dt&gt;secondaries&lt;/dt&gt;&lt;dd&gt;Total volume dispensed, time to endpoint.&lt;/dd&gt;
+        &lt;dt&gt;guardrails&lt;/dt&gt;&lt;dd&gt;Per-session dispense quota, pH range limits (3–11), auto-stop on quota exhaustion.&lt;/dd&gt;
+      &lt;/dl&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;pane pane-3&quot;&gt;
+      &lt;div class=&quot;pane-header&quot;&gt;
+        &lt;div class=&quot;pane-icon&quot;&gt;&lt;svg viewBox=&quot;0 0 32 32&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.5&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;path d=&quot;M16 28 v-12&quot; /&gt;&lt;path d=&quot;M16 18 C 8 18, 5 11, 5 6 C 11 6, 16 10, 16 16&quot; /&gt;&lt;path d=&quot;M16 18 C 24 18, 27 11, 27 6 C 21 6, 16 10, 16 16&quot; /&gt;&lt;/svg&gt;&lt;/div&gt;
+        &lt;h4 class=&quot;pane-title&quot;&gt;Indoor vertical farm&lt;/h4&gt;
+      &lt;/div&gt;
+      &lt;p class=&quot;pane-blurb&quot;&gt;A closed grow rack — lights, pumps, nutrient dosing, cameras. Pull more food out of every kilowatt.&lt;/p&gt;
+      &lt;div class=&quot;pane-viz&quot;&gt;
+        &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 280 160&quot; aria-label=&quot;Isometric indoor vertical farm rack with LED bars and plant rosettes&quot;&gt;
+  &lt;defs&gt;&lt;filter id=&quot;led-glow&quot; x=&quot;-20%&quot; y=&quot;-60%&quot; width=&quot;140%&quot; height=&quot;280%&quot;&gt;&lt;feGaussianBlur stdDeviation=&quot;2.5&quot; result=&quot;b&quot; /&gt;&lt;feMerge&gt;&lt;feMergeNode in=&quot;b&quot; /&gt;&lt;feMergeNode in=&quot;SourceGraphic&quot; /&gt;&lt;/feMerge&gt;&lt;/filter&gt;&lt;/defs&gt;
+  &lt;ellipse cx=&quot;126&quot; cy=&quot;148&quot; rx=&quot;60&quot; ry=&quot;8&quot; fill=&quot;#2a2a3a&quot; opacity=&quot;0.10&quot; /&gt;
+  &lt;polygon points=&quot;88,106 95,110 95,22 88,18&quot; fill=&quot;#2a2a3a&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;polygon points=&quot;86,104 88,106 88,18 86,16&quot; fill=&quot;#3d3d50&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;polygon points=&quot;86,16 88,18 95,22 93,20&quot; fill=&quot;#f9f9f9&quot; opacity=&quot;0.7&quot; /&gt;
+  &lt;polygon points=&quot;164,144 171,140 171,52 164,56&quot; fill=&quot;#2a2a3a&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;polygon points=&quot;162,142 164,144 164,56 162,54&quot; fill=&quot;#3d3d50&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;polygon points=&quot;162,54 164,56 171,52 169,50&quot; fill=&quot;#f9f9f9&quot; opacity=&quot;0.7&quot; /&gt;
+  &lt;polygon points=&quot;66,117 72,113 72,25 66,29&quot; fill=&quot;#2a2a3a&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;polygon points=&quot;142,155 149,151 149,63 142,67&quot; fill=&quot;#2a2a3a&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;polygon points=&quot;88,106 164,144 164,141 88,103&quot; fill=&quot;#2a2a3a&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;0.3&quot; /&gt;
+  &lt;polygon points=&quot;66,117 142,155 142,152 66,114&quot; fill=&quot;#1e1e2a&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;0.3&quot; /&gt;
+  &lt;polygon points=&quot;88,62 164,100 164,97 88,59&quot; fill=&quot;#2a2a3a&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;0.3&quot; /&gt;
+  &lt;polygon points=&quot;66,73 142,111 142,108 66,70&quot; fill=&quot;#1e1e2a&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;0.3&quot; /&gt;
+  &lt;polygon points=&quot;88,18 164,56 164,53 88,15&quot; fill=&quot;#2a2a3a&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;0.3&quot; /&gt;
+  &lt;polygon points=&quot;66,29 142,67 142,64 66,26&quot; fill=&quot;#1e1e2a&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;0.3&quot; /&gt;
+  &lt;polygon points=&quot;88,62 164,100 142,111 66,73&quot; fill=&quot;#ebe4d0&quot; stroke=&quot;#bbb5a0&quot; stroke-width=&quot;1&quot; /&gt;
+  &lt;polygon points=&quot;88,62 164,100 164,103 88,65&quot; fill=&quot;#d4cdb8&quot; stroke=&quot;#bbb5a0&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;polygon points=&quot;66,73 88,62 88,65 66,76&quot; fill=&quot;#cdc6b2&quot; stroke=&quot;#bbb5a0&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;polygon points=&quot;88,18 164,56 142,67 66,29&quot; fill=&quot;#ebe4d0&quot; stroke=&quot;#bbb5a0&quot; stroke-width=&quot;1&quot; /&gt;
+  &lt;polygon points=&quot;88,18 164,56 164,59 88,21&quot; fill=&quot;#d4cdb8&quot; stroke=&quot;#bbb5a0&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;polygon points=&quot;66,29 88,18 88,21 66,32&quot; fill=&quot;#cdc6b2&quot; stroke=&quot;#bbb5a0&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;!-- light wash below lower LED --&gt;
+  &lt;polygon points=&quot;82,67 158,105 157,113 81,75&quot; fill=&quot;#cc44cc&quot; opacity=&quot;0.07&quot; /&gt;
+  &lt;!-- lower tier LED bar (mounted under upper shelf, above lower plants) --&gt;
+  &lt;polygon points=&quot;79,62 155,100 155,103 79,65&quot; fill=&quot;#c855d0&quot; stroke=&quot;#8a25a0&quot; stroke-width=&quot;0.8&quot; filter=&quot;url(#led-glow)&quot; opacity=&quot;0.96&quot; /&gt;
+  &lt;circle cx=&quot;96&quot; cy=&quot;68&quot; r=&quot;1.5&quot; fill=&quot;#f088ff&quot; opacity=&quot;0.9&quot; /&gt;&lt;circle cx=&quot;112&quot; cy=&quot;76&quot; r=&quot;1.5&quot; fill=&quot;#f088ff&quot; opacity=&quot;0.9&quot; /&gt;&lt;circle cx=&quot;128&quot; cy=&quot;84&quot; r=&quot;1.5&quot; fill=&quot;#f088ff&quot; opacity=&quot;0.9&quot; /&gt;&lt;circle cx=&quot;144&quot; cy=&quot;92&quot; r=&quot;1.5&quot; fill=&quot;#f088ff&quot; opacity=&quot;0.9&quot; /&gt;
+  &lt;!-- light wash below upper LED --&gt;
+  &lt;polygon points=&quot;82,22 158,60 157,68 81,30&quot; fill=&quot;#cc44cc&quot; opacity=&quot;0.07&quot; /&gt;
+  &lt;!-- upper tier LED bar (mounted at top of rack, above upper plants) --&gt;
+  &lt;polygon points=&quot;79,18 155,56 155,59 79,21&quot; fill=&quot;#c855d0&quot; stroke=&quot;#8a25a0&quot; stroke-width=&quot;0.8&quot; filter=&quot;url(#led-glow)&quot; opacity=&quot;0.96&quot; /&gt;
+  &lt;circle cx=&quot;96&quot; cy=&quot;24&quot; r=&quot;1.5&quot; fill=&quot;#f088ff&quot; opacity=&quot;0.9&quot; /&gt;&lt;circle cx=&quot;112&quot; cy=&quot;32&quot; r=&quot;1.5&quot; fill=&quot;#f088ff&quot; opacity=&quot;0.9&quot; /&gt;&lt;circle cx=&quot;128&quot; cy=&quot;40&quot; r=&quot;1.5&quot; fill=&quot;#f088ff&quot; opacity=&quot;0.9&quot; /&gt;&lt;circle cx=&quot;144&quot; cy=&quot;48&quot; r=&quot;1.5&quot; fill=&quot;#f088ff&quot; opacity=&quot;0.9&quot; /&gt;
+  &lt;g transform=&quot;translate(92,75)&quot;&gt;&lt;ellipse cx=&quot;0&quot; cy=&quot;0&quot; rx=&quot;9&quot; ry=&quot;4&quot; fill=&quot;#2a2a3a&quot; opacity=&quot;0.10&quot; /&gt;&lt;ellipse cx=&quot;0&quot; cy=&quot;-3&quot; rx=&quot;8&quot; ry=&quot;4&quot; fill=&quot;#7a9a5c&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.8&quot; /&gt;&lt;ellipse cx=&quot;0&quot; cy=&quot;-4&quot; rx=&quot;5&quot; ry=&quot;2.5&quot; fill=&quot;#8aaa6a&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.5&quot; /&gt;&lt;/g&gt;
+  &lt;g transform=&quot;translate(107,83)&quot;&gt;&lt;ellipse cx=&quot;0&quot; cy=&quot;0&quot; rx=&quot;9&quot; ry=&quot;4&quot; fill=&quot;#2a2a3a&quot; opacity=&quot;0.10&quot; /&gt;&lt;ellipse cx=&quot;0&quot; cy=&quot;-3&quot; rx=&quot;8&quot; ry=&quot;4&quot; fill=&quot;#7a9a5c&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.8&quot; /&gt;&lt;ellipse cx=&quot;0&quot; cy=&quot;-4&quot; rx=&quot;5&quot; ry=&quot;2.5&quot; fill=&quot;#8aaa6a&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.5&quot; /&gt;&lt;/g&gt;
+  &lt;g transform=&quot;translate(123,90)&quot;&gt;&lt;ellipse cx=&quot;0&quot; cy=&quot;0&quot; rx=&quot;9&quot; ry=&quot;4&quot; fill=&quot;#2a2a3a&quot; opacity=&quot;0.10&quot; /&gt;&lt;ellipse cx=&quot;0&quot; cy=&quot;-3&quot; rx=&quot;8&quot; ry=&quot;4&quot; fill=&quot;#7a9a5c&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.8&quot; /&gt;&lt;ellipse cx=&quot;0&quot; cy=&quot;-4&quot; rx=&quot;5&quot; ry=&quot;2.5&quot; fill=&quot;#8aaa6a&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.5&quot; /&gt;&lt;/g&gt;
+  &lt;g transform=&quot;translate(138,98)&quot;&gt;&lt;ellipse cx=&quot;0&quot; cy=&quot;0&quot; rx=&quot;9&quot; ry=&quot;4&quot; fill=&quot;#2a2a3a&quot; opacity=&quot;0.10&quot; /&gt;&lt;ellipse cx=&quot;0&quot; cy=&quot;-3&quot; rx=&quot;8&quot; ry=&quot;4&quot; fill=&quot;#7a9a5c&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.8&quot; /&gt;&lt;ellipse cx=&quot;0&quot; cy=&quot;-4&quot; rx=&quot;5&quot; ry=&quot;2.5&quot; fill=&quot;#8aaa6a&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.5&quot; /&gt;&lt;/g&gt;
+  &lt;g transform=&quot;translate(92,31)&quot;&gt;&lt;ellipse cx=&quot;0&quot; cy=&quot;0&quot; rx=&quot;9&quot; ry=&quot;4&quot; fill=&quot;#2a2a3a&quot; opacity=&quot;0.10&quot; /&gt;&lt;ellipse cx=&quot;0&quot; cy=&quot;-3&quot; rx=&quot;8&quot; ry=&quot;4&quot; fill=&quot;#7a9a5c&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.8&quot; /&gt;&lt;ellipse cx=&quot;0&quot; cy=&quot;-4&quot; rx=&quot;5&quot; ry=&quot;2.5&quot; fill=&quot;#8aaa6a&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.5&quot; /&gt;&lt;/g&gt;
+  &lt;g transform=&quot;translate(107,39)&quot;&gt;&lt;ellipse cx=&quot;0&quot; cy=&quot;0&quot; rx=&quot;9&quot; ry=&quot;4&quot; fill=&quot;#2a2a3a&quot; opacity=&quot;0.10&quot; /&gt;&lt;ellipse cx=&quot;0&quot; cy=&quot;-3&quot; rx=&quot;8&quot; ry=&quot;4&quot; fill=&quot;#7a9a5c&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.8&quot; /&gt;&lt;ellipse cx=&quot;0&quot; cy=&quot;-4&quot; rx=&quot;5&quot; ry=&quot;2.5&quot; fill=&quot;#8aaa6a&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.5&quot; /&gt;&lt;/g&gt;
+  &lt;g transform=&quot;translate(123,46)&quot;&gt;&lt;ellipse cx=&quot;0&quot; cy=&quot;0&quot; rx=&quot;9&quot; ry=&quot;4&quot; fill=&quot;#2a2a3a&quot; opacity=&quot;0.10&quot; /&gt;&lt;ellipse cx=&quot;0&quot; cy=&quot;-3&quot; rx=&quot;8&quot; ry=&quot;4&quot; fill=&quot;#7a9a5c&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.8&quot; /&gt;&lt;ellipse cx=&quot;0&quot; cy=&quot;-4&quot; rx=&quot;5&quot; ry=&quot;2.5&quot; fill=&quot;#8aaa6a&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.5&quot; /&gt;&lt;/g&gt;
+  &lt;g transform=&quot;translate(138,54)&quot;&gt;&lt;ellipse cx=&quot;0&quot; cy=&quot;0&quot; rx=&quot;9&quot; ry=&quot;4&quot; fill=&quot;#2a2a3a&quot; opacity=&quot;0.10&quot; /&gt;&lt;ellipse cx=&quot;0&quot; cy=&quot;-3&quot; rx=&quot;8&quot; ry=&quot;4&quot; fill=&quot;#7a9a5c&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.8&quot; /&gt;&lt;ellipse cx=&quot;0&quot; cy=&quot;-4&quot; rx=&quot;5&quot; ry=&quot;2.5&quot; fill=&quot;#8aaa6a&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.5&quot; /&gt;&lt;/g&gt;
+  &lt;line x1=&quot;85&quot; y1=&quot;18&quot; x2=&quot;85&quot; y2=&quot;106&quot; stroke=&quot;#3a3a78&quot; stroke-width=&quot;2.5&quot; stroke-linecap=&quot;round&quot; /&gt;
+  &lt;line x1=&quot;85.6&quot; y1=&quot;18&quot; x2=&quot;85.6&quot; y2=&quot;106&quot; stroke=&quot;#6a6ab8&quot; stroke-width=&quot;0.9&quot; stroke-linecap=&quot;round&quot; opacity=&quot;0.55&quot; /&gt;
+  &lt;circle cx=&quot;85&quot; cy=&quot;84&quot; r=&quot;2.5&quot; fill=&quot;#3a3a78&quot; stroke=&quot;#22224a&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;line x1=&quot;85&quot; y1=&quot;84&quot; x2=&quot;92&quot; y2=&quot;87&quot; stroke=&quot;#3a3a78&quot; stroke-width=&quot;1&quot; stroke-linecap=&quot;round&quot; /&gt;
+  &lt;circle cx=&quot;85&quot; cy=&quot;40&quot; r=&quot;2.5&quot; fill=&quot;#3a3a78&quot; stroke=&quot;#22224a&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;line x1=&quot;85&quot; y1=&quot;40&quot; x2=&quot;92&quot; y2=&quot;43&quot; stroke=&quot;#3a3a78&quot; stroke-width=&quot;1&quot; stroke-linecap=&quot;round&quot; /&gt;
+        &lt;/svg&gt;
+      &lt;/div&gt;
+      &lt;dl class=&quot;pane-spec&quot;&gt;
+        &lt;dt&gt;environment&lt;/dt&gt;&lt;dd&gt;One 2-tier rack, ~3 m², climate-isolated.&lt;/dd&gt;
+        &lt;dt&gt;action space&lt;/dt&gt;&lt;dd&gt;Light schedule + intensity, nutrient mix, irrigation timing, harvest decision.&lt;/dd&gt;
+        &lt;dt&gt;sensors&lt;/dt&gt;&lt;dd&gt;Cameras (overhead + side), EC / pH probes, water-flow meters, kWh meter, scale at harvest.&lt;/dd&gt;
+        &lt;dt&gt;primary metric&lt;/dt&gt;&lt;dd&gt;Grams of edible biomass per kWh per cycle.&lt;/dd&gt;
+        &lt;dt&gt;secondaries&lt;/dt&gt;&lt;dd&gt;Cycle time, water used, nutrient cost, reject rate.&lt;/dd&gt;
+        &lt;dt&gt;guardrails&lt;/dt&gt;&lt;dd&gt;Nutrient-concentration ceiling, water-overflow drain, light-burn cutoff, max-cycle length.&lt;/dd&gt;
+      &lt;/dl&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;pane pane-4&quot;&gt;
+      &lt;div class=&quot;pane-header&quot;&gt;
+        &lt;div class=&quot;pane-icon&quot;&gt;&lt;svg viewBox=&quot;0 0 32 32&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.5&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;&gt;&lt;rect x=&quot;3&quot; y=&quot;25&quot; width=&quot;26&quot; height=&quot;4&quot; rx=&quot;1&quot; /&gt;&lt;circle cx=&quot;8&quot; cy=&quot;25&quot; r=&quot;2&quot; fill=&quot;currentColor&quot; /&gt;&lt;line x1=&quot;8&quot; y1=&quot;25&quot; x2=&quot;8&quot; y2=&quot;14&quot; /&gt;&lt;circle cx=&quot;8&quot; cy=&quot;14&quot; r=&quot;2&quot; fill=&quot;currentColor&quot; /&gt;&lt;line x1=&quot;8&quot; y1=&quot;14&quot; x2=&quot;20&quot; y2=&quot;9&quot; /&gt;&lt;circle cx=&quot;20&quot; cy=&quot;9&quot; r=&quot;2&quot; fill=&quot;currentColor&quot; /&gt;&lt;path d=&quot;M20 9 l5 2 l-1 4&quot; /&gt;&lt;/svg&gt;&lt;/div&gt;
+        &lt;h4 class=&quot;pane-title&quot;&gt;Warehouse pick-and-pack cell&lt;/h4&gt;
+      &lt;/div&gt;
+      &lt;p class=&quot;pane-blurb&quot;&gt;An off-the-shelf robot arm in front of mixed shelves and a conveyor. The boring industrial baseline — still worth opening up.&lt;/p&gt;
+      &lt;div class=&quot;pane-viz&quot;&gt;
+        &lt;svg viewBox=&quot;0 0 280 160&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; aria-label=&quot;Isometric warehouse pick-and-pack robot cell&quot;&gt;
+  &lt;polygon points=&quot;20,148 260,148 235,68 45,68&quot; fill=&quot;#ebe4d0&quot; stroke=&quot;#bbb5a0&quot; stroke-width=&quot;0.6&quot; /&gt;
+  &lt;g stroke=&quot;#d2cab2&quot; stroke-width=&quot;0.4&quot; fill=&quot;none&quot; opacity=&quot;0.7&quot;&gt;
+    &lt;line x1=&quot;95&quot; y1=&quot;75&quot; x2=&quot;65&quot; y2=&quot;140&quot; /&gt;&lt;line x1=&quot;135&quot; y1=&quot;75&quot; x2=&quot;115&quot; y2=&quot;140&quot; /&gt;&lt;line x1=&quot;175&quot; y1=&quot;75&quot; x2=&quot;165&quot; y2=&quot;140&quot; /&gt;&lt;line x1=&quot;215&quot; y1=&quot;75&quot; x2=&quot;215&quot; y2=&quot;140&quot; /&gt;
+    &lt;line x1=&quot;52&quot; y1=&quot;90&quot; x2=&quot;228&quot; y2=&quot;90&quot; /&gt;&lt;line x1=&quot;38&quot; y1=&quot;110&quot; x2=&quot;242&quot; y2=&quot;110&quot; /&gt;&lt;line x1=&quot;26&quot; y1=&quot;130&quot; x2=&quot;255&quot; y2=&quot;130&quot; /&gt;
+  &lt;/g&gt;
+  &lt;rect x=&quot;48&quot; y=&quot;72&quot; width=&quot;3&quot; height=&quot;46&quot; fill=&quot;#2a2a3a&quot; /&gt;&lt;rect x=&quot;56&quot; y=&quot;80&quot; width=&quot;3&quot; height=&quot;48&quot; fill=&quot;#2a2a3a&quot; /&gt;&lt;rect x=&quot;96&quot; y=&quot;80&quot; width=&quot;3&quot; height=&quot;48&quot; fill=&quot;#2a2a3a&quot; /&gt;
+  &lt;polygon points=&quot;48,78 99,78 99,82 48,82&quot; fill=&quot;#d8d0c4&quot; stroke=&quot;#bbb5a0&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;polygon points=&quot;48,78 56,84 56,88 48,82&quot; fill=&quot;#c0b8aa&quot; stroke=&quot;#bbb5a0&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;polygon points=&quot;56,84 99,84 99,88 56,88&quot; fill=&quot;#d8d0c4&quot; stroke=&quot;#bbb5a0&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;polygon points=&quot;48,98 99,98 99,101 48,101&quot; fill=&quot;#d8d0c4&quot; stroke=&quot;#bbb5a0&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;polygon points=&quot;48,98 56,104 56,107 48,101&quot; fill=&quot;#c0b8aa&quot; stroke=&quot;#bbb5a0&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;polygon points=&quot;56,104 99,104 99,107 56,107&quot; fill=&quot;#d8d0c4&quot; stroke=&quot;#bbb5a0&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;g&gt;&lt;polygon points=&quot;60,72 73,72 73,78 60,78&quot; fill=&quot;#c4a882&quot; stroke=&quot;#a08860&quot; stroke-width=&quot;0.5&quot; /&gt;&lt;polygon points=&quot;60,72 64,70 77,70 73,72&quot; fill=&quot;#d4b892&quot; stroke=&quot;#a08860&quot; stroke-width=&quot;0.5&quot; /&gt;&lt;polygon points=&quot;73,72 77,70 77,78 73,78&quot; fill=&quot;#b09870&quot; stroke=&quot;#a08860&quot; stroke-width=&quot;0.5&quot; /&gt;&lt;/g&gt;
+  &lt;g&gt;&lt;polygon points=&quot;78,72 88,72 88,78 78,78&quot; fill=&quot;#d8d0c4&quot; stroke=&quot;#a08860&quot; stroke-width=&quot;0.5&quot; /&gt;&lt;polygon points=&quot;78,72 82,70 92,70 88,72&quot; fill=&quot;#e8e0d4&quot; stroke=&quot;#a08860&quot; stroke-width=&quot;0.5&quot; /&gt;&lt;polygon points=&quot;88,72 92,70 92,78 88,78&quot; fill=&quot;#c8c0b4&quot; stroke=&quot;#a08860&quot; stroke-width=&quot;0.5&quot; /&gt;&lt;/g&gt;
+  &lt;g&gt;&lt;polygon points=&quot;62,92 74,92 74,98 62,98&quot; fill=&quot;#d8d0c4&quot; stroke=&quot;#a08860&quot; stroke-width=&quot;0.5&quot; /&gt;&lt;polygon points=&quot;62,92 66,90 78,90 74,92&quot; fill=&quot;#e8e0d4&quot; stroke=&quot;#a08860&quot; stroke-width=&quot;0.5&quot; /&gt;&lt;polygon points=&quot;74,92 78,90 78,98 74,98&quot; fill=&quot;#c8c0b4&quot; stroke=&quot;#a08860&quot; stroke-width=&quot;0.5&quot; /&gt;&lt;/g&gt;
+  &lt;g&gt;&lt;polygon points=&quot;79,92 90,92 90,98 79,98&quot; fill=&quot;#c4a882&quot; stroke=&quot;#a08860&quot; stroke-width=&quot;0.5&quot; /&gt;&lt;polygon points=&quot;79,92 83,90 94,90 90,92&quot; fill=&quot;#d4b892&quot; stroke=&quot;#a08860&quot; stroke-width=&quot;0.5&quot; /&gt;&lt;polygon points=&quot;90,92 94,90 94,98 90,98&quot; fill=&quot;#b09870&quot; stroke=&quot;#a08860&quot; stroke-width=&quot;0.5&quot; /&gt;&lt;/g&gt;
+  &lt;polygon points=&quot;130,120 152,120 152,130 130,130&quot; fill=&quot;#2a2a3a&quot; stroke=&quot;#1a1a2a&quot; stroke-width=&quot;0.6&quot; /&gt;
+  &lt;polygon points=&quot;130,120 136,116 158,116 152,120&quot; fill=&quot;#3a3a4a&quot; stroke=&quot;#1a1a2a&quot; stroke-width=&quot;0.6&quot; /&gt;
+  &lt;polygon points=&quot;152,120 158,116 158,130 152,130&quot; fill=&quot;#222232&quot; stroke=&quot;#1a1a2a&quot; stroke-width=&quot;0.6&quot; /&gt;
+  &lt;ellipse cx=&quot;141&quot; cy=&quot;116&quot; rx=&quot;9&quot; ry=&quot;4&quot; fill=&quot;#3a3a78&quot; stroke=&quot;#2a2a58&quot; stroke-width=&quot;0.8&quot; /&gt;
+  &lt;rect x=&quot;137&quot; y=&quot;93&quot; width=&quot;8&quot; height=&quot;24&quot; rx=&quot;2&quot; fill=&quot;#2a2a3a&quot; stroke=&quot;#1a1a2a&quot; stroke-width=&quot;0.6&quot; transform=&quot;rotate(-10,141,116)&quot; /&gt;
+  &lt;circle cx=&quot;136&quot; cy=&quot;91&quot; r=&quot;5&quot; fill=&quot;#3a3a78&quot; stroke=&quot;#2a2a58&quot; stroke-width=&quot;0.8&quot; /&gt;
+  &lt;rect x=&quot;127&quot; y=&quot;76&quot; width=&quot;7&quot; height=&quot;18&quot; rx=&quot;2&quot; fill=&quot;#2a2a3a&quot; stroke=&quot;#1a1a2a&quot; stroke-width=&quot;0.6&quot; transform=&quot;rotate(15,136,91)&quot; /&gt;
+  &lt;circle cx=&quot;124&quot; cy=&quot;78&quot; r=&quot;3.5&quot; fill=&quot;#3a3a78&quot; stroke=&quot;#2a2a58&quot; stroke-width=&quot;0.7&quot; /&gt;
+  &lt;rect x=&quot;119&quot; y=&quot;73&quot; width=&quot;3&quot; height=&quot;8&quot; rx=&quot;1&quot; fill=&quot;#2a2a3a&quot; stroke=&quot;#1a1a2a&quot; stroke-width=&quot;0.5&quot; transform=&quot;rotate(-15,121,77)&quot; /&gt;
+  &lt;rect x=&quot;124&quot; y=&quot;73&quot; width=&quot;3&quot; height=&quot;8&quot; rx=&quot;1&quot; fill=&quot;#2a2a3a&quot; stroke=&quot;#1a1a2a&quot; stroke-width=&quot;0.5&quot; transform=&quot;rotate(15,126,77)&quot; /&gt;
+  &lt;polygon points=&quot;168,130 258,130 258,148 168,148&quot; fill=&quot;#4a4a5a&quot; stroke=&quot;#3a3a4a&quot; stroke-width=&quot;0.6&quot; /&gt;
+  &lt;polygon points=&quot;155,122 168,130 258,130 245,122&quot; fill=&quot;#5a5a6a&quot; stroke=&quot;#3a3a4a&quot; stroke-width=&quot;0.6&quot; /&gt;
+  &lt;g stroke=&quot;#6a6a7a&quot; stroke-width=&quot;0.5&quot; opacity=&quot;0.8&quot;&gt;&lt;line x1=&quot;180&quot; y1=&quot;130&quot; x2=&quot;180&quot; y2=&quot;148&quot; /&gt;&lt;line x1=&quot;193&quot; y1=&quot;130&quot; x2=&quot;193&quot; y2=&quot;148&quot; /&gt;&lt;line x1=&quot;206&quot; y1=&quot;130&quot; x2=&quot;206&quot; y2=&quot;148&quot; /&gt;&lt;line x1=&quot;219&quot; y1=&quot;130&quot; x2=&quot;219&quot; y2=&quot;148&quot; /&gt;&lt;line x1=&quot;232&quot; y1=&quot;130&quot; x2=&quot;232&quot; y2=&quot;148&quot; /&gt;&lt;line x1=&quot;245&quot; y1=&quot;130&quot; x2=&quot;245&quot; y2=&quot;148&quot; /&gt;&lt;/g&gt;
+  &lt;g&gt;&lt;polygon points=&quot;195,118 210,118 210,127 195,127&quot; fill=&quot;#c4a882&quot; stroke=&quot;#a08860&quot; stroke-width=&quot;0.5&quot; /&gt;&lt;polygon points=&quot;195,118 199,115 214,115 210,118&quot; fill=&quot;#d4b892&quot; stroke=&quot;#a08860&quot; stroke-width=&quot;0.5&quot; /&gt;&lt;polygon points=&quot;210,118 214,115 214,127 210,127&quot; fill=&quot;#b09870&quot; stroke=&quot;#a08860&quot; stroke-width=&quot;0.5&quot; /&gt;&lt;/g&gt;
+  &lt;rect x=&quot;253&quot; y=&quot;80&quot; width=&quot;5&quot; height=&quot;55&quot; rx=&quot;1&quot; fill=&quot;#2a2a3a&quot; stroke=&quot;#1a1a2a&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;rect x=&quot;254&quot; y=&quot;85&quot; width=&quot;3&quot; height=&quot;40&quot; rx=&quot;0.5&quot; fill=&quot;#3a3a78&quot; opacity=&quot;0.7&quot; /&gt;
+  &lt;circle cx=&quot;255.5&quot; cy=&quot;90&quot; r=&quot;1.2&quot; fill=&quot;#f9f9f9&quot; opacity=&quot;0.8&quot; /&gt;&lt;circle cx=&quot;255.5&quot; cy=&quot;100&quot; r=&quot;1.2&quot; fill=&quot;#f9f9f9&quot; opacity=&quot;0.8&quot; /&gt;&lt;circle cx=&quot;255.5&quot; cy=&quot;110&quot; r=&quot;1.2&quot; fill=&quot;#f9f9f9&quot; opacity=&quot;0.8&quot; /&gt;&lt;circle cx=&quot;255.5&quot; cy=&quot;120&quot; r=&quot;1.2&quot; fill=&quot;#f9f9f9&quot; opacity=&quot;0.8&quot; /&gt;
+  &lt;g stroke=&quot;#3a3a78&quot; stroke-width=&quot;0.4&quot; opacity=&quot;0.3&quot; stroke-dasharray=&quot;2,3&quot;&gt;&lt;line x1=&quot;254&quot; y1=&quot;90&quot; x2=&quot;168&quot; y2=&quot;110&quot; /&gt;&lt;line x1=&quot;254&quot; y1=&quot;100&quot; x2=&quot;168&quot; y2=&quot;120&quot; /&gt;&lt;line x1=&quot;254&quot; y1=&quot;110&quot; x2=&quot;168&quot; y2=&quot;130&quot; /&gt;&lt;/g&gt;
+        &lt;/svg&gt;
+      &lt;/div&gt;
+      &lt;dl class=&quot;pane-spec&quot;&gt;
+        &lt;dt&gt;environment&lt;/dt&gt;&lt;dd&gt;Fenced robot cell, ~9 m², fixed lighting.&lt;/dd&gt;
+        &lt;dt&gt;action space&lt;/dt&gt;&lt;dd&gt;Arm motion, grip force, scan, label, place on conveyor.&lt;/dd&gt;
+        &lt;dt&gt;sensors&lt;/dt&gt;&lt;dd&gt;Wrist camera, overhead camera, barcode scanner, weight pad, joint torques.&lt;/dd&gt;
+        &lt;dt&gt;primary metric&lt;/dt&gt;&lt;dd&gt;Correctly packed orders per hour.&lt;/dd&gt;
+        &lt;dt&gt;secondaries&lt;/dt&gt;&lt;dd&gt;Mis-pick rate, damage rate, energy per pick.&lt;/dd&gt;
+        &lt;dt&gt;guardrails&lt;/dt&gt;&lt;dd&gt;Safety fence + light curtain, e-stop, force-limited arm, max-velocity cap.&lt;/dd&gt;
+      &lt;/dl&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;pane pane-5&quot;&gt;
+      &lt;div class=&quot;pane-header&quot;&gt;
+        &lt;div class=&quot;pane-icon&quot;&gt;&lt;svg viewBox=&quot;0 0 32 32&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.5&quot;&gt;&lt;line x1=&quot;6&quot; y1=&quot;6&quot; x2=&quot;26&quot; y2=&quot;26&quot; /&gt;&lt;line x1=&quot;6&quot; y1=&quot;26&quot; x2=&quot;26&quot; y2=&quot;6&quot; /&gt;&lt;circle cx=&quot;6&quot; cy=&quot;6&quot; r=&quot;3&quot; /&gt;&lt;circle cx=&quot;26&quot; cy=&quot;6&quot; r=&quot;3&quot; /&gt;&lt;circle cx=&quot;6&quot; cy=&quot;26&quot; r=&quot;3&quot; /&gt;&lt;circle cx=&quot;26&quot; cy=&quot;26&quot; r=&quot;3&quot; /&gt;&lt;rect x=&quot;12&quot; y=&quot;12&quot; width=&quot;8&quot; height=&quot;8&quot; rx=&quot;1&quot; fill=&quot;currentColor&quot; /&gt;&lt;/svg&gt;&lt;/div&gt;
+        &lt;h4 class=&quot;pane-title&quot;&gt;Outdoor sprayer drone&lt;/h4&gt;
+      &lt;/div&gt;
+      &lt;p class=&quot;pane-blurb&quot;&gt;A tank-equipped drone with a multispectral camera, working a real field. The hardest adversarial-robustness story of the bunch.&lt;/p&gt;
+      &lt;div class=&quot;pane-viz&quot;&gt;
+        &lt;svg viewBox=&quot;0 0 280 160&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; aria-label=&quot;Isometric field with sprayer drone and geofence boundary&quot;&gt;
+  &lt;polygon points=&quot;12,148 268,148 243,50 37,50&quot; fill=&quot;none&quot; stroke=&quot;#8B1A1A&quot; stroke-width=&quot;1&quot; stroke-dasharray=&quot;4,3&quot; /&gt;
+  &lt;polygon points=&quot;22,142 258,142 235,62 45,62&quot; fill=&quot;#ebe4d0&quot; stroke=&quot;#bbb5a0&quot; stroke-width=&quot;0.6&quot; /&gt;
+  &lt;g fill=&quot;#7a9a5c&quot; stroke=&quot;none&quot; opacity=&quot;0.85&quot;&gt;&lt;polygon points=&quot;45,62 91,62 85,82 39,82&quot; /&gt;&lt;/g&gt;
+  &lt;g fill=&quot;#5a7a44&quot; stroke=&quot;none&quot; opacity=&quot;0.85&quot;&gt;&lt;polygon points=&quot;91,62 137,62 131,82 85,82&quot; /&gt;&lt;/g&gt;
+  &lt;g fill=&quot;#7a9a5c&quot; stroke=&quot;none&quot; opacity=&quot;0.85&quot;&gt;&lt;polygon points=&quot;137,62 183,62 177,82 131,82&quot; /&gt;&lt;/g&gt;
+  &lt;g fill=&quot;#5a7a44&quot; stroke=&quot;none&quot; opacity=&quot;0.85&quot;&gt;&lt;polygon points=&quot;183,62 229,62 223,82 177,82&quot; /&gt;&lt;/g&gt;
+  &lt;g fill=&quot;#5a7a44&quot; stroke=&quot;none&quot; opacity=&quot;0.75&quot;&gt;&lt;polygon points=&quot;39,82 85,82 79,102 33,102&quot; /&gt;&lt;/g&gt;
+  &lt;g fill=&quot;#7a9a5c&quot; stroke=&quot;none&quot; opacity=&quot;0.75&quot;&gt;&lt;polygon points=&quot;85,82 131,82 125,102 79,102&quot; /&gt;&lt;/g&gt;
+  &lt;g fill=&quot;#5a7a44&quot; stroke=&quot;none&quot; opacity=&quot;0.75&quot;&gt;&lt;polygon points=&quot;131,82 177,82 171,102 125,102&quot; /&gt;&lt;/g&gt;
+  &lt;g fill=&quot;#7a9a5c&quot; stroke=&quot;none&quot; opacity=&quot;0.75&quot;&gt;&lt;polygon points=&quot;177,82 223,82 217,102 171,102&quot; /&gt;&lt;/g&gt;
+  &lt;g fill=&quot;#7a9a5c&quot; stroke=&quot;none&quot; opacity=&quot;0.65&quot;&gt;&lt;polygon points=&quot;33,102 79,102 73,122 27,122&quot; /&gt;&lt;/g&gt;
+  &lt;g fill=&quot;#5a7a44&quot; stroke=&quot;none&quot; opacity=&quot;0.65&quot;&gt;&lt;polygon points=&quot;79,102 125,102 119,122 73,122&quot; /&gt;&lt;/g&gt;
+  &lt;g fill=&quot;#7a9a5c&quot; stroke=&quot;none&quot; opacity=&quot;0.65&quot;&gt;&lt;polygon points=&quot;125,102 171,102 165,122 119,122&quot; /&gt;&lt;/g&gt;
+  &lt;g fill=&quot;#5a7a44&quot; stroke=&quot;none&quot; opacity=&quot;0.65&quot;&gt;&lt;polygon points=&quot;171,102 217,102 211,122 165,122&quot; /&gt;&lt;/g&gt;
+  &lt;g fill=&quot;#5a7a44&quot; stroke=&quot;none&quot; opacity=&quot;0.55&quot;&gt;&lt;polygon points=&quot;27,122 73,122 67,142 21,142&quot; /&gt;&lt;/g&gt;
+  &lt;g fill=&quot;#7a9a5c&quot; stroke=&quot;none&quot; opacity=&quot;0.55&quot;&gt;&lt;polygon points=&quot;73,122 119,122 113,142 67,142&quot; /&gt;&lt;/g&gt;
+  &lt;g fill=&quot;#5a7a44&quot; stroke=&quot;none&quot; opacity=&quot;0.55&quot;&gt;&lt;polygon points=&quot;119,122 165,122 159,142 113,142&quot; /&gt;&lt;/g&gt;
+  &lt;g fill=&quot;#7a9a5c&quot; stroke=&quot;none&quot; opacity=&quot;0.55&quot;&gt;&lt;polygon points=&quot;165,122 211,122 205,142 159,142&quot; /&gt;&lt;/g&gt;
+  &lt;polygon points=&quot;140,75 148,142 132,142&quot; fill=&quot;#a8c4d8&quot; opacity=&quot;0.30&quot; /&gt;
+  &lt;polygon points=&quot;140,75 162,140 118,140&quot; fill=&quot;#a8c4d8&quot; opacity=&quot;0.12&quot; /&gt;
+  &lt;g transform=&quot;translate(140,52)&quot;&gt;
+    &lt;line x1=&quot;-22&quot; y1=&quot;-9&quot; x2=&quot;22&quot; y2=&quot;9&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;1.6&quot; /&gt;&lt;line x1=&quot;-22&quot; y1=&quot;9&quot; x2=&quot;22&quot; y2=&quot;-9&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;1.6&quot; /&gt;
+    &lt;circle cx=&quot;-22&quot; cy=&quot;-9&quot; r=&quot;6&quot; fill=&quot;#f9f9f9&quot; stroke=&quot;#3a3a78&quot; stroke-width=&quot;1&quot; /&gt;&lt;circle cx=&quot;22&quot; cy=&quot;-9&quot; r=&quot;6&quot; fill=&quot;#f9f9f9&quot; stroke=&quot;#3a3a78&quot; stroke-width=&quot;1&quot; /&gt;
+    &lt;circle cx=&quot;-22&quot; cy=&quot;9&quot; r=&quot;6&quot; fill=&quot;#f9f9f9&quot; stroke=&quot;#3a3a78&quot; stroke-width=&quot;1&quot; /&gt;&lt;circle cx=&quot;22&quot; cy=&quot;9&quot; r=&quot;6&quot; fill=&quot;#f9f9f9&quot; stroke=&quot;#3a3a78&quot; stroke-width=&quot;1&quot; /&gt;
+    &lt;rect x=&quot;-8&quot; y=&quot;-6&quot; width=&quot;16&quot; height=&quot;12&quot; rx=&quot;2&quot; fill=&quot;#2a2a3a&quot; /&gt;
+    &lt;circle cx=&quot;0&quot; cy=&quot;0&quot; r=&quot;2&quot; fill=&quot;#f9f9f9&quot; opacity=&quot;0.5&quot; /&gt;
+    &lt;rect x=&quot;-2&quot; y=&quot;6&quot; width=&quot;4&quot; height=&quot;5&quot; rx=&quot;1&quot; fill=&quot;#3a3a78&quot; opacity=&quot;0.8&quot; /&gt;
+  &lt;/g&gt;
+        &lt;/svg&gt;
+      &lt;/div&gt;
+      &lt;dl class=&quot;pane-spec&quot;&gt;
+        &lt;dt&gt;environment&lt;/dt&gt;&lt;dd&gt;A bounded field plot, outdoor, with weather and bystanders.&lt;/dd&gt;
+        &lt;dt&gt;action space&lt;/dt&gt;&lt;dd&gt;Flight path, spray nozzle on/off, dosage rate.&lt;/dd&gt;
+        &lt;dt&gt;sensors&lt;/dt&gt;&lt;dd&gt;RGB + multispectral camera, GPS, IMU, tank-level sensor, wind sensor.&lt;/dd&gt;
+        &lt;dt&gt;primary metric&lt;/dt&gt;&lt;dd&gt;Pest pressure reduction, normalised by chemical applied.&lt;/dd&gt;
+        &lt;dt&gt;secondaries&lt;/dt&gt;&lt;dd&gt;Chemical drift, energy, flight time, area covered.&lt;/dd&gt;
+        &lt;dt&gt;guardrails&lt;/dt&gt;&lt;dd&gt;Geofence + tether, no-fly buffer around bystanders, chemical-flow ceiling, weather lockout.&lt;/dd&gt;
+      &lt;/dl&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;pane pane-6&quot;&gt;
+      &lt;div class=&quot;pane-header&quot;&gt;
+        &lt;div class=&quot;pane-icon&quot;&gt;&lt;svg viewBox=&quot;0 0 32 32&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;1.5&quot; stroke-linecap=&quot;round&quot;&gt;&lt;rect x=&quot;3&quot; y=&quot;7&quot; width=&quot;26&quot; height=&quot;18&quot; rx=&quot;3&quot; /&gt;&lt;circle cx=&quot;12&quot; cy=&quot;16&quot; r=&quot;3&quot; /&gt;&lt;circle cx=&quot;12&quot; cy=&quot;16&quot; r=&quot;1&quot; fill=&quot;currentColor&quot; /&gt;&lt;line x1=&quot;18&quot; y1=&quot;13&quot; x2=&quot;25&quot; y2=&quot;13&quot; /&gt;&lt;line x1=&quot;18&quot; y1=&quot;16&quot; x2=&quot;25&quot; y2=&quot;16&quot; /&gt;&lt;line x1=&quot;18&quot; y1=&quot;19&quot; x2=&quot;25&quot; y2=&quot;19&quot; /&gt;&lt;/svg&gt;&lt;/div&gt;
+        &lt;h4 class=&quot;pane-title&quot;&gt;Gel electrophoresis station&lt;/h4&gt;
+      &lt;/div&gt;
+      &lt;p class=&quot;pane-blurb&quot;&gt;An agarose gel tray, a power supply, and a UV camera. Set voltage and run time, then image the separated bands.&lt;/p&gt;
+      &lt;div class=&quot;pane-viz&quot;&gt;
+        &lt;svg viewBox=&quot;0 0 280 160&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; aria-label=&quot;Isometric gel electrophoresis station with gel tray and power supply&quot;&gt;
+  &lt;!-- bench --&gt;
+  &lt;polygon points=&quot;15,148 258,148 272,108 30,108&quot; fill=&quot;#ebe4d0&quot; stroke=&quot;#bbb5a0&quot; stroke-width=&quot;0.6&quot; /&gt;
+  &lt;g stroke=&quot;#d2cab2&quot; stroke-width=&quot;0.35&quot; fill=&quot;none&quot; opacity=&quot;0.5&quot;&gt;
+    &lt;line x1=&quot;30&quot; y1=&quot;108&quot; x2=&quot;15&quot; y2=&quot;148&quot; /&gt;&lt;line x1=&quot;90&quot; y1=&quot;108&quot; x2=&quot;75&quot; y2=&quot;148&quot; /&gt;
+    &lt;line x1=&quot;150&quot; y1=&quot;108&quot; x2=&quot;140&quot; y2=&quot;148&quot; /&gt;&lt;line x1=&quot;210&quot; y1=&quot;108&quot; x2=&quot;205&quot; y2=&quot;148&quot; /&gt;
+    &lt;line x1=&quot;30&quot; y1=&quot;108&quot; x2=&quot;272&quot; y2=&quot;108&quot; /&gt;&lt;line x1=&quot;22&quot; y1=&quot;128&quot; x2=&quot;265&quot; y2=&quot;128&quot; /&gt;
+  &lt;/g&gt;
+  &lt;!-- gel tank top face --&gt;
+  &lt;polygon points=&quot;38,52 188,52 206,82 56,82&quot; fill=&quot;#3a4a5a&quot; stroke=&quot;#2a3a4a&quot; stroke-width=&quot;0.7&quot; /&gt;
+  &lt;!-- gel tank front face --&gt;
+  &lt;polygon points=&quot;56,82 206,82 206,102 56,102&quot; fill=&quot;#2a3a4a&quot; stroke=&quot;#1a2a3a&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;!-- gel tank left face --&gt;
+  &lt;polygon points=&quot;38,52 56,82 56,102 38,72&quot; fill=&quot;#243444&quot; stroke=&quot;#1a2a3a&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;!-- gel slab (cream, inside buffer) --&gt;
+  &lt;polygon points=&quot;46,57 185,57 200,79 61,79&quot; fill=&quot;#dde8c0&quot; stroke=&quot;#b8c890&quot; stroke-width=&quot;0.5&quot; opacity=&quot;0.96&quot; /&gt;
+  &lt;!-- buffer liquid tint --&gt;
+  &lt;polygon points=&quot;39,53 46,57 185,57 200,79 206,79 206,82 56,82 38,52&quot; fill=&quot;#7ab4d8&quot; opacity=&quot;0.16&quot; /&gt;
+  &lt;!-- lane dividers --&gt;
+  &lt;g stroke=&quot;#aeba98&quot; stroke-width=&quot;0.45&quot; opacity=&quot;0.65&quot;&gt;
+    &lt;line x1=&quot;70&quot; y1=&quot;57&quot; x2=&quot;85&quot; y2=&quot;79&quot; /&gt;&lt;line x1=&quot;97&quot; y1=&quot;57&quot; x2=&quot;112&quot; y2=&quot;79&quot; /&gt;
+    &lt;line x1=&quot;124&quot; y1=&quot;57&quot; x2=&quot;139&quot; y2=&quot;79&quot; /&gt;&lt;line x1=&quot;151&quot; y1=&quot;57&quot; x2=&quot;166&quot; y2=&quot;79&quot; /&gt;
+    &lt;line x1=&quot;178&quot; y1=&quot;57&quot; x2=&quot;193&quot; y2=&quot;79&quot; /&gt;
+  &lt;/g&gt;
+  &lt;!-- wells at top of gel --&gt;
+  &lt;g fill=&quot;#8a9278&quot; opacity=&quot;0.75&quot;&gt;
+    &lt;rect x=&quot;48&quot; y=&quot;56&quot; width=&quot;4&quot; height=&quot;2.5&quot; rx=&quot;0.5&quot; /&gt;&lt;rect x=&quot;74&quot; y=&quot;56&quot; width=&quot;4&quot; height=&quot;2.5&quot; rx=&quot;0.5&quot; /&gt;
+    &lt;rect x=&quot;100&quot; y=&quot;56&quot; width=&quot;4&quot; height=&quot;2.5&quot; rx=&quot;0.5&quot; /&gt;&lt;rect x=&quot;127&quot; y=&quot;56&quot; width=&quot;4&quot; height=&quot;2.5&quot; rx=&quot;0.5&quot; /&gt;
+    &lt;rect x=&quot;154&quot; y=&quot;56&quot; width=&quot;4&quot; height=&quot;2.5&quot; rx=&quot;0.5&quot; /&gt;&lt;rect x=&quot;180&quot; y=&quot;56&quot; width=&quot;4&quot; height=&quot;2.5&quot; rx=&quot;0.5&quot; /&gt;
+  &lt;/g&gt;
+  &lt;!-- bands: ladder (leftmost, evenly spaced) --&gt;
+  &lt;polygon points=&quot;49,61 68,61 69,63 50,63&quot; fill=&quot;#1a2a1a&quot; opacity=&quot;0.72&quot; /&gt;
+  &lt;polygon points=&quot;50,66 69,66 70,68 51,68&quot; fill=&quot;#1a2a1a&quot; opacity=&quot;0.65&quot; /&gt;
+  &lt;polygon points=&quot;51,71 70,71 71,73 52,73&quot; fill=&quot;#1a2a1a&quot; opacity=&quot;0.58&quot; /&gt;
+  &lt;polygon points=&quot;52,75 71,75 72,77 53,77&quot; fill=&quot;#1a2a1a&quot; opacity=&quot;0.50&quot; /&gt;
+  &lt;!-- bands: sample 1 (two bands) --&gt;
+  &lt;polygon points=&quot;101,64 123,64 124,66 102,66&quot; fill=&quot;#1a2a1a&quot; opacity=&quot;0.88&quot; /&gt;
+  &lt;polygon points=&quot;103,74 125,74 126,76 104,76&quot; fill=&quot;#1a2a1a&quot; opacity=&quot;0.80&quot; /&gt;
+  &lt;!-- bands: sample 2 (one strong band) --&gt;
+  &lt;polygon points=&quot;128,67 150,67 151,69 129,69&quot; fill=&quot;#1a2a1a&quot; opacity=&quot;0.92&quot; /&gt;
+  &lt;!-- bands: sample 3 (fainter) --&gt;
+  &lt;polygon points=&quot;155,65 175,65 176,67 156,67&quot; fill=&quot;#1a2a1a&quot; opacity=&quot;0.45&quot; /&gt;
+  &lt;polygon points=&quot;157,73 177,73 178,75 158,75&quot; fill=&quot;#1a2a1a&quot; opacity=&quot;0.40&quot; /&gt;
+  &lt;!-- power supply --&gt;
+  &lt;polygon points=&quot;218,73 250,73 256,88 224,88&quot; fill=&quot;#2a2a3a&quot; stroke=&quot;#1a1a28&quot; stroke-width=&quot;0.6&quot; /&gt;
+  &lt;polygon points=&quot;224,88 256,88 256,108 224,108&quot; fill=&quot;#1a1a28&quot; stroke=&quot;#111&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;polygon points=&quot;218,73 224,88 224,108 218,93&quot; fill=&quot;#222232&quot; stroke=&quot;#111&quot; stroke-width=&quot;0.5&quot; /&gt;
+  &lt;rect x=&quot;226&quot; y=&quot;76&quot; width=&quot;24&quot; height=&quot;9&quot; rx=&quot;1&quot; fill=&quot;#0d1a2a&quot; stroke=&quot;#4a6aaa&quot; stroke-width=&quot;0.4&quot; /&gt;
+  &lt;text x=&quot;229&quot; y=&quot;83&quot; font-size=&quot;6.5&quot; fill=&quot;#44ddaa&quot; font-family=&quot;monospace&quot;&gt;80V 22m&lt;/text&gt;
+  &lt;!-- wires to electrodes --&gt;
+  &lt;path d=&quot;M218,78 Q207,76 206,83&quot; stroke=&quot;#cc3333&quot; stroke-width=&quot;1.2&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot; /&gt;
+  &lt;path d=&quot;M218,85 Q208,86 206,89&quot; stroke=&quot;#1a1a1a&quot; stroke-width=&quot;1.2&quot; fill=&quot;none&quot; stroke-linecap=&quot;round&quot; /&gt;
+  &lt;circle cx=&quot;206&quot; cy=&quot;83&quot; r=&quot;2.2&quot; fill=&quot;#cc3333&quot; stroke=&quot;#991111&quot; stroke-width=&quot;0.4&quot; /&gt;
+  &lt;circle cx=&quot;56&quot; cy=&quot;84&quot; r=&quot;2.2&quot; fill=&quot;#1a1a1a&quot; stroke=&quot;#333&quot; stroke-width=&quot;0.4&quot; /&gt;
+        &lt;/svg&gt;
+      &lt;/div&gt;
+      &lt;dl class=&quot;pane-spec&quot;&gt;
+        &lt;dt&gt;environment&lt;/dt&gt;&lt;dd&gt;Benchtop — gel box with buffer, power supply, UV transilluminator.&lt;/dd&gt;
+        &lt;dt&gt;action space&lt;/dt&gt;&lt;dd&gt;Set voltage (10–150 V), run time, and sample loading volumes per lane.&lt;/dd&gt;
+        &lt;dt&gt;sensors&lt;/dt&gt;&lt;dd&gt;UV camera, voltmeter, timer, buffer-level sensor.&lt;/dd&gt;
+        &lt;dt&gt;primary metric&lt;/dt&gt;&lt;dd&gt;Target-band separation score at imaging time.&lt;/dd&gt;
+        &lt;dt&gt;secondaries&lt;/dt&gt;&lt;dd&gt;Run time, buffer consumption, gel waste.&lt;/dd&gt;
+        &lt;dt&gt;guardrails&lt;/dt&gt;&lt;dd&gt;Voltage ceiling (150 V), run-time cap, UV shield interlock, buffer-low cutoff.&lt;/dd&gt;
+      &lt;/dl&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 id=&quot;anatomy-of-a-physical-eval&quot;&gt;Anatomy of a physical eval&lt;/h2&gt;
+
+&lt;p&gt;The diagram below sketches one possible
+anatomy for a physica eval (this might not be complete, but take it as a useful starting point).&lt;/p&gt;
+
+&lt;figure class=&quot;fullwidth&quot;&gt;
+&lt;div class=&quot;parts-fig&quot;&gt;
+&lt;svg viewBox=&quot;0 0 780 420&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; aria-label=&quot;Exploded diagram of the components of a physical eval&quot;&gt;
+  &lt;!-- isometric ground plane --&gt;
+  &lt;polygon points=&quot;190,300 530,300 480,210 240,210&quot; fill=&quot;#ebe4d0&quot; stroke=&quot;#bbb5a0&quot; stroke-width=&quot;0.6&quot; /&gt;
+
+  &lt;!-- subtle ground grid --&gt;
+  &lt;g stroke=&quot;#d2cab2&quot; stroke-width=&quot;0.4&quot; fill=&quot;none&quot; opacity=&quot;0.7&quot;&gt;
+    &lt;line x1=&quot;275&quot; y1=&quot;220&quot; x2=&quot;225&quot; y2=&quot;290&quot; /&gt;
+    &lt;line x1=&quot;320&quot; y1=&quot;220&quot; x2=&quot;285&quot; y2=&quot;290&quot; /&gt;
+    &lt;line x1=&quot;365&quot; y1=&quot;220&quot; x2=&quot;345&quot; y2=&quot;290&quot; /&gt;
+    &lt;line x1=&quot;410&quot; y1=&quot;220&quot; x2=&quot;405&quot; y2=&quot;290&quot; /&gt;
+    &lt;line x1=&quot;255&quot; y1=&quot;225&quot; x2=&quot;465&quot; y2=&quot;225&quot; /&gt;
+    &lt;line x1=&quot;245&quot; y1=&quot;250&quot; x2=&quot;475&quot; y2=&quot;250&quot; /&gt;
+    &lt;line x1=&quot;225&quot; y1=&quot;280&quot; x2=&quot;490&quot; y2=&quot;280&quot; /&gt;
+  &lt;/g&gt;
+
+  &lt;!-- geofence (dashed boundary just outside the ground) --&gt;
+  &lt;polygon class=&quot;parts-geofence&quot; points=&quot;178,308 542,308 488,200 232,200&quot; fill=&quot;none&quot; stroke=&quot;#8B1A1A&quot; stroke-width=&quot;1&quot; stroke-dasharray=&quot;4,3&quot; /&gt;
+
+  &lt;!-- back-row trees --&gt;
+  &lt;g&gt;&lt;ellipse cx=&quot;290&quot; cy=&quot;232&quot; rx=&quot;18&quot; ry=&quot;11&quot; fill=&quot;#7a9a5c&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.7&quot; /&gt;&lt;rect x=&quot;287&quot; y=&quot;240&quot; width=&quot;6&quot; height=&quot;8&quot; fill=&quot;#6b4a2a&quot; /&gt;&lt;/g&gt;
+  &lt;g&gt;&lt;ellipse cx=&quot;380&quot; cy=&quot;232&quot; rx=&quot;18&quot; ry=&quot;11&quot; fill=&quot;#7a9a5c&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.7&quot; /&gt;&lt;rect x=&quot;377&quot; y=&quot;240&quot; width=&quot;6&quot; height=&quot;8&quot; fill=&quot;#6b4a2a&quot; /&gt;&lt;/g&gt;
+
+  &lt;!-- front-row trees --&gt;
+  &lt;g&gt;&lt;ellipse cx=&quot;275&quot; cy=&quot;278&quot; rx=&quot;24&quot; ry=&quot;14&quot; fill=&quot;#7a9a5c&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.7&quot; /&gt;&lt;rect x=&quot;272&quot; y=&quot;287&quot; width=&quot;6&quot; height=&quot;10&quot; fill=&quot;#6b4a2a&quot; /&gt;&lt;/g&gt;
+  &lt;g&gt;&lt;ellipse cx=&quot;395&quot; cy=&quot;278&quot; rx=&quot;24&quot; ry=&quot;14&quot; fill=&quot;#7a9a5c&quot; stroke=&quot;#5a7a44&quot; stroke-width=&quot;0.7&quot; /&gt;&lt;rect x=&quot;392&quot; y=&quot;287&quot; width=&quot;6&quot; height=&quot;10&quot; fill=&quot;#6b4a2a&quot; /&gt;&lt;/g&gt;
+
+  &lt;!-- cameras --&gt;
+  &lt;g&gt;
+    &lt;line x1=&quot;210&quot; y1=&quot;295&quot; x2=&quot;210&quot; y2=&quot;215&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;1.4&quot; /&gt;
+    &lt;rect x=&quot;202&quot; y=&quot;208&quot; width=&quot;16&quot; height=&quot;10&quot; rx=&quot;2&quot; fill=&quot;#2a2a3a&quot; /&gt;
+    &lt;circle cx=&quot;210&quot; cy=&quot;213&quot; r=&quot;1.5&quot; fill=&quot;#f9f9f9&quot; /&gt;
+  &lt;/g&gt;
+  &lt;g&gt;
+    &lt;line x1=&quot;510&quot; y1=&quot;295&quot; x2=&quot;510&quot; y2=&quot;215&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;1.4&quot; /&gt;
+    &lt;rect x=&quot;502&quot; y=&quot;208&quot; width=&quot;16&quot; height=&quot;10&quot; rx=&quot;2&quot; fill=&quot;#2a2a3a&quot; /&gt;
+    &lt;circle cx=&quot;510&quot; cy=&quot;213&quot; r=&quot;1.5&quot; fill=&quot;#f9f9f9&quot; /&gt;
+  &lt;/g&gt;
+
+  &lt;!-- drone --&gt;
+  &lt;ellipse cx=&quot;360&quot; cy=&quot;265&quot; rx=&quot;22&quot; ry=&quot;5&quot; fill=&quot;#000&quot; opacity=&quot;0.06&quot; /&gt;
+  &lt;g transform=&quot;translate(360, 165)&quot;&gt;
+    &lt;line x1=&quot;-22&quot; y1=&quot;-9&quot; x2=&quot;22&quot; y2=&quot;9&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;1.8&quot; /&gt;
+    &lt;line x1=&quot;-22&quot; y1=&quot;9&quot; x2=&quot;22&quot; y2=&quot;-9&quot; stroke=&quot;#2a2a3a&quot; stroke-width=&quot;1.8&quot; /&gt;
+    &lt;circle cx=&quot;-22&quot; cy=&quot;-9&quot; r=&quot;6&quot; fill=&quot;#f9f9f9&quot; stroke=&quot;#3a3a78&quot; stroke-width=&quot;1&quot; /&gt;
+    &lt;circle cx=&quot;22&quot; cy=&quot;-9&quot; r=&quot;6&quot; fill=&quot;#f9f9f9&quot; stroke=&quot;#3a3a78&quot; stroke-width=&quot;1&quot; /&gt;
+    &lt;circle cx=&quot;-22&quot; cy=&quot;9&quot; r=&quot;6&quot; fill=&quot;#f9f9f9&quot; stroke=&quot;#3a3a78&quot; stroke-width=&quot;1&quot; /&gt;
+    &lt;circle cx=&quot;22&quot; cy=&quot;9&quot; r=&quot;6&quot; fill=&quot;#f9f9f9&quot; stroke=&quot;#3a3a78&quot; stroke-width=&quot;1&quot; /&gt;
+    &lt;rect x=&quot;-8&quot; y=&quot;-6&quot; width=&quot;16&quot; height=&quot;12&quot; rx=&quot;2&quot; fill=&quot;#2a2a3a&quot; /&gt;
+  &lt;/g&gt;
+
+  &lt;!-- metric readout (small floating box) --&gt;
+  &lt;g transform=&quot;translate(470, 130)&quot;&gt;
+    &lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;92&quot; height=&quot;44&quot; rx=&quot;3&quot; fill=&quot;#f9f9f9&quot; stroke=&quot;#3a3a78&quot; stroke-width=&quot;0.7&quot; /&gt;
+    &lt;text x=&quot;8&quot; y=&quot;16&quot; font-family=&quot;Inter, sans-serif&quot; font-size=&quot;8&quot; letter-spacing=&quot;0.08em&quot; fill=&quot;#888&quot;&gt;FRUIT SAVED&lt;/text&gt;
+    &lt;text x=&quot;8&quot; y=&quot;36&quot; font-family=&quot;Inter, sans-serif&quot; font-size=&quot;18&quot; font-weight=&quot;600&quot; fill=&quot;#3a3a78&quot;&gt;94%&lt;/text&gt;
+    &lt;text x=&quot;78&quot; y=&quot;36&quot; font-family=&quot;Inter, sans-serif&quot; font-size=&quot;9&quot; fill=&quot;#5a9a5a&quot; text-anchor=&quot;end&quot;&gt;↑ 3&lt;/text&gt;
+  &lt;/g&gt;
+
+  &lt;!-- remote operator: dashed signal arrow coming from outside the scene --&gt;
+  &lt;g&gt;
+    &lt;path d=&quot;M 650 320 Q 540 280, 380 175&quot; fill=&quot;none&quot; stroke=&quot;#3a3a78&quot; stroke-width=&quot;1&quot; stroke-dasharray=&quot;3,3&quot; marker-end=&quot;url(#arrowhead)&quot; /&gt;
+    &lt;circle cx=&quot;650&quot; cy=&quot;320&quot; r=&quot;3&quot; fill=&quot;#3a3a78&quot; /&gt;
+  &lt;/g&gt;
+  &lt;defs&gt;
+    &lt;marker id=&quot;arrowhead&quot; viewBox=&quot;0 0 10 10&quot; refX=&quot;9&quot; refY=&quot;5&quot; markerWidth=&quot;6&quot; markerHeight=&quot;6&quot; orient=&quot;auto&quot;&gt;
+      &lt;path d=&quot;M 0 0 L 10 5 L 0 10 z&quot; fill=&quot;#3a3a78&quot; /&gt;
+    &lt;/marker&gt;
+  &lt;/defs&gt;
+
+  &lt;!-- governance clipboard icon (anchor for callout 7) --&gt;
+  &lt;g transform=&quot;translate(445, 213)&quot;&gt;
+    &lt;rect x=&quot;0&quot; y=&quot;4&quot; width=&quot;20&quot; height=&quot;26&quot; rx=&quot;1&quot; fill=&quot;#f9f9f9&quot; stroke=&quot;#3a3a78&quot; stroke-width=&quot;0.8&quot; /&gt;
+    &lt;rect x=&quot;6&quot; y=&quot;0&quot; width=&quot;8&quot; height=&quot;8&quot; rx=&quot;1&quot; fill=&quot;#3a3a78&quot; /&gt;
+    &lt;line x1=&quot;3&quot; y1=&quot;14&quot; x2=&quot;17&quot; y2=&quot;14&quot; stroke=&quot;#3a3a78&quot; stroke-width=&quot;0.6&quot; opacity=&quot;0.5&quot; /&gt;
+    &lt;line x1=&quot;3&quot; y1=&quot;18&quot; x2=&quot;17&quot; y2=&quot;18&quot; stroke=&quot;#3a3a78&quot; stroke-width=&quot;0.6&quot; opacity=&quot;0.5&quot; /&gt;
+    &lt;line x1=&quot;3&quot; y1=&quot;22&quot; x2=&quot;13&quot; y2=&quot;22&quot; stroke=&quot;#3a3a78&quot; stroke-width=&quot;0.6&quot; opacity=&quot;0.5&quot; /&gt;
+  &lt;/g&gt;
+
+  &lt;!-- ========================== CALLOUTS ========================== --&gt;
+  &lt;!-- Each: leader line (dashed) + numbered circle + uppercase label. --&gt;
+
+  &lt;!-- 1: ENVIRONMENT (top-left) --&gt;
+  &lt;line x1=&quot;110&quot; y1=&quot;90&quot; x2=&quot;240&quot; y2=&quot;210&quot; stroke=&quot;#888&quot; stroke-width=&quot;0.6&quot; stroke-dasharray=&quot;2,3&quot; /&gt;
+  &lt;g class=&quot;cb&quot;&gt;&lt;circle cx=&quot;110&quot; cy=&quot;90&quot; r=&quot;11&quot; fill=&quot;#2a2a3a&quot; /&gt;&lt;text x=&quot;110&quot; y=&quot;94&quot; text-anchor=&quot;middle&quot; font-family=&quot;Inter, sans-serif&quot; font-size=&quot;11&quot; font-weight=&quot;600&quot; fill=&quot;#f9f9f9&quot;&gt;1&lt;/text&gt;&lt;/g&gt;
+  &lt;text x=&quot;128&quot; y=&quot;86&quot; font-family=&quot;Inter, sans-serif&quot; font-size=&quot;10.5&quot; font-weight=&quot;600&quot; letter-spacing=&quot;0.08em&quot; fill=&quot;#3a3a78&quot;&gt;ENVIRONMENT&lt;/text&gt;
+  &lt;text x=&quot;128&quot; y=&quot;100&quot; font-family=&quot;Inter, sans-serif&quot; font-size=&quot;9.5&quot; fill=&quot;#888&quot;&gt;the orchard&lt;/text&gt;
+
+  &lt;!-- 2: SENSORS (mid-left) --&gt;
+  &lt;line x1=&quot;110&quot; y1=&quot;220&quot; x2=&quot;210&quot; y2=&quot;216&quot; stroke=&quot;#888&quot; stroke-width=&quot;0.6&quot; stroke-dasharray=&quot;2,3&quot; /&gt;
+  &lt;g class=&quot;cb&quot;&gt;&lt;circle cx=&quot;110&quot; cy=&quot;220&quot; r=&quot;11&quot; fill=&quot;#2a2a3a&quot; /&gt;&lt;text x=&quot;110&quot; y=&quot;224&quot; text-anchor=&quot;middle&quot; font-family=&quot;Inter, sans-serif&quot; font-size=&quot;11&quot; font-weight=&quot;600&quot; fill=&quot;#f9f9f9&quot;&gt;2&lt;/text&gt;&lt;/g&gt;
+  &lt;text x=&quot;50&quot; y=&quot;246&quot; font-family=&quot;Inter, sans-serif&quot; font-size=&quot;10.5&quot; font-weight=&quot;600&quot; letter-spacing=&quot;0.08em&quot; fill=&quot;#3a3a78&quot;&gt;SENSORS&lt;/text&gt;
+  &lt;text x=&quot;50&quot; y=&quot;260&quot; font-family=&quot;Inter, sans-serif&quot; font-size=&quot;9.5&quot; fill=&quot;#888&quot;&gt;perimeter cameras&lt;/text&gt;
+
+  &lt;!-- 3: ACTION SPACE (top, near drone) --&gt;
+  &lt;line x1=&quot;360&quot; y1=&quot;100&quot; x2=&quot;360&quot; y2=&quot;153&quot; stroke=&quot;#888&quot; stroke-width=&quot;0.6&quot; stroke-dasharray=&quot;2,3&quot; /&gt;
+  &lt;g class=&quot;cb&quot;&gt;&lt;circle cx=&quot;360&quot; cy=&quot;90&quot; r=&quot;11&quot; fill=&quot;#2a2a3a&quot; /&gt;&lt;text x=&quot;360&quot; y=&quot;94&quot; text-anchor=&quot;middle&quot; font-family=&quot;Inter, sans-serif&quot; font-size=&quot;11&quot; font-weight=&quot;600&quot; fill=&quot;#f9f9f9&quot;&gt;3&lt;/text&gt;&lt;/g&gt;
+  &lt;text x=&quot;378&quot; y=&quot;86&quot; font-family=&quot;Inter, sans-serif&quot; font-size=&quot;10.5&quot; font-weight=&quot;600&quot; letter-spacing=&quot;0.08em&quot; fill=&quot;#3a3a78&quot;&gt;ACTION SPACE&lt;/text&gt;
+  &lt;text x=&quot;378&quot; y=&quot;100&quot; font-family=&quot;Inter, sans-serif&quot; font-size=&quot;9.5&quot; fill=&quot;#888&quot;&gt;drone, deterrents&lt;/text&gt;
+
+  &lt;!-- 4: PRIMARY METRIC (right, pointing to readout box) --&gt;
+  &lt;line x1=&quot;600&quot; y1=&quot;152&quot; x2=&quot;565&quot; y2=&quot;152&quot; stroke=&quot;#888&quot; stroke-width=&quot;0.6&quot; stroke-dasharray=&quot;2,3&quot; /&gt;
+  &lt;g class=&quot;cb&quot;&gt;&lt;circle cx=&quot;615&quot; cy=&quot;152&quot; r=&quot;11&quot; fill=&quot;#2a2a3a&quot; /&gt;&lt;text x=&quot;615&quot; y=&quot;156&quot; text-anchor=&quot;middle&quot; font-family=&quot;Inter, sans-serif&quot; font-size=&quot;11&quot; font-weight=&quot;600&quot; fill=&quot;#f9f9f9&quot;&gt;4&lt;/text&gt;&lt;/g&gt;
+  &lt;text x=&quot;633&quot; y=&quot;148&quot; font-family=&quot;Inter, sans-serif&quot; font-size=&quot;10.5&quot; font-weight=&quot;600&quot; letter-spacing=&quot;0.08em&quot; fill=&quot;#3a3a78&quot;&gt;METRIC&lt;/text&gt;
+  &lt;text x=&quot;633&quot; y=&quot;162&quot; font-family=&quot;Inter, sans-serif&quot; font-size=&quot;9.5&quot; fill=&quot;#888&quot;&gt;+ secondaries&lt;/text&gt;
+
+  &lt;!-- 5: GUARDRAILS (bottom, pointing to dashed geofence) --&gt;
+  &lt;line x1=&quot;280&quot; y1=&quot;370&quot; x2=&quot;285&quot; y2=&quot;312&quot; stroke=&quot;#888&quot; stroke-width=&quot;0.6&quot; stroke-dasharray=&quot;2,3&quot; /&gt;
+  &lt;g class=&quot;cb&quot;&gt;&lt;circle cx=&quot;280&quot; cy=&quot;380&quot; r=&quot;11&quot; fill=&quot;#2a2a3a&quot; /&gt;&lt;text x=&quot;280&quot; y=&quot;384&quot; text-anchor=&quot;middle&quot; font-family=&quot;Inter, sans-serif&quot; font-size=&quot;11&quot; font-weight=&quot;600&quot; fill=&quot;#f9f9f9&quot;&gt;5&lt;/text&gt;&lt;/g&gt;
+  &lt;text x=&quot;298&quot; y=&quot;376&quot; font-family=&quot;Inter, sans-serif&quot; font-size=&quot;10.5&quot; font-weight=&quot;600&quot; letter-spacing=&quot;0.08em&quot; fill=&quot;#3a3a78&quot;&gt;GUARDRAILS&lt;/text&gt;
+  &lt;text x=&quot;298&quot; y=&quot;390&quot; font-family=&quot;Inter, sans-serif&quot; font-size=&quot;9.5&quot; fill=&quot;#888&quot;&gt;geofence, no-fly buffers&lt;/text&gt;
+
+  &lt;!-- 6: ADVERSARIAL ROBUSTNESS (bottom-right, pointing to incoming signal) --&gt;
+  &lt;line x1=&quot;615&quot; y1=&quot;370&quot; x2=&quot;650&quot; y2=&quot;330&quot; stroke=&quot;#888&quot; stroke-width=&quot;0.6&quot; stroke-dasharray=&quot;2,3&quot; /&gt;
+  &lt;g class=&quot;cb&quot;&gt;&lt;circle cx=&quot;615&quot; cy=&quot;380&quot; r=&quot;11&quot; fill=&quot;#2a2a3a&quot; /&gt;&lt;text x=&quot;615&quot; y=&quot;384&quot; text-anchor=&quot;middle&quot; font-family=&quot;Inter, sans-serif&quot; font-size=&quot;11&quot; font-weight=&quot;600&quot; fill=&quot;#f9f9f9&quot;&gt;6&lt;/text&gt;&lt;/g&gt;
+  &lt;text x=&quot;633&quot; y=&quot;376&quot; font-family=&quot;Inter, sans-serif&quot; font-size=&quot;10.5&quot; font-weight=&quot;600&quot; letter-spacing=&quot;0.08em&quot; fill=&quot;#3a3a78&quot;&gt;OPEN ACCESS&lt;/text&gt;
+  &lt;text x=&quot;633&quot; y=&quot;390&quot; font-family=&quot;Inter, sans-serif&quot; font-size=&quot;9.5&quot; fill=&quot;#888&quot;&gt;remote operator input&lt;/text&gt;
+
+  &lt;!-- 7: GOVERNANCE (mid-right, pointing to clipboard) --&gt;
+  &lt;line x1=&quot;615&quot; y1=&quot;265&quot; x2=&quot;466&quot; y2=&quot;228&quot; stroke=&quot;#888&quot; stroke-width=&quot;0.6&quot; stroke-dasharray=&quot;2,3&quot; /&gt;
+  &lt;g class=&quot;cb&quot;&gt;&lt;circle cx=&quot;615&quot; cy=&quot;265&quot; r=&quot;11&quot; fill=&quot;#2a2a3a&quot; /&gt;&lt;text x=&quot;615&quot; y=&quot;269&quot; text-anchor=&quot;middle&quot; font-family=&quot;Inter, sans-serif&quot; font-size=&quot;11&quot; font-weight=&quot;600&quot; fill=&quot;#f9f9f9&quot;&gt;7&lt;/text&gt;&lt;/g&gt;
+  &lt;text x=&quot;633&quot; y=&quot;261&quot; font-family=&quot;Inter, sans-serif&quot; font-size=&quot;10.5&quot; font-weight=&quot;600&quot; letter-spacing=&quot;0.08em&quot; fill=&quot;#3a3a78&quot;&gt;GOVERNANCE&lt;/text&gt;
+  &lt;text x=&quot;633&quot; y=&quot;275&quot; font-family=&quot;Inter, sans-serif&quot; font-size=&quot;9.5&quot; fill=&quot;#888&quot;&gt;who sets the rules&lt;/text&gt;
+&lt;/svg&gt;
+&lt;/div&gt;
+&lt;figcaption&gt;Components of a physical eval.&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;An environment.&lt;/strong&gt; The orchard, the bench, the cell line, the floor.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;An action space the eval can verify.&lt;/strong&gt; What a participant is
+allowed to do — fly the drone, dispense the reagent, move the parts —
+needs to be observable enough that the system can confirm what
+happened.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Sensors.&lt;/strong&gt; What the eval uses to know the state of the world.
+Cameras, scales, thermocouples, microbiology assays, a human spot-check.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;A primary metric of utility,&lt;/strong&gt; plus secondary metrics (cost, time,
+resource use, energy).&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Safeties and guardrails.&lt;/strong&gt; A net to catch the drone, a kill switch,
+a fenced area, an interlock. Whatever ensures that a participant
+failing — or &lt;em&gt;trying&lt;/em&gt; to break things — doesn’t damage the orchard
+or hurt the birds.&lt;/p&gt;
+
+    &lt;p&gt;A physical eval is, by construction, a
+public-facing physical system that gives partial control of real
+hardware to whoever holds the current slot. Keeping it open without
+becoming dangerous — and without sacrificing utility — is the
+hardest layer of the stack (see
+&lt;em&gt;Safety for physical evals&lt;/em&gt;).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Governance.&lt;/strong&gt; The rules of the eval and who controls them. Who
+decides the primary metric and when it can change? Who can introduce
+external hardware or a remote-control override? Is slot time fixed
+or auctioned? Who arbitrates disputes, and by what process? Good
+governance is what distinguishes an eval that stays honest over years
+from one that quietly drifts to serve whoever is running it at the
+time.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This list is not final. Different domains will surface
+components not named here — calibration drift, biological containment,
+human-in-the-loop sign-off, regulatory constraints — and the right
+abstraction is going to settle as people actually build the things.&lt;/p&gt;
+
+&lt;h3 id=&quot;challenges-for-physical-evals&quot;&gt;Challenges for physical evals&lt;/h3&gt;
+
+&lt;p&gt;The following are some of the harder design problems that don’t have
+clean answers yet — and that any serious physical eval effort will have
+to confront.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Goodharting.&lt;/em&gt; Any eval with a numeric target invites unintended ways to hit it — with the wrinkle that in a physical eval the unintended ways can cause real-world harm. An agent optimising fruit saved might drive the deterrent so aggressively that birds &lt;em&gt;and&lt;/em&gt; orchard workers avoid the area: the metric goes up, the orchard becomes unusable.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Non-stationarity.&lt;/em&gt; The physical world changes regardless. An orchard in week one is not the same orchard in week twelve —
+season, weather, and pest population all shift. A wet-lab bench drifts
+as reagent batches age. Field plots evolve. Comparing scores across time is therefore hard, sometimes impossible.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Sequential contamination.&lt;/em&gt; Each participant leaves a trace for the
+next. In a wetlab this is problematic — reagents consumed, cultures
+disturbed, hardware worn — but the problem is general: stock depleted
+in a warehouse cell, soil compacted on a field plot, bird behaviour
+shifted by a heavy deterrence week. Sequential slots work for
+environments with a natural or cheap reset; they don’t work for
+environments where state accumulates.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Latency as a confound.&lt;/em&gt; A participant operating remotely over the
+internet sees the environment through a sensor stream and acts through a
+command channel, both of which have variable latency. Two agents with
+identical policies but different network conditions will produce
+different results. This is especially visible in fast-moving
+environments — a drone avoiding a collision, a robot arm catching a
+falling object.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Observer effect.&lt;/em&gt; The sensors required to score an eval change what is
+being measured. A camera rig that watches a field plot for pest activity
+may deter the pests on its own. A flow sensor on a reagent line changes
+the thermal environment of the bench. In some domains the effect is
+negligible; in others it will corrupt the primary metric.&lt;/p&gt;
+
+&lt;h2 id=&quot;safety-for-physical-evals&quot;&gt;Safety for physical evals&lt;/h2&gt;
+
+&lt;p&gt;A physical eval that anyone on the internet can operate is, by
+construction, a public attack surface on a real-world physical system.
+The participant at any given slot might be a well-behaved research
+team, an AI agent following a poorly-aligned policy, or a person who
+wants to break things on purpose. The eval has to keep working —
+usefully, openly, safely — across all three.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Somebody not fully trusted is about to make
+the drone, the sprayer, the autoclave do something for the next twenty
+minutes — what’s the worst that can happen, and how is it bounded?&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-attack-surface&quot;&gt;The attack surface&lt;/h3&gt;
+
+&lt;p&gt;A useful first pass is to categorise harms by who pays the cost:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Harm to the eval itself.&lt;/strong&gt; The drone crashes, the cell line dies,
+the robot arm jams. Cheap if the guardrails work — the operator
+resets, the leaderboard absorbs the failure.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Harm to the surrounding environment.&lt;/strong&gt; Chemicals spill, the
+orchard catches fire, a neighbouring field gets sprayed.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Harm to humans.&lt;/strong&gt; A bystander gets hit by the drone, an operator
+gets burned, a patient sample gets switched. &lt;label for=&quot;mn-raw-3&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mn-raw-3&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;The lines between these categories blur in practice — chemical drift is “environment” until a bystander walks through it.&lt;/span&gt;
+The category that matters most, and the hardest to bound.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Information harms.&lt;/strong&gt; Footage of bystanders or proprietary processes
+leaves the eval site; the eval is used as a covert surveillance
+platform; sensor streams are exfiltrated.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Generation of dangerous artifacts.&lt;/strong&gt; The wet-lab cell is steered
+toward synthesising something harmful; the sprayer drone is
+weaponised; the autoclave is used to destroy evidence.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Categories 1–3 are about &lt;em&gt;what can happen during a slot.&lt;/em&gt; Categories
+4–5 are about &lt;em&gt;what can leave the eval afterwards.&lt;/em&gt; They want different
+defences, and a serious eval needs both.&lt;/p&gt;
+
+&lt;h3 id=&quot;defences-worth-building-ai-gen&quot;&gt;Defences worth building (AI GEN)&lt;/h3&gt;
+
+&lt;p&gt;None of the following is a finished answer. They are the moves worth
+physical evals trying, evaluating, and writing up:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Time-slotting with audit.&lt;/strong&gt; Single operator at a time, every
+action logged, the whole slot replayable. The slowest defence and
+the foundation everything else builds on.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Action-space sandboxing.&lt;/strong&gt; The eval enforces hard limits &lt;em&gt;inside&lt;/em&gt;
+its abstraction: max chemical per slot, max motion envelope, max
+temperature ramp. The action space exposed to the operator is
+strictly smaller than the action space the hardware can physically
+produce.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Dry-run validation.&lt;/strong&gt; A submitted policy runs through a cheap
+simulation pass first — not as the eval itself, but as a gate.
+Refuses to execute on the physical system if the simulated run trips
+any guardrail.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Supervised / shadow modes.&lt;/strong&gt; &lt;label for=&quot;mn-raw-4&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mn-raw-4&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;Like a learner’s permit: new operators get to compute actions but not actuate them for the first N slots.&lt;/span&gt; New operators run in
+shadow mode (actions computed but not executed) for some number of
+slots before they’re trusted with real actuation. Progressive trust
+as the leaderboard accumulates evidence.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Anomaly cut-outs.&lt;/strong&gt; A separate monitor watches for off-distribution
+sensor readings, sudden command spikes, too-clever-by-half action
+sequences — and pulls the kill-switch before the eval owner has to.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Open red-teaming.&lt;/strong&gt; Each eval publishes its threat model and
+invites external researchers to attack it. The right way to find the
+holes is to invite people to look.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Skin in the game.&lt;/strong&gt; Operators bond a small amount per slot,
+refundable on clean completion, forfeited if an audit finds
+violation. Aligns incentives without requiring trust upfront.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Most of these are borrowed from adjacent fields — public cloud
+security, scientific-facility time-sharing (telescope nights, beamline
+schedules), bug-bounty programs, robotics-safety standards. &lt;em&gt;None&lt;/em&gt; of
+them have been worked out in detail for a public, openly-instrumented
+physical system that AI agents are also supposed to operate. That’s a
+research agenda in itself.&lt;/p&gt;
+
+&lt;h2 id=&quot;an-open-movement-for-physical-evals&quot;&gt;An open movement for physical evals&lt;/h2&gt;
+
+&lt;p&gt;Physical evals could become an open-source ecosystem: environments cheap
+to set up, easy to fork, open to anyone with a problem worth
+measuring.&lt;/p&gt;
+
+&lt;p&gt;The rest of this section traces the arc: where things have been (&lt;em&gt;Prior art&lt;/em&gt;),
+what an open ecosystem looks like in practice (&lt;em&gt;Open at every layer&lt;/em&gt;),
+what it would have to cost (&lt;em&gt;What’s the Raspberry Pi of a physical
+eval?&lt;/em&gt;).&lt;/p&gt;
+
+&lt;h3 id=&quot;prior-art&quot;&gt;Prior art&lt;/h3&gt;
+
+&lt;p&gt;Physical-world AI competitions aren’t new. The &lt;a href=&quot;https://en.wikipedia.org/wiki/DARPA_Grand_Challenge&quot;&gt;DARPA Grand
+Challenge&lt;/a&gt; put
+autonomous vehicles in the Mojave; the
+&lt;a href=&quot;https://en.wikipedia.org/wiki/DARPA_Robotics_Challenge&quot;&gt;DARPA Robotics Challenge&lt;/a&gt;
+put humanoids through disaster-response courses; the
+&lt;a href=&quot;https://robohub.org/amazon-picking-challenge/&quot;&gt;Amazon Picking Challenge&lt;/a&gt;
+ran in warehouse mock-ups for several years; &lt;label for=&quot;mn-raw-5&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mn-raw-5&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;&lt;a href=&quot;https://www.robocup.org/&quot;&gt;RoboCup&lt;/a&gt; has been running its soccer leagues since 1997 — arguably the longest-lived physical eval in continuous operation, and the one with the most literature on what makes it work and what it ends up measuring.&lt;/span&gt; RoboCup
+has been doing its soccer leagues since the late 1990s; the &lt;a href=&quot;https://www.indyautonomouschallenge.com/&quot;&gt;Indy
+Autonomous Challenge&lt;/a&gt; and
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Roborace&quot;&gt;Roborace&lt;/a&gt; have put driverless
+cars on real circuits.&lt;/p&gt;
+
+&lt;p&gt;What these have in common: each was (or is) a sponsor-led, time-limited
+event with closed protocols and bespoke infrastructure. They produced
+brilliant moments and a small library of papers; they were expensive to
+build and harder to reproduce.&lt;/p&gt;
+
+&lt;h3 id=&quot;whats-the-raspberry-pi-of-a-physical-eval&quot;&gt;What’s the Raspberry Pi of a physical eval?&lt;/h3&gt;
+
+&lt;p&gt;The hard constraint on all of this is cost. A DARPA-class eval needs
+millions of dollars and a multi-year program; even a modest
+research-grade one runs into expensive sensors,
+networking, fail-safe hardware, and the human labour to keep it
+operating. That ceiling is what makes physical evals rare today — and
+rare evals can’t be the basis of an ecosystem.&lt;/p&gt;
+
+&lt;p&gt;So one of the most important questions this community can keep returning
+to is the one in the heading.&lt;label for=&quot;mn-raw-6&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mn-raw-6&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;Stand-in for “the cheapest plausible build”. The Raspberry Pi did this for hobbyist computing; what’s the equivalent for physical evals?&lt;/span&gt;
+What’s the bill of materials that brings a credible, instrumented,
+openable physical eval down to the cost of a serious hobby project? Probably some mix of commodity sensors, a
+single-board computer for the control loop, an open scheduling service
+for time-share, off-the-shelf safety hardware, and a reference
+orchestration stack that everyone forks. If the answer ends up being
+&lt;em&gt;“a few hundred dollars and a weekend,”&lt;/em&gt; the ecosystem can actually
+form. If it stays at &lt;em&gt;“a few hundred thousand and a six-month build,”&lt;/em&gt;
+it stays a fantasy.&lt;/p&gt;
+
+&lt;h3 id=&quot;open-at-every-layer&quot;&gt;Open at every layer&lt;/h3&gt;
+
+&lt;p&gt;In order to further lower the cost for anyone to be able to set up (safely) their physical evals, we need to look at off-the-shelf hardware and an open source stack.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Open protocols.&lt;/strong&gt; The spec of an eval (environment, action space,
+sensors, metric, secondaries, guardrails) is published as a forkable
+document, the same way a research benchmark is published.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Open hardware.&lt;/strong&gt; Sensor rigs, mechanical setups, fail-safe systems
+default to off-the-shelf components, with reproducible bills of
+materials and CAD files.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Open software.&lt;/strong&gt; Time-share scheduling, telemetry capture, scoring,
+auditing — shared infrastructure, not a one-off codebase per eval.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;A community around it.&lt;/strong&gt; People running, replicating, and forking
+each other’s evals; people contributing sensor stacks and guardrail
+designs; people maintaining the scoring code together. No single lab
+can stand up enough physical evals to cover the interesting surface
+of physical problems — a community can.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;public-verifiability&quot;&gt;Public verifiability&lt;/h3&gt;
+
+&lt;p&gt;The safety section above focuses on protecting the physical environment
+from adversarial &lt;em&gt;participants&lt;/em&gt;. There is a symmetric problem that gets
+less attention: protecting participants — and the public — from
+adversarial &lt;em&gt;eval runners&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;In an open world where anyone can wire a field, a lab bench, or a
+warehouse cell to the internet and declare it a physical eval, the
+operator controls the sensors, the scoring pipeline, and in a way, the ground
+truth. A dishonest operator can inflate results for a preferred team,
+suppress evidence of harm, or fabricate the physical record entirely.
+If physical evals are going to carry weight — as procurement signals,
+safety certifications, or policy inputs — the data they produce has to
+be trustworthy independent of whether the runner is trustworthy.&lt;/p&gt;
+
+&lt;p&gt;This is a valuable research
+direction in its own right. Some threads worth pulling:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Tamper-evident sensors.&lt;/strong&gt; Hardware-attested video streams that can
+be verified as unedited after the fact — the physical analogue of a
+signed log.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Trusted execution environments.&lt;/strong&gt; Running the scoring pipeline
+inside a TEE means the operator cannot modify results without
+breaking the attestation, even if they control the host machine.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Cross-checking sensor redundancy.&lt;/strong&gt; Multiple independent sensor
+modalities covering the same physical event make coordinated
+fabrication harder: a weight sensor, a camera, and an RFID log all
+have to agree.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Third-party witnesses.&lt;/strong&gt; Spot audits by an independent party —
+human or automated — who can access raw sensor streams without going
+through the operator’s pipeline.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Combinations are likely to be
+necessary, and the right combination will vary by domain. What a
+wet-lab needs to prove that a synthesis actually ran differs from what
+an orchard needs to prove that a drone actually flew a slot. Building
+this layer — call it &lt;em&gt;physical eval verification&lt;/em&gt; — is at least as
+important as building the evals themselves to make the results publicly verifiable.&lt;/p&gt;
+
+&lt;h3 id=&quot;a-darwinian-ecosystem&quot;&gt;A Darwinian ecosystem&lt;/h3&gt;
+
+&lt;p&gt;Not every physical eval will be a good one. Some will be hard, some trivial.
+Some will be well-structured; some will be a mess. Some will scale to many
+participants; some will only ever host one team at a time. That’s fine — even
+desirable.
+The shape of “what makes a good physical eval” is going to emerge from people
+building them, breaking them, and learning what each one actually measured.&lt;/p&gt;
+
+&lt;p&gt;Sketched, a public registry for such an ecosystem might look like this:&lt;/p&gt;
+
+&lt;div class=&quot;physevals-board&quot;&gt;
+&lt;div class=&quot;bbar&quot;&gt;
+&lt;div class=&quot;dots&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;div class=&quot;url&quot;&gt;physevals.io · open registry · 126 evals&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;page&quot;&gt;
+&lt;div class=&quot;page-head&quot;&gt;
+&lt;div class=&quot;page-title&quot;&gt;Physical eval registry&lt;/div&gt;
+&lt;div class=&quot;page-sub&quot;&gt;43 accepting slots&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;eval-rows&quot;&gt;
+&lt;div class=&quot;er-row&quot;&gt;
+&lt;div class=&quot;er-icon&quot; style=&quot;background:#5a7a44&quot;&gt;O&lt;/div&gt;
+&lt;div class=&quot;er-name&quot;&gt;&lt;div class=&quot;er-title&quot;&gt;Orchard pest defence&lt;/div&gt;&lt;div class=&quot;er-sub&quot;&gt;agriculture · outdoor · Greenfields UK&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;er-status open&quot;&gt;● open&lt;/div&gt;
+&lt;div class=&quot;er-metric&quot;&gt;fruit saved / week&lt;/div&gt;
+&lt;div class=&quot;er-teams&quot;&gt;18 teams&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;er-row&quot;&gt;
+&lt;div class=&quot;er-icon&quot; style=&quot;background:#4a6ea5&quot;&gt;W&lt;/div&gt;
+&lt;div class=&quot;er-name&quot;&gt;&lt;div class=&quot;er-title&quot;&gt;pH adjustment bench&lt;/div&gt;&lt;div class=&quot;er-sub&quot;&gt;chemistry · indoor · benchtop&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;er-status open&quot;&gt;● open&lt;/div&gt;
+&lt;div class=&quot;er-metric&quot;&gt;ΔpH from target&lt;/div&gt;
+&lt;div class=&quot;er-teams&quot;&gt;11 teams&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;er-row&quot;&gt;
+&lt;div class=&quot;er-icon&quot; style=&quot;background:#0e7c6e&quot;&gt;V&lt;/div&gt;
+&lt;div class=&quot;er-name&quot;&gt;&lt;div class=&quot;er-title&quot;&gt;Indoor vertical farm&lt;/div&gt;&lt;div class=&quot;er-sub&quot;&gt;agriculture · controlled environment&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;er-status limited&quot;&gt;◑ 2 slots left&lt;/div&gt;
+&lt;div class=&quot;er-metric&quot;&gt;g / kWh / cycle&lt;/div&gt;
+&lt;div class=&quot;er-teams&quot;&gt;6 teams&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;er-row&quot;&gt;
+&lt;div class=&quot;er-icon&quot; style=&quot;background:#6a5a95&quot;&gt;P&lt;/div&gt;
+&lt;div class=&quot;er-name&quot;&gt;&lt;div class=&quot;er-title&quot;&gt;Pick-and-pack cell&lt;/div&gt;&lt;div class=&quot;er-sub&quot;&gt;logistics · warehouse robotics&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;er-status open&quot;&gt;● open&lt;/div&gt;
+&lt;div class=&quot;er-metric&quot;&gt;correct orders / hour&lt;/div&gt;
+&lt;div class=&quot;er-teams&quot;&gt;23 teams&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;er-row&quot;&gt;
+&lt;div class=&quot;er-icon&quot; style=&quot;background:#8a5a5a&quot;&gt;S&lt;/div&gt;
+&lt;div class=&quot;er-name&quot;&gt;&lt;div class=&quot;er-title&quot;&gt;Outdoor sprayer drone&lt;/div&gt;&lt;div class=&quot;er-sub&quot;&gt;agri-robotics · field · safety-vetted access&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;er-status soon&quot;&gt;○ coming soon&lt;/div&gt;
+&lt;div class=&quot;er-metric&quot;&gt;pest Δ / ml sprayed&lt;/div&gt;
+&lt;div class=&quot;er-teams&quot;&gt;—&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;er-row&quot;&gt;
+&lt;div class=&quot;er-icon&quot; style=&quot;background:#7a7a8a&quot;&gt;+&lt;/div&gt;
+&lt;div class=&quot;er-name&quot;&gt;&lt;div class=&quot;er-title&quot;&gt;Submit an eval&lt;/div&gt;&lt;div class=&quot;er-sub&quot;&gt;open spec · CC-BY · any domain&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;er-status soon&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;er-metric&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;er-teams&quot;&gt;→&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;page-foot&quot;&gt;
+&lt;span&gt;updated 26 May · specs CC-BY&lt;/span&gt;
+&lt;span&gt;physevals.io is imagined&lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;more-than-evals&quot;&gt;More than evals&lt;/h3&gt;
+
+&lt;p&gt;Every execution of a physical eval produces something beyond a score: a
+timestamped record of sensor readings, actions taken, and outcomes
+observed, all under conditions that were defined in advance and held
+constant across participants. That record has value on its own.&lt;/p&gt;
+
+&lt;p&gt;The most immediate use is data collection. A team that runs an agent on
+the orchard eval for a week doesn’t just get a leaderboard position —
+they accumulate labelled trajectories in a real environment that would
+be expensive to stage deliberately. Even failed attempts are informative:
+a drone that misses a bird on Tuesday has documentation of exactly what
+the environment looked like and what the agent did.&lt;/p&gt;
+
+&lt;p&gt;For some categories of problem the step further is worth considering:
+repurposing the eval environment as a training environment. The orchard
+is already instrumented. The slot system already handles scheduling. If
+the cost of running episodes is low enough — bird-deterrence is
+essentially free to attempt, wet-lab synthesis is not — the same
+infrastructure can run RL rollouts between evaluation windows. The
+environment that scores a model on Monday can help train the next
+version by Friday.&lt;/p&gt;
+
+&lt;p&gt;This doesn’t collapse the distinction between training and testing.
+Eval integrity still requires held-out conditions, independent scoring,
+and participants who didn’t design the environment. But the &lt;em&gt;hardware&lt;/em&gt;
+doesn’t have to be idle between eval slots, and the &lt;em&gt;data&lt;/em&gt; generated
+during evaluation doesn’t have to be discarded. For operators willing
+to share trajectories under open licences, a physical eval site becomes
+something closer to a living dataset — one that grows richer every time
+a new agent takes a slot.&lt;/p&gt;
+
+&lt;h2 id=&quot;physical-evals-as-a-market&quot;&gt;Physical evals as a market&lt;/h2&gt;
+
+&lt;p&gt;Why should one set up a physical eval? Setting up a physical eval can be a way to crowdsource intelligence for an unsolved problem.&lt;/p&gt;
+
+&lt;p&gt;The eval ecosystem can act as a &lt;em&gt;market&lt;/em&gt; for intelligence: any participant — human, agent, team, company, hobbyist —
+can take a slot, attempt to saturate the metric, and submit. The
+leaderboard answers the AI-selection question by revealing whose approach
+actually delivers on the physical world.&lt;/p&gt;
+
+&lt;p&gt;Physical evals can be a way for problem-owners to
+&lt;em&gt;delegate AI knowledge&lt;/em&gt; to a market.&lt;label for=&quot;mn-raw-7&quot; class=&quot;margin-toggle&quot;&gt;⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mn-raw-7&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;This is the same shift that happened with bug bounties. A company didn’t have to &lt;em&gt;predict&lt;/em&gt; who the best vulnerability researchers were; they had to publish the surface and the rules, and the market sorted itself out.&lt;/span&gt; The grower doesn’t pick a model.
+The hospital doesn’t pick a model. The factory doesn’t pick a model. They
+pick a problem worth instrumenting and let the world’s AI builders compete
+to be the answer. As more domains follow suit, an aggregate picture
+emerges of where AI is actually good.&lt;/p&gt;
+
+&lt;h2 id=&quot;get-in-touch&quot;&gt;Get in touch&lt;/h2&gt;
+
+&lt;p&gt;If any of this resonates, please write. Three good reasons:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Already working in this space.&lt;/strong&gt; Compare notes — what’s been learned
+about sensing, guardrails, or keeping a system honestly open will
+save the next person a lot of time.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Have a physical problem worth instrumenting as an eval.&lt;/strong&gt;
+Worth thinking through together — what to measure, how to keep
+it safe to open up, how to make it interesting enough that people show
+up to compete.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Have an eval to propose.&lt;/strong&gt; Even if hosting isn’t feasible right now,
+good proposals are valuable — they’re what an ecosystem of physical evals
+is made of.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;DM &lt;a href=&quot;https://twitter.com/iamnotnicola&quot;&gt;@iamnotnicola&lt;/a&gt; on X.&lt;/p&gt;
+
+&lt;p&gt;Let’s turn more of the physical world into something AI can be measured
+against — and use that to point AI at problems that actually matter.&lt;/p&gt;
+
+&lt;h2 id=&quot;acknowledgements&quot;&gt;Acknowledgements&lt;/h2&gt;
+
+&lt;p&gt;This was written by Nicola Greco with support of AI. It was brainstormed as part of ARIA’s
+&lt;a href=&quot;https://aria.org.uk/opportunity-spaces/trust-everything-everywhere/scaling-trust/&quot;&gt;Scaling Trust&lt;/a&gt;
+programme, in collaboration with Alex Obadia.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 23 May 2026 00:00:00 +0000</pubDate>
+        <link>/physical-evals/2026</link>
+        <guid isPermaLink="true">/physical-evals/2026</guid>
+        
+        
+        <category>Work</category>
+        
+      </item>
+    
+      <item>
+        <title>Introducing Quantum Punks</title>
+        <description>&lt;p&gt;Over the years, I met quantum people that had no idea about crypto and viceversa.&lt;/p&gt;
+
+&lt;p&gt;However, I also met people that are in the perfect intersection.&lt;/p&gt;
+
+&lt;p&gt;Finally, Alex Obadia and I decided to call them Quantum Punks and wrote a short manifesto: &lt;a href=&quot;https://quantumpunks.org&quot;&gt;Quantum Punks Manifesto&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;thesis&quot;&gt;Thesis&lt;/h3&gt;
+
+&lt;p&gt;Our main thesis is that a small yet growing field called Quantum Cryptography can:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Lead to new cryptographic protocols that we could not build with classical cryptography&lt;/li&gt;
+  &lt;li&gt;Be accelerationist for the broader quantum industry&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Even more so, a small movement of people beyond us, believes that there could be more cypherpunk applications of quantum technology that we have yet to discover.&lt;/p&gt;
+
+&lt;p&gt;We wrote this short doc to create awareness of what is possible and to gather like-minded people to build this future.&lt;/p&gt;
+
+&lt;h3 id=&quot;example-of-quantum-crypto&quot;&gt;Example of Quantum Crypto&lt;/h3&gt;
+
+&lt;p&gt;About 25 years before Nakamoto published the Bitcoin paper, quantum researcher Wiesner published the notion of Quantum Money.&lt;/p&gt;
+
+&lt;p&gt;Quantum Money is digital currency without consensus, ledgers or blockchains. It’s digital cash with physical properties. Tokens are encoded in quantum states which can be transferred over the internet (e.g. via fiber optics). Due to the no-cloning theorem, quantum money can’t be cloned and they can only be sent once.&lt;/p&gt;
+
+&lt;p&gt;Double spending solved.&lt;/p&gt;
+
+&lt;p&gt;Yet, we don’t have hardware to make this practical.&lt;/p&gt;
+
+&lt;p&gt;However, we do have hardware for making other cryptography practical (e.g. Quantum Key Distribution) - our bet is that we have hardware for even more than QKD.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 04 Sep 2024 13:06:00 +0000</pubDate>
+        <link>/quantum-punks/2024</link>
+        <guid isPermaLink="true">/quantum-punks/2024</guid>
+        
+        
+        <category>Work</category>
+        
+      </item>
+    
+      <item>
+        <title>My Protocol Years</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;Hey team,&lt;/p&gt;
+
+  &lt;p&gt;I have been at Protocol Labs for 7 years, most part of my adult life. 
+My main drive has always been to design a decentralized web infra - I was doing this at MIT and I left my PhD midway to join Juan and the early team - they were doing it for real - here I found many people that shared that same drive, many of us still do today. For all these years, Protocol Labs has been a place for visionary breakthrough innovation, which I had the possibility to help shape and look forward to its next iteration.&lt;/p&gt;
+
+  &lt;p&gt;For everyone at PL:&lt;/p&gt;
+
+  &lt;p&gt;My words won’t be enough to thank everyone for the wonderful rollercoaster dream-like adventure life changing experience that Protocol Labs has been. I am deeply grateful. Thank you!&lt;/p&gt;
+
+  &lt;p&gt;For the people that worked directly with me:&lt;/p&gt;
+
+  &lt;p&gt;Throughout the years I built many versions of the same team, an open distributed research lab (Filecoin Research -&amp;gt; Red Team -&amp;gt; CryptoLab -&amp;gt; CryptoNet). To you, I say: thank you for your trust in working with me for many years of your life and to share the vision of our research lab - my personal goal was to create teams that could do repeatable innovation, deploy real world cryptography safely, attract unique talent and be a point of reference in the ecosystem - you made this happen. Thank you!&lt;/p&gt;
+
+  &lt;p&gt;Finally deep thank you to Juan for believing in me at the beginning of this adventure.&lt;/p&gt;
+
+  &lt;p&gt;I look forward to all the future of Protocol Labs and the new teams forming.&lt;/p&gt;
+
+  &lt;p&gt;– Nicola&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The year 2024 ends my Protocol years.&lt;/p&gt;
+
+&lt;p&gt;The past seven years on this blog have been silent. I truly have dedicated most of my adult life in building decentralized systems, surrounded by incredible talent while at Protocol Labs. Months have passed, but I have yet to digest what an incredible ride it has been.&lt;/p&gt;
+
+&lt;p&gt;Protocol Labs was more than a company to me, it was a way to express myself on what I believe in, what I want to build and how I want to work. We invented many things, operated in a truly non-standard way, contributed to pushing humanity forward and pushing the frontier of research. In particular with my team at &lt;a href=&quot;https://cryptonet.org&quot;&gt;CryptoNet&lt;/a&gt;, we built an open distributed research lab, with 50+ collaborators, tens of peer-reviewed papers, many protocol improvements used by thousands of users and deployed a lot of new cryptography safely in the real world.&lt;/p&gt;
+
+&lt;p&gt;I look forward to the future of Protocol Labs in their next iteration as I will continue to be around this new Protocol Labs “network”.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 24 Apr 2024 13:06:00 +0000</pubDate>
+        <link>/protocol-years/2024</link>
+        <guid isPermaLink="true">/protocol-years/2024</guid>
+        
+        
+        <category>Work</category>
+        
+      </item>
+    
+      <item>
+        <title>Verifiable Markets on the blockchain</title>
+        <description>&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;1/ (Verifiable) Market Protocols will be another killer app of blockchain.&lt;/p&gt;&amp;mdash; Nicola Greco (@nicolagreco) &lt;a href=&quot;https://twitter.com/nicolagreco/status/877470925402386432&quot;&gt;June 21, 2017&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;I am currently working on something that includes this new notion of &lt;em&gt;Verifiable Markets&lt;/em&gt;. This was output of many conversations with Juan, Matt (from &lt;a href=&quot;https://protocol.ai&quot;&gt;Protocol Labs&lt;/a&gt;), &lt;a href=&quot;http://www.catalini.com/&quot;&gt;Christian Catalini&lt;/a&gt; (from MIT Sloan).&lt;/p&gt;
+
+&lt;p&gt;While I will soon post some more formal work on this, I think it is really important to present some form of understanding behind Verifiable Markets, what they are and why they are important.&lt;label for=&quot;sn-12&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-12&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; This post is being taken from my recent series of tweets on &lt;a href=&quot;https://twitter.com/nicolagreco/status/877470925402386432&quot;&gt;Verifiable Markets&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(Verifiable) Market Protocols&lt;/strong&gt; are another killer app for blockchain/decentralized tech. A &lt;em&gt;Market Protocol&lt;/em&gt; models the exchange of a good or a service between a buyer and a seller and it is &lt;em&gt;Verifiable&lt;/em&gt; if the exchange can be publicly verified by both party and any user interested in verifying the exchange.&lt;/p&gt;
+
+&lt;p&gt;It is important to note that:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Fair Exchange&lt;/strong&gt;: The exchange of payment/service only happens if the provider of the service can prove they should be rewarded.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Decentralized Market&lt;/strong&gt;: When built on a public ledger, the market is not operated by a central exchange, but by a network of users.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Proofs&lt;/strong&gt;: As long as one can prove the exchange of a good or the correct execution of a service, then we can have Verifiable Market Protocols. For example, in systems such as Filecoin, we need to prove that storage providers have correctly stored the data via Proofs of Storage.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The reason why I find this direction of work really exciting, is that we can now create new (verifiable market) protocols that connect demand and offer of a specific good/service in a verifiable and decentralised way.&lt;/p&gt;
+
+&lt;p&gt;There are a lot of Verifiable Markets that I look forward to see. An example is energy: if we can prove that electricity has been moved from a place to another, then we can have a decentralised energy market (and many others).&lt;/p&gt;
+</description>
+        <pubDate>Wed, 21 Jun 2017 13:06:04 +0000</pubDate>
+        <link>/verifiable-markets/2017</link>
+        <guid isPermaLink="true">/verifiable-markets/2017</guid>
+        
+        
+        <category>Ideas</category>
+        
+      </item>
+    
+      <item>
+        <title>Idea: Computation Coin</title>
+        <description>&lt;p&gt;I am posting a draft written during the summer of 2017. I wrote this after reading the Versum paper and starting learning about verifiable computation. The idea here is to do faster off-chain contracts.&lt;/p&gt;
+
+&lt;h1 id=&quot;computation-coin-coco&quot;&gt;Computation Coin (CoCo)&lt;/h1&gt;
+
+&lt;p&gt;Delegate computations by creating bounties&lt;/p&gt;
+
+&lt;h2 id=&quot;motivations&quot;&gt;Motivations&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Complex contracts are really expensive in Ethereum&lt;/li&gt;
+  &lt;li&gt;Every ethereum miner runs every computation (too much waste!)&lt;/li&gt;
+  &lt;li&gt;Use ideas from Refereed Multi-prover Delegated Computation (and Versum)&lt;/li&gt;
+  &lt;li&gt;SNARK &amp;amp; other systems are too expensive (!!)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;setting&quot;&gt;Setting&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Users&lt;/strong&gt;: they want to pay for computation&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Computers&lt;/strong&gt;: they want to be rewarded for computing&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Trust model&lt;/strong&gt;: this runs in the any trust model, if there is at least an honest computer running the computation, the computation is run correctly.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;protocols&quot;&gt;Protocols&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ComputationCoin&lt;/code&gt;: Users can create computation bounties that Computers can solve.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ReputationContract&lt;/code&gt;: Computers that misbehave are reported to ReputationContract and lose their reputation.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;protocol-1-computationcoin-protocol&quot;&gt;Protocol 1: ComputationCoin Protocol&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CreateComputation(code, timeout, minReputation)&lt;/code&gt;:&lt;/p&gt;
+
+    &lt;p&gt;User writes a computation &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;code&lt;/code&gt; (following Versum Guidelines). At &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;timeout&lt;/code&gt; time, all the coins in the contract are given to the winning answer. In this contract, only miners with minReputation from ReputationContract can participate.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FinanceComputation(coins)&lt;/code&gt;:&lt;/p&gt;
+
+    &lt;p&gt;Any user can put coins into the contract to incentivize Computers to compute!&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SolveComputation(ans, comm, coins)&lt;/code&gt;:&lt;/p&gt;
+
+    &lt;p&gt;Computers solve the computation and submit the answers &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ans&lt;/code&gt;, a commitment to the computation history &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;comm&lt;/code&gt;, a collateral &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;coins&lt;/code&gt; required by the contract, this will be added to the total amount of coins in the contract.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ConfuteAnswer(ans, comm, coins, conflict)&lt;/code&gt;:&lt;/p&gt;
+
+    &lt;p&gt;Computers can confute a previous answer by submitting their &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ans&lt;/code&gt;, a commitment to their computation history &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;comm&lt;/code&gt;, a collateral &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;coins&lt;/code&gt; required by the contract and the part of conflict between their answer and the previous submitter answer. (Note: this function call is only going to be added/processed by having the miners running “conflict”)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;protocol-2-reputationcontract-protocol&quot;&gt;Protocol 2: ReputationContract Protocol&lt;/h3&gt;
+
+&lt;p&gt;If a computer is found to create an incorrect computation in the future, they can be referenced to a reputation contract, losing in this way reputation, so in the future Computation contract can set up some minimum reputation they require.&lt;/p&gt;
+
+&lt;h2 id=&quot;problems-left&quot;&gt;Problems left&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Running arbitrary computation in a contract to detect conflict (this is a technical detail)&lt;/li&gt;
+  &lt;li&gt;(Actually important) How to keep computation history around and in an accountable way for a long time (they also might be long!!)&lt;/li&gt;
+  &lt;li&gt;Can we design this into an ethereum contract?&lt;/li&gt;
+  &lt;li&gt;Game theoretical analysis: what if EVERY computer is incentivized to misbehave?&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 17 Feb 2017 13:06:04 +0000</pubDate>
+        <link>/computation-coin/2017</link>
+        <guid isPermaLink="true">/computation-coin/2017</guid>
+        
+        
+        <category>Ideas</category>
+        
+      </item>
+    
+      <item>
+        <title>A Center for Decentralization</title>
+        <description>&lt;p&gt;People from the Internet,
+I will make this very simple,
+we live in a strange web.&lt;/p&gt;
+
+&lt;p&gt;Data is not yours,
+services don’t interoperate,
+you are locked in very many walled-garden,
+there is someone in the middle of your interactions,
+(actually, every time the same folks)
+web pages disappear/die every 100 days,
+Online identity - what the heck is even that?&lt;/p&gt;
+
+&lt;p&gt;[breath]&lt;/p&gt;
+
+&lt;p&gt;At the same time,
+Internet connection got better,
+our computers much faster
+our devices are all connected,
+storage is cheap.&lt;/p&gt;
+
+&lt;p&gt;Why don’t we - society, individuals and companies - start to build technologies that take advantage of this?&lt;/p&gt;
+
+&lt;p&gt;Let’s bring decentralization&lt;label for=&quot;sn-8&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-8&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; Read about my principle for a &lt;a href=&quot;http://nicola.io/decentralized-principles/2015/&quot;&gt;Decentralized Web&lt;/a&gt;&lt;/span&gt; at the center of attention.&lt;/p&gt;
+
+&lt;p&gt;–&lt;/p&gt;
+
+&lt;p&gt;Now, in practice, I haven’t started a center&lt;label for=&quot;sn-9&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-9&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; yet.&lt;/span&gt;. I like to call the meetings that we are starting in Boston with the name “Center for Decentralization” (every other Friday at 4:30 at the Berkman Center/MIT).&lt;/p&gt;
+
+&lt;p&gt;Do get in touch &lt;a href=&quot;http://twitter.com/nicolagreco&quot;&gt;@nicolagreco&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Thu, 01 Oct 2015 12:55:04 +0000</pubDate>
+        <link>/decentralization-center/2015</link>
+        <guid isPermaLink="true">/decentralization-center/2015</guid>
+        
+        
+        <category>Decentralized</category>
+        
+        <category>Web</category>
+        
+      </item>
+    
+      <item>
+        <title>Towards the future RDF library</title>
+        <description>&lt;p&gt;RDF is an simple and powerful language to describe data. However, playing with RDF data can get very tricky - especially when doing simple things. Only by solving the user experience of RDF libraries we would really get developers to user RDF more&lt;label for=&quot;sn-4&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-4&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;1&lt;/sup&gt; In all of its forms, &lt;em&gt;turtle&lt;/em&gt;, &lt;em&gt;json-ld&lt;/em&gt;, and so on.&lt;/span&gt;. This blog post is directed to the community that works in this field and it is an open call to work on an ultimate, simpler library for RDF.&lt;/p&gt;
+
+&lt;p&gt;I will now show you three ways to do a very simple task (1) the current way (using &lt;a href=&quot;http://github.com/rdf-ext/rdf-ext&quot;&gt;rdf-ext&lt;/a&gt;&lt;label for=&quot;sn-5&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-5&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;sup class=&quot;sidenote-number&quot;&gt;2&lt;/sup&gt; I have been recently involved with the development of this library&lt;/span&gt;) (2) the way developers find familiar (3) the way the future RDF lib should be.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-current-rdf-way&quot;&gt;The current RDF way&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Example 1:&lt;/em&gt; Creating a graph with a triple that represents my name&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rdf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;rdf-ext&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;me&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createGraph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;me&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Triple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;NamedNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;http://nicola.io&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;NamedNode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;http://xmlns.com/foaf/0.1/name&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rdf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Literal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Nicola&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;Example 2:&lt;/em&gt; Retrieving my name from the graph&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;me&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;match&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;http://nicola.io&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;http://xmlns.com/foaf/0.1/name&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;object&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Nicola&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;the-javascript-objects-way&quot;&gt;The Javascript Objects way&lt;/h2&gt;
+
+&lt;p&gt;Now, to the RDF experts, this might sound about right, but let’s remember one second how &lt;em&gt;real world&lt;/em&gt; developers would do something like that, let’s say using Javascript Objects.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Example 3:&lt;/em&gt; The equivalent of Example 1 and 2 using JSON&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;me&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Nicola&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;me&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Nicola&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;the-future-rdf-way&quot;&gt;The future RDF way&lt;/h2&gt;
+
+&lt;p&gt;The future RDF library should provide a seamless experience to the developer that is used to the JS object.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Example 4:&lt;/em&gt; The equivalent of Example 1 and 2 as it should be&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;simplerdf&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;me&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;http://xmlns.com/foaf/0.1/name&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Nicola&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;http://xmlns.com/foaf/0.1/name&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Nicola&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Even simpler, I should be able to load an JSON-LD context to achieve the following&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;me&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;me&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+  &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;http://xmlns.com/foaf/0.1/name&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;homepage&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;@id&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;http://xmlns.com/foaf/0.1/homepage&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;@type&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;@id&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;me&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Nicola&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;me&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Nicola&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In other words, the key hack is on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Object.defineProperty&lt;/code&gt; which enable us to redefine the getters/setters of object properties. So, in other words, we can have the power of a graph, behind some simple operations.&lt;/p&gt;
+
+&lt;p&gt;As a last note, as many of you may point out, these examples only show how to do operations when both the subject and the predicate are known - what about the rest?&lt;/p&gt;
+
+&lt;p&gt;In my opinion, this is already a big step forward simplifying RDF, maybe there are some operations would not be possible to achieve, and we can always come back to the traditional way of handling a graph &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;me.toGraph()&lt;/code&gt;, or we can find together some new clever solutions that have the same spirit of simplicity.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;I implemented most of what presented here in a library called &lt;a href=&quot;http://github.com/nicola/simplerdf&quot;&gt;simplerdf&lt;/a&gt; - please, have a look at &lt;a href=&quot;https://github.com/nicola/simplerdf/tree/master/examples&quot;&gt;further examples&lt;/a&gt;. However, as you may expect, this library is not stable at all, the APIs could change drastically in the next few days.&lt;/p&gt;
+
+&lt;p&gt;If you are interested, I really would like to hear from you, and maybe fork the Github repository and contribute, so that maybe, we could really write the future RDF library together.&lt;/p&gt;
+
+&lt;p&gt;Inspired by this &lt;a href=&quot;https://github.com/webr3/js3&quot;&gt;repo&lt;/a&gt; that has been written 5 years ago.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 11 Sep 2015 11:47:04 +0000</pubDate>
+        <link>/future-rdf/2015</link>
+        <guid isPermaLink="true">/future-rdf/2015</guid>
+        
+        
+        <category>Decentralized</category>
+        
+        <category>Web</category>
+        
+      </item>
+    
+      <item>
+        <title>The principles of a decentralized web</title>
+        <description>&lt;p&gt;In this article I will briefly introduce the my three key aspects that a decentralized web I think should have.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Users are in &lt;strong&gt;Control&lt;/strong&gt; of their data&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Interoperability&lt;/strong&gt; across the services on the web and&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Portability&lt;/strong&gt; of the data&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Hopefully, I will go deeper in the next few days. In the meantime, please tell me what are the principles that you care about and how we can extend this.&lt;/p&gt;
+
+&lt;p&gt;I am soon going to set up a mailing list for MIT, Harvard friends and passionates, please ping me if you want to get involved &lt;a href=&quot;http://twitter.com&quot;&gt;@nicolagreco&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: The post is trending on HackerNews and I would like to point out something to the readers. This post is an introductory post and the aim of this post is to continue to spark and foster interest in this field as well as starting the conversation of &lt;em&gt;What are the principles that matter to you and why?&lt;/em&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 08 Sep 2015 18:06:04 +0000</pubDate>
+        <link>/decentralized-principles/2015</link>
+        <guid isPermaLink="true">/decentralized-principles/2015</guid>
+        
+        
+        <category>Decentralized</category>
+        
+        <category>Web</category>
+        
+      </item>
+    
   </channel>
 </rss>

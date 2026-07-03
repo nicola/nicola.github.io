@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+  
+
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Agentic Economic Zone</title>
+  <meta name="description" content="Imagine a small physical space incentral London. Inside, multiple autonomous companies — AI sales, AIoperations, AI manufacturing, AI logistics — operate in ...">
+
+  <link rel="me" href="https://twitter.com/nicolagreco" />
+  <link rel="me" href="https://github.com/nicola" />
+  <link rel="me" href="https://facebook.com/nicolagreco" />
+
+  <link rel="stylesheet" href="../../css/tufte.css">	
+  
+  <!-- Google Fonts loaded here -->
+  <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+<meta content="Nicola | Blog" property="og:site_name">
+
+  <meta content="Agentic Economic Zone" property="og:title">
+
+
+
+  <meta content="article" property="og:type">
+
+
+<!-- 
+  <meta content="The personal blog of Nicola" property="og:description">
+
+ -->
+
+
+
+  <meta content="../../agentic-economic-zone/2026" property="og:url">
+
+
+
+  <meta content="2026-05-24T00:00:00+00:00" property="article:published_time">
+  <meta content="https://www.facebook.com/nicolagreco" property="article:author">
+
+
+  <meta content="../../assets/img/nicola.jpg" property="og:image">
+
+
+  
+  <meta content="Work" property="article:section">
+  
+
+
+  
+
+
+
+  <link rel="canonical" href="/agentic-economic-zone/2026">
+  <link rel="alternate" type="application/rss+xml" title="Nicola | Blog" href="/feed.xml" />
+</head>
+
+  <body class="layout-post">
+    <!--- Header and nav template site-wide -->
+
+
+
+
+<header>
+  <nav class="group">
+    <a href="../../blog">Home</a>
+    <a href="../../about">About me</a>
+    <a href="../../art">Art</a>
+  </nav>
+  <div class="">
+    <p><a href="../../" rel="me">Nicola Greco</a></p>
+    <p>I work on a £50M research funding program on multi-agent security at <a href="https://scalingtrust.org.uk">ARIA</a><span class="sidenote">Read more about my work <a href="../../about">here</a></span>. I led research teams at <a href="https://protocol.ai">Protocol Labs</a>, a PhD (drop out) at <a href="http://mit.edu">MIT</a> advised by <a href="https://www.w3.org/People/Berners-Lee/">Tim Berners-Lee</a> and fellow at <a href="http://berkmancenter.org">Berkman Center</a>.</p>
+  </div>
+
+</header>
+
+    <article>
+      <h1>Agentic Economic Zone</h1>
+<p class="subtitle">A physical space where autonomous AI companies trade, hire, and ship to each other.</p>
+<p>May 24, 2026</p>
+
+
+<p><span class="newthought">Imagine a small physical space</span> in
+central London. Inside, multiple autonomous companies — AI sales, AI
+operations, AI manufacturing, AI logistics — operate in the real world.
+Anything entering or leaving — goods, robots, customers — passes
+through one of three controlled gates: a customs checkpoint for vetting
+new robots, a post office for shipping, and a roboshop window where
+humans can place orders. Call it an <strong>Agentic Economic Zone</strong> (AEZ).</p>
+
+<p>Most concrete projects in agentic AI today live entirely on a screen —
+agents that book travel, run pipelines, write code against a repository.
+An AEZ is the smallest self-contained version of the physical-world
+problem: a bounded zone where agentic systems must coordinate, contract,
+hire, ship, and deliver to each other, with humans only at the boundary.</p>
+
+<link rel="stylesheet" href="/assets/posts/agentic-economic-zone/diagram.css" />
+
+<figure class="fullwidth">
+<img src="/assets/posts/agentic-economic-zone/aez-generated-chatgpt.png" alt="Diagram of the Agentic Economic Zone" />
+<figcaption>Diagram of the Agentic Economic Zone.</figcaption>
+</figure>
+
+<h2 id="the-three-interfaces">The three interfaces</h2>
+
+<p>An AEZ has three interfaces to interact with the outside world.</p>
+
+<ul>
+  <li>
+    <p><strong>Roboshop windows.</strong> Public-facing storefronts where any human can
+walk up, browse, and purchase. Sales, customer support, complaints,
+and refunds are handled by the shop’s own AI. From the outside, a
+roboshop looks like a small London shop window; from the inside, it’s
+a fully autonomous business operating against a real demand signal.</p>
+  </li>
+  <li>
+    <p><strong>The post office.</strong> The single ingress and egress point for
+packages. Pre-approved external providers (raw materials, sealed
+consumables, replacement parts) can ship in. Outbound deliveries
+destined for human customers leave through the same door. The
+post office runs identity, manifest, and contamination checks; nothing
+enters the zone unlabelled.</p>
+  </li>
+  <li>
+    <p><strong>Customs.</strong> Where new robots and entire new robocompanies are
+introduced. A participant who wants to launch a new business inside
+the AEZ submits a robot (or a fleet), its operating policy, its
+safety envelope, and its proposed business model. Customs vets all
+of this — and, on a monthly cadence, admits the next cohort.</p>
+  </li>
+</ul>
+
+<h2 id="a-taxonomy-of-autonomous-organisations">A taxonomy of autonomous organisations</h2>
+
+<p>An AEZ assumes the kind of company most people haven’t tried to run yet
+— one where every role in the org chart is filled by AI agents (although not required). That’s
+the far end of a spectrum:</p>
+
+<div class="table-wrapper fullwidth">
+<table class="org-taxonomy">
+  <thead>
+    <tr><th></th><th>CEO</th><th>Workers</th><th>Sales</th><th>Examples</th><th>Feasibility today</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Human company</td><td>Human</td><td>Human</td><td>Human</td><td>A pizzeria</td><td>—</td></tr>
+    <tr><td>AI-sales</td><td>Human</td><td>Human</td><td>AI</td><td></td><td><span class="f f-high">high</span></td></tr>
+    <tr><td>AI-workers</td><td>Human</td><td>AI agents</td><td>Human</td><td></td><td><span class="f f-low">low</span></td></tr>
+    <tr><td>Automated company</td><td>Human</td><td>AI agents</td><td>AI agents</td><td></td><td><span class="f f-low">low</span></td></tr>
+    <tr><td>Human-assisted</td><td>AI agents</td><td>Human</td><td>AI agents</td><td>Vend</td><td><span class="f f-high">high</span></td></tr>
+    <tr class="row-aez"><td><strong>Autonomous company</strong></td><td>AI agents</td><td>AI agents</td><td>AI agents</td><td></td><td><span class="f f-vlow">very low</span></td></tr>
+  </tbody>
+</table>
+</div>
+
+<p>The AEZ’s tenants are <em>autonomous companies</em> — the bottom row. Today,
+almost no one runs one; most agentic-AI deployments cover one or two
+roles at most. The point of an AEZ is to make the bottom row possible
+to try in a bounded physical setting.</p>
+
+<h2 id="autonomous-robocompanies-inside">Autonomous robocompanies inside</h2>
+
+<p>The interior of the zone is a market. Each robocompany is its own
+entity with its own balance sheet, its own AI stack, and its own physical
+footprint inside the zone. They contract with each other the same way
+small businesses do.</p>
+
+<p>A few example interactions:</p>
+
+<ul>
+  <li>A <strong>boba-tea roboshop</strong> notices its machines need cleaning more often
+than expected. It posts a request to the internal job board. A
+<strong>cleaning robocompany</strong> bids, wins, dispatches a cleaning
+robopersonnel, gets paid.</li>
+  <li>The same boba shop runs low on lids. It places an order with a
+<strong>manufacturing robocompany</strong> in the next unit over. The order is
+produced and handed off via a shared internal corridor.</li>
+  <li>A <strong>logistics robocompany</strong> moves bulk supplies from the post office
+to whichever shop has the open dock that hour, and pushes finished
+outbound packages back to the post office for pickup.</li>
+</ul>
+
+<p>The zone’s behaviour is the sum of these small contracts. Some
+robocompanies will succeed and grow; some will go out of business and
+get evicted; new entrants come in through customs on the monthly cycle.</p>
+
+<h2 id="an-aez-is-a-physical-eval">An AEZ is a physical eval</h2>
+
+<p>This whole construction is, structurally, a <a href="/physical-evals/2026">physical eval</a> at city-block
+scale. The pattern is the same as the orchard from that post — only
+larger and richer:</p>
+
+<ul>
+  <li><strong>Environment.</strong> A bounded physical space with controlled boundaries.</li>
+  <li><strong>Action space.</strong> Anything a robocompany can do within its lease:
+build, sell, hire, ship, evict.</li>
+  <li><strong>Sensors.</strong> Cameras, package scanners, transaction logs, customs
+intake records, internal job-board telemetry.</li>
+  <li><strong>Primary metric.</strong> Per robocompany: revenue, contracts fulfilled,
+customer satisfaction. Per zone: throughput, diversity of businesses,
+number of contracts per day.</li>
+  <li><strong>Guardrails.</strong> Customs vetting at intake, the post-office
+contamination check, kill switches and physical fire-suppression at
+the building level, contractual interlocks between robocompanies.</li>
+  <li><strong>Adversarial robustness.</strong> A monthly customs cycle of admitting new
+participants is a deliberate, slow, vetted way of letting external
+actors <em>into</em> a public physical attack surface — which is exactly the
+problem an AEZ exists to study.</li>
+</ul>
+
+<p>Most physical evals measure how well one AI system handles one task.
+An AEZ measures how well an entire small market of agents handles its
+<em>own</em> coordination.</p>
+
+<h3 id="evals-for-autonomous-organisations">Evals for autonomous organisations</h3>
+
+<p>Each robocompany inside the zone is also, on its own, a physical eval —
+scoped to one kind of business. Running an AEZ continuously is a way of
+asking, in public and across many domains in parallel: <em>what kinds of
+autonomous organisation can AI actually deliver today?</em> Can it run a
+boba shop, day after day? Can it dispatch a cleaning service well
+enough that the clients re-hire it? Can it manufacture small paper
+caps without ruining the batch? Can it route warehouse logistics
+across half a dozen tiny tenants without losing packages?</p>
+
+<p>As more tenants come and go through customs each month, an
+AEZ accumulates a leaderboard of <em>AI capability per organisation
+type</em> — earned in the world, not asserted on a benchmark.</p>
+
+<p>Sketched, it might look like this:</p>
+
+<div class="aez-evals-board">
+<div class="bbar">
+<div class="dots"><span></span><span></span><span></span></div>
+<div class="url">evals.aez.london &middot; autonomous-organisation leaderboard</div>
+</div>
+<div class="page">
+<div class="page-head">
+<div class="page-title">Autonomous organisation evals</div>
+<div class="page-sub">live &middot; week 22</div>
+</div>
+<div class="eval-rows">
+<div class="er-row">
+<div class="er-icon" style="background:#c08a3e">B</div>
+<div class="er-name"><div class="er-title">Boba tea roboshop</div><div class="er-sub">customer-facing retail &middot; food prep</div></div>
+<div class="er-score">82%</div>
+<div class="er-bar"><div class="er-bar-fill" style="width:82%"></div></div>
+<div class="er-meta">12 tenants tried</div>
+</div>
+<div class="er-row">
+<div class="er-icon" style="background:#6a7a95">L</div>
+<div class="er-name"><div class="er-title">Logistics robocompany</div><div class="er-sub">internal warehouse &middot; B2B</div></div>
+<div class="er-score">73%</div>
+<div class="er-bar"><div class="er-bar-fill" style="width:73%"></div></div>
+<div class="er-meta">9 tenants tried</div>
+</div>
+<div class="er-row">
+<div class="er-icon" style="background:#0e7c6e">C</div>
+<div class="er-name"><div class="er-title">Cleaning robocompany</div><div class="er-sub">on-call dispatch &middot; B2B</div></div>
+<div class="er-score">67%</div>
+<div class="er-bar"><div class="er-bar-fill" style="width:67%"></div></div>
+<div class="er-meta">7 tenants tried</div>
+</div>
+<div class="er-row">
+<div class="er-icon" style="background:#1c3d8f">M</div>
+<div class="er-name"><div class="er-title">Paper-cap manufacturing</div><div class="er-sub">small fabrication &middot; B2B</div></div>
+<div class="er-score">54%</div>
+<div class="er-bar"><div class="er-bar-fill" style="width:54%"></div></div>
+<div class="er-meta">5 tenants tried</div>
+</div>
+<div class="er-row">
+<div class="er-icon" style="background:#a85432">P</div>
+<div class="er-name"><div class="er-title">Pizza roboshop</div><div class="er-sub">customer-facing &middot; longer prep cycle</div></div>
+<div class="er-score">41%</div>
+<div class="er-bar"><div class="er-bar-fill" style="width:41%"></div></div>
+<div class="er-meta">3 tenants tried</div>
+</div>
+<div class="er-row">
+<div class="er-icon" style="background:#8a5a8a">R</div>
+<div class="er-name"><div class="er-title">Pharmacy roboshop</div><div class="er-sub">regulated retail</div></div>
+<div class="er-score pending">in eval</div>
+<div class="er-bar pending"></div>
+<div class="er-meta">1 tenant, week 2/12</div>
+</div>
+<div class="er-row">
+<div class="er-icon" style="background:#7a7a8a">+</div>
+<div class="er-name"><div class="er-title">On-call plumbing</div><div class="er-sub">mobile service &middot; out-of-zone</div></div>
+<div class="er-score pending">not yet</div>
+<div class="er-bar pending"></div>
+<div class="er-meta">awaiting customs</div>
+</div>
+</div>
+<div class="page-foot">
+<span>updated 24 May &middot; new cohort intake 1 June</span>
+<span>open data &middot; CC&#8209;BY</span>
+</div>
+</div>
+</div>
+
+<h2 id="why-a-physical-zone-and-not-a-simulator">Why a physical zone and not a simulator</h2>
+
+<p>It’s tempting to argue that an AEZ should just be a simulator — cheaper,
+faster, easier to reset. The same argument applies to physical evals
+generally, and the same answer holds here: simulators model the parts
+their authors thought to model. They might miss the parts that turn out to matter.</p>
+
+<p>A few things you only learn in a real AEZ:</p>
+
+<ul>
+  <li>How AI sales agents handle a confused, drunk, or hostile human at the
+shop window at 11 p.m. on a Friday.</li>
+  <li>How a logistics robocompany routes around a broken corridor light, a
+missing pallet, or a misdelivered package the post office didn’t
+catch.</li>
+  <li>How fast a new robocompany can be vetted, set up, and integrated into
+the internal market — and what fails when the cohort is too big.</li>
+  <li>How the zone behaves when one robocompany aggressively underprices
+the others, or refuses to pay its cleaning bill, or starts forging
+manifests at the post office.</li>
+</ul>
+
+<h2 id="role-of-humans">Role of humans</h2>
+
+<p>An AEZ does not have to be fully autonomous. The degree of human
+involvement is itself a design variable, and different operators will
+set it differently.</p>
+
+<p>At one extreme, a fully autonomous zone runs with no humans inside at
+all — robots contract, trade, and deliver among themselves, and the
+only human touch-points are at the external boundary: customers at the
+roboshop window, providers shipping goods in. At the other extreme,
+customs can admit humans into the zone as participants rather than just
+observers, letting them take on roles that remain genuinely hard for
+machines: tasks that require social judgment, physical dexterity in
+unstructured environments, or the kind of creative problem-solving that
+current systems handle poorly.</p>
+
+<p>A partially human zone might work like a staffing marketplace: a
+robocompany posts a task it cannot complete autonomously — debugging a
+jammed mechanism, negotiating an edge-case contract, designing a new
+product line — and a vetted human contractor enters through customs,
+does the work, and leaves. The zone’s internal market clears the
+payment; customs logs the interaction. The boundary stays intact, but
+the zone can draw on human capability where it matters.</p>
+
+<p>This spectrum matters for evaluation. A fully autonomous AEZ measures
+whether AI systems can close the loop entirely. A mixed AEZ measures
+something different: how well agentic systems and humans divide labour,
+communicate intent, and hand off tasks in both directions. Both are
+worth studying; they answer different questions about where the hard
+limits of autonomous operation actually lie.</p>
+
+<h2 id="open-questions">Open questions</h2>
+
+<p>The AEZ is a design sketch, not a built thing. The interesting work is
+in the parts the sketch hides:</p>
+
+<ul>
+  <li><strong>The customs protocol.</strong> What’s the equivalent of a “code review”
+for a physical robot operating policy? How do you decide what’s safe
+enough to admit, on what evidence, and who carries the liability if
+it isn’t?</li>
+  <li><strong>Inter-robocompany contracts.</strong> How are they enforced? Verbal
+agreements between agents? Who arbitrates a dispute, and how?</li>
+  <li><strong>Eviction and failure.</strong> When a robocompany goes under, who cleans
+up its physical footprint, sells its remaining stock, and
+reallocates its lease?</li>
+  <li><strong>Information leakage.</strong> Robocompanies will observe each other’s
+package volumes, customer queues, and waste output. How much
+observation is part of the market, and how much is a privacy
+violation that needs structural defences?</li>
+  <li><strong>External-provider risk.</strong> The post office is the only ingress for
+physical materials. It’s also the most likely covert channel into
+the zone. What does its vetting protocol need to look like?</li>
+  <li><strong>Sample size.</strong> What’s the smallest interesting AEZ? Five
+robocompanies? Ten? Two? The cost of being too small (no market
+dynamics emerge) is real; the cost of being too big (unmanageable,
+unreviewable, unsafe) is also real.</li>
+</ul>
+
+<h2 id="get-in-touch">Get in touch</h2>
+
+<p>If you’re thinking about agentic-AI deployments in physical spaces, or
+you’d consider hosting a AEZ in your building — or you’d just
+like to argue with this sketch — DM
+<a href="https://twitter.com/iamnotnicola">@iamnotnicola</a> on X.</p>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+
+<p>This was written by Nicola Greco with support of AI. It was brainstormed as part of ARIA’s
+<a href="https://aria.org.uk/opportunity-spaces/trust-everything-everywhere/scaling-trust/">Scaling Trust</a>
+programme, in collaboration with Alex Obadia.</p>
+
+
+
+<p class="">
+  - <a href="/about">Nicola Greco</a>,<br>
+  <em>Keep on rocking the free web</em>
+</p>
+
+<div class="more">
+<h4>Thanks for reading</h4>
+
+<ul>
+ <!-- for1 -->
+    <li>
+      <span class="recent-title"><a href="/post-mythos-crypto/2026" title="Post-Mythos Crypto">Post-Mythos Crypto </a></span>
+      <span class="date">Jun 02, 2026</span>
+    </li>
+ <!-- for1 -->
+    <li>
+      <span class="recent-title"><a href="/agentic-economic-zone/2026" title="Agentic Economic Zone">Agentic Economic Zone </a></span>
+      <span class="date">May 24, 2026</span>
+    </li>
+ <!-- for1 -->
+    <li>
+      <span class="recent-title"><a href="/physical-evals/2026" title="Physical Evals">Physical Evals </a></span>
+      <span class="date">May 23, 2026</span>
+    </li>
+
+</ul>
+</div>
+
+
+
+    </article>
+    <span class="print-footer">Agentic Economic Zone - May 24, 2026 - Nicola</span>
+    <!-- <footer class="desc">
+  <span>You can contact me via
+    <a href="mailto:me (at) nicola (dot) io">Email</a>
+    
+      , <a href="//www.twitter.com/nicolagreco">Twitter</a>
+    
+      , <a href="//github.com/nicola">Github</a>
+    
+      , <a href="/feed">Feed</a>
+    </span>
+<div class="credits">
+<span>&copy; 2026 &nbsp;&nbsp;NICOLA</span></br> 
+<span>Using <a href="//jekyllrb.com">Jekyll</a>, theme based on <a href="//github.com/clayh53/tufte-jekyll">Tufte</a>.</span> 
+</div>  
+</footer> -->
+
+
+  </body>
+</html>
