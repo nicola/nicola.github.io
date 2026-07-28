@@ -27,9 +27,13 @@ He started writing code when he was very young. At __14__ run a petition _“Lin
 
 The following are events and conference I gave a presentation at. Want me to give a keynote/unconference? Please contact me at [@nicolagreco](http://twitter.com/nicolagreco) or via email at me at nicola dot io.
 
+- __Scaling Trust__, d/acc day, 2025/11
 - __What if agents could generate protocols on the spot?__, Devconnect, Buenos Aires, 2025/11
+- __Funding Last-Mile Cryptography Research__, Public Good Crypto, Workshop on Cryptographic Tools for Blockchains, Eurocrypt, Spain, 2025/05
+- __[Quantum Cryptography](https://zeroknowledge.fm/podcast/360/)__, Zero Knowledge Podcast, 2025/05
 - __Quantum Punks, with Alex and Nicola__, ZKPodcast, 2025/05
 - __Quantum Cryptography Acceleration__, QuantumPunks @ Devcon7, Bangkok, 2024/11
+- __[From Quality Metrics to Reputation](https://sms.ethglobal.co/)__, Storage Market Summit, 2020/12
 - __Good SNARKS are here needed__, Zcon0, Montreal, 2018/06
 - __What is a Hackathon?__, SeedCamp, London, 2014/07
 - __10 points Manifesto of a new generation, OrientaGiovani__, Confindustria, Rome, 2012/11
