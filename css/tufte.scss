@@ -303,9 +303,14 @@ label.margin-toggle:not(.sidenote-number) {
   p, hr, body.layout-post p{
     width: 100%;
   }
-  table{
+  // Override the desktop table measure. Without the more-specific width,
+  // the later `table { width: 53%; }` rule squeezes all columns on phones.
+  body table{
     display: block;
+    width: 100%;
     max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     overflow-x: auto;
   }
   pre code, pre code p, code, body.layout-post pre code{
@@ -428,6 +433,199 @@ table { width: 53%;
         -webkit-font-feature-settings: 'tnum'; /* This is technically redundant */
         -moz-font-feature-settings: 'tnum';
         -ms-font-feature-settings: 'tnum'; }
+
+// The generative-cryptography summary needs the wider article canvas even
+// before the phone breakpoint; three prose columns cannot fit in 53%.
+#three-directions + table{
+  width: 90%;
+  table-layout: fixed;
+  text-align: left;
+}
+#three-directions + table th,
+#three-directions + table td{
+  padding-right: 1.4rem;
+  overflow-wrap: break-word;
+  vertical-align: top;
+}
+#three-directions + table th:last-child,
+#three-directions + table td:last-child{
+  padding-right: 0;
+}
+
+@media screen and (max-width: 760px){
+  #three-directions + table{
+    display: table;
+    width: 100%;
+    max-width: 100%;
+    font-size: 1.1rem;
+  }
+  #three-directions + table th,
+  #three-directions + table td{
+    padding-right: 0.6rem;
+  }
+}
+
+// Responsive video embeds
+.video-embed{
+  width: 90%;
+  margin: 1.4rem 0 2.8rem;
+  aspect-ratio: 16 / 9;
+}
+.video-embed iframe{
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+// Autoresearch benchmark visualization in Generative Cryptography
+.autoresearch-graph{
+  box-sizing: border-box;
+  width: 90%;
+  margin: 2.8rem 0 3.2rem;
+  padding: 1.4rem 1.6rem 1.2rem;
+  border: 1px solid rgba($border-color, 0.22);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.45);
+}
+.autoresearch-heading{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  font-family: $sans-font;
+}
+.autoresearch-kicker,
+.autoresearch-heading > div > strong,
+.autoresearch-result span{
+  display: block;
+}
+.autoresearch-kicker{
+  margin-bottom: 0.25rem;
+  color: lighten($text-color, 28%);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.autoresearch-heading > div > strong{
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+.autoresearch-result{
+  color: $contrast-color;
+  text-align: right;
+  white-space: nowrap;
+}
+.autoresearch-result strong{
+  font-size: 1.8rem;
+  line-height: 1;
+}
+.autoresearch-result span{
+  margin-top: 0.2rem;
+  color: lighten($text-color, 22%);
+  font-size: 0.75rem;
+}
+.autoresearch-graph svg{
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 0.8rem;
+  overflow: visible;
+  font-family: $sans-font;
+}
+.graph-grid line{
+  stroke: rgba($border-color, 0.13);
+  stroke-width: 1;
+}
+.graph-axis-labels text{
+  fill: lighten($text-color, 35%);
+  font-size: 13px;
+  text-anchor: end;
+}
+.graph-axis-labels .axis-title{
+  fill: lighten($text-color, 22%);
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  text-anchor: start;
+}
+.candidate-points circle{
+  fill: lighten($text-color, 52%);
+  opacity: 0.7;
+}
+.improvement-area{
+  fill: rgba($contrast-color, 0.08);
+}
+.improvement-line{
+  fill: none;
+  stroke: $contrast-color;
+  stroke-width: 4;
+  stroke-linejoin: round;
+}
+.accepted-points circle{
+  fill: $bg-color;
+  stroke: $contrast-color;
+  stroke-width: 4;
+}
+.graph-annotations line{
+  stroke: rgba($text-color, 0.45);
+  stroke-dasharray: 3 3;
+}
+.graph-annotations text{
+  fill: lighten($text-color, 18%);
+  font-size: 14px;
+}
+.graph-annotations .baseline-label,
+.graph-annotations .result-label{
+  fill: $contrast-color;
+  font-size: 16px;
+  font-weight: 600;
+}
+.autoresearch-loop{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.8rem;
+  border-radius: 3px;
+  background: rgba($contrast-color, 0.06);
+  color: lighten($text-color, 12%);
+  font-family: $sans-font;
+  font-size: 0.78rem;
+  letter-spacing: 0.015em;
+}
+.autoresearch-loop b{
+  color: $contrast-color;
+  font-weight: 400;
+}
+.autoresearch-graph figcaption{
+  margin-top: 0.8rem;
+  color: lighten($text-color, 20%);
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+@media screen and (max-width: 760px){
+  .video-embed{
+    width: 100%;
+  }
+  .autoresearch-graph{
+    width: 100%;
+    padding: 1rem 0.7rem;
+  }
+  .autoresearch-heading{
+    gap: 1rem;
+  }
+  .autoresearch-heading > div > strong{
+    font-size: 1.2rem;
+  }
+  .autoresearch-loop{
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+  .autoresearch-graph figcaption{
+    font-size: 0.9rem;
+  }
+}
 
 thead th { border-bottom: 1px solid $border-color;
            font-weight: 400; 

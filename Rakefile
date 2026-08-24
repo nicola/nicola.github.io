@@ -18,7 +18,10 @@ desc "Generate and publish blog to gh-pages"
 task :publish => [:generate] do
   Dir.mktmpdir do |tmp|
     message = "Site updated at #{Time.now.utc}"
-    system "git commit -am #{message.shellescape}"
+    # Stage new posts too; `git commit -am` silently skipped untracked files and
+    # the later master-branch cleanup could delete them after publishing.
+    system "git add -A"
+    system "git commit -m #{message.shellescape}"
     system "git push origin gh-pages"
     system "mv _site/* #{tmp}"
     system "mv CNAME #{tmp}"
