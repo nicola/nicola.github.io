@@ -175,7 +175,7 @@ date: 2026-07-06
 
 <h2 id="previous-talk-ideas">Previous talk/ideas</h2>
 
-<p>I gave a talk at Devconnect in Argentina in 2025 on <em>“What if AI agents could write cryptography?”</em></p>
+<p>Some of the ideas in this talk are outdated, but the talk was the seed for the ideas in this post.</p>
 
 <div class="video-embed">
   <iframe src="https://www.youtube-nocookie.com/embed/zDtx8L3SiU8?list=PLJYtLjirLHqwIUt8IAUJceeGC90jWColX" title="What if AI agents could write cryptography? — Devconnect Argentina 2025" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
