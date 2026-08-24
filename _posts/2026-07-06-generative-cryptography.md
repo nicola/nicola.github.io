@@ -1,6 +1,6 @@
 ---
 title: Generative Cryptography
-subtitle: AI research loops for new generating secure cryptography protocols.
+subtitle: AI research loops for generating new secure cryptography protocols.
 layout: post
 date: 2026-07-06
 ---
