@@ -61,7 +61,7 @@ date: 2026-07-06
 
 <p>Fields like SNARKs have improved by orders of magnitude over the past decade — but every one of those improvements was the outcome of scarce, expensive engineering hours: new constructions, refinements to existing ones, hardware speedups for hash functions, better circuits, tighter implementations.</p>
 
-<p>If AI can reason about cryptography, this entire surface becomes a target. Point a model at each deployed cryptographic protocol — its theory, its implementation, its hardware path — and let it grind: prove an optimization sound, benchmark it, keep it or discard it, repeat. None of this requires new science; it requires the loop.</p>
+<p>If AI can reason about cryptography, this entire surface becomes a target. Point a model at each deployed cryptographic protocol — its theory, its implementation, its hardware path — and let it grind: prove an optimization sound, benchmark it, keep it or discard it, repeat. None of this requires new science; it requires the loop.<label for="mn-gc-related" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-gc-related" class="margin-toggle"/><span class="marginnote"><strong>Related work</strong><br><br><a href="https://arxiv.org/abs/2608.21986"><em>AI Grinding for Fun and Cryptanalysis</em></a> — an autonomous workflow producing reproducible attacks and exact witnesses.<br><br><a href="https://better.codes/">The Proximity Prize</a> — agents improving cryptographic soundness bounds with machine-checked proofs.<br><br><a href="https://www.anthropic.com/research/discovering-cryptographic-weaknesses">Discovering cryptographic weaknesses with Claude</a> — Anthropic’s account of Claude Mythos Preview finding weaknesses in cryptographic algorithms.<br><br><a href="https://zk.golf/">zkGolf</a> — cheaper zero-knowledge circuits proved correct in Lean 4.</span></p>
 
 <figure class="autoresearch-graph" aria-labelledby="autoresearch-title autoresearch-caption">
   <div class="autoresearch-heading">
@@ -172,6 +172,15 @@ date: 2026-07-06
   <li><strong>Build harnesses for research loops.</strong> The scaffolding that lets a model propose, prove, check, and iterate unattended — the auto-research infrastructure itself.</li>
   <li><strong>Attempt the impossible.</strong> Point the loop at iO.</li>
 </ol>
+
+<h2 id="useful-links">Useful links</h2>
+
+<ul>
+  <li><a href="https://arxiv.org/abs/2608.21986"><strong>AI Grinding for Fun and Cryptanalysis</strong></a> — An autonomous cryptanalysis workflow in which agents generate, test, and refine reproducible attacks; the authors report failures in eight published constructions.</li>
+  <li><a href="https://better.codes/"><strong>The Proximity Prize</strong></a> — A research rewards program where AI agents compete to improve cryptographic soundness bounds with machine-checked proofs.</li>
+  <li><a href="https://www.anthropic.com/research/discovering-cryptographic-weaknesses"><strong>Discovering cryptographic weaknesses with Claude</strong></a> — Anthropic’s account of using Claude Mythos Preview to find weaknesses in cryptographic algorithms.</li>
+  <li><a href="https://zk.golf/"><strong>zkGolf</strong></a> — A competition to build cheaper zero-knowledge circuits while proving their correctness against a specification in Lean 4.</li>
+</ul>
 
 <h2 id="previous-talk-ideas">Previous talk/ideas</h2>
 
