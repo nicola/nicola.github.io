@@ -443,13 +443,17 @@ table { width: 53%;
 }
 #three-directions + table th,
 #three-directions + table td{
-  padding-right: 1.4rem;
+  padding: 0.6rem 1rem;
   overflow-wrap: break-word;
   vertical-align: top;
 }
+#three-directions + table th:first-child,
+#three-directions + table td:first-child{
+  padding-left: 0.5rem;
+}
 #three-directions + table th:last-child,
 #three-directions + table td:last-child{
-  padding-right: 0;
+  padding-right: 0.5rem;
 }
 
 @media screen and (max-width: 760px){
@@ -461,13 +465,13 @@ table { width: 53%;
   }
   #three-directions + table th,
   #three-directions + table td{
-    padding-right: 0.6rem;
+    padding: 0.45rem 0.4rem;
   }
 }
 
 // Responsive video embeds
 .video-embed{
-  width: 90%;
+  width: 70%;
   margin: 1.4rem 0 2.8rem;
   aspect-ratio: 16 / 9;
 }

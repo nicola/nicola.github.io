@@ -7,12 +7,14 @@ date: 2026-07-06
 
 <p>Cryptography is unusually well suited to AI research loops. Its problems can be stated formally, its solutions can be checked mechanically, and its progress has historically been bottlenecked by a small number of experts with years of context. If AI can reason about cryptography, we should be able to point a model in a loop, and watch it optimize, discover, and eventually invent.</p>
 
-<p><strong>The thesis</strong> of this memo in short:</p>
+<p>I call the field of research of AI-generated cryptography <i>Generative Cryptography</i>.</p>
+
+<p><strong>The thesis</strong> for Generative Cryptography in short:</p>
 
 <ul>
-  <li>AI can interact with cryptography in three distinct ways: <em>using</em> it, <em>improving</em> it, and <em>inventing</em> it.</li>
-  <li>The inventing case — the <strong>AI research loop</strong> — becomes tractable once cryptography is formalized well enough that a model can propose, prove, and iterate without a human in the middle.</li>
-  <li>New cryptography won’t only come from AI acting as a researcher. Agent societies will generate <em>demand</em> for primitives humans never needed — cryptography will be emergent, not just generated.</li>
+  <li><strong>Using cryptography.</strong> If AI agents can generate protocols or choose the right libraries, they can engage in custom cryptographic interactions on demand — interactions that are impractical today because secure protocol design and implementation require costly research and engineering.</li>
+  <li><strong>Improving cryptography.</strong> If we had datasets of formalized cryptography and the right harnesses for verifying what AI generates, then we could create AI research loops that propose optimizations, improve constructions, reduce communication complexity, and prove tighter bounds.</li>
+  <li><strong>Inventing cryptography.</strong> AI could be used to explore new assumptions and attempt long-standing open problems such as iO. At the same time, new AI settings may surface cryptographic needs we do not yet know we have — giving rise to a new field of emergent cryptography.</li>
 </ul>
 
 <p><strong>The call to action</strong> for this memo is:</p>
@@ -23,6 +25,8 @@ date: 2026-07-06
 </ul>
 
 <h2 id="three-directions">Three directions</h2>
+
+<p><em>What could we unlock if AI were great at writing cryptography?</em> The possibilities fall into three broad directions: using cryptography in new interactions, improving existing systems, and inventing new primitives. The table below summarizes each direction; the sections that follow explore them in turn.</p>
 
 <table>
   <thead>
@@ -55,13 +59,17 @@ date: 2026-07-06
 
 <p>Imagine two AI agents that want to schedule a call, but their security policies forbid sharing calendars. A human team stuck in this position gives up or leaks information. Agents don’t have to: they can decide, mid-interaction, to engage in a multi-party computation — either picking a protocol from an existing library or generating one on the spot.</p>
 
-<p>This is a <em>supercognition</em> property uniquely suited to AI. Writing a bespoke cryptographic protocol takes humans too long to do adaptively, in the middle of an interaction. For an agent, protocol selection and synthesis can become just another step in a negotiation. Cryptography stops being infrastructure you deploy in advance and becomes a move you make.</p>
+<p><em>Supercognition</em> is a capability unique to AI. In the <a href="https://aria.org.uk/media/dkhlumky/scaling-trust-programme-thesis.pdf">ARIA Scaling Trust programme thesis</a>, we called this an <em>AI advantage</em>: “agents can engage in new secure interactions that would not be possible for humans or more traditional computer programs. Such interactions can open up new market equilibria, new forms of coordination and ultimately new value creation.”</p>
+
+<p>Writing a bespoke cryptographic protocol takes humans too long to do adaptively, in the middle of an interaction. For an agent, protocol selection and synthesis can become just another step in a negotiation.</p>
+
+<p>This matters beyond making existing interactions faster. Secure, programmable agreements between agents could lower the cost of finding counterparties, negotiating terms, and enforcing outcomes; make entirely new classes of contracts viable; and allow coordination to remain pluralistic rather than pass through a few central intermediaries. Because contracts underpin so much of economic and social life, reducing these frictions at machine scale could change which markets and institutions are possible — an idea explored in <a href="https://blog.cosmos-institute.org/p/coasean-bargaining-at-scale"><em>Coasean Bargaining at Scale</em></a>.</p>
 
 <h2 id="improving-cryptography">Improving cryptography</h2>
 
-<p>Fields like SNARKs have improved by orders of magnitude over the past decade — but every one of those improvements was the outcome of scarce, expensive engineering hours: new constructions, refinements to existing ones, hardware speedups for hash functions, better circuits, tighter implementations.</p>
+<p>Fields like SNARKs have improved by orders of magnitude over the past decade<label for="mn-gc-protocol-labs" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-gc-protocol-labs" class="margin-toggle"/><span class="marginnote">My previous team at Protocol Labs played a major role in reducing SNARK proving time, spending several million dollars on engineering time toward this work. Generative cryptography is likely to turn much of that engineering effort into compute cost, making this kind of progress far cheaper.</span> — but every one of those improvements was the outcome of scarce, expensive engineering hours: new constructions, refinements to existing ones, hardware speedups for hash functions, better circuits, tighter implementations.</p>
 
-<p>If AI can reason about cryptography, this entire surface becomes a target. Point a model at each deployed cryptographic protocol — its theory, its implementation, its hardware path — and let it grind: prove an optimization sound, benchmark it, keep it or discard it, repeat. None of this requires new science; it requires the loop.<label for="mn-gc-related" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-gc-related" class="margin-toggle"/><span class="marginnote"><strong>Related work</strong><br><br><a href="https://arxiv.org/abs/2608.21986"><em>AI Grinding for Fun and Cryptanalysis</em></a> — an autonomous workflow producing reproducible attacks and exact witnesses.<br><br><a href="https://better.codes/">The Proximity Prize</a> — agents improving cryptographic soundness bounds with machine-checked proofs.<br><br><a href="https://www.anthropic.com/research/discovering-cryptographic-weaknesses">Discovering cryptographic weaknesses with Claude</a> — Anthropic’s account of Claude Mythos Preview finding weaknesses in cryptographic algorithms.<br><br><a href="https://zk.golf/">zkGolf</a> — cheaper zero-knowledge circuits proved correct in Lean 4.</span></p>
+<p>If AI can reason about cryptography, then we can create AI research loops. Point a model at each deployed cryptographic protocol — its theory, its implementation, its hardware path — and let it grind: prove an optimization sound, benchmark it, keep it or discard it, repeat. None of this requires new science; it requires the loop.<label for="mn-gc-related" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-gc-related" class="margin-toggle"/><span class="marginnote"><strong>Related work</strong><br><br><a href="https://arxiv.org/abs/2608.21986"><em>AI Grinding for Fun and Cryptanalysis</em></a> — an autonomous workflow producing reproducible attacks and exact witnesses.<br><br><a href="https://better.codes/">The Proximity Prize</a> — agents improving cryptographic soundness bounds with machine-checked proofs.<br><br><a href="https://www.anthropic.com/research/discovering-cryptographic-weaknesses">Discovering cryptographic weaknesses with Claude</a> — Anthropic’s account of Claude Mythos Preview finding weaknesses in cryptographic algorithms.<br><br><a href="https://zk.golf/">zkGolf</a> — cheaper zero-knowledge circuits proved correct in Lean 4.</span></p>
 
 <figure class="autoresearch-graph" aria-labelledby="autoresearch-title autoresearch-caption">
   <div class="autoresearch-heading">
@@ -114,22 +122,37 @@ date: 2026-07-06
   <figcaption id="autoresearch-caption">An example of the loop compounding small, verified gains. Every dot is a candidate implementation; the line moves only when a change makes proving faster without breaking correctness. Values are illustrative.</figcaption>
 </figure>
 
-<h2 id="inventing-cryptography-the-research-loop">Inventing cryptography: the research loop</h2>
+<h2 id="inventing-cryptography">Inventing cryptography</h2>
 
-<p>The third direction is the one that names this post. Specify a set of assumptions and a problem specification, and let the AI go try to solve it — generating new protocols, and eventually attacking open problems.</p>
+<p>If we have a well-specified protocol — ideally formalized in Lean — an AI can propose improvements and verify each one against the specification. This is likely to produce gains across the field, but it is still optimization. The deeper question is whether AI can make scientific breakthroughs: can it invent new cryptography?</p>
 
-<p>What does a single iteration look like? There is a spectrum from the ideal setup to the practical one:</p>
+<p>There are at least three forms this invention could take.</p>
 
-<ul>
-  <li><strong>The ideal setup.</strong> Create a folder containing the entire body of knowledge of cryptography (most of it is likely already in the weights), hand it to a smart model together with a natural-language definition of the problem, and ask for a solution with a proof. Specification in natural language, proof in natural language.</li>
-  <li><strong>The practical setup.</strong> Build a large dataset of cryptography formally specified — in Lean — with formal specifications and formal proofs. Write the target specification in Lean, and start an iterative auto-research loop: propose a construction, attempt the proof, check it mechanically, learn from the failure, try again.</li>
-</ul>
+<h3 id="solving-open-problems">Solving open problems</h3>
 
-<p>The formal end of the spectrum is what makes the loop <em>closable</em> today. Natural-language cryptography needs a human to judge whether a proof is right; Lean does not. A proof assistant turns “is this new protocol secure under these assumptions?” into a machine-checkable question — which is exactly the property a research loop needs to run unattended, and exactly the property that lets us measure whether the AI is improving over time.</p>
+<p>The most concrete form starts with a definition and a set of assumptions that are already fixed. The problem is well specified; what is missing is the construction. The AI is asked to find that construction and prove that it satisfies the definition. This is different from improving an existing protocol: there may be no known protocol to optimize.</p>
 
-<h2 id="generative-vs-emergent-cryptography">Generative vs. emergent cryptography</h2>
+<p>There are several ways this could happen. Models may simply become more capable: they could absorb the body of cryptographic knowledge from papers written in natural language and develop stronger reasoning. Alternatively, we can build better infrastructure for cryptographic invention by creating large datasets of cryptography formalized in Lean and better harnesses for running and evaluating research loops.</p>
 
-<p>There is a second, less obvious source of new cryptography. Historically, breakthroughs weren’t invented in a vacuum — they arose because there was a capability people wanted but couldn’t achieve:</p>
+<h4 id="the-holy-grail-io">The holy grail: iO</h4>
+
+<p>Every research loop needs a north star, and for cryptography the obvious one is <strong>indistinguishability obfuscation</strong>. iO is the primitive from which nearly everything else can be built — “crypto-complete” — and yet every known construction is impractical, resting on strong assumptions and astronomical overheads.</p>
+
+<p>Some of the best minds in cryptography have tried to make iO practical, but the field is constrained by how few people can work on it. The number of cryptography researchers is small; the number with the background to work on iO is smaller; and the number actively doing so is smaller still. My intuition is that fewer than ten people are actively working on iO at any given time.</p>
+
+<p>A capable research loop could change the odds simply by putting many more “simulated cryptographers” on the problem. Even without a single dramatic leap in intelligence, the breadth of parallel exploration might uncover a construction, reduction, or optimization that a very small research community has overlooked.</p>
+
+<p>It is exactly the kind of open problem a research loop should attack: precisely specifiable, mechanically checkable, and stuck. If in five years we look back at this post and iO has been solved, I would be very glad.</p>
+
+<h3 id="proposing-new-assumptions">Proposing new assumptions</h3>
+
+<p><label for="mn-gc-assumptions" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-gc-assumptions" class="margin-toggle"/><span class="marginnote">Designing and judging assumptions may remain among the hardest parts of cryptography to automate. If proof generation and iterative optimization become largely machine-driven, assumptions may remain a place for human cryptographers to work in a more traditional scientific mode.</span>A deeper form of invention is to propose new cryptographic assumptions. An AI might identify a new mathematical problem, formulate its hardness precisely, and use it as the foundation for new constructions. This is harder to evaluate than solving a problem under assumptions we already accept. A construction and its proof can be checked mechanically; the truth of a hardness assumption cannot.</p>
+
+<p>We can search for attacks, connect a new assumption to established ones through reductions, and study how it behaves across parameters, but no verifier can certify that an efficient attack will never be found. New assumptions earn confidence through scrutiny and time. An AI that generates them therefore needs a different evaluation loop — one built around sustained cryptanalysis, not only proof checking.</p>
+
+<h3 id="emergent-cryptography">Emergent cryptography: new definitions</h3>
+
+<p>The most open-ended form of invention is to discover the question itself. A new cryptographic definition captures a capability that should exist and the security properties it should satisfy. Historically, major breakthroughs began with needs that existing cryptography could not express:</p>
 
 <ul>
   <li><strong>Public-key cryptography</strong> — secure communication without shared secrets.</li>
@@ -138,20 +161,9 @@ date: 2026-07-06
   <li><strong>Multi-party computation</strong> — joint computation without sharing inputs.</li>
 </ul>
 
-<p>Agent societies will create requirements humans have never encountered at scale. Once thousands or millions of autonomous agents negotiate, delegate authority, preserve privacy, and optimize trust against each other, they will hit coordination problems for which today’s cryptography is simply not the right abstraction. An <a href="https://nicola.io/agentic-economic-zone/2026">Agentic Economic Zone</a> is not just a benchmark for agents — it is a <em>generator of cryptographic demand</em>. Agents incentivized to minimize trust costs while maximizing capability create evolutionary pressure for new primitives.</p>
+<p><label for="mn-gc-aez" class="margin-toggle">&#8853;</label><input type="checkbox" id="mn-gc-aez" class="margin-toggle"/><span class="marginnote">For example, experiments like <a href="https://nicola.io/agentic-economic-zone/2026">Agentic Economic Zones</a> aren’t just benchmarks for agents but <em>generators of cryptographic demand</em>.</span>AI settings may create needs we do not yet know we have. Once thousands or millions of autonomous agents negotiate, delegate authority, preserve privacy, and optimize trust against one another, they may encounter coordination problems for which today’s definitions are the wrong abstraction.</p>
 
-<p>This gives us two complementary research agendas:</p>
-
-<ul>
-  <li><strong>Generative cryptography</strong> asks: can AI deliberately synthesize cryptography from specifications, intent, or formal definitions?</li>
-  <li><strong>Emergent cryptography</strong> asks: can new cryptography arise naturally because AI societies create entirely new coordination and trust problems?</li>
-</ul>
-
-<h2 id="the-holy-grail-io">The holy grail: iO</h2>
-
-<p>Every research loop needs a north star, and for cryptography the obvious one is <strong>indistinguishability obfuscation</strong>. iO is the primitive from which nearly everything else can be built — “crypto-complete” — and yet every known construction is impractical, resting on strong assumptions and astronomical overheads.</p>
-
-<p>It is exactly the kind of problem a research loop should be pointed at: precisely specifiable, mechanically checkable, and stuck. If in five years we look back at this post and iO has been solved, I would be very glad.</p>
+<p>I call this research direction <strong>emergent cryptography</strong>: new definitions and primitives arising from the security and coordination problems of AI systems themselves. Here AI is not only searching for a construction from a specification; it is helping surface and formalize the specification worth solving.</p>
 
 <h2 id="what-success-looks-like">What success looks like</h2>
 
@@ -166,12 +178,22 @@ date: 2026-07-06
 
 <h2 id="call-to-action">Call to action</h2>
 
+<p>In practice, these are some of the directions that may be most critical to work on now. At ARIA, through the <a href="https://scalingtrust.org.uk/">Scaling Trust</a> programme, we are also funding work across some of them.</p>
+
 <ol>
   <li><strong>Create datasets for cryptography.</strong> The field’s knowledge, formalized — constructions, assumptions, and proofs in Lean or similar — is the substrate every research loop will run on.</li>
   <li><strong>Build benchmarks and evaluations.</strong> We cannot tell whether the loop is improving without measuring it: suites of cryptographic problems, from re-deriving known protocols to open questions.</li>
   <li><strong>Build harnesses for research loops.</strong> The scaffolding that lets a model propose, prove, check, and iterate unattended — the auto-research infrastructure itself.</li>
   <li><strong>Attempt the impossible.</strong> Point the loop at iO.</li>
 </ol>
+
+<h2 id="previous-talk-ideas">Previous talk/ideas</h2>
+
+<p>Some of the ideas in this talk are outdated, but the talk was the seed for the ideas in this post.</p>
+
+<div class="video-embed">
+  <iframe src="https://www.youtube-nocookie.com/embed/zDtx8L3SiU8?list=PLJYtLjirLHqwIUt8IAUJceeGC90jWColX" title="What if AI agents could write cryptography? — Devconnect Argentina 2025" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 <h2 id="useful-links">Useful links</h2>
 
@@ -181,14 +203,6 @@ date: 2026-07-06
   <li><a href="https://www.anthropic.com/research/discovering-cryptographic-weaknesses"><strong>Discovering cryptographic weaknesses with Claude</strong></a> — Anthropic’s account of using Claude Mythos Preview to find weaknesses in cryptographic algorithms.</li>
   <li><a href="https://zk.golf/"><strong>zkGolf</strong></a> — A competition to build cheaper zero-knowledge circuits while proving their correctness against a specification in Lean 4.</li>
 </ul>
-
-<h2 id="previous-talk-ideas">Previous talk/ideas</h2>
-
-<p>Some of the ideas in this talk are outdated, but the talk was the seed for the ideas in this post.</p>
-
-<div class="video-embed">
-  <iframe src="https://www.youtube-nocookie.com/embed/zDtx8L3SiU8?list=PLJYtLjirLHqwIUt8IAUJceeGC90jWColX" title="What if AI agents could write cryptography? — Devconnect Argentina 2025" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
 
 <h2 id="get-in-touch">Get in touch</h2>
 
