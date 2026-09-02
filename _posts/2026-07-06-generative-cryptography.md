@@ -134,15 +134,15 @@ date: 2026-07-06
 
 <p>There are several ways this could happen. Models may simply become more capable: they could absorb the body of cryptographic knowledge from papers written in natural language and develop stronger reasoning. Alternatively, we can build better infrastructure for cryptographic invention by creating large datasets of cryptography formalized in Lean and better harnesses for running and evaluating research loops.</p>
 
-<h4 id="the-holy-grail-io">The holy grail: iO</h4>
+<h4 id="north-star-io">North star: iO</h4>
 
-<p>Every research loop needs a north star, and for cryptography the obvious one is <strong>indistinguishability obfuscation</strong>. iO is the primitive from which nearly everything else can be built — “crypto-complete” — and yet every known construction is impractical, resting on strong assumptions and astronomical overheads.</p>
+<p>A north-star problem for AI research loops in cryptography is <strong>indistinguishability obfuscation</strong>. iO is the primitive from which nearly everything else can be built, and yet every known construction is impractical, resting on strong assumptions and astronomical overheads.</p>
 
 <p>Some of the best minds in cryptography have tried to make iO practical, but the field is constrained by how few people can work on it. The number of cryptography researchers is small; the number with the background to work on iO is smaller; and the number actively doing so is smaller still. My intuition is that fewer than ten people are actively working on iO at any given time.</p>
 
-<p>A capable research loop could change the odds simply by putting many more “simulated cryptographers” on the problem. Even without a single dramatic leap in intelligence, the breadth of parallel exploration might uncover a construction, reduction, or optimization that a very small research community has overlooked.</p>
+<p>A capable research loop could change the odds simply by putting many more “simulated cryptographers” on the problem. Even without a dramatic leap in intelligence, the breadth of parallel exploration might uncover a construction, reduction, or optimization that a very small research community has overlooked.</p>
 
-<p>It is exactly the kind of open problem a research loop should attack: precisely specifiable, mechanically checkable, and stuck. If in five years we look back at this post and iO has been solved, I would be very glad.</p>
+<p>If in five years we look back at this post and iO has been solved, I would be very glad.</p>
 
 <h3 id="proposing-new-assumptions">Proposing new assumptions</h3>
 
