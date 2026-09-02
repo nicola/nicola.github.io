@@ -150,7 +150,7 @@ date: 2026-07-06
 
 <p>We can search for attacks, connect a new assumption to established ones through reductions, and study how it behaves across parameters, but no verifier can certify that an efficient attack will never be found. New assumptions earn confidence through scrutiny and time. An AI that generates them therefore needs a different evaluation loop — one built around sustained cryptanalysis, not only proof checking.</p>
 
-<h3 id="emergent-cryptography">Emergent cryptography: new definitions</h3>
+<h3 id="writing-new-definitions">Writing new definitions</h3>
 
 <p>The most open-ended form of invention is to discover the question itself. A new cryptographic definition captures a capability that should exist and the security properties it should satisfy. Historically, major breakthroughs began with needs that existing cryptography could not express:</p>
 
@@ -212,4 +212,4 @@ date: 2026-07-06
 
 <p>Many of these ideas grew out of writing the <a href="https://aria.org.uk/media/dkhlumky/scaling-trust-programme-thesis.pdf">ARIA Scaling Trust programme thesis</a>, a process that began in summer 2025, and from a <a href="https://www.youtube.com/watch?v=zDtx8L3SiU8&list=PLJYtLjirLHqwIUt8IAUJceeGC90jWColX">talk I gave at Devconnect in November 2025</a>, <em>“What if AI agents could write cryptography?”</em></p>
 
-<p>This was written by Nicola Greco with support from AI and many conversations with Kobi Gurkan, Alex Obadia, Ran Canetti, and Wei Dai.</p>
+<p>This was written by Nicola Greco with support from AI and many conversations with Kobi Gurkan, Alex Obadia, Ran Canetti, Wei Dai, and Giacomo Fenzi.</p>
