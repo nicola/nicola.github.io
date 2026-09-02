@@ -212,4 +212,4 @@ date: 2026-07-06
 
 <p>Many of these ideas grew out of writing the <a href="https://aria.org.uk/media/dkhlumky/scaling-trust-programme-thesis.pdf">ARIA Scaling Trust programme thesis</a>, a process that began in summer 2025, and from a <a href="https://www.youtube.com/watch?v=zDtx8L3SiU8&list=PLJYtLjirLHqwIUt8IAUJceeGC90jWColX">talk I gave at Devconnect in November 2025</a>, <em>“What if AI agents could write cryptography?”</em></p>
 
-<p>This was written by Nicola Greco with support from AI and many conversations with Kobi Gurkan and Alex Obadia.</p>
+<p>This was written by Nicola Greco with support from AI and many conversations with Kobi Gurkan, Alex Obadia, Ran Canetti, and Wei Dai.</p>
